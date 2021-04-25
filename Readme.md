@@ -4,7 +4,7 @@
 
 <br>
 
-## Electro-Hogar
+## ElectroHogar
 
 ### Descripción del negocio
 Ofrecemos productos electrodomésticos del hogar para el uso cotidiano de todas las marcas. Aputamos a un público familiar y de personas que están comenzando a conformar un hogar. Las siguientes categorías se incluyen en la venta:
