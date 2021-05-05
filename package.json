@@ -1,0 +1,19 @@
+{
+  "name": "grupo_8_electrohogar",
+  "version": "1.0.0",
+  "description": "<br>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcoseani1987/grupo_8_ElectroHogar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gcoseani1987/grupo_8_ElectroHogar/issues"
+  },
+  "homepage": "https://github.com/gcoseani1987/grupo_8_ElectroHogar#readme"
+}
