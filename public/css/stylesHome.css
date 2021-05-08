@@ -58,7 +58,12 @@
 }
 
 @media(min-width:769px) {
-        .user{
-        margin-right: 10px;
+        .logo {
+            width: 250px;
+        }
+        .nav{
+            margin-top: -35px;
+            margin-left: 50%;
+        }
+
     }
-}
