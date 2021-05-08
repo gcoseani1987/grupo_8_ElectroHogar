@@ -34,6 +34,6 @@ Ofrecemos productos electrodomésticos del hogar para el uso cotidiano de todas 
 ## Integrantes
 -Coseani, Guillermo Adolfo. QA Data analyst. 34 años
 
--Galvano, Juan Ignacio. Despachante de aeronaves. 23 años
+-Galvagno, Juan Ignacio. Despachante de aeronaves. 23 años
 
 -Cucit, Emiliano. Estudiante Ing. Química. 27 años
