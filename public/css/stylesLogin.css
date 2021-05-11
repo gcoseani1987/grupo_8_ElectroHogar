@@ -21,6 +21,7 @@
     position: fixed;
     z-index: 10;
     justify-content: space-between;
+    top: 0;
 }
 .user{
     display: flex;
@@ -47,6 +48,7 @@
 .main-header-center-left i{
     color: rgb(10,74,173);
 }
+
 
 .footer{
     padding-top: 20px;
@@ -85,18 +87,6 @@
 .derechos{
     font-size: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media(min-width:480px){
     .logo-mini{
