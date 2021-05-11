@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Electro Hogar</title>
+    <title>Registrate</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/stylesRegistro.css">
     <script src="https://kit.fontawesome.com/117d4d8bac.js" crossorigin="anonymous"></script>
@@ -35,10 +35,54 @@
                 <a href="/carritoCompras"><i class="fas fa-shopping-cart"></i></a> 
      </div>
   </header>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facere rem dolorem deserunt perferendis est ullam tempore doloribus aspernatur, quae quasi voluptates reprehenderit similique, error itaque ab accusantium velit!</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facere rem dolorem deserunt perferendis est ullam tempore doloribus aspernatur, quae quasi voluptates reprehenderit similique, error itaque ab accusantium velit!</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facere rem dolorem deserunt perferendis est ullam tempore doloribus aspernatur, quae quasi voluptates reprehenderit similique, error itaque ab accusantium velit!</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis facere rem dolorem deserunt perferendis est ullam tempore doloribus aspernatur, quae quasi voluptates reprehenderit similique, error itaque ab accusantium velit!</p>
+  
+  <main class="main-registro">    
+    <section class="registro-form">
+      <form action="registro" method="POST" class="registro">
+        <p class="text-registro"><strong>REGISTRATE AHORA Y EMPEZÁ A COMPRAR</strong><p>
+          <br>
+        <div class="form-container">
+          <label>Nombre:</label>
+          <br>
+          <br>
+          <input class="input-registro" type="text" name="nombre" required>
+          <br>
+          <br>
+          <label>Apellido:</label>
+          <br>
+          <br>
+          <input class="input-registro" type="text" name="apellido" required>
+          <br>
+          <br>
+          <label>Email:</label>
+          <br>
+          <br>
+          <input class="input-registro" type="email" name="email" placeholder="ejemplo@hotmail.com" required>
+          <br>
+          <br>
+          <label>Contraseña:</label>
+          <br>
+          <br>
+          <input class="input-registro" type="password" name="password" required>
+          <br>
+          <br>
+          <label>Repita su contraseña:</label>
+          <br>
+          <br>
+          <input class="input-registro" type="password" name="password" required>
+        </div>
+          <br>
+        <div class="button">
+          <button class="button-registro">Crear cuenta</button>
+        </div>
+          <br>
+        </form>
+        <div class="iniciar-sesion">
+          <p>Ya tenes una cuenta?</p>
+          <a href="/login">Ingresá acá</a>
+        </div>
+    </section> 
+  </main>
  
   <footer class="footer">
     <div class="main-footer">

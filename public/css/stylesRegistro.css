@@ -21,6 +21,7 @@
     position: fixed;
     z-index: 10;
     justify-content: space-between;
+    top: 0;
 }
 .user{
     display: flex;
@@ -45,6 +46,40 @@
     font-size: 40px;
 }
 .main-header-center-left i{
+    color: rgb(10,74,173);
+}
+.main-registro {
+    background-image: url(../images/login.jpg);
+    background-attachment: fixed;
+    opacity: 0.9;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.registro-form {
+    width: max-content;
+    margin: auto;
+    border: 3px rgb(10,74,173) solid;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+}
+
+
+.button-registro{
+    background-color: rgb(10,74,173);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    }
+
+.forgot a{
+    color: rgb(10,74,173);
+}
+.iniciar-sesion a{
     color: rgb(10,74,173);
 }
 
@@ -99,6 +134,9 @@
         padding-right: 20px;
         padding-left: 20px;
     }
+    .registro{
+        border: none;
+    }
 }
 @media(min-width:769px){
     .main-header{
@@ -151,7 +189,4 @@
         align-items: center;
     }
 }
-
-
-
 

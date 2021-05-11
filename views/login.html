@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Electro Hogar</title>
+    <title>Ingresá</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/stylesLogin.css">
     <script src="https://kit.fontawesome.com/117d4d8bac.js" crossorigin="anonymous"></script>
@@ -35,13 +35,42 @@
                 <a href="/carritoCompras"><i class="fas fa-shopping-cart"></i></a> 
      </div>
   </header>
-  <main>
-    <p class="ja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, provident eum. Voluptatem nisi enim sit ipsa quia impedit voluptatum fugit optio quidem quis. Dolores voluptas totam ratione laborum, cumque autem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores ut, doloremque sunt eum quam sed autem mollitia dignissimos beatae harum non recusandae ab quia deserunt earum assumenda nam enim. Ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum id quas dolores beatae incidunt nulla, debitis vero enim? Eos recusandae modi libero vero odit repudiandae, tenetur autem quibusdam ab eum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eveniet illum illo deserunt. Similique inventore ullam, aspernatur veniam dolorem minus unde voluptatum quibusdam dolores beatae ex ipsum, molestiae eos repudiandae!</p>
-    <div class="formulario">
-      <form action="/registro" method="POST" class="login">
-
-      </form>
-    </div>
+  <main class="main-login">    
+    <section class="login-form">
+      <form action="login" method="POST" class="login">
+        <p class="text-login"><strong>INGRESAR CON MAIL Y CONTRASEÑA</strong><p>
+          <br>
+        <div class="form-container">
+          <label>Email:</label>
+          <br>
+          <br>
+          <input class="input-login" type="email" name="email" placeholder="ejemplo@hotmail.com" required>
+          <br>
+          <br>
+        <label>Contraseña:</label>
+          <br>
+          <br>
+          <input class="input-login" type="password" name="password" required>
+          <br>
+          <br>
+        </div>
+        <div class="forgot">
+          <span><a href="#">Olvidé mi usuario</a></span>
+          <br>
+          <span><a href="#">Olvide mi contraseña</a></span>
+        </div>
+          <br>
+        <div>
+        <label>Recuérdame</label>
+        <input type="radio" name="recordar">
+      </div>
+          <br>
+      <div class="button">
+          <button class="login-button">Ingresar</button>
+      </div>
+      <br>
+    </form>
+    </section> 
   </main>
 
   <footer class="footer">
