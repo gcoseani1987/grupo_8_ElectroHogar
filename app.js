@@ -29,3 +29,6 @@ app.get('/registro', (req, res) => {
     res.sendFile(path.join(__dirname, './views/registro.html'));
 });
 
+app.get('/auxiliar', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/auxiliar.html'));
+});

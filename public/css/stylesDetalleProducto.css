@@ -86,16 +86,52 @@
     font-size: 12px;
 }
 
+.main-product-principal{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-items: center;
+}
+.main-right-top{
+        display: block;
+        height: 100%;
+}
 
 
+.condiciones-pago{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border: gray solid 1px;
+    border-radius: 5px;
+    width: 100%;
+    height: 60%;
+}
+
+.price-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
 
 
-
-
-
-
-
-
+.agregar-carrito{
+    display: flex;
+    margin: 20px;
+    padding: 13px 18px;
+    border: 0px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: rgb(3, 0, 153);
+    text-decoration: none;
+    height: auto;
+    width: 100%;
+}
 
 
 @media(min-width:480px){
