@@ -21,6 +21,7 @@
     position: fixed;
     z-index: 10;
     justify-content: space-between;
+    top: 0;
 }
 .user{
     display: flex;
@@ -47,7 +48,38 @@
 .main-header-center-left i{
     color: rgb(10,74,173);
 }
+.main-login {
+    background-image: url(../images/login.jpg);
+    background-attachment: fixed;
+    opacity: 0.9;
+    margin-top: 90px;
+    justify-content: center;
+}
 
+.login-form {
+    width: max-content;
+    margin: auto;
+    border: 3px rgb(10,74,173) solid;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+}
+
+
+.login-button{
+    background-color: rgb(10,74,173);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    }
+
+.forgot a{
+    color: rgb(10,74,173);
+
+}
 .footer{
     padding-top: 20px;
     background-color: rgb(217,217,217);
@@ -55,7 +87,7 @@
     border-top: white 2px solid ;
 }
 .logo-footer{
-    width: 70%;
+    width: 70%
 }
 .redes{
     display: flex;
@@ -86,18 +118,6 @@
     font-size: 12px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media(min-width:480px){
     .logo-mini{
         display: none;
@@ -110,6 +130,9 @@
     .main-header-center-right{
         padding-right: 20px;
         padding-left: 20px;
+    }
+    .login{
+        border: none;
     }
 }
 @media(min-width:769px){
@@ -163,9 +186,3 @@
         align-items: center;
     }
 }
-
-
-
-
-
-
