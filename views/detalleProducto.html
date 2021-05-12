@@ -11,14 +11,36 @@
     <link href = "https://fonts.googleapis.com/css2? family = Karantina: wght @ 300 & display = swap" rel = "stylesheet">
 </head>
 <body>
-  <main>
-    <div class='main-product'>
+  <header class="main-header">
+      <div class="main-header-left">
+        <a href="/"><img class=logo src="/images/logo.png"></a>
+        <a href="/"><img class=logo-mini src="/images/logo-mini.png"></a>
+      </div>
+      <div class="main-header-center">
+        <div class="main-header-center-left">
+            <form action="productos" method="POST" class="bar"></form>
+            <label"></label>
+            <input type="text" name="buscador" placeholder="Que buscabas?" class="buscador">
+            <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="main-header-center-right">
+            <ul class="user">
+                <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="/registro">Registrate<i class="fas fa-user-plus"></i></a></li>
+              </ul>
+        </div>
+      </div>
+     <div class="main-header-right">
+                <a href="/carritoCompras"><i class="fas fa-shopping-cart"></i></a> 
+     </div>
+  </header>
+  <main class='main-product'>
       <div class='main-product-principal'>
  <!-- Muestra imagen del producto -->
         <div class='main-product-left-top'>
           <img src="/images/SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV.jfif" alt="Smart TV Hisense 50 pulgadas">
         </div>
- <!-- Fin de la muestra del producto -->
 <!-- Comienza condiciones de venta -->
     <div class='main-product-right-top'>
       <h1>SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV</h1>
@@ -46,19 +68,136 @@
       </div> 
     </div>   
   </div>
-  <!-- Termina condiciones de venta--> 
-<div class='main-product-right-bottom'>
-  <!-- Descripción del producto-->
+   <!-- Descripcion y detalle del producto-->
+<div class='main-product-left-bottom'>
+    <!-- Descripción del producto-->
 <div class='product-description-model'>
+  <h3>Descripción del producto</h3>
+  <p>Led Smart. 50" 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC).
+     Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). 
+     USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA.
+      Incluye: soporte tipo pie x2, guia rapida x1, 
+      manual legal x1, bolsa con tornillos para la base x1, 
+      control remoto x1, pilas AAA x2, cable de alimentacion x1.</p>
 </div>
-  <!-- Termina descripcion del producto -->
     <!-- Detalles del producto-->
-<div class='product-description-model'>
+<div class='product-detail-model'>
+  <h3>Especificaciones técnicas</h3>
+      <table class='table-specifications'>
+        <tbody>
+        <tr>
+          <td>Alto:</td>
+          <td>70.9</td>
+        </tr>
+        <tr>
+          <td>Color:</td>
+          <td>Negro</td>
+        </tr>
+        <tr>
+          <td>Garantía:</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Modelo:</td>
+          <td>50A64GSV</td>
+        </tr>
+        <tr>
+          <td>Origen:</td>
+          <td>ARGENTINA:</td>
+        </tr>  
+        <tr>
+          <td>Peso:</td>
+          <td>9.9</td>
+        </tr>      
+        <tr>
+          <td>Profundidad:</td>
+          <td>22.6</td>
+        </tr>   
+        <tr>
+          <td>Bluetooth:</td>
+          <td>Si</td>
+        </tr>  
+        <tr>
+          <td>Brillo:</td>
+          <td>250</td>
+        </tr> 
+        <tr>
+          <td>Entrada de video compuesto:</td>
+          <td>Si</td>
+        </tr> 
+        <tr>
+          <td>Formato de pantalla:</td>
+          <td>4K UHD</td>
+        </tr> 
+        <tr>
+          <td>Frecuencia de barrido:</td>
+          <td>60</td>
+        </tr>      
+        <tr>
+          <td>HDMI:</td>
+          <td>Si</td>
+        </tr>   
+        <tr>
+          <td>Salida de audio:</td>
+          <td>Si</td>
+        </tr>    
+        <tr>
+          <td>Sintonizador TDA:</td>
+          <td>Si</td>
+        </tr>   
+        <tr>
+          <td>Tamaño de pantalla:</td>
+          <td>50</td>
+        </tr>       
+        <tr>
+          <td>Wi-Fi:</td>
+          <td>Si</td>
+        </tr>  
+        <tr>
+          <td>USB:</td>
+          <td>Si</td>
+        </tr>  
+        <tr>
+          <td>Tecnología Smart:</td>
+          <td>Si</td>
+        </tr>                 
+        </tbody>
+      </table>
 </div>
-    <!-- Termina detalle del producto-->
 </div>
-    <!-- Termina descripcion del producto-->
-  </div>
 </main>
+  <footer class="footer">
+    <div class="main-footer">
+      <div class="footer-left">
+        <div class="footer-left1">
+          <a href="/"><img class=logo-footer src="/images/logo.png"></a>
+        </div>
+        <div class="footer-left2">
+          <ul class="redes">
+            <li><a href="/facebook.com/electroHogar" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="/twitter.com/electroHogar" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="/instagram.com/electroHogar" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-center">
+        <p><strong> Venta telefonica:0800-333-5555 <i class="fas fa-phone-alt"></i></strong></p>
+        <p>Horarios: Lu a Vi de 10hs a 18hs</p>
+        <br>
+        <p><strong>Atención al cliente:0800-333-2222 <i class="fas fa-phone-alt"></i></strong></p>
+        <p>Las 24hs</p>
+      </div>
+      <div class="footer-right">
+        <p><strong>© Copyright 2021 | Todos los derechos reservados electroHogar.com.
+           electroHogar S.A | Capital Federal | Argentina </strong></p>
+           <br>
+           <p class="derechos">Las fotos son a modo ilustrativo. La venta de cualquiera de los productos 
+             publicados está sujeta a la verificación de stock. Los precios online y 
+             los planes de financiación para los productos presentados/publicados en 
+             www.electroHogar.com.ar son válidos exclusivamente para la compra vía 
+             internet en las páginas antes mencionadas.Las especificaciones técnicas 
+             y descripciones están sujetas a cambios sin previo aviso.</p>
+      </div>
+    </div>
+  </footer>
 </body>
-

@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
 }
+
 .logo{
     display: none;
 }
@@ -40,6 +41,15 @@
 .buscador{
     width: 75%;
 }
+
+/* Main*/
+
+.main-product{
+    position:relative;
+    display:block;
+}
+/* Main - top*/
+
 .main-header-right a{
     color : rgb(10,74,173);
     font-size: 40px;
@@ -51,14 +61,11 @@
 .main-product-principal{
     display: flex;
     flex-direction: row;
-    height: 100%;
     justify-items: center;
 }
 .main-right-top{
         display: block;
-        height: 100%;
 }
-
 
 .condiciones-pago{
     display: flex;
@@ -73,8 +80,13 @@
 
 .price-wrapper{
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
+
+.planes-cuotas{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-top: 4px;
     margin-bottom: 10px;
 }
@@ -95,6 +107,33 @@
     width: 100%;
 }
 
+/* Descripcion y especificaciones*/
+
+
+.table-specifications {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    padding:5px;
+    width: 100%;
+    border:1px solid #C0C0C0;
+    border-collapse:collapse;
+}
+    
+
+}
+.table-specifications th {
+    border:1px solid #C0C0C0;
+    padding:5px;
+    background:#F0F0F0;
+}
+.table-specifications td {
+    border:1px solid #C0C0C0;
+    padding:5px;
+
+}
+
+/* Footer*/
 
 .footer{
     padding-top: 20px;
