@@ -1,8 +1,0 @@
-Logotipo --> Guille
-Color Azul --> Ver colores de la página https://1000marcas.net/
-
-Diseño y Maqueta
-Home --> Juan Manuel
-Carrito de compras --> Guille
-Formulario de Registro/Formulario de Ingreso --> Juan Manuel
-Detalle del producto --> Emiliano Cucit
