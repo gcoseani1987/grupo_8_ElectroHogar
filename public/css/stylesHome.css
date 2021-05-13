@@ -107,6 +107,7 @@
     border: 1px black solid;
     background-color: rgb(217,217,217);
     border-radius: 50%;
+    box-shadow: 0 0 10px;
 }
 .venta img{ 
     width: 100%;
@@ -140,13 +141,13 @@ article {
 }
 
 .footer{
-    padding-top: 20px;
+    padding-top: 10px;
     background-color: rgb(217,217,217);
     text-align: center;
     border-top: white 2px solid ;
 }
 .logo-footer{
-    width: 70%;
+    width: 50%;
 }
 .redes{
     display: flex;
@@ -169,15 +170,18 @@ article {
 }
 
 .footer-center{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-top: white 2px solid;
     border-bottom: white 2px solid;
     padding: 10px 0;
 }
+.footer-right p{
+    font-size: 12px;
+}
 
 .derechos{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 @media(min-width:480px){
@@ -199,7 +203,7 @@ article {
         flex-wrap: wrap;
     }
     .producto {
-        flex-basis: calc(48% - 10px);
+        flex-basis: calc(47% - 10px);
     }
 }
 
@@ -226,6 +230,7 @@ article {
     .producto {
         flex-basis: calc(32% - 10px);
     }
+
     .footer-center{
         padding: 0;
         margin: 0;

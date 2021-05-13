@@ -29,6 +29,25 @@ app.get('/registro', (req, res) => {
     res.sendFile(path.join(__dirname, './views/registro.html'));
 });
 
-app.get('/auxiliar', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/auxiliar.html'));
+app.get('/categoria/aires', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/categoriaAire.html'));
 });
+
+app.get('/categoria/hornos', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/categoriaHorno.html'));
+});
+
+app.get('/categoria/heladeras', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/categoriaHeladera.html'));
+});
+
+app.get('/categoria/lavavajillas', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/categoriaLavavajilla.html'));
+});
+
+app.get('/categoria/televisores', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/categoriaTele.html'));
+});
+
+
+
