@@ -172,8 +172,8 @@
     background-color: white;
     width: 25%;
     height: 90%;
-    margin:5px;
-    padding: 5px;
+    margin:2px;
+    padding: 1px;
 }
 
 .carrito-main-right-desc{
@@ -182,8 +182,8 @@
     flex-direction: column;
     border: 1px solid black;
     height: auto;
-    margin:5px;
-    padding: 5px;
+    margin:2px;
+    padding: 1px;
     justify-content: flex-start;
     align-items: center ;
 }
@@ -201,30 +201,42 @@
 .codigo-descuento-insert{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     font-size: 12px;
     border: 1px solid black;
     height: auto;
-    margin:2px;
+    margin:5px;
     padding: 1px;
 }
 
 .codigo{
     font-size: 12px;
     border: 1px solid black;
-    width: 70%;
+    width: 63%;
     height: auto;
-    margin:1px;
-    padding: 1px;
+    margin-right:5px;
+    padding: 2px;
 }
+
+.input-discount{
+    font-size: 12px;
+    border: 1px solid black;
+    height: auto;
+    width: 95%;
+    margin:5px;
+    padding: 2px;
+}
+
 
 .aplicar-codigo{
     font-size: 12px;
     border: 1px solid black;
-    width: 30%;
+    width: 33%;
     height: auto;
-    margin:1px;
-    padding: 1px;
+    margin-left:5px;
+    padding: 2px;
 }
 
 .carrito-main-right-subtotal{
@@ -258,13 +270,23 @@
     justify-content: center;
     background-color: white;
     align-items: center;
-    text-align: center;
     border: 1px solid black;
     height: 10%;
     margin:5px;
     padding: 5px;
 }
 
+.finalizarcompra-button{
+    margin:10px;
+    width:90%;
+    height: 90%;
+}
+
+.continuarcomprando-button{
+    margin:10px;
+    width:90%;
+    height: 90%;
+}
 
 
 

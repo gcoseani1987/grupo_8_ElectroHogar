@@ -35,27 +35,39 @@
             <p>SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV</p>
           </div>
           <div class='precio-producto'>$65.000</div>
-          <div class='delete-producto'>Eliminar </div>
+          <div class='delete-producto'>
+            <button class="eliminar-button" type="delete">Eliminar</button>
+          </div>
         </div>
       </div>
       <div class='carrito-main-right'>
         <div class='carrito-main-right-desc'>
           <div class='codigo-descuento-text'>Tenés código de descuento</div>
           <div class='codigo-descuento-insert'>
-            <div class='codigo'>#########</div>
-            <div class='aplicar-codigo'>Aplicar</div>
+            <div class='codigo'>
+              <input class="input-discount" type="value" name="discount" required>
+            </div>
+            <div class='aplicar-codigo'>
+              <button class="aplicar-button" type="submit">Ingresar</button>
+            </div>
           </div>
         </div>
         <div class='carrito-main-right-subtotal'>
           <div class='subtotal-text'>Subtotal</div>
-          <div class='subtotal-monto'>$$$$$$</div>
+          <div class='subtotal-monto'>65.000</div>
         </div>
         <div class='carrito-main-right-total'>
           <div class='total-text'>Total</div>
-          <div class='total-monto'>$$$$$$</div>
+          <div class='total-monto'>65.000</div>
         </div>
-        <div class='carrito-main-right-botton1'>Finalizar compra</div>
-        <div class='carrito-main-right-botton1'>Continuar comprado</div>
+        <div class='carrito-main-right-botton1'>
+          <button class="finalizarcompra-button" type="submit">Finalizar compra</button>
+        </div>
+        <div class='carrito-main-right-botton1'>
+          <form action="/">
+            <input type="submit" value="Continuar comprando" class='continuarcomprando-button' />
+        </form>
+        </div>
       </div>
     </div>
   </div>
