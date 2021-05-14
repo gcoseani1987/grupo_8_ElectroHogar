@@ -21,6 +21,7 @@
     position: fixed;
     z-index: 10;
     justify-content: space-between;
+    top: 0;
 }
 .user{
     display: flex;
@@ -47,6 +48,44 @@
 .main-header-center-left i{
     color: rgb(10,74,173);
 }
+
+.cat-aire {
+    margin-top: 70px;
+}
+
+.productos img{
+    background-color: rgb(217,217,217);
+    width: 100%;
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productos article {
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+    margin: 10px;
+}
+
+.productos p{
+    text-align: center;
+}
+
+
+.precio{
+    font-size: 18px;
+    color: rgb(10,74,173);
+    font-weight: bold;
+    text-align: center;
+}
+.modelo{
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+
 
 .footer{
     padding-top: 10px;
@@ -108,6 +147,13 @@
         padding-right: 20px;
         padding-left: 20px;
     }
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productos article{
+        flex-basis: calc(47% - 10px);
+    }
 }
 @media(min-width:769px){
     .main-header{
@@ -122,6 +168,14 @@
         padding-right: 90px;
         padding-left: 240px;
     }
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productos article{
+        flex-basis: calc(32% - 10px);
+    }
+
     .footer-center{
         padding: 0;
         margin: 0;
@@ -143,6 +197,13 @@
 
 }
 @media(min-width:1200px){
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .productos article{
+        flex-basis: calc(24% - 10px);
+    }
     .footer-right{
         border-top: 0;
         margin-top: -20px;
