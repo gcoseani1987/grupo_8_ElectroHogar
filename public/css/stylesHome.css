@@ -85,10 +85,12 @@
     width: 100%;
     border: black 2px solid;
     text-align: center;
+    font-size: 14px;
 }
 
 .promo{
     display: none;
+    background: linear-gradient(to bottom, rgb(10,74,173), white)
 }
 
 .categorias{
@@ -126,6 +128,7 @@ article {
 
 .text{
     font-size: 25px;
+    color: rgb(10,74,173);
 }
 .precio{
     font-size: 18px;
