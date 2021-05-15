@@ -41,8 +41,8 @@ app.get('/categoria/heladeras', (req, res) => {
     res.sendFile(path.join(__dirname, './views/categoriaHeladera.html'));
 });
 
-app.get('/categoria/lavavajillas', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/categoriaLavavajilla.html'));
+app.get('/categoria/lavarropas', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/categoriaLavarropa.html'));
 });
 
 app.get('/categoria/televisores', (req, res) => {

@@ -73,7 +73,7 @@
 }
 
 .promo i{
-    color: rgb(10,74,173);
+    color: black;
 }
 
 .promo{
@@ -129,8 +129,9 @@ article {
     }
 
 .text{
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(10,74,173);
+    margin-left: 15px;
 }
 .precio{
     font-size: 18px;
