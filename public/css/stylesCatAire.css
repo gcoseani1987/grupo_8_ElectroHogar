@@ -67,6 +67,10 @@
     align-items: center;
 }
 
+.productos article:hover {
+    box-shadow: 0px 0px 10px rgb(10,74,173);
+}
+
 .productos p{
     text-align: center;
 }
