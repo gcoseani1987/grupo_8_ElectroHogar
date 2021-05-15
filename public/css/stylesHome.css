@@ -83,7 +83,7 @@
 
 .promo p{
     width: 100%;
-    border: black 2px solid;
+    border: rgb(182, 182, 182) 1px solid;
     text-align: center;
     font-size: 14px;
 }
@@ -106,7 +106,6 @@
 .categorias img{
     width: 90%;
     margin-top: 20px;
-    border: 1px black solid;
     background-color: rgb(217,217,217);
     border-radius: 50%;
     box-shadow: 5px 5px 10px;

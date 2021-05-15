@@ -9,11 +9,10 @@
 
 .container{
     display:flex;
-    background-color: burlywood;
     flex-direction: column;
     padding: 10px;
     border: 2px solid black;
-    height: 1000px;
+    height: 1300px;
 }
 
 /*Container header*/
@@ -26,8 +25,7 @@
     align-items: center;
     margin: 5px;
     padding: 5px;
-    border: 1px solid black;
-    height: 10%;
+    height: 5%;
 }
 
 .logo{
@@ -57,11 +55,9 @@
 
 .carrito-compras{
     display:flex;
-    background-color: burlywood;
     flex-direction: column;
     justify-content: center;
     padding: 5px;
-    border: 1px solid black;
     height: 70%;
 }
 
@@ -69,6 +65,8 @@
     align-self: left;
     margin: 5px;
     padding: 5px;
+    background: linear-gradient(rgb(125, 163, 221), rgb(138, 184, 252));
+    width: 100%;
 }
 
 /*Carrito container*/
@@ -76,9 +74,7 @@
 .carrito-main{
     display: flex;
     flex-direction: row;
-    background-color: green;
     justify-content: space-between;
-    border: 1px solid gray;
     height: 100%;
     margin:5px;
 }
@@ -88,7 +84,6 @@
 .carrito-main-left{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     width: 75%;
     height: 90%;
     margin:10px;
@@ -100,19 +95,18 @@
 .carrito-main-left-productA{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
     justify-content: space-between;
     align-items: center;
     width: 99%;
-    height: 30%;
+    height: 20%;
     margin:5px;
     padding: 1px;
+    border-bottom: 1px solid gray;
 }
 
 .imagen-producto{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
     width: 20%;
     margin:5px;
     padding: 1px;
@@ -127,7 +121,6 @@
 
 .descripcion-producto{
     flex-direction: row;
-    border: 1px solid black;
     background-color: white;
     width: 25%;
     height: auto;
@@ -143,7 +136,6 @@
 
 .precio-producto{
     flex-direction: row;
-    border: 1px solid black;
     width: auto;
     height: auto;
     margin:5px;
@@ -152,14 +144,15 @@
 }
 
 
-.delete-producto{
+.eliminar-button{
     flex-direction: row;
-    border: 1px solid black;
     background-color: white;
+    color: blue;
     width: 15%;
     margin:5px;
     padding: 5px;
     text-align: center;
+    border: none;
 }
 
 
@@ -168,7 +161,6 @@
 
 .carrito-main-right{
     flex-direction: row;
-    border: 1px solid black;
     background-color: white;
     width: 25%;
     height: 90%;
@@ -180,7 +172,6 @@
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     height: auto;
     margin:2px;
     padding: 1px;
@@ -191,7 +182,6 @@
 
 .codigo-descuento-text{
     font-size: 12px;
-    border: 1px solid black;
     height: auto;
     margin:5px;
     padding: 5px;
@@ -205,7 +195,6 @@
     align-items: center;
     width: 100%;
     font-size: 12px;
-    border: 1px solid black;
     height: auto;
     margin:5px;
     padding: 1px;
@@ -213,7 +202,6 @@
 
 .codigo{
     font-size: 12px;
-    border: 1px solid black;
     width: 63%;
     height: auto;
     margin-right:5px;
@@ -222,7 +210,6 @@
 
 .input-discount{
     font-size: 12px;
-    border: 1px solid black;
     height: auto;
     width: 95%;
     margin:5px;
@@ -232,60 +219,104 @@
 
 .aplicar-codigo{
     font-size: 12px;
-    border: 1px solid black;
     width: 33%;
     height: auto;
     margin-left:5px;
     padding: 2px;
 }
 
-.carrito-main-right-subtotal{
+.box-compra{
     display: flex;
-    background-color: white;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
     height: auto;
     margin:5px;
     padding: 5px;
+    background: linear-gradient(rgb(196, 197, 199), rgb(230, 230, 230));
+}
+.carrito-main-right-subtotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    margin:5px;
 }
 
+.subtotal-text{
+    font-size: 15px;
+    margin-right: 27px;
+    text-align: left;
+}
+
+.subtotal-monto{
+    text-align: right;
+}
+
+
+.total-text{
+    font-size: 20px;
+    margin-right: 35px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.total-monto{
+    text-align: right;
+}
 
 .carrito-main-right-total{
     display: flex;
     flex-direction: row;
-    background-color: white;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
     height: auto;
     margin:5px;
     padding: 5px;
+
 }
 
 
 .carrito-main-right-botton1{
     display: flex;
     justify-content: center;
-    background-color: white;
     align-items: center;
-    border: 1px solid black;
     height: 10%;
     margin:5px;
     padding: 5px;
+
+}
+
+
+.carrito-main-right-botton2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    margin:5px;
+    padding: 5px;
+    border-color: rgb(19, 100, 221);
+    border: 1px;
 }
 
 .finalizarcompra-button{
+    color: white;
     margin:10px;
     width:90%;
-    height: 90%;
+    height: 80%;
+    border: none;
+    white-space: normal;
+    background: rgb(19, 100, 221);
 }
 
 .continuarcomprando-button{
+
+    background-color: white;
+    color: black;
     margin:10px;
     width:90%;
-    height: 90%;
+    height: 80%;
+    white-space: normal;
 }
 
 
@@ -294,18 +325,83 @@
 
 .recomendaciones-banner{
     display:flex;
-    background-color: burlywood;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
     margin-top:5px ;
     width: 100%;
-    height: 15%;
+    height: 20%;
     border: 1px solid black;
+    line-height:20%
 }
 
 .recomendacion{
-    margin:5px ;
-    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top:5px ;
+    width: 32.5%;
     height:95%;
-    border: 1px solid black;
     margin-top:5px;
+}
+
+.recomendacion-producto{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border: solid black 1px;
+    height: 75%;
+}
+
+
+.recomendación-producto-photo{
+    display: flex;
+    justify-content: left;
+    align-self: center;
+    height: 80%;
+    width: 35%;
+}
+
+.recomendación-producto-photo img{
+    padding: 2px;
+    align-self: center;
+    height: 75px;
+    width: 75px;
+}
+
+.recomendación-producto-descripcion{
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    border: black solid 1px;
+    margin: 2px;
+    width: 65%;
+}
+
+
+
+.recomendacion-agregar-carrito{
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    align-items: center;
+    border: 1px;
+    margin-left: 90px;
+}
+
+
+.agregaralcarrito-button{
+    color: white;
+    background-color: rgb(19, 100, 221);
+    padding: 5px;
+}
+
+/*Footer*/
+
+
+.logo-footer{
+    background-color: white;
+    margin-top: 25px;
+    height: auto;
+    width: 200px;
 }
