@@ -109,7 +109,8 @@
     border: 1px black solid;
     background-color: rgb(217,217,217);
     border-radius: 50%;
-    box-shadow: 0 0 10px;
+    box-shadow: 5px 5px 10px;
+    transition: all 0.8s;
 }
 .venta img{ 
     width: 100%;
@@ -119,12 +120,13 @@
 
 article:hover{
     background-color: rgb(217,217,217);
-    box-shadow: 0px 0px 10px rgb(10,74,173);
+    box-shadow: 5px 5px 10px rgb(10,74,173);
 }
 
 article {
-        box-shadow: 0px 0px 10px rgb(100,100,100);
+        box-shadow: 5px 5px 10px rgb(100,100,100);
         margin: 10px;
+        transition: all 0.8s;
     }
 
 .text{

@@ -66,15 +66,21 @@
     text-align: center;
 }
 
-
 .login-button{
-    background-color: rgb(10,74,173);
+    background-color: rgb(217,217,217);
     border: none;
-    color: white;
+    color: black;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
-    }
+    box-shadow: 5px 5px 10px;
+    transition: all 0.7s;
+}
+
+.login-button:hover{
+    background-color: rgb(10,74,173);
+    color: white;
+}
 
 .forgot a{
     color: rgb(10,74,173);
