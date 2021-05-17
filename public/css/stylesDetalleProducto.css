@@ -31,21 +31,12 @@
     margin-top: 10px;
 }
 
-.main-header-center-left i{
-    color: rgb(10,74,173);
-}
-
 .main-header-center-right ul{
     list-style: none;
 }
 .main-header-center-right a{
     text-decoration: none;
     color: rgb(10,74,173);
-}
-
-.main-header-right a{
-    color : rgb(10,74,173);
-    font-size: 40px;
 }
 .buscador{
     width: 75%;
@@ -261,6 +252,7 @@
     margin: 10px;
 }
 }
+
 @media(min-width:769px){
     .main-header{
         display: flex;
