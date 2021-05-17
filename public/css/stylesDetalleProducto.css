@@ -1,10 +1,10 @@
+  
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 .logo{
     display: none;
 }
@@ -30,7 +30,6 @@
     margin-left: -30px;
     margin-top: 10px;
 }
-
 .main-header-center-right ul{
     list-style: none;
 }
@@ -41,39 +40,61 @@
 .buscador{
     width: 75%;
 }
+.main-header-right a{
+    color : rgb(10,74,173);
+    font-size: 40px;
+}
+.main-header-center-left i{
+    color: rgb(10,74,173);
+}
+
+.buscador{
+    width: 75%;
+}
 
 /*Main*/
 
 .article{
     position:relative;
-    padding-top: 70px;
+    padding-top: 80px;
 } 
+
 
 .article-top{
     display: flex;
     flex-direction: row;
-    padding-top: 10px;
     justify-content: space-around;
-    margin: 10px;
+    align-items:center;
 } 
 
-.article-top-left{
-    margin: 40px;
-}
+.article-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-top: 5px;
+} 
 
-.article-top-left-title{
+
+.article-title{
+    position:relative;
+    margin-top: 10px;
     font-size: 15px;
     width: 80%;
+    margin-left: 15px;
 }
 
+
 .article-container-images{
-    width: 500px;
-    height: 500px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .article-container-images img{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .box-condiciones-pago{
@@ -87,7 +108,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    width: 70%;
+    width: 100%;
 }
 
 .tarjeta-cuotas{
@@ -97,12 +118,13 @@
 .box-precio{
     text-align: left;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 30px;
 }
 
 
 .box-comprar{
+    font-size: 25px;
     margin-right: 20px;
     margin-top: 10px;
     padding: 13px 18px;
@@ -113,7 +135,7 @@
     background-color: rgb(3, 0, 153);
     text-decoration: none;
     height: 50%;
-    width: 80%;
+    width: 100%;
 }
 
 
@@ -152,8 +174,6 @@
     margin-left: 30px;
     margin-bottom: 10px;
 }
-
-
 
 
 .table-specifications {
@@ -251,6 +271,70 @@
     padding-top: 10px;
     margin: 10px;
 }
+.article-title{
+    position:relative;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 70%;
+    margin-left: 100px;
+}
+.article-container-images{
+    margin: 0px;
+    padding: 0px;
+}
+.article-container-images img{
+    width: 300px;
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.article-descripcion{
+    margin-left: 100px;
+}
+
+.descripcion-title{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.table-title{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+.table-specifications {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    padding:10px;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    border:1px solid #C0C0C0;
+    border-collapse:collapse;
+}
+
+    
+.table-specifications th {
+    border:1px solid #C0C0C0;
+    padding:5px;
+    background:#F0F0F0;
+}
+
+.table-specifications td {
+    border:1px solid #C0C0C0;
+    padding:5px;
+}
+
+.product-specification {
+    font-weight: bold;
+}
 }
 
 @media(min-width:769px){
@@ -284,7 +368,6 @@
         border-top: white 2px solid;
         padding-top: 20px;
     }
-
 }
 @media(min-width:1200px){
     .footer-right{
@@ -302,5 +385,11 @@
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+    }
+    .article-container-images img{
+        width: 450px;
+        height: 450px;
+        margin: 0px;
+        padding: 0px;
     }
 }
