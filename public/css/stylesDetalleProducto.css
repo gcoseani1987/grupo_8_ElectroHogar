@@ -1,4 +1,5 @@
-  
+/*HEADER*/
+
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -20,6 +21,8 @@
     padding: 10px;
     display: flex;
     position: fixed;
+    top: 0;
+    right: 0;
     z-index: 10;
     justify-content: space-between;
 }
@@ -47,131 +50,83 @@
 .main-header-center-left i{
     color: rgb(10,74,173);
 }
-
-.buscador{
-    width: 75%;
-}
-
-/*Main*/
-.article-top-right{
-    border: 1px black solid;
-    padding: 40px;
-}
+/*MAIN*/
 .article{
-    position:relative;
-    padding-top: 80px;
-} 
-
-
-.article-top{
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-} 
-
-.article-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 10px;
-    margin-top: 5px;
-} 
-
-
+}
 .article-title{
-    position:relative;
-    margin-top: 10px;
-    font-size: 15px;
-    width: 80%;
     margin-left: 15px;
+    text-align: left;
+    color: rgba(10, 23, 43, 0.7);
 }
-
-
-.article-container-images{
-    margin: 0px;
-    padding: 0px;
-}
-
-.article-container-images img{
-    width: 450px;
-    height: 450px;
-    margin: 0px;
-    padding: 0px;
-}
-
-.box-condiciones-pago{
-    display: flex;
+.article-top {
+    display: flex; 
     flex-direction: column;
-    justify-content: center;
-    border: solid 2px rgb(128, 120, 120);
-    padding: 10px;
-}
-
-.tarjetas{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    margin: 20px 10px;
 }
-
-.tarjeta-cuotas{
-    font-size: 20px;
-    margin-left: 10px;
+.article-top-right {
+    padding: 40px;
+    margin: 15px;
+    border: black 2px solid;
+    box-shadow: 5px 5px 10px rgb(10,74,173);
+}
+.article-top-left{
+    padding: 20px;
+    margin: 15px;
+    border: black 2px solid;
+    box-shadow: 5px 5px 10px rgb(10,74,173);
+    text-align: left;
 }
 .box-precio{
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 30px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 800;
+    color:rgb(10,74,173);
 }
-
-
+.box-tarjetas{
+    margin:10px 0;
+}
+.tarjeta-cuotas{
+    font-weight: 800;
+}
 .box-comprar{
-    font-size: 25px;
-    margin-right: 20px;
-    margin-top: 10px;
-    padding: 13px 18px;
-    font-weight: bold;
-    border: 0px;
-    color: white;
     text-align: center;
-    background-color: rgb(3, 0, 153);
-    text-decoration: none;
-    height: 50%;
-    width: 70%;
-    align-self: center;
 }
-
-
 .comprar-button{
-    margin-right: auto;
-    font-weight: bold;
-    border: 0px;
-    color: white;
+    background-color: rgb(217,217,217);
     text-align: center;
-    background-color: rgb(3, 0, 153);
-    text-decoration: none;
-    height: 50%;
-    width: 50%;
-}
-
-.article-bottom{
-    display: flex;
-    flex-direction: column;
-    width: 88%;
-}
-
-.article-descripcion{
-    margin-left: 30px;
-}
-
-.descripcion-title{
+    border: none;
+    color: black;
     font-size: 20px;
-    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(10,74,173);
+    transition: all 0.7s;
 }
 
+.comprar-button:hover{
+    background-color: rgb(10,74,173);
+    color: white;
+}
+.article-bottom{
+    margin: 20px 15px;
+}
+.article-descripcion{
+    margin: 10px 0;
+    padding: 5px;
+    border: black 2px solid;
+}
+.descripcion-title{
+    margin: 10px 0;
+    border-bottom: black 2px solid;
+}
+.article-table{
+    margin: 30px 0;
+    padding: 0;
+}
 .table-title{
     font-size: 20px;
     margin-top: 10px;
@@ -208,10 +163,7 @@
 .product-specification {
     font-weight: bold;
 }
-
-
-/* Footer*/
-
+/*FOOTER*/
 .footer{
     padding-top: 10px;
     background-color: rgb(217,217,217);
@@ -226,21 +178,17 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-
 .footer-left2 ul{
     list-style: none;
 }
-
 .footer-left2 a{
     text-decoration: none;
     color: rgb(10,74,173);
 }
-
 .footer-left2 i{
     font-size: 40px;
     padding:10px 0 ;
 }
-
 .footer-center{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -251,7 +199,6 @@
 .footer-right p{
     font-size: 12px;
 }
-
 .derechos{
     font-size: 10px;
 }
@@ -268,80 +215,10 @@
         padding-right: 20px;
         padding-left: 20px;
     }
-    .article-top{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    .article-top-right img{
+        width: 300px;
+    }
 }
-.article-top-right{
-    border: none;
-}
-.article-title{
-    position:relative;
-    margin-top: 10px;
-    font-size: 15px;
-    width: 70%;
-    margin-left: 100px;
-}
-.article-container-images{
-    margin: 0px; 
-    padding: 0px;
-}
-.article-container-images img{
-    width: 300px;
-    height: 300px;
-    margin: 0px;
-    padding: 0px;
-}
-
-.article-descripcion{
-    margin-left: 100px;
-}
-
-.descripcion-title{
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0px;
-}
-
-.table-title{
-    font-size: 20px;
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-bottom: 10px;
-}
-
-.table-specifications {
-    display: table;
-    border-collapse: collapse;
-    width: 100%;
-    padding:10px;
-    margin-left: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 80%;
-    border:1px solid #C0C0C0;
-    border-collapse:collapse;
-}
-
-    
-.table-specifications th {
-    border:1px solid #C0C0C0;
-    padding:5px;
-    background:#F0F0F0;
-}
-
-.table-specifications td {
-    border:1px solid #C0C0C0;
-    padding:5px;
-}
-
-.product-specification {
-    font-weight: bold;
-}
-}
-
 @media(min-width:769px){
     .main-header{
         display: flex;
@@ -354,6 +231,21 @@
     .main-header-center-right{
         padding-right: 90px;
         padding-left: 240px;
+    }
+    .article-title{
+        border-bottom: solid 2px rgba(88, 84, 84,0.7) ;
+    }
+    .article-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .article-top-right{
+        border: none;
+        box-shadow: none;
+    }
+    .article-top-right img{
+        width: 350px;
     }
     .footer-center{
         padding: 0;
@@ -375,8 +267,8 @@
     }
 }
 @media(min-width:1200px){
-    .product-image {
-         border-bottom: white 2px solid;
+    .article-top-right img{
+        width: 450px;
     }
     .footer-right{
         border-top: 0;
@@ -393,11 +285,5 @@
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-    }
-    .article-container-images img{
-        width: 450px;
-        height: 450px;
-        margin: 0px;
-        padding: 0px;
     }
 }

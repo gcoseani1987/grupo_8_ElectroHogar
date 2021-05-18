@@ -192,11 +192,11 @@
     margin: 15px;
     padding: 20px;
     text-align: center;
-    box-shadow: 5px 5px 10px blue;
+    box-shadow: 5px 5px 10px rgb(100, 100, 100);
     transition: all 0.8s;
 }
 .recomendacion:hover{
-    box-shadow: 5px 5px 10px rgb(54, 184, 112);
+    box-shadow: 10px 10px 10px rgb(54, 184, 112);
 }
 .recomendación-producto-descripcion{
     font-weight: bold;
