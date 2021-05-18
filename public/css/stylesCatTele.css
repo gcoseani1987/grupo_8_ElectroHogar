@@ -54,8 +54,9 @@
 }
 
 .cat-aire h2{
+    margin-left: 15px;
     font-size: 30px;
-    color: rgb(187, 54, 54);
+    color: rgb(54, 184, 112);
 }
 
 .productos img{
@@ -70,7 +71,7 @@
 }
 
 .productos article:hover {
-    box-shadow: 5px 5px 10px rgb(187, 54, 54);
+    box-shadow: 5px 5px 10px rgb(54, 184, 112);
 }
 
 .productos p{

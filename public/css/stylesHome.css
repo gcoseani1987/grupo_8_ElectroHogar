@@ -78,7 +78,9 @@
     display: flex;
     font-weight: 600;
     display: none;
-    background-color: rgb(187, 54, 54)
+    margin-top: -5px;
+    background: linear-gradient(to bottom, rgb(54, 184, 112), white);
+
 }
 
 .promo p{
@@ -94,6 +96,7 @@
     display: flex;
     width: 100%;
     text-align: center;
+    justify-content: space-around;
 }
 .categorias img:hover{
     background-color: rgb(10,74,173);
@@ -103,8 +106,7 @@
     margin-top: 20px;
     background-color: rgb(217,217,217);
     border-radius: 50%;
-    box-shadow: 5px 5px 10px;
-    box-shadow: 5px 5px 10px rgb(187, 54, 54);
+    box-shadow: 5px 5px 10px rgb(54, 184, 112);
     transition: all 0.8s;
 }
 .venta img{ 
@@ -115,8 +117,7 @@
 
 article:hover{
     background-color: rgb(217,217,217);
-    box-shadow: 5px 5px 10px rgb(10,74,173);
-    box-shadow: 5px 5px 10px rgb(187,54,54);
+    box-shadow: 5px 5px 10px rgb(54, 184, 112);
 }
 
 article {
@@ -126,13 +127,13 @@ article {
     }
 
 .text1{
-    font-size: 24px;
+    font-size: 30px;
     color: rgb(10,74,173);
+    margin-left: 15px;
 }
 .text{
     font-size: 30px;
-    color: rgb(10,74,173);
-    color: rgb(187,54,54);
+    color:rgb(54, 184, 112);
     margin-left: 15px;
 }
 .precio{
