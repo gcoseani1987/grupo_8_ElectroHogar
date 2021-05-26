@@ -31,7 +31,6 @@ app.get('/registro', (req, res) => {
 
 /*Categorías*/
 
-const categoriasRoutes  = require('categoriasRoutes');
-const categoriasController  = require('categoriasController');
+const categoriasRoutes  = require('./routes/categorias');
 
 app.use('/categoria', categoriasRoutes);

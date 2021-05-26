@@ -3,8 +3,8 @@ const path = require('path');
 
 const categoriasController = {
     categoria : (req, res) =>{
-        res.Sendfile(path.resolve('../views/categoria.html'))
-    }
+        res.Sendfile(path.resolve('views/categoria.html'))
+    },
 };
 
 module.exports = categoriasController
