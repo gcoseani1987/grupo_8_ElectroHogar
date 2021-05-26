@@ -1,9 +1,10 @@
 const express = require('express');
+const path = require('path');
 const categoriasRoutes = express.Router();
 
-const electrohogarController = require('../controllers/categoriasController')
+const categoriasController = require(path.resolve(__dirname,'../controllers/categoriasController'))
 
-categoriasRoutes.get('/categoria', electrohogarController.categoria)
+categoriasRoutes.get('/categoria', categoriasController.categoria)
 
 module.exports = categoriasRoutes
 
