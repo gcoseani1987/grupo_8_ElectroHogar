@@ -29,25 +29,9 @@ app.get('/registro', (req, res) => {
     res.sendFile(path.join(__dirname, './views/registro.html'));
 });
 
-app.get('/categoria/aires', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/categoriaAire.html'));
-});
+/*Categorías*/
 
-app.get('/categoria/hornos', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/categoriaHorno.html'));
-});
+const categoriasRoutes  = require('categoriasRoutes');
+const categoriasController  = require('categoriasController');
 
-app.get('/categoria/heladeras', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/categoriaHeladera.html'));
-});
-
-app.get('/categoria/lavarropas', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/categoriaLavarropa.html'));
-});
-
-app.get('/categoria/televisores', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/categoriaTele.html'));
-});
-
-
-
+app.use('/categoria', categoriasRoutes);
