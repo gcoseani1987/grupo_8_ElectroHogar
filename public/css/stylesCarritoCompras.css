@@ -8,6 +8,7 @@
     display: none;
 
 }
+
 .logo-mini {
     height: 70px;
     border-left-width: 30px;
@@ -54,11 +55,14 @@
     margin-top: 20px;
     padding: 15px;
     border: black 2px solid;
-    box-shadow: 2px 2px 5px rgba(12, 39, 80,0.9);
+    box-shadow: 2px 2px 5px rgb(54, 184, 112);;
 }
 .delete-button{
     border: none;
     font-size: 1.25em;
+}
+.delete-button:hover{
+    color:rgb(194, 40, 40);
 }
 .product-price{
     font-weight: bold;
@@ -69,7 +73,7 @@
     margin-top: 20px;
     padding: 15px;
     border: black 2px solid;
-    box-shadow: 2px 2px 5px rgb(10,74,173);
+    box-shadow: 2px 2px 5px rgb(54, 184, 112);;
 }
 .codigo-descuento-text{
     font-weight: 600;
@@ -103,13 +107,47 @@
     color: black;
 }
 .aplicar-button{
+    background-color: rgb(217,217,217);
     border: none;
-    height: 2em;
-    margin: 5px;
-    padding: 3px;
-    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px;
+    transition: all 0.7s;
+}
+.finalizarcompra-button{
+    background-color: rgb(217,217,217);
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px;
+    transition: all 0.7s;
+}
+.continuarcomprando-button{
+    background-color: rgb(217,217,217);
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px;
+    transition: all 0.7s;
+}
+
+.aplicar-button:hover{
+    background-color: rgb(10,74,173);
     color: white;
-    background-color: rgba(12, 39, 80,0.9)   
+}
+.finalizarcompra-button:hover{
+    background-color: rgb(10,74,173);
+    color: white;
+}
+.continuarcomprando-button:hover{
+    background-color: rgb(10,74,173);
+    color: white;
 }
 .carrito-main-right-total{
     display: flex;
@@ -119,10 +157,14 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
-.acomodar-botones{
+.acomodar-botones {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 1em;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 .finalizarcompra-button,
 .continuarcomprando-button{
@@ -133,6 +175,9 @@
     font-weight: 400;
     color: white;
     background-color: rgba(12, 39, 80,0.9)  
+}
+.agregaralcarrito-button:hover{
+    background-color:rgb(10,74,173) ;
 }
 .recomendaciones{
     font-size: 18px;
@@ -147,7 +192,11 @@
     margin: 15px;
     padding: 20px;
     text-align: center;
-    box-shadow: 5px 5px 10px blue;
+    box-shadow: 5px 5px 10px rgb(100, 100, 100);
+    transition: all 0.8s;
+}
+.recomendacion:hover{
+    box-shadow: 10px 10px 10px rgb(54, 184, 112);
 }
 .recomendación-producto-descripcion{
     font-weight: bold;
@@ -217,6 +266,16 @@
     .container-header{
         align-items: center;
     }
+    .finalizarcompra-button{
+        height: 2em;
+    }
+    .continuarcomprando-button{
+        height: 2em;
+    }
+    .acomodar-botones{
+        display: flex;
+        flex-direction: row;
+    }
 }
 @media(min-width:769px){
     .logo{
@@ -254,9 +313,6 @@
         position: relative;
         top: 150px;
     }
-    .finalizarcompra-button{
-        height: 3em;
-    }
     .recomendaciones-banner{
         display: flex;
         flex-wrap: wrap;
@@ -265,6 +321,9 @@
     }
 } 
 @media(min-width:1200px){
+    .product-image{
+        border: none;
+    }
     .footer-right{
         border-top: 0;
         margin-top: -20px;
