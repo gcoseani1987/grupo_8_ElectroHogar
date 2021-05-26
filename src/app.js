@@ -5,7 +5,7 @@ const path = require('path');
 app.listen(3030, () => console.log('Servidor corriendo'))
 
 
-const publicPath = path.resolve(__dirname, './public');
+const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
 
