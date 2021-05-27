@@ -1,97 +1,73 @@
-/*HEADER*/
-
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-.logo{
-    display: none;
-}
-.logo-mini {
-    width: 40%;
-    border-left-width: 30px;
-    padding: 0 0;
-    margin-left: 0;
-}
+
+/* NO BORRAR*/
 .main-header{
     background-color: rgb(217,217,217);
     width: 100%;
     padding: 10px;
     display: flex;
     position: fixed;
-    top: 0;
-    right: 0;
     z-index: 10;
     justify-content: space-between;
+    top: 0;
 }
-.user{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: -30px;
-    margin-top: 10px;
-}
-.main-header-center-right ul{
-    list-style: none;
-}
-.main-header-center-right a{
-    text-decoration: none;
-    color: rgb(10,74,173);
-}
-.buscador{
-    width: 75%;
-}
-.main-header-right a{
-    color : rgb(10,74,173);
-    font-size: 40px;
-}
-.main-header-center-left i{
-    color: rgb(10,74,173);
-}
-/*MAIN*/
+
+
 .article{
     margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
+
 .article-title{
     margin-left: 15px;
     text-align: left;
     color: rgba(10, 23, 43, 0.7);
 }
+
 .article-top {
     display: flex; 
     flex-direction: column;
     align-items: center;
     margin: 20px 10px;
 }
+
 .article-top-right {
     padding: 40px;
 
 }
+
 .article-top-left{
     padding: 20px;
     margin: 15px;
     border: black 2px solid;
     text-align: center;
 }
+
 .box-precio{
     text-align: center;
     font-size: 1em;
     font-weight: 800;
     color:rgb(10,74,173);
 }
+
 .box-tarjetas{
     margin:10px 0;
 }
+
 .tarjeta-cuotas{
     font-weight: 800;
 }
+
 .box-comprar{
     text-align: center;
 }
+
 .comprar-button{
     background-color: rgb(217,217,217);
     text-align: center;
@@ -108,29 +84,33 @@
     background-color: rgb(10,74,173);
     color: white;
 }
+
 .article-bottom{
     margin: 20px 15px;
 }
+
 .article-descripcion{
     margin: 10px 0;
     padding: 5px;
     border: black 2px solid;
 }
+
 .descripcion-title{
     margin: 10px 0;
     border-bottom: black 2px solid;
 }
+
 .article-table{
     margin: 30px 0;
     padding: 0;
 }
+
 .table-title{
     font-size: 20px;
     margin-top: 10px;
     margin-left: 30px;
     margin-bottom: 10px;
 }
-
 
 .table-specifications {
     display: table;
@@ -144,7 +124,6 @@
     border:1px solid #C0C0C0;
     border-collapse:collapse;
 }
-
     
 .table-specifications th {
     border:1px solid #C0C0C0;
@@ -160,75 +139,14 @@
 .product-specification {
     font-weight: bold;
 }
-/*FOOTER*/
-.footer{
-    padding-top: 10px;
-    background-color: rgb(217,217,217);
-    text-align: center;
-    border-top: white 2px solid ;
-}
-.logo-footer{
-    width: 50%;
-}
-.redes{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.footer-left2 ul{
-    list-style: none;
-}
-.footer-left2 a{
-    text-decoration: none;
-    color: rgb(10,74,173);
-}
-.footer-left2 i{
-    font-size: 40px;
-    padding:10px 0 ;
-}
-.footer-center{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-top: white 2px solid;
-    border-bottom: white 2px solid;
-    padding: 10px 0;
-}
-.footer-right p{
-    font-size: 12px;
-}
-.derechos{
-    font-size: 10px;
-}
+
 @media(min-width:480px){
-    .logo-mini{
-        display: none;
-    }
-    .logo{
-        display: block;
-        width: 150px;
-        padding-top: 10px;
-    }
-    .main-header-center-right{
-        padding-right: 20px;
-        padding-left: 20px;
-    }
     .article-top-right img{
         width: 300px;
     }
 }
+
 @media(min-width:769px){
-    .main-header{
-        display: flex;
-        justify-content: space-between;
-}
-    .main-header-center{
-        flex-grow: 1;
-        padding-left: 50px;
-    }
-    .main-header-center-right{
-        padding-right: 90px;
-        padding-left: 240px;
-    }
     .article-title{
         border-bottom: solid 2px rgba(88, 84, 84,0.7) ;
     }
@@ -244,43 +162,10 @@
     .article-top-right img{
         width: 350px;
     }
-    .footer-center{
-        padding: 0;
-        margin: 0;
-        border-left:0;
-        border-right:0;
-        border-bottom:0;
-        border-top:0;
-    }
-    .main-footer{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .footer-right{
-        border-top: white 2px solid;
-        padding-top: 20px;
-    }
 }
+
 @media(min-width:1200px){
     .article-top-right img{
         width: 450px;
-    }
-    .footer-right{
-        border-top: 0;
-        margin-top: -20px;
-        max-width: 40%;
-    }
-    .footer-center{
-        padding: 0 10px ;
-        margin-right: 20px;
-    }
-    .main-footer{
-        padding-bottom: 20px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
     }
 }
