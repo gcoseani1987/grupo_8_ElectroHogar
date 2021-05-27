@@ -1,0 +1,67 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* NO BORRAR*/
+.main-header{
+    background-color: rgb(217,217,217);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    justify-content: space-between;
+    top: 0;
+}
+
+.create-registro{
+    background-image: url(../images/login.jpg);
+    background-attachment: fixed;
+    opacity: 0.9;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.create-form{
+    width: max-content;
+    margin: auto;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+    padding: 10px;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(10,74,173);
+}
+
+.create-button{
+    background-color: rgb(217,217,217);
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px;
+    transition: all 0.7s;
+}
+
+.create-button:hover{
+    background-color: rgb(10,74,173);
+    color: white;
+}
+
+.input-create{
+    width: 90%;
+}
+
+.description-create{
+    height: 70px;
+    width: 90%;
+}

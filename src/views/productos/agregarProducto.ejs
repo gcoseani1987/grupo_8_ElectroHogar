@@ -1,0 +1,62 @@
+<%- include('../partials/head.ejs')%>
+<link rel="stylesheet" href="/css/stylesAgregarProducto.css">
+<title>Crear producto</title>
+</head>
+<body>
+
+    <%- include('../partials/header.ejs')%>
+
+    <main class="create-registro">
+        <h2 class="titulo">Agregar producto</h2>
+        <section class="create-form">
+            <form action="create" method="POST" class="create">
+                <div class="create-container">
+                    <label>Nombre de producto:</label>
+                    <br>
+                    <br>
+                    <input class="input-create" type="text" name="name" required>
+                    <br>
+                    <br>
+                    <label>Descripción de producto:</label>
+                    <br>
+                    <br>
+                    <textarea name="description" class="description-create"></textarea>
+                    <br>
+                    <br>
+                    <label>Imagen:</label>
+                    <br>
+                    <br>
+                    <input class="input-create" type="file" name="photo" accept="jpg,jpeg" multiple required>
+                    <br>
+                    <br>
+                    <label>Categoría:</label>
+                    <br>
+                    <br>
+                    <select class="input-create" name="category" required>
+                        <option value="televisor">Televisores</option>
+                        <option value="aire">Aires Acondicionados</option>
+                        <option value="lavarropa">Lavarropas</option>
+                        <option value="horno">Hornos</option>
+                        <option value="heladera">Heladeras</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label>Precio:</label>
+                    <br>
+                    <br>
+                    <input class= "input-create" type="number" name="price" placeholder="$50.000" required>
+                </div>
+                <br>
+                <div class="button-container">
+                    <button class="create-button" type="submit">Agregar Producto</button>
+                    <button class="create-button" type="reset">Borrar</button>
+                    </div>
+            </form>
+        </section>
+        <br>
+        <br>
+    </main>
+
+    <%- include('../partials/footer.ejs')%>
+
+</body>
