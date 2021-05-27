@@ -106,7 +106,6 @@
     margin-top: 20px;
     background-color: rgb(217,217,217);
     border-radius: 50%;
-    box-shadow: 5px 5px 10px rgb(54, 184, 112);
     transition: all 0.8s;
 }
 .venta img{ 
@@ -117,7 +116,6 @@
 
 article:hover{
     background-color: rgb(217,217,217);
-    box-shadow: 5px 5px 10px rgb(54, 184, 112);
 }
 
 article {
@@ -133,7 +131,7 @@ article {
 }
 .text{
     font-size: 30px;
-    color:rgb(54, 184, 112);
+    color: rgb(10,74,173);
     margin-left: 15px;
 }
 .precio{

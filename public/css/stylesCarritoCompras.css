@@ -53,9 +53,7 @@
     text-align: center;
     margin: 5px;
     margin-top: 20px;
-    padding: 15px;
-    border: black 2px solid;
-    box-shadow: 2px 2px 5px rgb(54, 184, 112);;
+    padding: 30px;
 }
 .delete-button{
     border: none;
@@ -72,8 +70,7 @@
     margin: 5px;
     margin-top: 20px;
     padding: 15px;
-    border: black 2px solid;
-    box-shadow: 2px 2px 5px rgb(54, 184, 112);;
+    box-shadow: 2px 2px 2px 2px rgb(175, 180, 177);;
 }
 .codigo-descuento-text{
     font-weight: 600;
@@ -92,7 +89,7 @@
     margin-bottom: 15px;
 }
 .aplicar-descuento{
-    margin-top: 10px;
+    margin: 10px;
     font-weight: bold;
     font-size: 1.25em;
 }
@@ -100,7 +97,7 @@
     font-weight: bolder;
     font-size: 1.3em;
     color: green;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 .subtotal-monto{
     text-decoration: line-through;
@@ -115,26 +112,27 @@
     border-radius: 5px;
     box-shadow: 5px 5px 10px;
     transition: all 0.7s;
+    padding: 10px;
 }
 .finalizarcompra-button{
     background-color: rgb(217,217,217);
     border: none;
     color: black;
     font-size: 20px;
-    padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px;
     transition: all 0.7s;
+    padding: 10px;
 }
 .continuarcomprando-button{
     background-color: rgb(217,217,217);
     border: none;
     color: black;
     font-size: 20px;
-    padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px;
     transition: all 0.7s;
+    padding: 10px;
 }
 
 .aplicar-button:hover{
@@ -188,7 +186,6 @@
     font-weight: 900;
 }
 .recomendacion{
-    border: 2px black solid;
     margin: 15px;
     padding: 20px;
     text-align: center;
@@ -196,7 +193,6 @@
     transition: all 0.8s;
 }
 .recomendacion:hover{
-    box-shadow: 10px 10px 10px rgb(54, 184, 112);
 }
 .recomendación-producto-descripcion{
     font-weight: bold;
