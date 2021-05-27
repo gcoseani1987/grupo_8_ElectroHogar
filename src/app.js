@@ -3,34 +3,40 @@ const app = express();
 const path = require('path');
 
 app.listen(3030, () => console.log('Servidor corriendo'))
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine','ejs');
 
 
 const publicPath = path.resolve(__dirname, '../public');
-app.use(express.static(publicPath));
+app.use(express.static(publicPath)); 
+
+/* Home */
+const homeRoutes=require('./routes/homeRoutes')
+app.use('/',homeRoutes)
+
+/* Carrito */
+
+const carritoRoutes =require('./routes/homeRoutes')
+app.use('/carritoCompras',carritoRoutes) 
+
+/* Productos */
+
+const productoRoutes = require('./routes/productoRoutes')
+
+app.use('/productos', productoRoutes)
 
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'));
-});
+/* Usuarios */
 
-app.get('/carritoCompras', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/carritoCompras.html'));
-});
+const usersRoutes = require('./routes/usersRoutes')
 
-app.get('/detalleProducto', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/detalleProducto.html'));
-});
+app.use('/users', usersRoutes)
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/login.html'));
-});
-
-app.get('/registro', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/registro.html'));
-});
 
 /*Categorías*/
 
-const categoriasRoutes  = require('./routes/categorias');
+const categoriasRoutes = require('./routes/categoriasRoutes')
 
-app.use('/categoria', categoriasRoutes);
+app.use('/categorias', categoriasRoutes)
+
+

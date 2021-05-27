@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node src/app",
-    "dev" : "nodemon src/app"
+    "start": "node src/app",
+    "dev": "nodemon src/app"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gcoseani1987/grupo_8_ElectroHogar#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "path": "^0.12.7"
   }

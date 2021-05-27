@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingresá</title>
+    <title>Home | Electro Hogar</title>
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/stylesLogin.css">
+    <link rel="stylesheet" href="/css/stylesHome.css">
     <script src="https://kit.fontawesome.com/117d4d8bac.js" crossorigin="anonymous"></script>
     <link href = "https://fonts.googleapis.com/css2? family = Karantina: wght @ 300 & display = swap" rel = "stylesheet">
 </head>
@@ -26,8 +26,8 @@
         </div>
         <div class="main-header-center-right">
             <ul class="user">
-                <li><a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="/registro">Registrate<i class="fas fa-user-plus"></i></a></li>
+                <li><a href="/users/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="/users/registro">Registrate<i class="fas fa-user-plus"></i></a></li>
               </ul>
         </div>
       </div>
@@ -35,48 +35,67 @@
                 <a href="/carritoCompras"><i class="fas fa-shopping-cart"></i></a> 
      </div>
   </header>
-  <main class="main-login">   
-    <br>   
-    <section class="login-form">
-      <form action="login" method="POST" class="login">
-        <p class="text-login"><strong>INGRESAR CON MAIL Y CONTRASEÑA</strong><p>
-          <br>
-        <div class="form-container">
-          <label>Email:</label>
-          <br>
-          <br>
-          <input class="input-login" type="email" name="email" placeholder="ejemplo@hotmail.com" required>
-          <br>
-          <br>
-        <label>Contraseña:</label>
-          <br>
-          <br>
-          <input class="input-login" type="password" name="password" required>
-          <br>
-          <br>
-        </div>
-        <div class="forgot">
-          <span><a href="#">Olvidé mi usuario</a></span>
-          <br>
-          <span><a href="#">Olvide mi contraseña</a></span>
-        </div>
-          <br>
-        <div>
-        <label>Recuérdame</label>
-        <input type="checkbox" name="recordar">
+  <main>
+    <div class="slider">
+      <ul>
+        <li><img src="/images/banner.jpg" alt="Banner"></li>
+        <li><img src="/images/banner2.jpg" alt="Banner"></li>
+      </ul> 
+    </div>
+    <div class="promo">
+      <p>Paga en 3, 6 o 12 cuotas sin interés <br><i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>   <i class="fab fa-cc-mastercard"></i></p>
+      <p>Envios gratis a todo el país en compras superiores a $20.000 <br><i class="fas fa-plane-departure"></i></p>
+      <p> Paga con tarjetas de Débito o crédito <br><i class="fas fa-credit-card"></i></p>
+      <p>¿Tenés dudas? Contactanos <br> <i class="fab fa-whatsapp"></i></p>
+    </div>
+    <br>
+    <h2 class="text1">Categorias</h2>
+    <section class="categorias">
+      <div class="aire">
+        <a href="/categorias/aires"><img src="/images/aire.png" alt="Aire Acondicionado"></a>
       </div>
-          <br>
-      <div class="button">
-          <button class="login-button" type="submit">Ingresar</button>
+      <div class="tele">
+        <a href="/categorias/televisores"><img src="/images/televisor.png" alt="Televisores"></a>
       </div>
-      <br>
-    </form>
-  </section> 
+      <div class="horno">
+        <a href="/categorias/hornos"><img src="/images/hornos.png" alt="Hornos"></a>
+      </div>
+      <div class="heladera">
+        <a href="/categorias/heladeras"><img src="/images/heladeras.png" alt="Heladeras"></a>
+      </div>
+      <div class="lavarropa">
+        <a href="/categorias/lavarropas"><img src="/images/lavarropas.png" alt="Lavarropas"></a>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <h2 class="text">Ofertas</h2>
+    <section class="venta">
+      <article class="producto">
+        <a href="/productos/detalleProducto"><img src="/images/lavarropas.png" alt="Lavavajillas"></a>
+        <p class="precio">$20.000</p>
+        <p class="modelo">Lavarropas Drean </p>
+      </article>
+      <article class="producto">
+        <a href="/productos/detalleProducto"><img src="/images/hornos.png" alt="Hornos"></a>
+        <p class="precio">$25.000</p>
+        <p class="modelo">Horno Drean</p>
+      </article>
+      <article class="producto">
+        <a href="/productos/detalleProducto"><img src="/images/televisor.png" alt="Televisor"></a>
+        <p class="precio">$30.000</p>
+        <p class="modelo">Televisor Sony 43"</p>
+      </article>
+      <article class="producto">
+        <a href="/productos/detalleProducto"><img src="/images/aire.png" alt="Aire Acondicionado"></a>
+        <p class="precio">$35.000</p>
+        <p class="modelo">Aire Acondicionado Drean 3.000 W</p>
+      </article>
+    </section>  
+  </main>
   <br>
   <br>
-  <br>
-  <br>
-</main>
   <footer class="footer">
     <div class="main-footer">
       <div class="footer-left">

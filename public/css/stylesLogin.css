@@ -59,6 +59,8 @@
 .login-form {
     width: max-content;
     margin: auto;
+    border: 1px black solid;
+    border-radius: 10px;
     background-color: white;
     opacity: 0.9;
     text-align: center;

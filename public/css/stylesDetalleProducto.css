@@ -52,23 +52,7 @@
 }
 /*MAIN*/
 .article{
-<<<<<<< HEAD
-    position:relative;
-    padding-top: 80px;
-} 
-
-
-.article-top{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-} 
-
-.article-main{
-=======
     margin-top: 100px;
->>>>>>> dc1dc1e72870be08adc8507cfcb5bd6ba31ee0e0
     display: flex;
     flex-direction: column;
 }
@@ -77,43 +61,21 @@
     text-align: left;
     color: rgba(10, 23, 43, 0.7);
 }
-<<<<<<< HEAD
-
-
-.article-container-images{
-    margin: 0px;
-    padding: 0px;
-}
-
-.article-container-images img{
-    width: 200px;
-    height: 200px;
-    margin: 0px;
-    padding: 0px;
-}
-
-.box-condiciones-pago{
-    display: flex;
-=======
 .article-top {
     display: flex; 
->>>>>>> dc1dc1e72870be08adc8507cfcb5bd6ba31ee0e0
     flex-direction: column;
     align-items: center;
     margin: 20px 10px;
 }
 .article-top-right {
     padding: 40px;
-    margin: 15px;
-    border: black 2px solid;
-    box-shadow: 5px 5px 10px rgb(10,74,173);
+
 }
 .article-top-left{
     padding: 20px;
     margin: 15px;
     border: black 2px solid;
-    box-shadow: 5px 5px 10px rgb(10,74,173);
-    text-align: left;
+    text-align: center;
 }
 .box-precio{
     text-align: center;
