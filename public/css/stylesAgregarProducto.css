@@ -19,6 +19,7 @@
 .create-registro{
     background-image: url(../images/login.jpg);
     background-attachment: fixed;
+    background-size: contain;
     opacity: 0.9;
     margin-top: 90px;
     justify-content: center;
@@ -40,11 +41,22 @@
     margin-bottom: 10px;
     color: rgb(10,74,173);
 }
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-create-precio{
+    width: 30%;
+    text-align: center;
+    font-size: 1.2em;
+}
 
 .create-button{
     background-color: rgb(217,217,217);
     border: none;
     color: black;
+    margin-bottom: 15px;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -64,4 +76,10 @@
 .description-create{
     height: 70px;
     width: 90%;
+}
+
+@media(min-width:1200px){
+    .create-registro{
+        background-size: cover;
+    }
 }

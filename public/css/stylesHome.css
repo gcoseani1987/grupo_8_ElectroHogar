@@ -36,6 +36,7 @@
 
 .categorias img:hover{
     background-color: rgb(10,74,173);
+    box-shadow: 5px 5px 25px grey;
 }
 
 .categorias img{
@@ -54,11 +55,13 @@
 
 article:hover{
     background-color: rgb(217,217,217);
+    box-shadow: 5px 5px 10px rgb(100,100,100);
 }
 
 article {
-        box-shadow: 5px 5px 10px rgb(100,100,100);
+        box-shadow: 5px 5px 30px rgb(100,100,100);
         margin: 10px;
+        margin-top: 20px;
         transition: all 0.8s;
     }
 
