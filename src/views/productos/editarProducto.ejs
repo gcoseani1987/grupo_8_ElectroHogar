@@ -1,29 +1,28 @@
 <%- include('../partials/head.ejs')%>
-<link rel="stylesheet" href="/css/stylesAgregarProducto.css">
-<title>Crear producto</title>
+<link rel="stylesheet" href="/css/stylesEditarProducto.css">
+<title>Editar producto</title>
 </head>
 <body>
 
     <%- include('../partials/header.ejs')%>
 
     <main class="create-registro">
-        <h2 class="titulo">AGREGAR PRODUCTO</h2>
+        <h2 class="titulo">EDITAR PRODUCTO</h2>
         <section class="create-form">
             <form action="create" method="POST" class="create">
                 <div class="create-container">
-                    <label>Nombre de producto:</label>
+                    <label>Producto</label>
                     <br>
+                    <img src="/images/tele7.jpg" alt="TV">
                     <br>
-                    <input class="input-create" type="text" name="name" required>
-                    <br>
-                    <br>
-                    <label>Descripción de producto</label>
+
+                    <label>Editar descripcion de producto</label>
                     <br>
                     <br>
                     <textarea name="description" class="description-create"></textarea>
                     <br>
                     <br>
-                    <label>Imagen</label>
+                    <label>Editar imagenes</label>
                     <br>
                     <br>
                     <input class="input-create" type="file" name="photo" accept="jpg,jpeg" multiple required>
@@ -48,8 +47,8 @@
                 </div>
                 <br>
                 <div class="button-container">
-                    <button class="create-button" type="submit">Agregar producto</button>
-                    <button class="create-button" type="reset">Borrar</button>
+                    <button class="create-button" type="submit">Guardar cambios</button>
+                    <button class="create-button" type="reset">Borrar producto</button>
                     </div>
             </form>
         </section>
