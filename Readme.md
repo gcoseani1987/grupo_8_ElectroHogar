@@ -3,9 +3,7 @@
 ### Trello: https://trello.com/b/rusMiY8O/proyecto-integrador-digital-house-grupo-8
 
 ### Link: https://electrohogar.herokuapp.com/
-
 <br>
-
 ## ElectroHogar
 
 ### Descripción del negocio
