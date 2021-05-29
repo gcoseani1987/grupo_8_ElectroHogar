@@ -76,13 +76,14 @@
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px rgb(10,74,173);
+    box-shadow: 5px 5px 20px grey;
     transition: all 0.7s;
 }
 
 .comprar-button:hover{
     background-color: rgb(10,74,173);
     color: white;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .article-bottom{
