@@ -17,13 +17,13 @@
     top: 0;
 }
 
-.cat-aire {
+.categoria {
     margin-top: 70px;
 }
 
-.cat-aire h2{
+.categoria h2{
     font-size: 30px;
-    color: rgb(54, 184, 112);
+    color: rgb(10,74,173);
     margin-left: 15px;
 }
 .productos img{
@@ -31,14 +31,14 @@
 }
 
 .productos article {
-    box-shadow: 5px 5px 10px rgb(100,100,100);
+    box-shadow: 5px 5px 20px rgb(100,100,100);
     margin: 10px;
     align-items: center;
     transition: all 0.8s;
 }
 
 .productos article:hover {
-    box-shadow: 5px 5px 10px rgb(54, 184, 112);
+    box-shadow: 5px 5px 10px rgb(100,100,100);
 }
 .productos p{
     text-align: center;

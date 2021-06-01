@@ -1,0 +1,29 @@
+{
+    "categorias":[
+        {
+            "id" : 1,
+            "nombre":"AIRES ACONDICIONADOS",
+            "imagen":"/images/bannerAireAcondicionado.jpg"
+        },
+        {
+            "id" : 2,
+            "nombre":"TELEVISORES",
+            "imagen":"/images/bannerTelevisores.jpg"
+        },
+        {
+            "id" : 3,
+            "nombre":"HORNOS",
+            "imagen":"/images/bannerHornos.png"
+        },
+        {
+            "id" : 4,
+            "nombre":"HELADERAS",
+            "imagen":"/images/bannerHeladeras.jpg"
+        },
+        {
+            "id" : 5,
+            "nombre":"LAVARROPAS",
+            "imagen":"/images/bannerLavarropas.jpg"
+        }
+    ]
+}
