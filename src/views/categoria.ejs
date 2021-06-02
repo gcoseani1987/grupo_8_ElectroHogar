@@ -1,5 +1,5 @@
 <%- include('partials/head.ejs')%>
-<title>Categorias</title>
+<title>Categorias | <%=categoria.nombre%></title>
 <link rel="stylesheet" href="/css/stylesCategoria.css">
 </head>
 
@@ -8,7 +8,7 @@
   <%- include('partials/header.ejs')%>
 
   <main class="categoria">
-    <div class="imagen-banner-categoria"><img src="<%=categoria.imagen%>"></div>
+    <div class="imagen-banner-categoria"><img src="<%=categoria.imagen%>" width="100%"></div>
     <br>
     <h2><%=categoria.nombre%></h2>
     <br>

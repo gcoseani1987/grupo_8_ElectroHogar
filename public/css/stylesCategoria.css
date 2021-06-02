@@ -19,6 +19,7 @@
 
 .categoria {
     margin-top: 70px;
+    margin-bottom: 20px;
 }
 
 .categoria h2{
@@ -26,20 +27,25 @@
     color: rgb(10,74,173);
     margin-left: 15px;
 }
+.productos{
+    margin:25px;
+    margin-top: 0;
+}
 .productos img{
     width: 100%;
 }
 
 .productos article {
-    box-shadow: 5px 5px 20px rgb(100,100,100);
+    box-shadow: 5px 5px 20px grey;
     margin: 10px;
     align-items: center;
     transition: all 0.8s;
 }
-
+ 
 .productos article:hover {
-    box-shadow: 5px 5px 10px rgb(100,100,100);
+    box-shadow: 5px 5px 10px grey;
 }
+
 .productos p{
     text-align: center;
 }

@@ -1,4 +1,3 @@
-const { nombre } = require('ejs')
 const fs = require('fs')
 
 const leer = fs.readFileSync(__dirname + '/categorias.json')
