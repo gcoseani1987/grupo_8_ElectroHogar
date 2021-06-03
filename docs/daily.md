@@ -1,15 +1,27 @@
-# Retro
+####Reuniones
 
-### Sprint 1
-<br>
-En el primer sprint tuvimos una buen organización y distribución de tareas. Al mismo tiempo que fuimos metódicos en la resolución de las consignas planteadas como así también en el diseño de los wireframes. El debate sobre que tipo de plataforma desarrollar y que producto vender se desarrollo de manera constructiva llegando a la conclusión de que la venta de electrodomésticos era un buen nicho y en el cual teniamos muchos ejemplos para tomar como ideas iniciales. Pudimos definir de manera correcta la misión de la empresa y los productos que va a vender esto nos permitió facilitarnos muchas tareas en el sprint 2 en el desarrollo de la web.
-<br>
-Respecto a las fallas, fuimos un poco ambiciosos en el maquetado de los HTML al mismo tiempo que no definimos desde un primer momento la paleta de colores como así que colores ibamos a utilizar en cada parte de los wireframe. En este sentido la elección de colores entendemos no resulta ajena a la empresa y es el primer impacto que va a tener el futuro cliente con la empresa. Es un aspecto que debemos mejorar en los subsiguientes sprint. También deberíamos haber definido desde un primer momento la familia de fuentes a utilizar ya que al igual que los colores el primer impacto visual en la plataforma debe invitar al cliente a navegar en la web.
+## Reunión 22-04-2021
 
-### Sprint 2
-<br>
-Comenzar a hacer peer review en el codigo de nuestros compañeros, ser mas estructurados y plantear bien la distribucion y fechas de tareas.
-Hacer mas reuniones semanales con horarios y duracion definida previamente.
-Continuar entregando los sprint en tiempo y forma.
-No consideramos tener que dejar de hacer algo o hacer menos, es la primera vez que trabajamos de esta forma y por el momento no encontramos ningun inconveniente.
-Consideramos estar bien organizados durante el sprint, y cada uno cumplio con sus tareas, y el sprint fue entregado en tiempo y forma cumpliendo los requisitos planteados.
+Tratamos el sprint 1 y la distribución de tareas. Definimos el rubro y el nombre del proyecto. También nos pusimos de acuerdo en los horarios posibles de reuniones.
+
+## Reunión 23-04-2021
+
+Trabajamos sobre el  Sprint 1, comenzamos a hacer el Trello y los Wireframes como así también buscar que páginas podrían sernos útil para fijarnos las funcionalidades
+que debería tener nuestro proyecto
+
+## Reunión 08-05-2021
+
+Distribuimos actividades del Sprint 2. Definimos colores y logos a utilizar en las actividades.
+
+## Reunión 13-05-2021
+
+Vimos la dificultades que tuvo cada uno y las resolvimos de manera conjunta.
+
+## Reunión 26-05-2021
+
+Distribuimos tareas del Sprint 3. Realizamos Routeo, Controllers y paginas de edición y creación del producto
+
+## Reunión 28-05-2021 
+
+Completamos las tareas pendientes y discutimos sobre cuestiones que podemos mejorar en el formato de la página (colores, fuente, funcionalidades). Realizamos
+cambios por consenso.
