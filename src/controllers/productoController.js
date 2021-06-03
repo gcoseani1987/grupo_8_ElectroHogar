@@ -7,7 +7,7 @@ const controller = {
       },
     editar: (req,res) => {
       res.render('productos/editarProducto.ejs')
-    }
+    },
   }
   
   module.exports = controller  

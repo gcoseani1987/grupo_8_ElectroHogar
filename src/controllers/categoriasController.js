@@ -1,4 +1,4 @@
-const categorias=require('../models/categorias.js')
+const categorias=require('../models/categorias')
 const controller = {
   categoria: (req, res) => {
     const id = req.params.id
@@ -7,4 +7,4 @@ const controller = {
   },
 }
   
-  module.exports = controller 
+module.exports = controller 
