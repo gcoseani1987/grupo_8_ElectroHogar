@@ -519,7 +519,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 18,
@@ -546,7 +546,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 19,
@@ -573,7 +573,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 20,
@@ -600,7 +600,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 21,
@@ -627,7 +627,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 22,
@@ -654,7 +654,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 23,
@@ -681,7 +681,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 24,
@@ -708,7 +708,7 @@
             "tipoControles"	:"PANEL EXTERNO",
             "tipoEstantes"	:"VIDRIO TEMPLADO",
            " volumenBruto"	:504,
-            "volumenNeto"	:456,
+            "volumenNeto"	:456
         },
         {
             "id" : 25,
