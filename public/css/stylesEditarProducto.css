@@ -62,6 +62,7 @@
     border-radius: 5px;
     box-shadow: 5px 5px 20px grey;
     transition: all 0.7s;
+    margin-bottom: 10px;
 }
 
 .create-button:hover{

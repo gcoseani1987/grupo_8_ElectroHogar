@@ -3,15 +3,23 @@ const app = express();
 const path = require('path');
 const port = process.env.PORT || 3030 
 
+//requerimos la constante que nos arma la ruta
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath)); 
 
+//configuracion del template engine
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine','ejs');
 
+//requiremos la extension que nos permite trabajar con formularios
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
+//metodo override para trabajar con put y delete en HTML
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
+//corremos el servidor
 app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 
 /* Home */
