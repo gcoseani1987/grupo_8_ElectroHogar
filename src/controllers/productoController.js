@@ -8,6 +8,16 @@ const controller = {
     editar: (req,res) => {
       res.render('productos/editarProducto.ejs')
     },
+    crear: (req, res) => {
+      let producosActualizados = req.body
+      productos.crear(producosActualizados)
+      res.redirect('/productos/listado') 
+    },
+    listado: (req, res) => {
+      /* let productos = productos.findAll() */
+      res.render('./productos/listadoDeProductos.ejs')
+    },
+
   }
   
   module.exports = controller  

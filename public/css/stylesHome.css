@@ -52,6 +52,9 @@
     display: block;
     justify-content: center;
 }
+.padding-top{
+    padding-top: 100px;
+}
 
 article:hover{
     background-color: rgb(217,217,217);

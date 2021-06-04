@@ -1,4 +1,5 @@
 const categorias=require('../models/categorias')
+
 const controller = {
   categoria: (req, res) => {
     const id = req.params.id

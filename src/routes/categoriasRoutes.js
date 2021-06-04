@@ -6,4 +6,4 @@ const categoriasController = require('../controllers/categoriasController')
 router.get('/:id', categoriasController.categoria)
 
 module.exports = router
-   
+    
