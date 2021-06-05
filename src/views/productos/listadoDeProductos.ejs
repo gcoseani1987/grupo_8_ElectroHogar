@@ -7,48 +7,17 @@
   <%- include('../partials/header.ejs')%> 
   <div class="padding-top">
   </div>
-  <h2 class="text">Categorias</h2>
-  <section class="categorias">
-    <div class="aire">
-      <a href="/categorias/1"><img src="/images/aire.png" alt="Aire Acondicionado"></a>
-    </div>
-    <div class="tele">
-      <a href="/categorias/2"><img src="/images/televisor.png" alt="Televisores"></a>
-    </div>
-    <div class="horno">
-      <a href="/categorias/3"><img src="/images/hornos.png" alt="Hornos"></a>
-    </div>
-    <div class="heladera">
-      <a href="/categorias/4"><img src="/images/heladeras.png" alt="Heladeras"></a>
-    </div>
-    <div class="lavarropa">
-      <a href="/categorias/5"><img src="/images/lavarropas.png" alt="Lavarropas"></a>
-    </div>
-  </div>
-  </section>
  <main class="listadoProductos">
-    <h2 class="text">Nuestros productos</h2>
+    <h2 class="text">Productos</h2>
     <section class="venta">
+     <%for (let i=0; i<productosLista.length ; i++){%>
       <article class="producto">
-        <a href="/productos/detalleProducto"><img src="/images/lavarropas.png" alt="Lavavajillas"></a>
-        <p class="precio">$20.000</p>
-        <p class="modelo">Lavarropas Drean </p>
+        <a href="/productos/detalleProducto"><img src="<%=productosLista[i].imagen%>" alt="<%=productosLista[i].descripcion%>"></a>
+        <p class="precio"><%=productosLista[i].precio%></p>
+        <p class="modelo"><%=productosLista[i].nombre%> </p>
+        <p class="modelo">En stock: <%=productosLista[i].stock%> </p>
       </article>
-      <article class="producto">
-        <a href="/productos/detalleProducto"><img src="/images/hornos.png" alt="Hornos"></a>
-        <p class="precio">$25.000</p>
-        <p class="modelo">Horno Drean</p>
-      </article>
-      <article class="producto">
-        <a href="/productos/detalleProducto"><img src="/images/televisor.png" alt="Televisor"></a>
-        <p class="precio">$30.000</p>
-        <p class="modelo">Televisor Sony 43"</p>
-      </article>
-      <article class="producto">
-        <a href="/productos/detalleProducto"><img src="/images/aire.png" alt="Aire Acondicionado"></a>
-        <p class="precio">$35.000</p>
-        <p class="modelo">Aire Acondicionado Drean 3.000 W</p>
-      </article>
+      <%}%>
     </section>  
 </main>
   <br>
