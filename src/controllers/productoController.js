@@ -1,3 +1,5 @@
+const productos = require('../models/productos.js')
+const { propfind } = require('../routes/productoRoutes.js')
 const controller = {
     detalle: (req, res) => {
       res.render('productos/detalleProducto.ejs')
@@ -8,16 +10,10 @@ const controller = {
     editar: (req,res) => {
       res.render('productos/editarProducto.ejs')
     },
-    crear: (req, res) => {
-      let producosActualizados = req.body
-      productos.crear(producosActualizados)
-      res.redirect('/productos/listado') 
-    },
     listado: (req, res) => {
-      /* let productos = productos.findAll() */
-      res.render('./productos/listadoDeProductos.ejs')
+      let productosLista = productos.findAll() 
+      res.render('./productos/listadoDeProductos.ejs', { productosLista: productosLista.productos })
     },
-
   }
   
   module.exports = controller  

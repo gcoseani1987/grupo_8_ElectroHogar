@@ -46,6 +46,10 @@
     border-radius: 50%;
     transition: all 0.8s;
 }
+main{
+    max-width: 1250px;
+    margin : auto
+}
 
 .venta img{ 
     width: 100%;
