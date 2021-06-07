@@ -14,5 +14,13 @@
     "password": "blabla",
     "password2": "blabla",
     "id": 2
+  },
+  {
+    "nombre": "asdknsdkfo",
+    "apellido": "alksndslkdf",
+    "email": "ignacio.101@hotmail.com",
+    "password": "123456",
+    "password2": "123456",
+    "id": 3
   }
 ]

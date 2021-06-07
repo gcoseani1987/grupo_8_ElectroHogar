@@ -9,6 +9,7 @@
   </div>
  <main class="listadoProductos">
     <h2 class="text">Productos</h2>
+    <a href="/productos/agregar"><button class="button-agregar">Agregar productos</button></a>
     <section class="venta">
      <%for (let i=0; i<productos.length ; i++){%>
       <article class="producto">
@@ -26,9 +27,9 @@
         <br>
         <div class="buttons">
         <form action="/productos/<%=productos[i].id%>?_method=DELETE"  method="POST">
-          <button id="button" type="submit">Eliminar</button>
+          <button class="button" id="button" type="submit">Eliminar</button>
         </form>     
-        <a href='/productos/<%=productos[i].id%>/editar'><button id="button">Modificar</button></a>    
+        <a href='/productos/<%=productos[i].id%>/editar'><button class="button" id="button">Modificar</button></a>    
         <br>
         <br>
         </div>
