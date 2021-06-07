@@ -1,0 +1,116 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.promo i{
+    color: black;
+}
+
+.promo{
+    display: flex;
+    font-weight: 600;
+    display: none;
+    margin-top: -5px;
+    background: linear-gradient(to bottom, rgb(0 125 119), white);
+
+}
+
+.promo p{
+    width: 100%;
+    color: black;
+    border: rgb(182, 182, 182) 1px solid;
+    text-align: center;
+    font-size: 14px;
+    font-size: 18px;
+}
+
+main{
+    max-width: 1250px;
+    margin : auto
+}
+
+.venta {
+    display: flex;
+    flex-wrap: wrap;
+}
+.producto {
+    flex-basis: calc(47% - 10px);
+}
+
+.venta img{ 
+    width: 100%;
+    display: block;
+    justify-content: center;
+}
+.padding-top{
+    padding-top: 100px;
+}
+
+article {
+        box-shadow: 5px 5px 30px rgb(100,100,100);
+        margin: 10px;
+        margin-top: 20px;
+        transition: all 0.8s;
+    }
+
+.text{
+    font-size: 30px;
+    color: rgb(0 125 119);
+    margin-left: 15px;
+}
+
+.precio{
+    font-size: 18px;
+    color: rgb(10,74,173);
+    font-weight: bold;
+    text-align: center;
+}
+
+.modelo{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly
+}
+
+@media(min-width:480px){
+    .venta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto {
+        flex-basis: calc(31% - 10px);
+    }
+}
+
+@media(min-width:769px){
+    .promo{
+        display: flex;
+    }
+    .venta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto {
+        flex-basis: calc(23% - 10px);
+    }
+}
+
+@media(min-width:1200px){
+
+    .venta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto {
+        flex-basis: calc(19% - 10px)
+    }
+}

@@ -9,51 +9,60 @@
     <main class="create-registro">
         <h2 class="titulo">EDITAR PRODUCTO</h2>
         <section class="create-form">
-            <form action="create" method="POST" class="create">
+            <form action='/productos/<%= productoEncontrado.id %>/editar?_method=PUT' method="POST" class="create">
                 <div class="create-container">
                     <label>Producto</label>
                     <br>
-                    <img src="/images/tele7.jpg" alt="TV">
-                    <br>
-                    <label for="">Editar nombre</label>
+                    <img src="<%=productoEncontrado.imagen%>" alt="<%=productoEncontrado.descripcion%>">
                     <br>
                     <br>
-                    <input type="name" class="input-create" name="name" required>
-                    <br>    
                     <br>
-                    <label>Editar descripcion de producto</label>
+                    <label for="nombre" class="label">Editar nombre</label>
                     <br>
+                    <input type="name" class="input-create" name="name" value="<%= productoEncontrado.nombre %>">
+                    <br> 
+                    <br>   
                     <br>
-                    <textarea name="description" class="description-create"></textarea>
+                    <label for="descripcion" class="label">Editar descripcion de producto</label>
                     <br>
-                    <br>
-                    <label>Editar imagenes</label>
-                    <br>
-                    <br>
-                    <input class="input-create" type="file" name="photo" accept="jpg,jpeg" multiple required>
+                    <textarea name="descripcion" class="description-create" value="<%= productoEncontrado.descripcion %>"></textarea>
                     <br>
                     <br>
-                    <label>Categoría</label>
+                    <br>
+                    <label for="stock" class="label">Stock</label>
+                    <br>
+                    <input for="stock" class="input-create-precio" type="number" name="stock" value="<%= productoEncontrado.stock %>">
                     <br>
                     <br>
-                    <select class="input-create" name="category" required>
-                        <option value="televisor">Televisores</option>
-                        <option value="aire">Aires Acondicionados</option>
-                        <option value="lavarropa">Lavarropas</option>
-                        <option value="horno">Hornos</option>
-                        <option value="heladera">Heladeras</option>
+                    <br>
+                    <label for="imagenes" class="label">Editar imagenes</label>
+                    <br>
+                    <input for="imagen" class="input-create" type="file" name="photo" accept="jpg,jpeg" multiple>
+                    <br>
+                    <br>
+                    <br>
+                    <label for="categorias" class="label">Categoría</label>
+                    <br>
+                    <select name="categoria" class="input-create">
+                        <option value="<%= productoEncontrado.categoria %>"><%= productoEncontrado.categoria %></option>
+                        <option value="televisores">Televisores</option>
+                        <option value="aires">Aires Acondicionados</option>
+                        <option value="lavarropas">Lavarropas</option>
+                        <option value="hornos">Hornos</option>
+                        <option value="heladeras">Heladeras</option>
                     </select>
                     <br>
                     <br>
-                    <label>Precio</label>
                     <br>
+                    <label for="precio" class="label">Precio</label>
                     <br>
-                    <input class= "input-create-precio" type="number" name="price" placeholder="$50.000" required>
+                    <input for="precio" class= "input-create-precio" type="number" name="price" placeholder="$50.000" value="<%= productoEncontrado.precio %>">
                 </div>
+                <br>
                 <br>
                 <div class="button-container">
                     <button class="create-button" type="submit">Guardar cambios</button>
-                    <button class="create-button" type="reset">Borrar producto</button>
+                    <button class="create-button" type="reset">Resetear</button>
                     </div>
             </form>
         </section>

@@ -9,39 +9,46 @@
     <main class="create-registro">
         <h2 class="titulo">AGREGAR PRODUCTO</h2>
         <section class="create-form">
-            <form action="create" method="POST" class="create">
+            <form action="/productos/agregar" method="POST" class="create">
                 <div class="create-container">
-                    <label>Nombre de producto:</label>
+                    <label for="nombre">Nombre de producto:</label>
                     <br>
                     <br>
-                    <input class="input-create" type="text" name="name" required>
+                    <input class="input-create" type="text" name="nombre" required>
                     <br>
                     <br>
-                    <label>Descripción de producto</label>
+                    <label for="descripcion">Descripción de producto</label>
                     <br>
                     <br>
-                    <textarea name="description" class="description-create"></textarea>
+                    <textarea name="descripcion" class="description-create"></textarea>
                     <br>
                     <br>
-                    <label>Imagen</label>
+                    <label for="stock">Stock</label>
+                    <br>
+                    <br>
+                    <input class="input-create-precio" type="number" name="stock" required>
+                    <br>
+                    <br>
+                    <label for="imagen">Imagen</label>
                     <br>
                     <br>
                     <input class="input-create" type="file" name="photo" accept="jpg,jpeg" multiple required>
                     <br>
                     <br>
-                    <label>Categoría</label>
+                    <label for="categoria">Categoría</label>
                     <br>
                     <br>
-                    <select class="input-create" name="category" required>
-                        <option value="televisor">Televisores</option>
-                        <option value="aire">Aires Acondicionados</option>
-                        <option value="lavarropa">Lavarropas</option>
-                        <option value="horno">Hornos</option>
-                        <option value="heladera">Heladeras</option>
+                    <select class="input-create" name="categoria" required>
+                        <option value="">Seleccionar</option>
+                        <option value="televisores">Televisores</option>
+                        <option value="aires">Aires Acondicionados</option>
+                        <option value="lavarropas">Lavarropas</option>
+                        <option value="hornos">Hornos</option>
+                        <option value="heladeras">Heladeras</option>
                     </select>
                     <br>
                     <br>
-                    <label>Precio</label>
+                    <label for="precio">Precio</label>
                     <br>
                     <br>
                     <input class= "input-create-precio" type="number" name="price" placeholder="$50.000" required>

@@ -73,12 +73,18 @@
 
 
 .input-create{
-    width: 90%;
+    width: 95%;
+    text-align: center;
+}
+
+.label{
+    color: rgb(10,74,173);
+    font-size: 20px;
 }
 
 .description-create{
     height: 70px;
-    width: 90%;
+    width: 95%;
     padding: 5px;
 }
 
