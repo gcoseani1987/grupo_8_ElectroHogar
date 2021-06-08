@@ -9,7 +9,7 @@
     <main class="create-registro">
         <h2 class="titulo">EDITAR PRODUCTO</h2>
         <section class="create-form">
-            <form action='/productos/<%= productoEncontrado.id %>/editar?_method=PUT' method="POST" class="create">
+            <form action='/productos/<%= productoEncontrado.id %>/editar?_method=PUT' method="POST" class="create" enctype="multipart/form-data">
                 <div class="create-container">
                     <label>Producto</label>
                     <br>
@@ -35,9 +35,9 @@
                     <br>
                     <br>
                     <br>
-                    <label for="imagenes" class="label">Editar imagenes</label>
+                    <label for="imagen" class="label">Editar imagenes</label>
                     <br>
-                    <input for="imagen" class="input-create" type="file" name="photo" accept="jpg,jpeg" multiple>
+                    <input name="imagenes" class="input-create" type="file" accept="jpg,jpeg" multiple>
                     <br>
                     <br>
                     <br>

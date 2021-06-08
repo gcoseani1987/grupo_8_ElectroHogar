@@ -9,7 +9,7 @@
     <main class="create-registro">
         <h2 class="titulo">AGREGAR PRODUCTO</h2>
         <section class="create-form">
-            <form action="/productos/agregar" method="POST" class="create">
+            <form action="/productos/agregar" method="POST" class="create" enctype="multipart/form-data">
                 <div class="create-container">
                     <label for="nombre">Nombre de producto:</label>
                     <br>
@@ -32,7 +32,7 @@
                     <label for="imagen">Imagen</label>
                     <br>
                     <br>
-                    <input class="input-create" type="file" name="photo" accept="jpg,jpeg" multiple required>
+                    <input name="imagenes" class="input-create" type="file" accept="jpg,jpeg" multiple required>
                     <br>
                     <br>
                     <label for="categoria">Categoría</label>

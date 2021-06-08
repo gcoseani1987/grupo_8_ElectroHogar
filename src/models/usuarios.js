@@ -24,7 +24,7 @@ module.exports = {
     const usuariosUpdated = [...usuariosJson, nuevoUsuario]
     this.writeFile(usuariosUpdated)
     return nuevoUsuario
-  },
+  }, 
 
   validarUsuario(usuarios) {
     usuarios = this.readFile()

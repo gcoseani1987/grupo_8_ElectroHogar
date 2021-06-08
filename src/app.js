@@ -38,7 +38,7 @@ app.use('/productos', productoRoutes)
 /* Usuarios */
 const usersRoutes = require('./routes/usersRoutes')
 app.use('/users', usersRoutes)
-
+ 
 /*Categorías*/
 const categoriasRoutes = require('./routes/categoriasRoutes')
 app.use('/categorias', categoriasRoutes)

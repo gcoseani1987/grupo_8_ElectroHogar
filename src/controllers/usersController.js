@@ -1,4 +1,5 @@
-const usuario = require('../models/usuarios')
+const usuarios = require('../models/usuarios')
+const { usuariosPath } = require('../models/usuarios')
 
 const controller = {
   login: (req, res) => {
@@ -12,22 +13,21 @@ const controller = {
 
   crearUsuario: (req, res) => {
     let nuevoUsuario = req.body
-    usuario.crearUsuario(nuevoUsuario)
+    usuarios.crearUsuario(nuevoUsuario)
     res.redirect('/')
-  },
+  }, 
 
   loginUsuario: (req, res) =>{
     const sesion = req.body
-    const estadoUsuario = user.validarUsuario(sesion)
+    const estadoUsuario = usuarios.validarUsuario(sesion)
 
     if(estadoUsuario == 'Ha sido registrado'){
     res.redirect('/productos/listado')
 
      }else{
-    res.render('users/login.ejs', { userStatus })
+    res.render('users/login.ejs', { estadoUsuario })
     }
   }
-
 }
 
 module.exports = controller
