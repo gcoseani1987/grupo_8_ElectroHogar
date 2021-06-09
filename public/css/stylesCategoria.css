@@ -20,12 +20,16 @@
 .categoria {
     margin-top: 70px;
     margin-bottom: 20px;
+    max-width: 1250px;
+    margin: auto;
+    padding-top: 70px;
 }
 
 .categoria h2{
     font-size: 30px;
     color: rgb(10,74,173);
     margin-left: 15px;
+    text-transform: uppercase;
 }
 .productos{
     margin:25px;

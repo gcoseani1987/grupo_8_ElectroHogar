@@ -6,10 +6,11 @@ const controller = {
     const id = req.params.id
     let categoria = categorias.findByPk(id)
     let allProducts = productos.findAll()
-    let filterProducts = allProducts.filter()
-    res.render('categoria.ejs', { categoria })
-  },
+    let filterProducts = allProducts.filter(categoria=>categoria.nombre==allProducts.categoria)
+    console.log(allProducts.categoria)
+    res.render('categoria.ejs', { categoria , filterProducts })
+  }, 
   
-}
+} 
   
 module.exports = controller 

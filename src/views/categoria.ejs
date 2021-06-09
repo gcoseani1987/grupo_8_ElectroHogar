@@ -13,14 +13,14 @@
     <h2><%=categoria.nombre%></h2>
     <br>
     <section class="productos">
-      <%for (let i=0; i<productos.length ; i++){
-        if (productos.categoria == productos.){%>
-          
-      <article>
-        <a href="/productos/detalleProducto"><img src="/images/aire1.jpg" alt="Aire"></a>
-        <p class="precio">$$$$</p>
-        <p class="modelo">####</p>
-      </article>
+      <%for (let i=0; i<filterProducts.length ; i++){%>
+        <article class="producto">
+          <a href="/productos/detalleProducto"><img src="<%=filterProducts[i].imagen%>" alt="<%=productos[i].descripcion%>"></a>
+          <br>
+          <p class="precio"><%=productos[i].precio%></p>
+          <br>
+          <p class="modelo"><%=productos[i].nombre%></p>
+      </article> 
     <% } %>
     </section>
   </main>

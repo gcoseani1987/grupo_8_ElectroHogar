@@ -35,6 +35,7 @@ main{
 .venta {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 .producto {
     flex-basis: calc(47% - 10px);
@@ -55,11 +56,15 @@ article {
         margin-top: 20px;
         transition: all 0.8s;
     }
+article:hover{
+    box-shadow: 5px 5px 10px rgb(100,100,100);
+}
 
 .text{
     font-size: 30px;
     color: rgb(0 125 119);
-    margin-left: 15px;
+    margin-left: 12px;
+    margin-bottom: 15px;
 }
 
 .precio{
@@ -90,8 +95,22 @@ article {
     box-shadow: 5px 5px 10px;
     transition: all 0.7s;
 }
+.button{
+    background-color: rgb(217,217,217);
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px;
+    transition: all 0.7s;
+}
 
 .button-agregar:hover{
+    background-color: rgb(10,74,173);
+    color: white;
+}
+.button:hover{
     background-color: rgb(10,74,173);
     color: white;
 }
@@ -106,7 +125,7 @@ article {
     border: none;
     color: black;
     font-size: 15px;
-    padding: 0px 3px;
+    padding: 2px 3px;
     border-radius: 3px;
     transition: all 0.7s;
 }

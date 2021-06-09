@@ -11,6 +11,10 @@
     padding: 0 0;
     margin-left: 0;
 } 
+.container{
+    max-width: 1250px;
+    margin: auto;
+}
 .container-header{
     width: 100%;
     top: 0;
