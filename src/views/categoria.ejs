@@ -15,11 +15,11 @@
     <section class="productos">
       <%for (let i=0; i<filterProducts.length ; i++){%>
         <article class="producto">
-          <a href="/productos/detalleProducto"><img src="<%=filterProducts[i].imagen%>" alt="<%=productos[i].descripcion%>"></a>
+          <a href="/productos/detalleProducto"><img src="<%=filterProducts[i].imagen%>" alt="<%=filterProducts[i].descripcion%>"></a>
           <br>
-          <p class="precio"><%=productos[i].precio%></p>
+          <p class="precio"><%=filterProducts[i].precio%></p>
           <br>
-          <p class="modelo"><%=productos[i].nombre%></p>
+          <p class="modelo"><%=filterProducts[i].nombre%></p>
       </article> 
     <% } %>
     </section>

@@ -1,5 +1,4 @@
-{
-    "categorias":[
+[
         {
             "id" : 1,
             "nombre":"aires",
@@ -25,5 +24,4 @@
             "nombre":"lavarropas",
             "imagen":"/images/bannerLavarropas.jpg"
         }
-    ]
-}
+]

@@ -12,7 +12,7 @@ module.exports = {
   },
   findByPk(id) {
     const categorias = this.readFile();
-    const categoriaEncontrada = categorias.categorias.find(categoria => categoria.id==id)
+    const categoriaEncontrada = categorias.find(categoria => categoria.id==id)
     return categoriaEncontrada
   },
 }

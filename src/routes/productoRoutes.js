@@ -17,7 +17,7 @@ const uploadFile = multer({ storage })
 const productoController = require('../controllers/productoController')
 
 router.get('/listado', productoController.listado)
-router.get('/detalle/:id', productoController.detalle)
+router.get('/detalle', productoController.detalle)
 
 router.get('/agregar', productoController.formNew) 
 router.post('/agregar', uploadFile.array('imagenes'), productoController.crear)

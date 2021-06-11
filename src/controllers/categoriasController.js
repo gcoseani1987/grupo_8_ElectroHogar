@@ -6,8 +6,8 @@ const controller = {
     const id = req.params.id
     let categoria = categorias.findByPk(id)
     let allProducts = productos.findAll()
-    let filterProducts = allProducts.filter(categoria=>categoria.nombre==allProducts.categoria)
-    console.log(allProducts.categoria)
+    let filterProducts = allProducts.filter(producto=>producto.categoriaProd==categoria.nombre) 
+    console.log(allProducts)
     res.render('categoria.ejs', { categoria , filterProducts })
   }, 
   
