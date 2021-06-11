@@ -26,9 +26,9 @@ module.exports = {
       return productos 
   },
 
-  findByPk(id) {
-    const productos = this.readFile();
-    const productoEncontrado = productos.productos.find(producto => producto.id==id)
+  findByPk(id) { 
+    const productos = this.findAll();
+    const productoEncontrado = productos.find(producto => producto.id==id)
     return productoEncontrado
   },
 

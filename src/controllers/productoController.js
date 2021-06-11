@@ -3,7 +3,7 @@ const producto = require('../models/productos')
 const controller = {
     listado: (req, res) => {
       let productos = producto.findAll() 
-      res.render('./productos/listadoDeProductos.ejs', { productos: productos })
+      res.render('./productos/listadoDeProductos.ejs', { productos })
     },
 
     detalle: (req, res) => {

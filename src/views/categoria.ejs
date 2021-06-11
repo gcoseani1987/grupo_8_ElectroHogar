@@ -15,7 +15,7 @@
     <section class="productos">
       <%for (let i=0; i<filterProducts.length ; i++){%>
         <article class="producto">
-          <a href="/productos/detalle"><img src="<%=filterProducts[i].imagen%>" alt="<%=filterProducts[i].descripcion%>"></a>
+          <a href="/productos/detalle/<%=filterProducts[i].id%>"><img src="<%=filterProducts[i].imagen%>" alt="<%=filterProducts[i].descripcion%>"></a>
           <br>
           <p class="precio"><%=filterProducts[i].precio%></p>
           <br>
