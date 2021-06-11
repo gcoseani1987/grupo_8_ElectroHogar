@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const multer = require('multer')
+/* const multer = require('multer')
 const path = require('path')
 
 const storage = multer.diskStorage({
@@ -12,15 +12,15 @@ const storage = multer.diskStorage({
     }
 })
 
-const uploadFile = multer({ storage })
+const uploadFile = multer({ storage }) */
 
 const productoController = require('../controllers/productoController')
 
 router.get('/listado', productoController.listado)
-router.get('/detalle', productoController.detalle)
+router.get('/detalle/:id', productoController.detalle)
 
 router.get('/agregar', productoController.formNew) 
-router.post('/agregar', uploadFile.array('imagenes'), productoController.crear)
+/* router.post('/agregar', uploadFile.array('imagenes'), productoController.crear) */
 
 router.get('/:id/editar', productoController.editar) 
 router.put('/:id/editar', productoController.update)

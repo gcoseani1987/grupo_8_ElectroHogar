@@ -9,7 +9,7 @@ const controller = {
     detalle: (req, res) => {
       let id = req.params.id
       let productoEncontrado = producto.findByPk(id)
-      res.render('productos/detalleProducto.ejs', { productoEncontrado })
+      res.render('productos/detalleProducto.ejs', { productoEncontrado } )
     },
     
     formNew: (req, res) => {
