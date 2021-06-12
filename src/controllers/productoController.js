@@ -6,7 +6,7 @@ const controller = {
       let productos = producto.findAll() 
       res.render('./productos/listadoDeProductos.ejs', { productos })
     },
-
+ 
     detalle: (req, res) => {
       let id = req.params.id
       let productoEncontrado = producto.findByPk(id) 
@@ -31,14 +31,14 @@ const controller = {
       res.render('productos/editarProducto.ejs', { productoEncontrado })
     },
 
-    update: (req, res) => {
+    actualizar: (req, res) => {
       let data = req.body
       let id = req.params.id
       producto.update(data, id)
       res.redirect('/productos/listado')
     },
   
-    delete: (req, res) => {
+    borrar: (req, res) => {
       let id = req.params.id
       let productoEliminado = producto.delete(id)
       res.redirect('/productos/listado')

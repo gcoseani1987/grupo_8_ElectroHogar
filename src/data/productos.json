@@ -13,8 +13,8 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
   },
   {
     "id": 2,
@@ -30,8 +30,9 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
+        
   },
   {
     "id": 3,
@@ -47,8 +48,9 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
+        
   },
   {
     "id": 4,
@@ -64,8 +66,9 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
+        
   },
   {
     "id": 5,
@@ -81,8 +84,9 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
+        
   },
   {
     "id": 6,
@@ -98,8 +102,9 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
+        
   },
   {
     "id": 7,
@@ -115,8 +120,9 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
+        
   },
   {
     "id": 8,
@@ -132,8 +138,9 @@
     "origen": "Argentina",
     "peso": 9.9,
     "profundidad": 22.6,
-    "tamanoPantalla": 50,
-    "smart": "si"
+    "alto":61.7,
+    "ancho": 95.5
+        
   },
   {
     "id": 9,
@@ -142,17 +149,15 @@
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
-    "Alto": 29,
-    "Ancho": 72.2,
-    "Color": "BLANCO",
-    "Garantia": 12,
-    "Modelo": "BS26WCCR",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 10,
@@ -160,18 +165,16 @@
     "imagen": "/images/aire2.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
-    "Alto": 29,
-    "Ancho": 72.2,
-    "Color": "BLANCO",
-    "Garantia": 12,
     "precio": "23500",
-    "Modelo": "BS26WCCR",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 11,
@@ -179,18 +182,16 @@
     "imagen": "/images/aire3.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
-    "Alto": 29,
-    "Ancho": 72.2,
-    "Color": "BLANCO",
-    "Garantia": 12,
-    "Modelo": "BS26WCCR",
     "precio": "23500",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 12,
@@ -198,18 +199,16 @@
     "imagen": "/images/aire4.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
-    "Alto": 29,
-    "Ancho": 72.2,
-    "Color": "BLANCO",
     "precio": "23500",
-    "Garantia": 12,
-    "Modelo": "BS26WCCR",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 13,
@@ -217,18 +216,16 @@
     "imagen": "/images/aire5.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
-    "Alto": 29,
-    "Ancho": 72.2,
-    "Color": "BLANCO",
-    "Garantia": 12,
     "precio": "23500",
-    "Modelo": "BS26WCCR",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 14,
@@ -236,18 +233,16 @@
     "imagen": "/images/aire6.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
-    "Alto": 29,
-    "Ancho": 72.2,
-    "Color": "BLANCO",
     "precio": "23500",
-    "Garantia": 12,
-    "Modelo": "BS26WCCR",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 15,
@@ -255,18 +250,16 @@
     "imagen": "/images/aire7.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
-    "Alto": 29,
     "precio": "23500",
-    "Ancho": 72.2,
-    "Color": "BLANCO",
-    "Garantia": 12,
-    "Modelo": "BS26WCCR",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 16,
@@ -274,18 +267,16 @@
     "imagen": "/images/aire8.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
-    "Alto": 29,
-    "Ancho": 72.2,
     "precio": "23500",
-    "Color": "BLANCO",
-    "Garantia": 12,
-    "Modelo": "BS26WCCR",
-    "Origen": "ARGENTINA",
-    "Peso": 8.3,
-    "Profundidad": 18.7,
-    "Tipo": "Split",
     "stock": 8,
-    "Frigorias": 2322
+    "alto": 29,
+    "ancho": 72.2,
+    "color": "BLANCO",
+    "garantia": 12,
+    "modelo": "BS26WCCR",
+    "origen": "ARGENTINA",
+    "peso": 8.3,
+    "profundidad": 18.7
   },
   {
     "id": 17,
@@ -430,11 +421,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -451,11 +438,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -472,11 +455,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -493,11 +472,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -514,11 +489,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -535,11 +506,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -556,11 +523,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -577,11 +540,7 @@
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
-    "cantidadHornallas": 4,
-    "encendidoElectrico": "NO",
     "stock": 3,
-    "visorHorno": "SI",
-    "luzHorno": "NO",
     "alto": 85.5,
     "ancho": 57,
     "color": "Negro",
@@ -606,13 +565,7 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   },
   {
     "id": 34,
@@ -629,13 +582,7 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   },
   {
     "id": 35,
@@ -652,13 +599,7 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   },
   {
     "id": 36,
@@ -675,13 +616,7 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   },
   {
     "id": 37,
@@ -698,13 +633,7 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   },
   {
     "id": 38,
@@ -721,13 +650,7 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   },
   {
     "id": 39,
@@ -744,13 +667,7 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   },
   {
     "id": 40,
@@ -767,12 +684,6 @@
     "modelo": "NEXT 8.12 ECO",
     "origen": "ARGENTINA",
     "peso": 71,
-    "profundidad": 55,
-    "capacidad": 8,
-    "lavadoRapido": "Si",
-    "mediaCarga": "SI",
-    "programas": 35,
-    "tipoCarga": "FRONTAL",
-    "tecnologia": "AUTOMATICO"
+    "profundidad": 55
   }
 ]

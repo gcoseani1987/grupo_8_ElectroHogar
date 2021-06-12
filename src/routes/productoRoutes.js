@@ -23,8 +23,8 @@ router.get('/agregar', productoController.formNew)
 router.post('/agregar', uploadFile.single('imagen') , productoController.crear)
 
 router.get('/:id/editar', productoController.editar) 
-router.put('/:id/editar', productoController.update)
+router.put('/:id/editar', productoController.actualizar)
 
-router.delete('/:id', productoController.delete)
+router.delete('/:id', productoController.borrar)
 
 module.exports = router
