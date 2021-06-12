@@ -12,8 +12,8 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine','ejs');
 
 //requiremos la extension que nos permite trabajar con formularios
-app.use(express.urlencoded({extended: false}));
 app.use(express.json())
+app.use(express.urlencoded({extended: false}));
 
 //metodo override para trabajar con put y delete en HTML
 const methodOverride = require('method-override')

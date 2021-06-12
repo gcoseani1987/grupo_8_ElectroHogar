@@ -22,13 +22,13 @@ module.exports = {
     nuevoUsuario.id = this.generarId()
     const usuariosJson = this.readFile()
     const usuariosUpdated = [...usuariosJson, nuevoUsuario]
-    this.writeFile(usuariosUpdated)
+    this.writeFile(usuariosUpdated) 
     return nuevoUsuario
   }, 
 
   validarUsuario(usuarios) {
     usuarios = this.readFile()
-    const usuarioEncontrado = usuarios.find((e) => e.email === user.email)
+    const usuarioEncontrado = usuarios.find((e) => e.email === usuarios.email)
     if (usuarioEncontrado === undefined) {
       return 'El usuario no existe'
     } else if (usuarioEncontrado.password == usuarios.password) {

@@ -22,7 +22,7 @@ const controller = {
     const estadoUsuario = usuarios.validarUsuario(sesion)
 
     if(estadoUsuario == 'Ha sido registrado'){
-    res.redirect('/productos/listado')
+    res.redirect('/')
 
      }else{
     res.render('users/login.ejs', { estadoUsuario })

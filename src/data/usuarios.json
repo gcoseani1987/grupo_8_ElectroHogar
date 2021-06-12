@@ -31,5 +31,13 @@
     "password": "12345678",
     "password2": "12345678",
     "id": 4
+  },
+  {
+    "nombre": "Emiliano",
+    "apellido": "Cucit",
+    "email": "emicu144@gmail.com",
+    "password": "dasdilvasvhdasja",
+    "password2": "sdasdasd",
+    "id": 5
   }
 ]

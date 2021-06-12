@@ -11,17 +11,17 @@
 <article class='article'>
   <div class='article-main'>
   <div class='article-title'>
-    <h1><%=productoEncontrado.descripcion%></h1>
+    <h1><%=productoEncontrado.nombre%></h1>
   </div>
   <div class='article-top'>
     <div class='article-top-right'>
-        <img src="<%=productoEncontrado.imagen%>" alt="<%=productoEncontrado.descripcion%>">
+        <img src="<%=productoEncontrado.imagen%>" alt="<%=productoEncontrado.nombre%>">
     </div>
     <div class='article-top-left'> 
       <div class='box-condiciones-pago'>
         <div class='box-precio'>
           <span class='precio-contado'><strong>Precio:</strong></span>
-          <span class='precio-contado'><%=productoEncontrado.precio%></span>
+          <span class='precio-contado'>$<%=productoEncontrado.precio%></span>
         </div>
         <div class='box-tarjetas'>
           <div class='tarjetas'>
@@ -29,7 +29,7 @@
               <img src="https://images.fravega.com/f64/5ca9b33896079f3d56ac0a01038d568a.png" alt="mastercard" widht=20>
             </div>
             <div class='tarjeta-cuotas'>
-              <i>12 cuotas sin interés de $ 5.166.58</i>
+              <i>12 cuotas sin interés de $<%=Math.round((productoEncontrado.precio)/12)%></i>
             </div>
           </div>
           <div class='tarjetas'>
@@ -37,7 +37,7 @@
               <img src="https://images.fravega.com/f64/d91d7904a85783a86377e30feb87e7ff.png" alt="mastercard" widht=20>
             </div>
             <div class='tarjeta-cuotas'>
-              <i>12 cuotas sin interés de $ 5.166.58</i>
+              <i>12 cuotas sin interés de $<%=Math.round(((productoEncontrado.precio)/12))%></i>
             </div>
           </div>
            <div class='tarjetas'>
@@ -45,7 +45,7 @@
               <img src="https://images.fravega.com/f64/4ccbd7df1af0344289b45659aab25bbd.png" alt="mastercard" widht=20>
             </div>
             <div class='tarjeta-cuotas'>
-              <i>12 cuotas sin interés de $ 5.166.58</i>
+              <i>12 cuotas sin interés de $<%=Math.round((productoEncontrado.precio)/12)%></i>
             </div>
           </div>
         </div>
@@ -64,12 +64,7 @@
         <h3>Descripción del producto</h3>
       </div>
       <div class='descripcion-text'>
-        <p>Led Smart. 50" 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC).
-          Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). 
-          USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA.
-           Incluye: soporte tipo pie x2, guia rapida x1, 
-           manual legal x1, bolsa con tornillos para la base x1, 
-           control remoto x1, pilas AAA x2, cable de alimentacion x1.</p>
+        <p><%=productoEncontrado.descripcion%></p>
       </div>
     </div>
     <div class='article-table'>

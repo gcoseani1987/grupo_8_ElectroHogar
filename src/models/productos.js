@@ -12,7 +12,7 @@ module.exports = {
 
   writeFile(newData) {
     const dataJson = JSON.stringify(newData, null, 2);
-    fs.writeFileSync(this.filename, dataJson);
+    fs.writeFileSync(this.fileName, dataJson);
 },
 
   generarId() {
@@ -55,7 +55,7 @@ update (body ,id){
            ...body
        }
    } return producto 
-  });
+  });  
   this.writeFile(productoEditado)
 },
 

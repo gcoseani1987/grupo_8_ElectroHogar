@@ -23,7 +23,6 @@ router.get('/registro', userController.nuevoUsuario)
 router.post('registro', userController.crearUsuario)
 
 router.post('/registro', uploadFile.single('imagen'), userController.crearUsuario)
-router.post('/login', userController.loginUsuario)
 
 
 

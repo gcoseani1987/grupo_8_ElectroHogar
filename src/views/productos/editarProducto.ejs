@@ -9,7 +9,7 @@
     <main class="create-registro">
         <h2 class="titulo">EDITAR PRODUCTO</h2>
         <section class="create-form">
-            <form action='/productos/<%= productoEncontrado.id %>/editar?_method=PUT' method="POST" class="create" enctype="multipart/form-data">
+            <form action='/productos/<%= productoEncontrado.id %>/editar?_method=PUT' method="POST" class="create" enctype="multipart/form-data"> 
                 <div class="create-container">
                     <label>Producto</label>
                     <br>
@@ -25,7 +25,7 @@
                     <br>
                     <label for="descripcion" class="label">Editar descripcion de producto</label>
                     <br>
-                    <textarea name="descripcion" class="description-create" value="<%= productoEncontrado.descripcion %>"></textarea>
+                    <textarea name="descripcion" class="description-create"><%= productoEncontrado.descripcion %></textarea>
                     <br>
                     <br>
                     <br>
@@ -37,14 +37,13 @@
                     <br>
                     <label for="imagen" class="label">Editar imagenes</label>
                     <br>
-                    <input name="imagenes" class="input-create" type="file" accept="jpg,jpeg" multiple>
+                    <input name="imagen" class="input-create" type="file" accept="jpg,jpeg" >
                     <br>
                     <br>
                     <br>
                     <label for="categorias" class="label">Categoría</label>
                     <br>
                     <select name="categoria" class="input-create">
-                        <option value="<%= productoEncontrado.categoria %>"><%= productoEncontrado.categoria %></option>
                         <option value="televisores">Televisores</option>
                         <option value="aires">Aires Acondicionados</option>
                         <option value="lavarropas">Lavarropas</option>
@@ -56,7 +55,7 @@
                     <br>
                     <label for="precio" class="label">Precio</label>
                     <br>
-                    <input for="precio" class= "input-create-precio" type="number" name="price" placeholder="$50.000" value="<%= productoEncontrado.precio %>">
+                    <input for="precio" class= "input-create-precio" type="text" name="precio" placeholder="$50.000" value="$<%= productoEncontrado.precio %>">
                 </div>
                 <br>
                 <br>
