@@ -4,11 +4,11 @@ const { usuariosPath } = require('../models/usuarios')
 const controller = {
   login: (req, res) => {
     const estadoUsuario = ''
-    res.render('users/login.ejs', { estadoUsuario })
+    res.render('users/login', { estadoUsuario })
   },
 
   nuevoUsuario: (req, res) => {
-    res.render('users/registro.ejs')
+    res.render('users/registro')
   },
 
   crearUsuario: (req, res) => {
@@ -25,7 +25,7 @@ const controller = {
     res.redirect('/')
 
      }else{
-    res.render('users/login.ejs', { estadoUsuario })
+    res.render('users/login', { estadoUsuario })
     }
   }
 }

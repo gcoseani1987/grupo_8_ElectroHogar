@@ -4,17 +4,17 @@ const { productosPath } = require('../models/usuarios')
 const controller = {
     listado: (req, res) => {
       let productos = producto.findAll() 
-      res.render('./productos/listadoDeProductos.ejs', { productos })
+      res.render('./productos/listadoDeProductos', { productos })
     },
  
     detalle: (req, res) => {
       let id = req.params.id
       let productoEncontrado = producto.findByPk(id) 
-      res.render('productos/detalleProducto.ejs', { productoEncontrado } )
+      res.render('productos/detalleProducto', { productoEncontrado } )
     },
     
     formNew: (req, res) => {
-      res.render('productos/agregarProducto.ejs')
+      res.render('productos/agregarProducto')
     },
 
     crear: (req, res) => {
@@ -28,7 +28,7 @@ const controller = {
     editar: (req, res) => {
       let id = req.params.id
       let productoEncontrado = producto.findByPk(id)
-      res.render('productos/editarProducto.ejs', { productoEncontrado })
+      res.render('productos/editarProducto', { productoEncontrado })
     },
 
     actualizar: (req, res) => {

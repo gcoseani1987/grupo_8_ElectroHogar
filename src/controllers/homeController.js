@@ -1,9 +1,9 @@
 const controller = {
     home: (req, res) => {
-      res.render('home.ejs')
+      res.render('home')
     },
     carrito: (req, res) => {
-      res.render('carritoCompras.ejs')
+      res.render('carritoCompras')
     },    
   }
   
