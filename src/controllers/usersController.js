@@ -1,4 +1,4 @@
-const usuarios = require('../models/usuarios')
+const usuario = require('../models/usuarios')
 const { usuariosPath } = require('../models/usuarios')
 
 const controller = {
@@ -27,7 +27,18 @@ const controller = {
      }else{
     res.render('users/login', { estadoUsuario })
     }
-  }
+  },
+
+    listado: (req, res) => {
+      let usuarios = usuario.findAll() 
+      res.render('./users/listadoUsuario', { usuarios })
+  },
+
+  borrar: (req, res) => {
+    let id = req.params.id
+    let usuarioEliminado = usuario.delete(id)
+    res.redirect('/users/listado')
+  },
 }
 
 module.exports = controller

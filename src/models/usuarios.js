@@ -18,6 +18,20 @@ module.exports = {
     return this.readFile().pop().id + 1
   },
 
+  findAll() {
+    return this.readFile()
+},
+
+  findUser(usuario) {
+    const usuarios = this.readFile()
+    return usuarios.find(e => e.email === usuario.email)
+
+},
+  findByPk(id) {
+    const usuarios = this.readFile()
+    return usuarios.find(e => e.id == id)
+},
+
   crearUsuario(nuevoUsuario) {
     nuevoUsuario.id = this.generarId()
     const usuariosJson = this.readFile()
@@ -36,5 +50,11 @@ module.exports = {
     } else {
       return 'El usuario o la contraseña son incorrectos'
     }
+  },
+
+  delete (id){
+    const usuarios = this.readFile();
+    const nuevoUsuario = usuarios.filter(idUsuario => idUsuario.id != id)
+    this.writeFile(nuevoUsuario)
   },
 }

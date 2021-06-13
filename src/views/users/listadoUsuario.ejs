@@ -1,0 +1,38 @@
+<%- include('../partials/head.ejs')%>
+<title>Usuarios | Electro Hogar</title>
+<link rel="stylesheet" href="/css/stylesListadoUsuario.css">
+</head>
+
+<body>
+  <%- include('../partials/header.ejs')%> 
+  <div class="padding-top">
+  </div>
+ <main class="listadoUsuarios">
+    <h2 class="text">Usuarios</h2>
+    <section class="venta">
+     <%for (let i=0; i<usuarios.length ; i++){%>
+      <article class="producto">
+        <br>
+        <p class="nombre">Nombre: <%=usuarios[i].nombre%></p>
+        <br>
+        <p class="modelo">Apellido: <%=usuarios[i].apellido%></p>
+        <br>
+        <p class="modelo">Email: <%=usuarios[i].email%></p>
+        <br> 
+        <p class="modelo">Contraseña: <%=usuarios[i].password%></p>
+        <br>
+        <div class="buttons">
+        <form action="/users/<%=usuarios[i].id%>?_method=DELETE"  method="POST">
+          <button class="button" id="button" type="submit">Eliminar</button>
+        </form>      
+        <br>
+        <br>
+        </div>
+      </article>
+      <%}%>
+    </section>  
+</main>
+  <br>
+  <br>
+  <%- include('../partials/footer.ejs')%>
+</body>

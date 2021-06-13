@@ -85,23 +85,6 @@
     "ancho": 95.5
   },
   {
-    "id": 6,
-    "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
-    "imagen": "/images/tele6.jpg",
-    "categoriaProd": "televisores",
-    "precio": "25000",
-    "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
-    "stock": 4,
-    "color": "Negro",
-    "garantia": 12,
-    "modelo": "50A64GSV",
-    "origen": "Argentina",
-    "peso": 9.9,
-    "profundidad": 22.6,
-    "alto": 61.7,
-    "ancho": 95.5
-  },
-  {
     "id": 7,
     "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
     "imagen": "/images/tele7.jpg",

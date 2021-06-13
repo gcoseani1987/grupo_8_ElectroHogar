@@ -39,13 +39,5 @@
     "password": "dasdilvasvhdasja",
     "password2": "sdasdasd",
     "id": 5
-  },
-  {
-    "nombre": "Juan José",
-    "apellido": "Perez",
-    "email": "juanjope@gmail.com",
-    "password": "asdasdasd",
-    "password2": "asdasdasd",
-    "id": 6
   }
 ]

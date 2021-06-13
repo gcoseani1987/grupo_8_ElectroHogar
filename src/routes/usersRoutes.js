@@ -19,8 +19,12 @@ const userController = require('../controllers/usersController')
 router.get('/login', userController.login)
 router.post('login', userController.loginUsuario)
 
+router.get('/listado',  userController.listado)
+
 router.get('/registro', userController.nuevoUsuario)
 router.post('registro', userController.crearUsuario)
+
+router.delete('/:id', userController.borrar)
 
 router.post('/registro', uploadFile.single('imagen'), userController.crearUsuario)
 
