@@ -38,7 +38,7 @@ module.exports = {
     const productosUpdated = [...productos, producto ];
     this.writeFile(productosUpdated);
     return producto;
-},
+}, 
 
   delete (id){
   const productos = this.readFile();

@@ -12,8 +12,10 @@ const controller = {
   },
 
   crearUsuario: (req, res) => {
-    let nuevoUsuario = req.body
-    usuarios.crearUsuario(nuevoUsuario)
+    const nuevoUsuario = req.body
+    nuevoUsuario.imagen = '/images/usuarios' + req.file.filename
+    console.log(nuevoUsuario)
+    usuario.crearUsuario(nuevoUsuario)
     res.redirect('/')
   }, 
 

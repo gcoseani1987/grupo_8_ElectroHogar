@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+
 const path = require('path')
 const multer = require('multer')
 
@@ -20,7 +21,7 @@ router.get('/listado', productoController.listado)
 router.get('/detalle/:id', productoController.detalle)
 
 router.get('/agregar', productoController.formNew) 
-router.post('/agregar', uploadFile.single('imagen') , productoController.crear)
+router.post('/agregar', uploadFile.single('imagen'), productoController.crear)
 
 router.get('/:id/editar', productoController.editar) 
 router.put('/:id/editar', productoController.actualizar)

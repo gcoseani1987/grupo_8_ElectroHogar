@@ -22,7 +22,7 @@ const controller = {
       nuevoProducto.imagen = '/images/' + req.file.filename
       console.log(nuevoProducto)
       producto.crear(nuevoProducto)
-      res.redirect('/productos/listado')
+      res.redirect('/productos/listado')  
     },
 
     editar: (req, res) => {

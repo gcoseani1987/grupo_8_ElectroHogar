@@ -6,7 +6,7 @@
     "email": "ignacio.101@hotmail.com",
     "password": "123456789",
     "password2": "123456789",
-    "imagen": "/images/tele1"
+    "imagen": "/images/usuarios/capitan.jpg"
   },
   {
     "nombre": "blabla",
@@ -14,6 +14,7 @@
     "email": "ignacio.101@hotmail.com",
     "password": "blabla",
     "password2": "blabla",
+    "imagen": "/images/usuarios/iron.jpg",
     "id": 2
   },
   {
@@ -22,6 +23,7 @@
     "email": "ignacio.101@hotmail.com",
     "password": "123456",
     "password2": "123456",
+    "imagen": "/images/usuarios/ironman.jpg",
     "id": 3
   },
   {
@@ -30,6 +32,7 @@
     "email": "emicu144@gmail.com",
     "password": "12345678",
     "password2": "12345678",
+    "imagen": "/images/usuarios/thanos.jpg",
     "id": 4
   },
   {
@@ -38,6 +41,16 @@
     "email": "emicu144@gmail.com",
     "password": "dasdilvasvhdasja",
     "password2": "sdasdasd",
+    "imagen": "/images/usuarios/thor.jpg",
     "id": 5
+  },
+  {
+    "nombre": "Bruce",
+    "apellido": "Banner",
+    "email": "ignacio.101@hotmail.com",
+    "password": "batman",
+    "password2": "batman",
+    "imagen": "/images/usuariosfunction now() { [native code] }.jpg",
+    "id": 6
   }
 ]
