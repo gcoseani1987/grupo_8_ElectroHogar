@@ -17,6 +17,7 @@ main{
 }
 .producto {
     flex-basis: calc(47% - 10px);
+    max-width: 222px;
 }
 
 .venta img{ 
@@ -95,7 +96,7 @@ article:hover{
 
 .buttons{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .button{

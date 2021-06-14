@@ -28,7 +28,7 @@ module.exports = {
 
 },
   findByPk(id) {
-    const usuarios = this.readFile()
+    const usuarios = this.readFile() 
     return usuarios.find(e => e.id == id)
 },
 
@@ -42,11 +42,11 @@ module.exports = {
 
   validarUsuario(usuarios) {
     usuarios = this.readFile()
-    const usuarioEncontrado = usuarios.find((e) => e.email === usuarios.email)
+    const usuarioEncontrado = usuarios.find((usuario) => usuario.email === usuarios.email)
     if (usuarioEncontrado === undefined) {
-      return 'El usuario no existe'
-    } else if (usuarioEncontrado.password == usuarios.password) {
-      return 'Ha sido registrado'
+      return 'Usuario inexistente'
+    } else if (usuarioEncontrado.password === usuarios.password) {
+      return 'Usuario registrado'
     } else {
       return 'El usuario o la contraseña son incorrectos'
     }

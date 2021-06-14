@@ -11,9 +11,9 @@ const controller = {
     res.render('users/registro')
   },
 
-  crearUsuario: (req, res) => {
+   crearUsuario: (req, res) => {
     const nuevoUsuario = req.body
-    nuevoUsuario.imagen = '/images/usuarios' + req.file.filename
+    nuevoUsuario.imagen = '/images/usuarios/' + req.file.filename
     console.log(nuevoUsuario)
     usuario.crearUsuario(nuevoUsuario)
     res.redirect('/')
@@ -21,10 +21,10 @@ const controller = {
 
   loginUsuario: (req, res) =>{
     const sesion = req.body
-    const estadoUsuario = usuarios.validarUsuario(sesion)
+    const estadoUsuario = usuario.validarUsuario(sesion)
 
-    if(estadoUsuario == 'Ha sido registrado'){
-    res.redirect('/')
+    if(estadoUsuario == 'Ha sido registrado'){ 
+    res.redirect('/') 
 
      }else{
     res.render('users/login', { estadoUsuario })
