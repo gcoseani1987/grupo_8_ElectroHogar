@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator')
 const usuario = require('../models/usuarios')
 const { usuariosPath } = require('../models/usuarios')
 
@@ -12,12 +13,19 @@ const controller = {
   },
 
    crearUsuario: (req, res) => {
+    const resultadoValidaciones = validationResult(req) 
     const nuevoUsuario = req.body
     nuevoUsuario.imagen = '/images/usuarios/' + req.file.filename
-    console.log(nuevoUsuario)
     usuario.crearUsuario(nuevoUsuario)
-    res.redirect('/')
-  }, 
+    if(resultadoValidaciones.length>0){
+      return res.render('users/registro'),{
+        errors : resultadoValidaciones.errors.mapped(),
+        oldData : req.body
+      }
+  } else {
+      res.redirect('/') 
+  } 
+  },
 
   loginUsuario: (req, res) =>{
     const sesion = req.body

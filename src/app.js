@@ -40,11 +40,11 @@ app.use('/productos', productoRoutes)
 const usersRoutes = require('./routes/usersRoutes')
 app.use('/users', usersRoutes)
 
-/*Categorías*/
+/*Categorías*/ 
 const categoriasRoutes = require('./routes/categoriasRoutes')
 app.use('/categorias', categoriasRoutes)
 
-/* Error 404 */
+/* Error 404 */    
 app.use((req, res, next) => {
     res.status(404).render('not-found')
 })

@@ -16,37 +16,37 @@
             <label for="nombre">Nombre:</label>
             <br>
             <br>
-            <input class="input-registro" type="text" name="nombre" required>
+            <input class="input-registro <%= locals.errors && errors  %>" type="text" name="nombre" >
             <br>
             <br>
             <label for="apellido">Apellido:</label>
             <br>
             <br>
-            <input class="input-registro" type="text" name="apellido" required>
+            <input class="input-registro" type="text" name="apellido">
             <br>
             <br> 
             <label for="email">Email:</label>
             <br>
             <br>
-            <input class="input-registro" type="email" name="email" placeholder="ejemplo@hotmail.com" required>
+            <input class="input-registro" type="email" name="email" placeholder="ejemplo@hotmail.com">
             <br>
             <br>
             <label for="imagen">Imagen de perfil:</label>
             <br>
             <br>
-            <input name="imagen" class="input-registro" type="file" accept="jpg,jpeg" required> 
+            <input name="imagen" class="input-registro" type="file"> 
             <br>
             <br>
             <label for="password">Contraseña:</label>
             <br>
             <br>
-            <input class="input-registro" type="password" name="password" required>
+            <input class="input-registro" type="password" name="password">
             <br>
             <br>
             <label for="password2">Repita su contraseña:</label>
             <br>
             <br>
-            <input class="input-registro" type="password" name="password2" required>
+            <input class="input-registro" type="password" name="password2">
         </div>
           <br>
         <div class="button">
