@@ -22,6 +22,7 @@ app.use(methodOverride('_method'))
 //corremos el servidor
 app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 
+
 /* Home */
 const homeRoutes=require('./routes/homeRoutes')
 app.use('/',homeRoutes)
@@ -38,7 +39,12 @@ app.use('/productos', productoRoutes)
 /* Usuarios */
 const usersRoutes = require('./routes/usersRoutes')
 app.use('/users', usersRoutes)
- 
+
 /*Categorías*/
 const categoriasRoutes = require('./routes/categoriasRoutes')
 app.use('/categorias', categoriasRoutes)
+
+/* Error 404 */
+app.use((req, res, next) => {
+    res.status(404).render('not-found')
+})
