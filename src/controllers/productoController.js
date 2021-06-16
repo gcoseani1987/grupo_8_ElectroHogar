@@ -1,9 +1,7 @@
+const { validationResult } = require('express-validator')
 const producto = require('../models/productos')
 const { productosPath } = require('../models/usuarios')
-const path = require('path')
-const fs = require('fs')
 
-const { validationResult } = require('express-validator');
 
 const controller = {
     listado: (req, res) => {
@@ -24,10 +22,6 @@ const controller = {
     crear: (req, res) => {
       const nuevoProducto = req.body 
       const resultadoValidaciones = validationResult(req)
-      if (!resultadoValidaciones.isEmpty()) {
-        if (req.file) {
-            fs.unlinkSync(req.file.path)
-        } else {
       nuevoProducto.imagen = '/images/' + req.file.filename
       producto.crear(nuevoProducto)
       if(resultadoValidaciones.length>0){
@@ -38,7 +32,6 @@ const controller = {
     } else {
         res.redirect('/productos/listado') 
     } 
-    }
     },
 
     editar: (req, res) => {

@@ -13,7 +13,7 @@ const validacionUsuario = [
         } 
         return true
     }),
-    body(imagen).custom((value, { req })=>{
+    body('imagen').custom((value, { req })=>{
         const file = req.file
         const extensionesPermitidas = ['.jpg','.png','.gif']
         const extension = path.extname(file.originalname)

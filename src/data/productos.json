@@ -644,5 +644,22 @@
     "origen": "ARGENTINA",
     "peso": 71,
     "profundidad": 55
+  },
+  {
+    "nombre": "",
+    "descripcion": "",
+    "stock": "",
+    "categoriaProd": "",
+    "alto": "",
+    "ancho": "",
+    "color": "",
+    "garantia": "",
+    "modelo": "",
+    "origen": "",
+    "peso": "",
+    "Profundidad": "",
+    "precio": "",
+    "imagen": "/images/1623886234198.jpg",
+    "id": 40
   }
 ]
