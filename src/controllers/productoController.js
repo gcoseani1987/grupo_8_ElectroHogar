@@ -7,7 +7,7 @@ const controller = {
     listado: (req, res) => {
       let productos = producto.findAll() 
       res.render('./productos/listadoDeProductos', { productos })
-    },
+    }, 
  
     detalle: (req, res) => {
       let id = req.params.id
