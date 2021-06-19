@@ -35,8 +35,8 @@ module.exports = {
   crear(producto) {
     producto.id = this.generarId();
     const productos = this.readFile();
-    const productosUpdated = [...productos, producto ];
-    this.writeFile(productosUpdated); 
+    const listaActualizada = [...productos, producto ];
+    this.writeFile(listaActualizada); 
     return producto;
 }, 
 

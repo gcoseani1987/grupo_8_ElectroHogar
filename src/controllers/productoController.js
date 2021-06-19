@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator')
 const producto = require('../models/productos')
 const { productosPath } = require('../models/usuarios')
-const resultadoValidaciones = require('../middlewares/productosMiddlewares')
+const fs = require('fs')
 
 const controller = {
     listado: (req, res) => {
@@ -9,8 +9,8 @@ const controller = {
       res.render('./productos/listadoDeProductos', { productos })
     }, 
  
-    detalle: (req, res) => {
-      let id = req.params.id
+    detalle: (req, res) => {  
+      let {id} = req.params.id
       let productoEncontrado = producto.findByPk(id) 
       res.render('productos/detalleProducto', { productoEncontrado } )
     },
@@ -18,21 +18,24 @@ const controller = {
     formNew: (req, res) => {
       res.render('productos/agregarProducto')
     },
-
+ 
     crear: (req, res) => {
-      const nuevoProducto = req.body 
       const resultadoValidaciones = validationResult(req)
-      nuevoProducto.imagen = '/images/' + req.file.filename
-      producto.crear(nuevoProducto)
-      if(resultadoValidaciones.length>0){
-        return res.render('productos/agregarProducto'),{
-          errors : resultadoValidaciones.errors.mapped(),
-          oldData : req.body
+      if(!resultadoValidaciones.isEmpty()){
+        if(req.file){
+          fs.unlinkSync(req.file.path)
         }
-    } else {
-        res.redirect('/productos/listado') 
-    } 
-    },
+        const oldData = req.body
+        res.render('productos/agregarProducto',{ oldData, errors: resultadoValidaciones.mapped()})
+        return
+      }
+      const { nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,origen,profundidad,precio } = req.body
+      const productoNuevo = {nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,
+        origen,profundidad,precio, imagen : '/images/' + req.file.filename }
+        producto.crear(productoNuevo)
+        res.redirect('/productos/listado')
+      
+    }, 
 
     editar: (req, res) => {
       let id = req.params.id
@@ -41,11 +44,20 @@ const controller = {
     },
 
     actualizar: (req, res) => {
-      let data = req.body
-      let id = req.params.id
-      producto.modificar(data, id)
-      res.redirect('/productos/listado') 
-    },
+      const data= req.body
+      const { id }= req.params
+      const productoOriginal = producto.findByPk(id)
+      const { file }= req
+      let imagen 
+      if(file){
+        imagen = '/images/' + file.filename
+      } else{
+        imagen = productoOriginal.imagen
+      }
+      data.imagen = imagen
+      producto.modificar(data,id)
+      res.redirect('/productos/listado')    
+},
   
     borrar: (req, res) => {
       let id = req.params.id

@@ -1,13 +1,11 @@
 const express = require('express');
 const router = express.Router();
-
-const path = require('path');
 const multer = require('multer');
-const { body } = require('express-validator');
+const path = require('path');
 
-const productoController = require('../controllers/productoController')
-
+const { isFileImage }=require('../helpers/file')
 const validaciones = require ('../middlewares/productosMiddlewares')
+const productoController =require('../controllers/productoController')
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){

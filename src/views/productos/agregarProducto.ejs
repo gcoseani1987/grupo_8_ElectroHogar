@@ -64,9 +64,11 @@
                     <br>
                     <select 
                     name="categoriaProd" 
-                    class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>"
+                    class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>" style="
+                    text-transform: uppercase;
+                "
                     >
-                    <option value="">Categoría</option>
+                    <option value="" >Categoría</option>
                     <%  
                         let seleccionarCategoria = ['televisores','aires','hornos','heladeras','lavarropas'];
                     %>
@@ -167,7 +169,7 @@
                     <br>
                     <br>
                     <input class="input-create-precio <%= locals.errors && errors.profundidad ? 'is-invalid' : null %>" type="number" 
-                    name="Profundidad" step="0.01" placeholder="1" value="<%= locals.oldData && oldData.profundidad %>">
+                    name="profundidad" step="0.01" placeholder="1" value="<%= locals.oldData && oldData.profundidad %>">
                     <%if (locals.errors && errors.profundidad){%>
                         <div class="advertencia">
                             <%=errors.profundidad.msg%>
