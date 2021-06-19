@@ -36,7 +36,7 @@ module.exports = {
     producto.id = this.generarId();
     const productos = this.readFile();
     const productosUpdated = [...productos, producto ];
-    this.writeFile(productosUpdated);
+    this.writeFile(productosUpdated); 
     return producto;
 }, 
 
@@ -46,19 +46,18 @@ module.exports = {
   this.writeFile(nuevoProducto)
 },
 
-update (body ,id){
+modificar (data ,id){
   const productos = this.readFile();
   const productoEditado = productos.map(producto =>{
    if(producto.id == id){
        producto ={
            id: producto.id,
-           ...body
+           ...data
        }
    } return producto 
   });  
   this.writeFile(productoEditado)
-},
-
+}
 }
 
  

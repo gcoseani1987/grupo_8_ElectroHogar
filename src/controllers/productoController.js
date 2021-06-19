@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator')
 const producto = require('../models/productos')
 const { productosPath } = require('../models/usuarios')
-
+const resultadoValidaciones = require('../middlewares/productosMiddlewares')
 
 const controller = {
     listado: (req, res) => {
@@ -43,8 +43,8 @@ const controller = {
     actualizar: (req, res) => {
       let data = req.body
       let id = req.params.id
-      producto.update(data, id)
-      res.redirect('/productos/listado')
+      producto.modificar(data, id)
+      res.redirect('/productos/listado') 
     },
   
     borrar: (req, res) => {

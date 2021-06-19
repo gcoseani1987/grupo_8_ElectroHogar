@@ -1,3 +1,4 @@
+  
 <%- include('../partials/head.ejs')%>
 <link rel="stylesheet" href="/css/stylesEditarProducto.css">
 <title>Editar producto</title>
@@ -44,16 +45,11 @@
                     <label for="categorias" class="label">Categoría</label>
                     <br>
                     <select name="categoria" class="input-create">
-                        <option value="televisores">Seleccione una categoría</option>
-                        <% 
-                            const selecCategoria = [televisores, aires, hornos, heladeras, lavarropas]
-                        %>
-                        <%
-                            for (const unaCategoria of selecCategoria){ %>
-                                <option value="<%=unaCategoria%>"><%=unaCategoria%> </option>
-
-                            }
-                        %>
+                        <option value="televisores">Televisores</option>
+                        <option value="aires">Aires Acondicionados</option>
+                        <option value="lavarropas">Lavarropas</option>
+                        <option value="hornos">Hornos</option>
+                        <option value="heladeras">Heladeras</option> 
                     </select>
                     <label for="alto">Alto</label>
                     <br>
@@ -115,7 +111,7 @@
                     <button class="create-button" type="reset">Resetear</button>
                     </div>
             </form>
-        </section> 
+        </section>
         <br>
         <br>
     </main>

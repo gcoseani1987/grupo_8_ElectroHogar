@@ -16,6 +16,7 @@
 .acomodar-header{
     background-color: rgb(217,217,217);
     width: 100%;
+    top: 0;
     height: 70px;
     padding: 10px;
     display: flex;

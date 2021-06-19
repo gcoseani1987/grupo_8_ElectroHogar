@@ -65,7 +65,7 @@
                     <select 
                     name="categoriaProd" 
                     class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>"
-                >
+                    >
                     <option value="">Categoría</option>
                     <%  
                         let seleccionarCategoria = ['televisores','aires','hornos','heladeras','lavarropas'];
@@ -76,7 +76,7 @@
                             <%= locals.oldData && (unaCategoria === oldData.categoriaProd) ? 'selected' : null %> 
                         > <%= unaCategoria%> </option>
                     <% } %>
-                </select>
+                    </select>
                     <br>
                     <br>
                     <label for="alto">Alto</label>

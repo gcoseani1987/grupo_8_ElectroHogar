@@ -15,6 +15,9 @@
     justify-content: space-between;
     top: 0;
 }
+.main-header{
+    margin-top: 10px;
+}
 
 .create-registro{
     background-image: url(../images/login.jpg);
