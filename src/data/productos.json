@@ -610,20 +610,5 @@
     "origen": "ARGENTINA",
     "peso": 71,
     "profundidad": 55
-  },
-  {
-    "nombre": "Televisor  UHD 4K",
-    "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
-    "stock": "11",
-    "alto": "61.7",
-    "ancho": "95.5",
-    "color": "NEGRO",
-    "garantia": "12",
-    "modelo": "50A64GSV",
-    "origen": "JAPON",
-    "profundidad": "22.6",
-    "precio": "55000",
-    "imagen": "/images/1624142927120.jpg",
-    "id": 38
   }
 ]

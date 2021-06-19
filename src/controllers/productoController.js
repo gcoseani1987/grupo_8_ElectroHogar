@@ -44,20 +44,21 @@ const controller = {
     },
 
     actualizar: (req, res) => {
-      const data= req.body
-      const { id }= req.params
+      const { id } = req.params;
+      const { nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,origen,profundidad,precio } = req.body
+      const data = req.body; 
       const productoOriginal = producto.findByPk(id)
-      const { file }= req
-      let imagen 
-      if(file){
-        imagen = '/images/' + file.filename
-      } else{
-        imagen = productoOriginal.imagen
+      const { file } = req
+      let imagen
+      if (file) {
+          imagen = '/images/' + file.filename
+      } else {
+          imagen = productoOriginal.image
       }
       data.imagen = imagen
-      producto.modificar(data,id)
-      res.redirect('/productos/listado')    
-},
+      producto.modificar(data, id);
+      res.redirect('/productos/listado');
+  },
   
     borrar: (req, res) => {
       let id = req.params.id
