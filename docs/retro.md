@@ -13,3 +13,7 @@ Hacer mas reuniones semanales con horarios y duracion definida previamente.
 Continuar entregando los sprint en tiempo y forma.
 No consideramos tener que dejar de hacer algo o hacer menos, es la primera vez que trabajamos de esta forma y por el momento no encontramos ningun inconveniente.
 Consideramos estar bien organizados durante el sprint, y cada uno cumplio con sus tareas, y el sprint fue entregado en tiempo y forma cumpliendo los requisitos planteados.
+
+### Sprint 3
+<br>
+Debemos comenzar a explora los html y css para mejorar el formato y el diseño de la página para que la experiencia del usuario sea más dinámica. Al mismo tiempo comenzar a hacer debugging cuando estamos desarrollando para poder encontrar de manera más rápida los errores en el código. Debemos comenzar a hacer más meetings para poder resolver los problemas que no pudimos solucionar de manera individual ya que los sprint conforme vamos  avanzando se van a haciendo más complejos en su resolución. Continuar organizandonos y trabajar en equipo. Dejar de desarrollar sin hacer debugging ya que luego es muy díficil resolver los conflictos que surgen en el código
