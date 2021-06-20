@@ -44,12 +44,21 @@
                     <br>
                     <label for="categoriaProd" class="label">Categoría</label>
                     <br>
-                    <select name="categoriaProd" class="input-create" value="<%=productoEncontrado.categoriaProd%>">
-                        <option value="televisores">Televisores</option>
-                        <option value="aires">Aires Acondicionados</option>
-                        <option value="lavarropas">Lavarropas</option>
-                        <option value="hornos">Hornos</option>
-                        <option value="heladeras">Heladeras</option>  
+                    <select 
+                    name="categoriaProd" 
+                    class="input-create" style="
+                    text-transform: uppercase;"
+                    >
+                    <option value="">Categoría</option>
+                    <%  
+                        let seleccionarCategoria = ['televisores','aires','hornos','heladeras','lavarropas'];
+                    %>
+                    <% for (const unaCategoria of seleccionarCategoria) { %>
+                        <option 
+                            value="<%= unaCategoria %>"
+                            <%= productoEncontrado.categoriaProd && (unaCategoria === productoEncontrado.categoriaProd) ? 'selected' : null %> 
+                        > <%= unaCategoria%> </option>
+                    <% } %>
                     </select>
                     <label for="alto">Alto</label>
                     <br>

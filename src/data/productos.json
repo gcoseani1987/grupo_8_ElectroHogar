@@ -138,19 +138,19 @@
   {
     "id": 9,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire1.jpg",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
+    "stock": "8",
     "categoriaProd": "aires",
-    "precio": "23500",
-    "stock": 8,
-    "alto": 29,
-    "ancho": 72.2,
+    "alto": "29",
+    "ancho": "72.2",
     "color": "BLANCO",
-    "garantia": 12,
+    "garantia": "12",
     "modelo": "BS26WCCR",
     "origen": "ARGENTINA",
-    "peso": 8.3,
-    "profundidad": 18.7
+    "profundidad": "18.7",
+    "peso": "8.3",
+    "precio": "23500",
+    "imagen": "/images/aire1.jpg"
   },
   {
     "id": 10,
@@ -642,7 +642,7 @@
     "origen": "ARGENTINA",
     "profundidad": "0.7",
     "peso": "9.9",
-    "precio": "37899",
+    "precio": "40500",
     "imagen": "/images/1624168332779.jpg"
   }
 ]
