@@ -48,15 +48,15 @@ module.exports = {
 
 modificar (data ,id){
   const productos = this.readFile();
-  const productoEditado = productos.map(producto =>{
+  const productoAEditar = productos.map(producto =>{
    if(producto.id == id){
        producto ={
-           id: producto.id,
-           ...data
+          id: producto.id,
+          ...data
        }
    } return producto 
   });  
-  this.writeFile(productoEditado)
+  this.writeFile(productoAEditar)
 }
 }
 

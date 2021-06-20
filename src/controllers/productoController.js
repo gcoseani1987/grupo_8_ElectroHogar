@@ -29,9 +29,9 @@ const controller = {
         res.render('productos/agregarProducto',{ oldData, errors: resultadoValidaciones.mapped()})
         return
       }
-      const { nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,origen,profundidad,precio } = req.body
+      const { nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,origen,profundidad,peso,precio } = req.body
       const productoNuevo = {nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,
-        origen,profundidad,precio, imagen : '/images/' + req.file.filename }
+        origen,profundidad,peso, precio, imagen : '/images/' + req.file.filename }
         producto.crear(productoNuevo)
         res.redirect('/productos/listado')
       
@@ -45,18 +45,20 @@ const controller = {
 
     actualizar: (req, res) => {
       const { id } = req.params;
-      const { nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,origen,profundidad,precio } = req.body
-      const data = req.body; 
       const productoOriginal = producto.findByPk(id)
+      const data = req.body; 
       const { file } = req
       let imagen
       if (file) {
-          imagen = '/images/' + file.filename
+        imagen = '/images/' + req.file.filename
       } else {
-          imagen = productoOriginal.image
+        imagen = productoOriginal.imagen
       }
       data.imagen = imagen
-      producto.modificar(data, id);
+      const { nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,origen,profundidad,peso,precio } = req.body
+      const dataNueva = {nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,
+        origen,profundidad,peso, precio , imagen }
+      producto.modificar(dataNueva, id);
       res.redirect('/productos/listado');
   },
   

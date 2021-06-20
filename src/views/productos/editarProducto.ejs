@@ -6,7 +6,7 @@
 <body>
 
     <%- include('../partials/header.ejs')%>
-
+ 
     <main class="create-registro">
         <h2 class="titulo">EDITAR PRODUCTO</h2>
         <section class="create-form">
@@ -14,13 +14,13 @@
                 <div class="create-container">
                     <label>Producto</label>
                     <br>
-                    <img src="<%=productoEncontrado.imagen%>" alt="<%=productoEncontrado.descripcion%>">
+                    <img src="<%=productoEncontrado.imagen%>" alt="<%=productoEncontrado.descripcion%>" width="300px">
                     <br>
                     <br>
-                    <br>
+                    <br> 
                     <label for="nombre" class="label">Editar nombre</label>
                     <br>
-                    <input type="name" class="input-create" name="name" value="<%= productoEncontrado.nombre %>">
+                    <input type="name" class="input-create" name="nombre" value="<%= productoEncontrado.nombre %>">
                     <br> 
                     <br>   
                     <br>
@@ -90,7 +90,7 @@
                     <label for="peso">Peso</label>
                     <br>
                     <br>
-                    <input class="input-create-precio" type="text" name="peso" value="<%= productoEncontrado.peso %>">
+                    <input class="input-create-precio" type="text" name="peso" value="<%= productoEncontrado.peso%>">
                     <br>
                     <br>
                     <label for="profundidad">Profundidad</label>
@@ -102,7 +102,7 @@
                     <br>
                     <label for="precio" class="label">Precio</label>
                     <br>
-                    <input for="precio" class= "input-create-precio" type="text" name="precio" placeholder="$50.000" value="$<%= productoEncontrado.precio %>">
+                    <input for="precio" class= "input-create-precio" type="text" name="precio" placeholder="$50.000" value="<%= productoEncontrado.precio %>">
                 </div>
                 <br>
                 <br>

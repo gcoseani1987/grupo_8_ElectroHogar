@@ -27,7 +27,7 @@ router.get('/agregar', productoController.formNew)
 router.post('/agregar', uploadFile.single('imagen'), validaciones, productoController.crear)
 
 router.get('/:id/editar', productoController.editar) 
-router.put('/:id/editar', productoController.actualizar)
+router.put('/:id/editar', uploadFile.single('imagen'), productoController.actualizar)
 
 router.delete('/:id', productoController.borrar)
 
