@@ -11,6 +11,6 @@ function isFileImage(fileName) {
     return false
 }
 
-module.exports = {
+module.exports = { 
     isFileImage,
 }

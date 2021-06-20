@@ -178,5 +178,14 @@
     "password2": "asgard",
     "imagen": "/images/usuarios/1623646141652.jpg",
     "id": 25
+  },
+  {
+    "nombre": "Bruce",
+    "apellido": "Wayne",
+    "email": "batman@batman.com",
+    "password": "batman",
+    "password2": "batman",
+    "imagen": "/images/usuarios/1624225836683.jpg",
+    "id": 26
   }
 ]

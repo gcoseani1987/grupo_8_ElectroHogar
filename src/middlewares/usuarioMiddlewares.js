@@ -1,4 +1,7 @@
 const { body } = require('express-validator')
+const path = require('path')
+
+const { isFileImage } = require('../helpers/file')
 
 const validacionUsuario = [
     body('nombre').notEmpty().withMessage('Por favor complete un nombre'),

@@ -28,13 +28,12 @@ const controller = {
         const oldData = req.body
         res.render('productos/agregarProducto',{ oldData, errors: resultadoValidaciones.mapped()})
         return
-      }
+      } 
       const { nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,origen,profundidad,peso,precio } = req.body
       const productoNuevo = {nombre,descripcion,stock,categoria,alto,ancho,color,garantia,modelo,
         origen,profundidad,peso, precio, imagen : '/images/' + req.file.filename }
         producto.crear(productoNuevo)
         res.redirect('/productos/listado')
-      
     }, 
 
     editar: (req, res) => {

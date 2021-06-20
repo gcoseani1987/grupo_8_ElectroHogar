@@ -12,7 +12,7 @@ const validaciones = [
     body('ancho').notEmpty().withMessage('Tienes que especificar el ancho'),
     body('color').notEmpty().withMessage('Tienes que especificar el color'),
     body('garantia').notEmpty().withMessage('Tienes que especificar la garantía'),
-    body('modelo').notEmpty().withMessage('Tienes que espeficiar el'),
+    body('modelo').notEmpty().withMessage('Tienes que espeficar el modelo'),
     body('origen').notEmpty().withMessage('Tienes que especificar el origen'),
     body('peso').notEmpty().withMessage('Tienes que especificar el peso'),
     body('profundidad').notEmpty().withMessage('Tienes que especificar la profundidad'),

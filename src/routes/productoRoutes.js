@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-
+ 
 const { isFileImage }=require('../helpers/file')
 const validaciones = require ('../middlewares/productosMiddlewares')
 const productoController =require('../controllers/productoController')
@@ -17,8 +17,6 @@ const storage = multer.diskStorage({
 })
 
 const uploadFile = multer({ storage }) 
-
-
 
 router.get('/listado', productoController.listado)
 router.get('/detalle/:id', productoController.detalle)

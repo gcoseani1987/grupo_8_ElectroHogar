@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator')
 const usuario = require('../models/usuarios')
 const { usuariosPath } = require('../models/usuarios')
+const fs = require('fs')
 
 const controller = {
   login: (req, res) => {
@@ -13,24 +14,24 @@ const controller = {
   },
 
    crearUsuario: (req, res) => {
-    const resultadoValidaciones = validationResult(req) 
-    const nuevoUsuario = req.body
-    nuevoUsuario.imagen = '/images/usuarios/' + req.file.filename
-    usuario.crearUsuario(nuevoUsuario)
-    if(resultadoValidaciones.length>0){
-      return res.render('users/registro'),{
-        errors : resultadoValidaciones.errors.mapped(),
-        oldData : req.body
+    const resultadoValidaciones = validationResult(req)
+    if(!resultadoValidaciones.isEmpty()){
+      if(req.file){
+        fs.unlinkSync(req.file.path)
       }
-  } else {
-      res.redirect('/') 
-  } 
-  },
+      const oldData = req.body
+      res.render('users/registro',{ oldData, errors: resultadoValidaciones.mapped()})
+      return
+    } 
+    const { nombre, apellido, email, password, password2 } = req.body
+    const usuarioNuevo = {nombre, apellido, email, password, password2, imagen : '/images/usuarios/' + req.file.filename }
+      usuario.crearUsuario(usuarioNuevo)
+      res.redirect('/')
+  }, 
 
   loginUsuario: (req, res) =>{
     const sesion = req.body
     const estadoUsuario = usuario.validarUsuario(sesion)
-
     if(estadoUsuario == 'Ha sido registrado'){ 
     res.redirect('/') 
 
@@ -39,9 +40,9 @@ const controller = {
     }
   },
 
-    listado: (req, res) => {
-      let usuarios = usuario.findAll() 
-      res.render('./users/listadoUsuario', { usuarios })
+  listado: (req, res) => {
+    let usuarios = usuario.findAll() 
+    res.render('./users/listadoUsuario', { usuarios })
   },
 
   borrar: (req, res) => {

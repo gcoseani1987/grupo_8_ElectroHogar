@@ -66,6 +66,10 @@
     color: rgb(10,74,173);
 }
 
+.advertencia{
+    color: rgb(187, 58, 58);
+}
+
 @media(min-width:480px){
     .registro{
         border: none;
