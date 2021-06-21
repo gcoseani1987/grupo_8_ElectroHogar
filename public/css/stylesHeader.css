@@ -31,7 +31,9 @@
     position: fixed;
     z-index: 10;
     justify-content: space-between;
-    margin: 0 5px
+    margin: 0 5px;
+    padding-left: 10px;
+    padding-right: 10px
 }
 .user{
     display: flex;
@@ -74,6 +76,7 @@
 .slider img {
     width: 100%;
 }
+/* dropdown */
 
 @keyframes cambio {
     0% {margin-left: 0%;}
