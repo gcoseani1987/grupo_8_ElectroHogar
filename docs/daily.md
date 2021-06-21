@@ -21,7 +21,13 @@ Vimos la dificultades que tuvo cada uno y las resolvimos de manera conjunta.
 
 Distribuimos tareas del Sprint 3. Realizamos Routeo, Controllers y paginas de edición y creación del producto
 
+## Reunión 01-06-2021 
+
+## Reunión 16-06-2021 
+
+## Reunión 19-06-2021 
+
+## Reunión 20-06-2021 
+
 ## Reunión 28-05-2021 
 
-Completamos las tareas pendientes y discutimos sobre cuestiones que podemos mejorar en el formato de la página (colores, fuente, funcionalidades). Realizamos
-cambios por consenso.
