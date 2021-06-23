@@ -21,7 +21,7 @@ const validaciones = [
             const { file } = req
             if (!file) {
                 throw new Error('Por favor ingrese una imagen')
-            }
+            } 
             if (!isFileImage(file.originalname)) {
                 throw new Error('Por favor ingrese un archivo que sea una imagen') 
             }

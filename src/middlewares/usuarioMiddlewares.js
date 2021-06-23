@@ -17,17 +17,14 @@ const validacionUsuario = [
         return true
     }),
     body('imagen').custom((value, { req })=>{
-        const file = req.file
-        const extensionesPermitidas = ['.jpg','.png','.gif']
-        const extension = path.extname(file.originalname)
-        if(!file){
-            throw new Error ('Tienes que subir una imagen');
-        } else { 
-        if(!extensionesPermitidas.includes(extension)){
-            throw new Error ('Las extensiones permitidas son .jpg, .png, .gif');
+        const { file } = req
+        if (!file) {
+            throw new Error('Por favor ingrese una imagen')
+        } 
+        if (!isFileImage(file.originalname)) {
+            throw new Error('Por favor ingrese un archivo que sea una imagen') 
         }
-    }
-        return true; 
+        return true
     })
 ]
 

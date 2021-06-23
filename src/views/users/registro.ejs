@@ -28,7 +28,7 @@
             <label for="apellido">Apellido:</label>
             <br> 
             <br>
-            <input class="input-registro<%= locals.errors && errors.apellido ? 'is-invalid' : null%>" type="text" name="apellido"
+            <input class="input-registro <%= locals.errors && errors.apellido ? 'is-invalid' : null%>" type="text" name="apellido"
             value="<%= locals.oldData && oldData.apellido %>">
             <%if (locals.errors && errors.apellido){%>    
               <div class="advertencia">
@@ -40,7 +40,7 @@
             <label for="email">Email:</label>
             <br>
             <br>
-            <input class="input-registro<%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ejemplo@hotmail.com"
+            <input class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ejemplo@hotmail.com"
             value="<%= locals.oldData && oldData.email %>">
             <%if (locals.errors && errors.email){%>    
               <div class="advertencia">
@@ -63,7 +63,7 @@
             <label for="password">Contraseña:</label>
             <br>
             <br>
-            <input class="input-registro" type="password" name="password">
+            <input class="input-registro <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
             <%if (locals.errors && errors.password){%>    
               <div class="advertencia">
                   <%=errors.password.msg%>
@@ -74,7 +74,7 @@
             <label for="password2">Repita su contraseña:</label>
             <br>
             <br>
-            <input class="input-registro" type="password" name="password2">
+            <input class="input-registro <%= locals.errors && errors.password2 ? 'is-invalid' : null%>" type="password" name="password2">
             <%if (locals.errors && errors.password2){%>    
               <div class="advertencia">
                   <%=errors.password2.msg%>

@@ -25,7 +25,7 @@ module.exports = {
   findAll(){
       const productos = this.readFile()
       return productos 
-  },
+  }, 
 
   findByPk(id) { 
     const productos = this.findAll();

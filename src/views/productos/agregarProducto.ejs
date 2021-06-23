@@ -4,7 +4,7 @@
 </head>
 <link rel="shortcut icon" href="/images/logo-mini-title.svg" style="color: rgb(10,74,173);">
 <body>
-
+ 
     <%- include('../partials/header.ejs')%>
  
     <main class="create-registro">
@@ -52,7 +52,7 @@
                     <label for="imagen">Imagen</label>
                     <br>
                     <br>
-                    <input name="imagen" class="input-create " type="file" accept="jpg,jpeg" >
+                    <input name="imagen" class="input-create " type="file"  >
                     <%if (locals.errors && errors.imagen){%>
                         <div class="advertencia">
                             <%=errors.imagen.msg%>
