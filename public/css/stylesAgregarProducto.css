@@ -74,6 +74,9 @@
     color: white;
     box-shadow: 5px 5px 5px grey;
 }
+.is-invalid{
+    border :rgb(187, 58, 58) 2px solid;
+}
 
 .input-create{
     width: 90%;
