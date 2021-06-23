@@ -21,7 +21,7 @@ const controller = {
         fs.unlinkSync(req.file.path)
       }
       const oldData = req.body
-      res.render('users/registro',{ oldData, errors: resultadoValidaciones.mapped()})
+      res.render('users/registro', { oldData, errors: resultadoValidaciones.mapped()})
       return
     } 
     const { nombre, apellido, email } = req.body
@@ -29,7 +29,6 @@ const controller = {
     password2 = bcryptjs.hashSync(req.body.password2, 10)
     const usuarioNuevo = {nombre, apellido, email, password, password2, imagen : '/images/usuarios/' + req.file.filename }
       usuario.crearUsuario(usuarioNuevo)
-      console.log(usuarioNuevo)
       res.redirect('/')
   }, 
 

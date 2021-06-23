@@ -20,8 +20,6 @@
         <br>
         <p class="modelo">Email: <%=usuarios[i].email%></p>
         <br> 
-        <p class="modelo">Contraseña: <%=usuarios[i].password%></p>
-        <br>
         <div class="buttons">
         <form action="/users/<%=usuarios[i].id%>?_method=DELETE"  method="POST">
           <button class="button" id="button" type="submit">Eliminar</button>
