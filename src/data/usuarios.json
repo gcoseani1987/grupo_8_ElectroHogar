@@ -187,5 +187,14 @@
     "password2": "batman",
     "imagen": "/images/usuarios/1624225836683.jpg",
     "id": 26
+  },
+  {
+    "nombre": "Lionel Andres",
+    "apellido": "Messi",
+    "email": "messi@gmail.com",
+    "password": "$2a$10$VTQ4XMt5Np.tqje6nULn6u8czVXjSk.uoBIW958e2rhH5E7Dm3GB2",
+    "password2": "$2a$10$MK29et4uXG48CdR0FMpsjuCi7LpBpKD.FZh00MJnn9HoR/e/lYK12",
+    "imagen": "/images/usuarios/1624412372747.jpg",
+    "id": 27
   }
 ]

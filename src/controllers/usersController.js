@@ -2,6 +2,7 @@ const { validationResult } = require('express-validator')
 const usuario = require('../models/usuarios')
 const { usuariosPath } = require('../models/usuarios')
 const fs = require('fs')
+const bcryptjs = require('bcryptjs') 
 
 const controller = {
   login: (req, res) => {
@@ -23,9 +24,12 @@ const controller = {
       res.render('users/registro',{ oldData, errors: resultadoValidaciones.mapped()})
       return
     } 
-    const { nombre, apellido, email, password, password2 } = req.body
+    const { nombre, apellido, email } = req.body
+    password = bcryptjs.hashSync(req.body.password, 10)
+    password2 = bcryptjs.hashSync(req.body.password2, 10)
     const usuarioNuevo = {nombre, apellido, email, password, password2, imagen : '/images/usuarios/' + req.file.filename }
       usuario.crearUsuario(usuarioNuevo)
+      console.log(usuarioNuevo)
       res.redirect('/')
   }, 
 
