@@ -31,6 +31,4 @@ router.delete('/:id', userController.borrar)
 
 router.post('/registro', uploadFile.single('imagen'), userController.crearUsuario)
 
-
-
 module.exports = router

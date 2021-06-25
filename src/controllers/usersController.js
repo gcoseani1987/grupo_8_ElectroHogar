@@ -30,7 +30,7 @@ const controller = {
     const usuarioNuevo = {nombre, apellido, email, password, password2, imagen : '/images/usuarios/' + req.file.filename }
       usuario.crearUsuario(usuarioNuevo)
       res.redirect('/')
-  }, 
+  },  
 
   loginUsuario: (req, res) =>{
     const sesion = req.body

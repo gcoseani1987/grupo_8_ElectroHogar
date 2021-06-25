@@ -57,4 +57,10 @@ module.exports = {
     const nuevoUsuario = usuarios.filter(idUsuario => idUsuario.id != id)
     this.writeFile(nuevoUsuario)
   },
+
+  findByField(field, value) {
+    const usuarios = this.readFile();
+    const usuarioEncontrado = usuarios.find(usuario => usuario[field] == value) 
+    return usuarioEncontrado
+  }
 }
