@@ -8,7 +8,7 @@ const controller = {
   login: (req, res) => {
     const estadoUsuario = ''
     res.render('users/login', { estadoUsuario })
-  },
+  }, 
 
   nuevoUsuario: (req, res) => {
     res.render('users/registro')

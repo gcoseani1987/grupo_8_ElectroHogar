@@ -1,200 +1,74 @@
 [
   {
-    "id": 1,
-    "nombre": "Ignacio",
-    "apellido": "Galvagno",
-    "email": "ignacio.101@hotmail.com",
-    "password": "123456789",
-    "password2": "123456789",
-    "imagen": "/images/usuarios/capitan.jpg"
-  },
-  {
-    "nombre": "Emiliano",
-    "apellido": "Cucit",
-    "email": "emicu144@gmail.com",
-    "password": "131313",
-    "password2": "131313",
-    "imagen": "/images/usuarios/1623643597539.jpg",
-    "id": 7
-  },
-  {
-    "nombre": "Steve ",
-    "apellido": "Rogers",
-    "email": "capamerica@gmail.com",
-    "password": "advengers1",
-    "password2": "advengers1",
-    "imagen": "/images/usuarios/1623643766459.jpg",
-    "id": 8
-  },
-  {
-    "nombre": "Tony ",
-    "apellido": "Stark",
-    "email": "ironman@gmail.com",
-    "password": "jarvis",
-    "password2": "jarvis",
-    "imagen": "/images/usuarios/1623643998448.jpg",
-    "id": 9
-  },
-  {
-    "nombre": "Thor",
-    "apellido": "Odinson",
-    "email": "thor@gmail.com",
-    "password": "Mjolnir",
-    "password2": "Mjolnir",
-    "imagen": "/images/usuarios/1623644219158.png",
-    "id": 10
-  },
-  {
-    "nombre": "Robert Bruce",
-    "apellido": "Banner",
-    "email": "hulk@gmail.com",
-    "password": "siempreenojado",
-    "password2": "siempreenojado",
-    "imagen": "/images/usuarios/1623644340321.jpg",
-    "id": 11
-  },
-  {
-    "nombre": "Natalia Alianovna",
-    "apellido": "Romanova",
-    "email": "blackwidow@gmail.com",
-    "password": "Romanova",
-    "password2": "Romanova",
-    "imagen": "/images/usuarios/1623644449485.jpg",
-    "id": 12
-  },
-  {
-    "nombre": "Clint",
-    "apellido": "Barton",
-    "email": "hawkeye@gmail.com",
-    "password": "eldelarco",
-    "password2": "Romanova",
-    "imagen": "/images/usuarios/1623644512168.jpg",
-    "id": 13
-  },
-  {
-    "nombre": "James ",
-    "apellido": "Rhodes",
-    "email": "warmachine@gmail.com",
-    "password": "warmachine",
-    "password2": "warmachine",
-    "imagen": "/images/usuarios/1623644594235.jpg",
-    "id": 14
-  },
-  {
-    "nombre": "Piertro",
-    "apellido": "Maximoff",
-    "email": "quicksilver@gmail.com",
-    "password": "elmasrapido",
-    "password2": "Maximoff",
-    "imagen": "/images/usuarios/1623644700201.jpg",
-    "id": 15
-  },
-  {
-    "nombre": "Wanda",
-    "apellido": "Maximoff ",
-    "email": "scarletwitch@gmail.com",
-    "password": "wandavision",
-    "password2": "wandavision",
-    "imagen": "/images/usuarios/1623644782889.jpg",
-    "id": 16
-  },
-  {
-    "nombre": "Scott",
-    "apellido": "Lang",
-    "email": "antman@gmail.com",
-    "password": "lahormiga",
-    "password2": "Maximoff ",
-    "imagen": "/images/usuarios/1623644827296.jpg",
-    "id": 17
-  },
-  {
-    "nombre": "Stephen Vincent",
-    "apellido": "Strange",
-    "email": "doctorstrange@gmai.com",
-    "password": "hechicerosupremo",
-    "password2": "Stephen Vincent",
-    "imagen": "/images/usuarios/1623644902473.png",
-    "id": 18
-  },
-  {
-    "nombre": "Peter ",
-    "apellido": "Parker",
-    "email": "spiderman@gmail.com",
-    "password": "elpreferidodetony",
-    "password2": "Stephen Vincent",
-    "imagen": "/images/usuarios/1623645046275.jpg",
-    "id": 19
-  },
-  {
-    "nombre": "Samuel",
-    "apellido": "Thomas",
-    "email": "falcon@gmail.com",
-    "password": "thefalcon",
-    "password2": "thefalcon",
-    "imagen": "/images/usuarios/1623645132844.jpg",
-    "id": 20
-  },
-  {
-    "nombre": "James ",
-    "apellido": "Barnes",
-    "email": "bucky@gmail.com",
-    "password": "elamigodelcapi",
-    "password2": "Stephen Vincent",
-    "imagen": "/images/usuarios/1623645192424.jpg",
-    "id": 21
-  },
-  {
-    "nombre": "Tchalla",
-    "apellido": "Tchalla",
-    "email": "blackpanter@gmail.com",
-    "password": "wakandaforever",
-    "password2": "wakandaforever",
-    "imagen": "/images/usuarios/1623645824349.jpg",
-    "id": 22
-  },
-  {
-    "nombre": "Stan ",
-    "apellido": "Lee",
-    "email": "marvelcomics@gmail.com",
-    "password": "marvelcomicsuniverse",
-    "password2": "marvelcomicsuniverse",
-    "imagen": "/images/usuarios/1623645916040.jpg",
-    "id": 23
-  },
-  {
-    "nombre": "Nicholas",
-    "apellido": "Fury",
-    "email": "nickfury@gmail.com",
-    "password": "eldelparche",
-    "password2": "eldelparche",
-    "imagen": "/images/usuarios/1623646021795.jpg",
-    "id": 24
-  },
-  {
-    "nombre": "Loki",
-    "apellido": "Loki",
-    "email": "loki@gmail.com",
-    "password": "asgard",
-    "password2": "asgard",
-    "imagen": "/images/usuarios/1623646141652.jpg",
-    "id": 25
-  },
-  {
-    "nombre": "Bruce",
-    "apellido": "Wayne",
-    "email": "batman@batman.com",
-    "password": "batman",
-    "password2": "batman",
-    "imagen": "/images/usuarios/1624225836683.jpg",
-    "id": 26
-  },
-  {
     "nombre": "Guillermo Adolfo",
     "apellido": "Coseani",
     "email": "gcoseani@gmail.com",
     "password": "$2a$10$3911ecqGb1AXZ.tosdb.yeUYvQev9XqMdJl80K4J29R0DfP1bje2K",
     "password2": "$2a$10$T2kg..DqV.jn.8RcFO1S0.UgVAR2GViA2t3lELpBFSVOAokDdNzde",
     "imagen": "/images/usuarios/1624413248766.jpg",
-    "id": 27
+    "id": 1
+  },
+  {
+    "nombre": "Gabriel Omar",
+    "apellido": "Batistuta",
+    "email": "gbatistuta@gmail.com",
+    "password": "$2a$10$unUgbIlOPlU9/R4DWIYmcubvhkvTMJuYQvIzAL6EHlq/gxKg6WJca",
+    "password2": "$2a$10$zuiU.j3.6XGiknclxuNhVuA.3IgBfypihUvEUgKRVximnWwMIzsAS",
+    "imagen": "/images/usuarios/1624663058141.jpg",
+    "id": 2
+  },
+  {
+    "nombre": "Tony",
+    "apellido": "Stark",
+    "email": "ironman@gmail.com",
+    "password": "$2a$10$J3GovEXfRj1Y.V8mSidWDOdfC/0Ncarb5GouXV8j3YV0no/Nlac66",
+    "password2": "$2a$10$roxiRddcml.1s3/WpRZWzeUJHNzEkEvPwpQFC5jRaYe3arxbTeTLu",
+    "imagen": "/images/usuarios/1624663091320.jpg",
+    "id": 3
+  },
+  {
+    "nombre": "Steve ",
+    "apellido": "Rogers",
+    "email": "capamerica@gmail.com",
+    "password": "$2a$10$domYaHlZTm7idsd80zM.ZeYUtcYnOM2jOTt6YwaYfhiHJfOWMI8oW",
+    "password2": "$2a$10$zubTUikm9Z6H6Oxd.lp3C.KtwRVviezGPqti9gEeeO7WKZPO9ceFu",
+    "imagen": "/images/usuarios/1624663124088.jpg",
+    "id": 4
+  },
+  {
+    "nombre": "Thor",
+    "apellido": "Odinson",
+    "email": "thor@gmail.com",
+    "password": "$2a$10$rD4JYEtu7KaPERMLJPQWfuOEaVyp2B3/ExfL4ga.EH/HuM.uuHQcC",
+    "password2": "$2a$10$JGONxgorczyPfxOrz8CWp.1mIWLXf7PMCT.ZuSckzRTec3FXMAZTG",
+    "imagen": "/images/usuarios/1624663150401.jpg",
+    "id": 5
+  },
+  {
+    "nombre": "Bruce",
+    "apellido": "Banner",
+    "email": "hulk@gmail.com",
+    "password": "$2a$10$uAIVYYmRYyGoLEFneCuBQOYeiHyKxEOXNxDsV36fW7LkGXpjeIWXO",
+    "password2": "$2a$10$pUbQq8Mwbv9BS49YtV9txOk8AHF6oHdhs6H3JXc0Wz9jPkw7Y09A2",
+    "imagen": "/images/usuarios/1624663182332.jpg",
+    "id": 6
+  },
+  {
+    "nombre": "Bruce",
+    "apellido": "Wayne",
+    "email": "batman@gmail.com",
+    "password": "$2a$10$RWU.gZL9ldzC8PDgzlQ.u.fjenYN9VN8mYZiJGv0SjBFHWXVRvak.",
+    "password2": "$2a$10$8/RDtIvsz.jb4iubwUd5deE77TC7ZseCgtto6oDPKuGF5pQ3ZstKC",
+    "imagen": "/images/usuarios/1624663226410.jpg",
+    "id": 7
+  },
+  {
+    "nombre": "Juan Sebastian",
+    "apellido": "Veron",
+    "email": "veron@gmail.com",
+    "password": "$2a$10$DNczhp54L96ojnq/KKTqr.C87EutDw7mXiw3nzWzxfBxCgamM.m62",
+    "password2": "$2a$10$5CLfWVI7N8flaQzGnrZNOe/YD7.qUMEjk3QfBZFRpT1n/guGx9xcm",
+    "imagen": "/images/usuarios/1624663274253.jpg",
+    "id": 8
   }
-] 
+]
