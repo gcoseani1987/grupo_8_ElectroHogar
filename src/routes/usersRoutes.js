@@ -5,6 +5,7 @@ const path = require('path')
 
 const { isFileImage }=require('../helpers/file')
 const validacionUsuario = require('../middlewares/usuarioMiddlewares')
+const validacionesLogin = require('../middlewares/loginMiddlewares')
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -20,7 +21,7 @@ const uploadFile = multer({ storage })
 const userController = require('../controllers/usersController') 
 
 router.get('/login', userController.login)
-router.post('/login', userController.loginUsuario)
+router.post('/login', validacionesLogin , userController.loginUsuario)
 
 router.get('/listado',  userController.listado)
 

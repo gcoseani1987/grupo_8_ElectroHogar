@@ -46,11 +46,12 @@
 
 }
 
-.article-top-left{
+.article-top-left {
     padding: 20px;
     margin: 15px;
-    border: black 2px solid;
+    border: #00000047 1px solid;
     text-align: center;
+    border-radius: 10px;
 }
 
 .box-precio{
@@ -97,7 +98,8 @@
 .article-descripcion{
     margin: 10px 0;
     padding: 5px;
-    border: black 2px solid;
+    border: black 1px solid;
+    border-radius: 5px;
 }
 
 .descripcion-title{

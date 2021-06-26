@@ -33,13 +33,12 @@ const controller = {
   },  
 
   loginUsuario: (req, res) =>{
-    const sesion = req.body
-    const estadoUsuario = usuario.validarUsuario(sesion)
-    if(estadoUsuario == 'Ha sido registrado'){ 
+    const resultadoValidaciones = validationResult(req)
+    const oldData = req.body
+    if(resultadoValidaciones.isEmpty()){ 
     res.redirect('/') 
-
      }else{
-    res.render('users/login', { estadoUsuario })
+    res.render('users/login', { oldData, errors: resultadoValidaciones.mapped() })
     }
   },
 

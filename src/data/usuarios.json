@@ -70,5 +70,14 @@
     "password2": "$2a$10$5CLfWVI7N8flaQzGnrZNOe/YD7.qUMEjk3QfBZFRpT1n/guGx9xcm",
     "imagen": "/images/usuarios/1624663274253.jpg",
     "id": 8
+  },
+  {
+    "nombre": "Emiliano",
+    "apellido": "Cucit",
+    "email": "emicu144@gmail.com",
+    "password": "$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6",
+    "password2": "$2a$10$TlgidhagnOlW29UA5.cavuqZgxkdU88JdwE8F1CbfdEBjgyLy2bHi",
+    "imagen": "/images/usuarios/1624740739540.jpg",
+    "id": 9
   }
 ]

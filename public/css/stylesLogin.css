@@ -64,6 +64,12 @@
     margin-top:10px;
     color: rgb(10,74,173)
 }
+.advertencia{
+    color: rgb(187, 58, 58);
+}
+.is-invalid{
+    border :rgb(187, 58, 58) 2px solid;
+}
 
 
 @media(min-width:480px){

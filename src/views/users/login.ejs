@@ -15,15 +15,26 @@
           <br>
         <div class="form-container">
           <label for="email">Email:</label>
-          <br> 
           <br>
-          <input class="input-login" type="email" name="email" placeholder="ejemplo@hotmail.com" required>
+          <br>
+          <input class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ejemplo@hotmail.com"
+          value="<%= locals.oldData && oldData.email %>">
+          <%if (locals.errors && errors.email){%>    
+            <div class="advertencia">
+                <%=errors.email.msg%>
+            </div>
+        <%}%>    
           <br>
           <br>
         <label for="password">Contraseña:</label>
           <br>
           <br>
-          <input class="input-login" type="password" name="password" required>
+          <input class="input-login <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
+          <%if (locals.errors && errors.password){%>    
+            <div class="advertencia">
+                <%=errors.password.msg%>
+            </div>
+        <%}%> 
           <br>
           <br>
         </div>

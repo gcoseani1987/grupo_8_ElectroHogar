@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const bcryptjs = require('bcryptjs')
 
 module.exports = {
   usuariosPath: path.resolve(__dirname, '../data/usuarios.json'),
@@ -40,17 +41,6 @@ module.exports = {
     return nuevoUsuario
   }, 
 
-  validarUsuario(usuarios) {
-    usuarios = this.readFile()
-    const usuarioEncontrado = usuarios.find((usuario) => usuario.email === usuarios.email)
-    if (usuarioEncontrado === undefined) {
-      return 'Usuario inexistente'
-    } else if (usuarioEncontrado.password === usuarios.password) {
-      return 'Usuario registrado'
-    } else {
-      return 'El usuario o la contraseña son incorrectos'
-    }
-  },
 
   delete (id){
     const usuarios = this.readFile();
