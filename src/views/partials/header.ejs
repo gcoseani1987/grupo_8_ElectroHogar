@@ -14,10 +14,19 @@
           </form>
       </div>
       <div class="main-header-center-right">
+        <% if (!locals.estaLoggeado) { %>
+         
           <ul class="user">
-              <li><a href="/users/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-              <li><a href="/users/registro">Registrate<i class="fas fa-user-plus"></i></a></li>
-            </ul>
+            <li><a href="/users/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="/users/registro">Registrate<i class="fas fa-user-plus"></i></a></li>
+          </ul>
+        <% }else { %>
+          <ul class="user">
+            <li><h4 class="mensaje-bienvenida">Hola <%= locals.usuarioLoggeado.nombre %></h2></li>
+            <li><img class="imagen-bienvenida" src="<%= locals.usuarioLoggeado.imagen %>" alt=""></li>
+            <li><a href="/users/logout">Cerrar Sesion</a></li>
+          </ul>
+        <% } %>
       </div>
     </div>
    <div class="main-header-right">

@@ -77,6 +77,12 @@
     width: 100%;
 }
 
+.mensaje-bienvenida{
+    color: rgb(10,74,173);
+}
+.imagen-bienvenida{
+    size: 10px;
+}
 /* dropdown */
 
 @keyframes cambio {
