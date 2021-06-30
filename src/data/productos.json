@@ -682,23 +682,5 @@
     "precio": "40500",
     "imagen": "/images/1624168332779.jpg",
     "oferta": "no"
-  },
-  {
-    "id": 39,
-    "nombre": "Emiliano",
-    "descripcion": "das",
-    "oferta": "no",
-    "stock": "1",
-    "categoriaProd": "aires",
-    "alto": "0.01",
-    "ancho": "12",
-    "color": "NEGRO",
-    "garantia": "1",
-    "modelo": "L32S60A",
-    "origen": "JAPON",
-    "profundidad": "1.3",
-    "peso": "9.9",
-    "precio": "3",
-    "imagen": "/images/1625027440912.jpg"
   }
 ]

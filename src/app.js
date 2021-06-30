@@ -1,7 +1,18 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3030 
+const vistasUsuariosMiddleware = require('./middlewares/vistasUsuariosMiddleware')
+
+app.use(vistasUsuariosMiddleware)
+
+//requerimos express-session
+app.use(session({
+    secret : 'ELECRTOHOGAR',
+    resave: false,
+    saveUninitialized:false,
+}))
 
 //requerimos la constante que nos arma la ruta
 const publicPath = path.resolve(__dirname, '../public');

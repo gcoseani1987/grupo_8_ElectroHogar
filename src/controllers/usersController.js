@@ -1,6 +1,6 @@
 const { validationResult } = require('express-validator')
 const usuario = require('../models/usuarios')
-const { usuariosPath } = require('../models/usuarios')
+const { usuariosPath, findByField } = require('../models/usuarios')
 const fs = require('fs')
 const bcryptjs = require('bcryptjs') 
 
@@ -34,19 +34,28 @@ const controller = {
 
   loginUsuario: (req, res) =>{
     const resultadoValidaciones = validationResult(req)
+    const usuarioALoggear = usuario.findByField('email',req.body.email)
     const oldData = req.body
     if(resultadoValidaciones.isEmpty()){ 
-    res.redirect('/') 
+      delete usuarioALoggear.password
+      delete usuarioALoggear.password2
+      req.session.usuarioLoggeado = usuarioALoggear
+      res.redirect('/')
      }else{
     res.render('users/login', { oldData, errors: resultadoValidaciones.mapped() })
     }
-  },
+  }, 
 
   listado: (req, res) => {
     let usuarios = usuario.findAll() 
     res.render('./users/listadoUsuario', { usuarios })
   },
 
+  desloggear: ()=>{
+    req.session.destroy()
+    return res.redirect('/')
+  },
+ 
   borrar: (req, res) => {
     let id = req.params.id
     let usuarioEliminado = usuario.delete(id)

@@ -40,7 +40,7 @@ module.exports = {
     this.writeFile(usuariosUpdated) 
     return nuevoUsuario
   }, 
-
+ 
 
   delete (id){
     const usuarios = this.readFile();
