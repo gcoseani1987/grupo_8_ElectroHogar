@@ -29,9 +29,9 @@ const controller = {
         res.render('productos/agregarProducto',{ oldData, errors: resultadoValidaciones.mapped()})
         return
       } 
-      const { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,modelo,origen,profundidad,peso,precio } = req.body
+      const { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,oferta,modelo,origen,profundidad,peso,precio } = req.body
       const productoNuevo = {nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,modelo,
-        origen,profundidad,peso, precio, imagen : '/images/' + req.file.filename }
+        origen,profundidad,peso,oferta,precio, imagen : '/images/' + req.file.filename }
         producto.crear(productoNuevo)
         res.redirect('/productos/listado')
     }, 
@@ -54,8 +54,8 @@ const controller = {
         imagen = productoOriginal.imagen
       }
       data.imagen = imagen
-      const { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,modelo,origen,profundidad,peso,precio } = req.body
-      const dataNueva = {nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,modelo,
+      const { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,oferta,modelo,origen,profundidad,peso,precio } = req.body
+      const dataNueva = {nombre,descripcion,oferta,stock,categoriaProd,alto,ancho,color,garantia,modelo,
         origen,profundidad,peso, precio , imagen }
       producto.modificar(dataNueva, id);
       res.redirect('/productos/listado');

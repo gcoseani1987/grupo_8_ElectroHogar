@@ -44,11 +44,13 @@
     <br>
     <h2 class="text">Ofertas</h2>
     <section class="venta">
-      <article class="producto">
-        <a href="/productos/detalle/33"><img src="/images/lavarropas.png" alt="Lavavajillas"></a>
-        <p class="precio">$20.000</p>
-        <p class="modelo">Lavarropas Drean </p>
-      </article>
+      <%for (let i=0; i<productosOferta.length ; i++){%>
+        <article class="producto">
+         <a href="/productos/detalle/<%=productosOferta[i].id%>"><img src="<%=productosOferta[i].imagen%>" alt="<%=productosOferta[i].categoriaProd%>"></a>
+         <p class="precio">$<%=productosOferta[i].precio%></p>
+         <p class="modelo"><%=productosOferta[i].nombre%></p>
+        </article>
+        <% } %>
       <article class="producto">
         <a href="/productos/detalle/25"><img src="/images/hornos.png" alt="Hornos"></a>
         <p class="precio">$25.000</p>

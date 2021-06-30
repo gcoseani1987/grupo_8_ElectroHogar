@@ -188,7 +188,20 @@
                             <%=errors.precio.msg%>
                         </div>
                     <%}%>
-                </div>
+                    <br>
+                    <br>
+                    <div class="input-container">
+                        <label for="rings">¿De oferta?</label>
+                        <div class="<%= (locals.errors && errors.oferta) ? 'input-error' : '' %>">
+                            <input type="radio" name="oferta" id="oferta" value="si" <%= (locals.oldValues && oldValues.oferta === 'si') ? 'checked' : '' %>/>Si
+                            <input type="radio" name="oferta" id="oferta" value="no" <%= (locals.oldValues && oldValues.oferta === 'no') ? 'checked' : '' %> />No
+                            <%if (locals.errors && errors.oferta){%>
+                                <div class="advertencia">
+                                    <%=errors.oferta.msg%>
+                                </div>
+                            <%}%>
+                         </div>
+                     </div>
                 <br>
                 <div class="button-container">
                     <button class="create-button" type="submit">Agregar producto</button>

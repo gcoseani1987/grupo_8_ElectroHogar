@@ -15,6 +15,7 @@ const validaciones = [
     body('modelo').notEmpty().withMessage('Tienes que espeficar el modelo'),
     body('origen').notEmpty().withMessage('Tienes que especificar el origen'),
     body('peso').notEmpty().withMessage('Tienes que especificar el peso'),
+    body('oferta').notEmpty().withMessage('Debes especificar si esta en oferta'),
     body('profundidad').notEmpty().withMessage('Tienes que especificar la profundidad'),
     body('precio').notEmpty().withMessage('Tienes que detallar el precio'),
     body('imagen').custom((value, { req }) => {
