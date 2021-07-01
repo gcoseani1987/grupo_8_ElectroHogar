@@ -1,17 +1,22 @@
 const express = require('express');
 const session = require('express-session');
+const cookies = require('cookie-parser')
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3030 
 const vistasUsuariosMiddleware = require('./middlewares/vistasUsuariosMiddleware')
 
 
-//requerimos express-session
+//requerimos express-session 
 app.use(session({
     secret : 'ELECRTOHOGAR',
     resave: false,
     saveUninitialized:false,
 }))
+
+//requerimos cookie-parser
+app.use(cookies())
+
 app.use(vistasUsuariosMiddleware)
 
 //requerimos la constante que nos arma la ruta

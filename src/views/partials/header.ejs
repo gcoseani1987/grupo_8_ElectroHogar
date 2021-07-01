@@ -23,7 +23,6 @@
         <% }else { %>
           <ul class="user">
             <li><h4 class="mensaje-bienvenida">Hola <%= locals.usuarioLoggeado.nombre %></h2></li>
-            <li><img class="imagen-bienvenida" src="<%= locals.usuarioLoggeado.imagen %>" alt=""></li>
             <li><a href="/users/logout">Cerrar Sesion</a></li>
           </ul>
         <% } %>
