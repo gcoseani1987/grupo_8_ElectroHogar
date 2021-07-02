@@ -55,10 +55,10 @@ const controller = {
     res.render('./users/listadoUsuario', { usuarios })
   },
 
-  desloggear: ()=>{
+  desloggear: (req,res)=>{
     req.session.destroy()
     res.clearCookie('Email')
-    return res.redirect('/')
+    res.redirect('/')
   },
  
   borrar: (req, res) => {

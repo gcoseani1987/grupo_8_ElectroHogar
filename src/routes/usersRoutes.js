@@ -34,6 +34,6 @@ router.delete('/:id', userController.borrar)
 
 router.post('/registro', uploadFile.single('imagen'), userController.crearUsuario)
 
-router.get('/logout', loggeadoMiddleware ,userController.desloggear) 
+router.get('/logout', invitadoMiddleware ,userController.desloggear) 
  
 module.exports = router
