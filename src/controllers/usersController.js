@@ -42,7 +42,7 @@ const controller = {
       req.session.usuarioLoggeado = usuarioALoggear
 
       if(req.body.recordar){
-        res.cookie('Email usuario',bcryptjs.hashSync(req.body.email,10),{ maxAge : (1000*60)*15 })
+        res.cookie('Email',bcryptjs.hashSync(req.body.email,10),{ maxAge : (1000*60)*60*24 })
       }
       res.redirect('/')
      }else{
@@ -56,8 +56,8 @@ const controller = {
   },
 
   desloggear: ()=>{
-    res.clearCookie('Email usuario')
     req.session.destroy()
+    res.clearCookie('Email')
     return res.redirect('/')
   },
  
