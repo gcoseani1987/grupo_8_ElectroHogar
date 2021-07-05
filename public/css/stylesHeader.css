@@ -7,6 +7,8 @@
 
 .logo{
     display: none;
+    position: relative;
+    top: 2px;
 }
 
 .logo-mini {
@@ -39,6 +41,10 @@
     padding-left: 10px;
     padding-right: 10px
 }
+.main-header-center{
+    position: relative;
+    top: 3px;
+}
 
 .user{
     display: flex;
@@ -46,6 +52,7 @@
     justify-content: space-around;
     margin-left: -30px;
     margin-top: 10px;
+    align-items: center;
 }
 
 .buscador{
@@ -86,6 +93,13 @@
 
 .slider img {
     width: 100%;
+}
+.agrandar-carrito{
+    font-size: 30px;
+}
+.user-nav{
+    margin-left:5px;
+    margin-right: 5px;
 }
 
 @keyframes cambio {

@@ -14,17 +14,17 @@
    <div class="main-header-right">
     <% if (!locals.estaLoggeado) { %>        
       <ul class="user">
-        <li><a href="/users/login">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-        <li><a href="/users/registro">Registrate<i class="fas fa-user-plus"></i></a></li>
-        <a href="/carritoCompras"><i class="fas fa-shopping-cart"></i></a>
+        <li><a href="/users/login" class="user-nav">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="/users/registro" class="user-nav">Registrate<i class="fas fa-user-plus"></i></a></li>
+        <a href="/carritoCompras" class="agrandar-carrito"><i class="fas fa-shopping-cart"></i></a>
       </ul>
     <% }else { %>
       <ul class="user">
-        <li><h4 class="mensaje-bienvenida">Hola <%= locals.usuarioLoggeado.nombre %></h2></li>
-        <li><a href="/users/logout">Cerrar Sesion</a></li>
-        <a href="/carritoCompras"><i class="fas fa-shopping-cart"></i></a>
+        <li><a href="" class="user-nav">Hola <%= locals.usuarioLoggeado.nombre %>  <i class="fas fa-user-alt"></i></a></li>
+        <li><a href="/users/logout" class="user-nav">Cerrar Sesion  <i class="fas fa-sign-out-alt"></i></a></li>
+        <a href="/carritoCompras" class="agrandar-carrito"><i class="fas fa-shopping-cart"></i></a>
       </ul>
-    <% } %>
+    <% } %> 
    </div>
   </div>
 </header>
