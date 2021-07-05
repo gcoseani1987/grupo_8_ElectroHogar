@@ -6,16 +6,9 @@
 }
 
 .logo{
-    display: none;
     position: relative;
-    top: 2px;
-}
-
-.logo-mini {
-    width: 40%;
-    border-left-width: 30px;
-    padding: 0 0;
-    margin-left: 0;
+    width: 110px;
+    padding-top: 15px;
 }
 
 .acomodar-header{
@@ -45,9 +38,18 @@
     position: relative;
     top: 3px;
 }
+.burger-menu{
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    color: rgb(10,74,173);
+    position: relative;
+    right: -5px;
+    top: -5px;
+}
 
 .user{
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-around;
     margin-left: -30px;
@@ -59,6 +61,19 @@
     margin-top: 10px;
     margin-left: 10px;
     width: 75%;
+    height: 35px;
+    position: relative;
+    top: -5px;
+    padding-left: 5px;
+}
+.lupita{
+    font-size: 20px;
+    position: relative;
+    left: -30px;
+    top: -3px;
+    border: none;
+    background-color: transparent;
+    color: rgb(10,74,173);
 }
 
 .main-header-right{
@@ -110,21 +125,25 @@
 }
 
 @media(min-width:480px){
-    .logo-mini{
-        display: none;
-    }
-
     .logo{
         display: block;
         width: 150px;
         padding-top: 10px;
+    }
+    .buscador{
+        width: 85%;
     }
 }
 
 @media(min-width:769px){
     .main-header{
         display: flex;
-
+    }
+    .burger-menu{
+        display: none;
+    }
+    .user{
+        display: flex;
     }
 
     .main-header-center{

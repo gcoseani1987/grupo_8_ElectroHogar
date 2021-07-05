@@ -50,12 +50,19 @@ main{
     max-width: 1250px;
     margin : auto
 }
+.venta{
+    text-align: -webkit-center;
+}
 
 .venta img{ 
     width: 100%;
     height: 250px;
     display: block;
     justify-content: center;
+}
+.producto{
+    max-width: 300px;
+    
 }
 .padding-top{
     padding-top: 100px;
@@ -95,7 +102,6 @@ article {
 .modelo{
     font-size: 18px;
     color: black;
-    font-weight: bold;
     text-align: center;
 }
 
@@ -103,6 +109,7 @@ article {
     .venta {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .producto {
         flex-basis: calc(47% - 10px);
