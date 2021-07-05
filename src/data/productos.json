@@ -14,13 +14,13 @@
     "profundidad": "22.6",
     "peso": "9.9",
     "precio": "25000",
-    "imagen": "/images/tele1.png",
+    "imagen": "/images/televisor.png",
     "oferta": "si"
   },
   {
     "id": 2,
     "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
-    "imagen": "/images/tele2.png",
+    "imagen": "/images/tele1.png",
     "categoriaProd": "televisores",
     "precio": "25000",
     "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
@@ -56,7 +56,7 @@
   {
     "id": 4,
     "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
-    "imagen": "/images/tele4.png",
+    "imagen": "/images/televisor.png",
     "categoriaProd": "televisores",
     "precio": "25000",
     "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
@@ -74,7 +74,7 @@
   {
     "id": 5,
     "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
-    "imagen": "/images/tele5.png",
+    "imagen": "/images/tele1.png",
     "categoriaProd": "televisores",
     "precio": "25000",
     "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
@@ -92,7 +92,7 @@
   {
     "id": 6,
     "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
-    "imagen": "/images/tele6.png",
+    "imagen": "/images/tele2.png",
     "categoriaProd": "televisores",
     "precio": "25000",
     "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
@@ -110,7 +110,7 @@
   {
     "id": 7,
     "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
-    "imagen": "/images/tele7.png",
+    "imagen": "/images/tele3.png",
     "categoriaProd": "televisores",
     "precio": "25000",
     "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
@@ -140,7 +140,7 @@
     "profundidad": "22.6",
     "peso": "9.9",
     "precio": "26000",
-    "imagen": "/images/tele8.png",
+    "imagen": "/images/tele1.png",
     "oferta": "no"
   },
   {
@@ -158,13 +158,13 @@
     "profundidad": "18.7",
     "peso": "8.3",
     "precio": "23500",
-    "imagen": "/images/aire1.jpg",
+    "imagen": "/images/aire1.png",
     "oferta": "si"
   },
   {
     "id": 10,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire2.jpg",
+    "imagen": "/images/aire2.png",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
@@ -182,7 +182,7 @@
   {
     "id": 11,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire3.jpg",
+    "imagen": "/images/aire.png",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
@@ -200,7 +200,7 @@
   {
     "id": 12,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire4.jpg",
+    "imagen": "/images/aire1.png",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
@@ -218,7 +218,7 @@
   {
     "id": 13,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire5.jpg",
+    "imagen": "/images/aire2.png",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
@@ -236,7 +236,7 @@
   {
     "id": 14,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire6.jpg",
+    "imagen": "/images/aire.png",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
@@ -254,7 +254,7 @@
   {
     "id": 15,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire7.jpg",
+    "imagen": "/images/aire1.png",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
@@ -272,7 +272,7 @@
   {
     "id": 16,
     "nombre": "AIRE ACONDICIONADO SPLIT BGH",
-    "imagen": "/images/aire8.jpg",
+    "imagen": "/images/aire2.png",
     "descripcion": "Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",
     "categoriaProd": "aires",
     "precio": "23500",
@@ -290,7 +290,7 @@
   {
     "id": 17,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera1.jpg",
+    "imagen": "/images/heladeras.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -308,7 +308,7 @@
   {
     "id": 18,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera2.jpg",
+    "imagen": "/images/heladera1.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -326,7 +326,7 @@
   {
     "id": 19,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera3.jpg",
+    "imagen": "/images/heladera2.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -344,7 +344,7 @@
   {
     "id": 20,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera4.jpg",
+    "imagen": "/images/heladera3.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -362,7 +362,7 @@
   {
     "id": 21,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera5.jpg",
+    "imagen": "/images/heladeras.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -380,7 +380,7 @@
   {
     "id": 22,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera6.jpg",
+    "imagen": "/images/heladera1.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -398,7 +398,7 @@
   {
     "id": 23,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera7.jpg",
+    "imagen": "/images/heladera2.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -416,7 +416,7 @@
   {
     "id": 24,
     "nombre": "HELADERA NO FROST ARISTON",
-    "imagen": "/images/heladera8.jpg",
+    "imagen": "/images/heladera3.png",
     "descripcion": "Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",
     "categoriaProd": "heladeras",
     "precio": "45000",
@@ -434,7 +434,7 @@
   {
     "id": 25,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno1.jpg",
+    "imagen": "/images/hornos.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -452,7 +452,7 @@
   {
     "id": 26,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno2.jpg",
+    "imagen": "/images/hornos1.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -470,7 +470,7 @@
   {
     "id": 27,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno3.jpg",
+    "imagen": "/images/hornos2.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -488,7 +488,7 @@
   {
     "id": 28,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno4.jpg",
+    "imagen": "/images/hornos3.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -506,7 +506,7 @@
   {
     "id": 29,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno5.jpg",
+    "imagen": "/images/hornos.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -524,7 +524,7 @@
   {
     "id": 30,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno6.jpg",
+    "imagen": "/images/hornos1.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -542,7 +542,7 @@
   {
     "id": 31,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno7.jpg",
+    "imagen": "/images/hornos2.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -560,7 +560,7 @@
   {
     "id": 32,
     "nombre": "COCINA MARSHALL",
-    "imagen": "/images/horno8.jpg",
+    "imagen": "/images/hornos3.png",
     "descripcion": "Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",
     "categoriaProd": "hornos",
     "precio": "55000",
@@ -578,7 +578,7 @@
   {
     "id": 33,
     "nombre": "LAVARROPAS AUTOMATICO DREAN",
-    "imagen": "/images/lavarropa1.jpg",
+    "imagen": "/images/lavarropas1.png",
     "descripcion": "Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",
     "categoriaProd": "lavarropas",
     "stock": 9,
@@ -596,7 +596,7 @@
   {
     "id": 34,
     "nombre": "LAVARROPAS AUTOMATICO DREAN",
-    "imagen": "/images/lavarropa2.jpg",
+    "imagen":"/images/lavarropas.png",
     "descripcion": "Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",
     "categoriaProd": "lavarropas",
     "stock": 9,
@@ -614,7 +614,7 @@
   {
     "id": 35,
     "nombre": "LAVARROPAS AUTOMATICO DREAN",
-    "imagen": "/images/lavarropa3.jpg",
+    "imagen": "/images/lavarropas.png",
     "descripcion": "Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",
     "categoriaProd": "lavarropas",
     "stock": 9,
@@ -632,7 +632,7 @@
   {
     "id": 36,
     "nombre": "LAVARROPAS AUTOMATICO DREAN",
-    "imagen": "/images/lavarropa4.jpg",
+    "imagen": "/images/lavarropas1.png",
     "descripcion": "Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",
     "categoriaProd": "lavarropas",
     "stock": 9,
@@ -662,7 +662,7 @@
     "profundidad": "55",
     "peso": "71",
     "precio": "24000",
-    "imagen": "/images/lavarropa5.jpg",
+    "imagen": "/images/lavarropas.png",
     "oferta": "no"
   },
   {
@@ -680,7 +680,7 @@
     "profundidad": "0.7",
     "peso": "9.9",
     "precio": "40500",
-    "imagen": "/images/1624168332779.jpg",
+    "imagen": "/images/televisor.png",
     "oferta": "no"
   }
 ]
