@@ -5,6 +5,8 @@
 ### Link: https://electrohogar.herokuapp.com/
 <br>
 
+Pol, Gonza, tenemos las retros y las daily en la carpeta Docs
+
 ## ElectroHogar
 
 ### Descripción del negocio
