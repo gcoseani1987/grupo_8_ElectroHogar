@@ -33,6 +33,9 @@
     text-align: center;
     justify-content: space-around;
 }
+.categorias img{
+    height: 90%;
+}
 
 .categorias img:hover{
     background-color: rgb(10,74,173);
