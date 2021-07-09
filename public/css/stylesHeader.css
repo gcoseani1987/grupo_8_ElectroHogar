@@ -89,6 +89,10 @@
     color: rgb(10,74,173);
 }
 
+.main-header-right a:hover{
+    font-weight: bold;
+}
+
 .slider{
     padding-top: 50Fpx;
     overflow: hidden;
@@ -111,6 +115,10 @@
 }
 .agrandar-carrito{
     font-size: 30px;
+}
+.agrandar-carrito:hover{
+    color: rgb(9, 58, 131);
+    font-size: 33px;
 }
 .user-nav{
     margin-left:5px;
