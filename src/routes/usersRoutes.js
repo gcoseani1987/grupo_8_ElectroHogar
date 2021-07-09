@@ -22,10 +22,10 @@ const uploadFile = multer({ storage })
 
 const userController = require('../controllers/usersController') 
 
-router.get('/login', loggeadoMiddleware , userController.login)
-router.post('/login', validacionesLogin , userController.loginUsuario)
+router.get('/login', loggeadoMiddleware, userController.login)
+router.post('/login', validacionesLogin, userController.loginUsuario)
 
-router.get('/listado', invitadoMiddleware ,  userController.listado)
+router.get('/listado', invitadoMiddleware, loggeadoMiddleware, userController.listado)
 
 router.get('/registro', loggeadoMiddleware , userController.nuevoUsuario)
 router.post('/registro', uploadFile.single('imagen'), validacionUsuario, userController.crearUsuario)

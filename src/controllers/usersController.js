@@ -19,7 +19,7 @@ const controller = {
     if(!resultadoValidaciones.isEmpty()){
       if(req.file){
         fs.unlinkSync(req.file.path)
-      }
+      }  
       const oldData = req.body
       res.render('users/registro', { oldData, errors: resultadoValidaciones.mapped()})
       return
@@ -27,9 +27,10 @@ const controller = {
     const { nombre, apellido, email } = req.body
     password = bcryptjs.hashSync(req.body.password, 10)
     password2 = bcryptjs.hashSync(req.body.password2, 10)
-    const usuarioNuevo = {nombre, apellido, email, password, password2, imagen : '/images/usuarios/' + req.file.filename }
+    const administrador = false
+    const usuarioNuevo = {nombre, apellido, email, password, administrador, password2, imagen: '/images/usuarios/' + req.file.filename }
       usuario.crearUsuario(usuarioNuevo)
-      res.redirect('/')
+      res.redirect('/') 
   },  
 
   loginUsuario: (req, res) =>{
