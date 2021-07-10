@@ -93,10 +93,10 @@
     "nombre": "Juan Ignacio",
     "apellido": "Galvagno",
     "email": "ignacio.101@hotmail.com",
-    "password": "$2a$10$YrPs/I7tqWbzOTaPj7/omuEJTcCnXwLW4zBWszUYYML20jBfJHNeu",
+    "password": "$2a$10$RQJS9KvsLV9tDJI/papDwOQORdUAgt8MiivbkOGfx6YDNvorRYtMe",
     "administrador": true,
-    "password2": "$2a$10$QTUmn5DzdDEa.KkPlPyJSekFJIN7sv3XXusa6V2KXPDG9FZfO69q6",
-    "imagen": "/images/usuarios/1625844555412.jpg",
+    "password2": "$2a$10$u/Ss.b.uf0dP.b5lmv5JXuI1k5bv6TMC370Ueyoj65ooCYtEiLKIa",
+    "imagen": "/images/usuarios/1625878521479.jpg",
     "id": 10
   }
 ]

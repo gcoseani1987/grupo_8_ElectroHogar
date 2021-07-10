@@ -127,8 +127,9 @@
   },
   {
     "id": 8,
-    "nombre": "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",
+    "nombre": "SMART HISENSE 55 PULGADAS 4K UHD 50A64GSV",
     "descripcion": "Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.",
+    "oferta": "no",
     "stock": "4",
     "categoriaProd": "televisores",
     "alto": "61.7",
@@ -140,8 +141,7 @@
     "profundidad": "22.6",
     "peso": "9.9",
     "precio": "26000",
-    "imagen": "/images/tele1.png",
-    "oferta": "no"
+    "imagen": "/images/tele1.png"
   },
   {
     "id": 9,
@@ -596,7 +596,7 @@
   {
     "id": 34,
     "nombre": "LAVARROPAS AUTOMATICO DREAN",
-    "imagen":"/images/lavarropas.png",
+    "imagen": "/images/lavarropas.png",
     "descripcion": "Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",
     "categoriaProd": "lavarropas",
     "stock": 9,

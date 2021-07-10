@@ -8,6 +8,7 @@
 Pol, Gonza, tenemos las retros y las daily en la carpeta Docs
 
 USUARIO ADMIN: ignacio.101@hotmail.com password: nacho123
+
 USUARIO: ironman@gmail.com password: ironman
 
 ## ElectroHogar
