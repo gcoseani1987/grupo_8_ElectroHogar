@@ -28,7 +28,7 @@
 }
 
 .categorias{
-    display: flex;
+    display: none;
     width: 100%;
     text-align: center;
     justify-content: space-around;
@@ -84,6 +84,7 @@ article {
     }
 
 .text1{
+    display: none;
     font-size: 30px;
     color: rgb(0 125 119);
     margin-left: 15px;
@@ -122,6 +123,12 @@ article {
 @media(min-width:769px){
     .promo{
         display: flex;
+    }
+    .categorias{
+        display: flex;
+    }
+    .text1{
+        display: block;
     }
     .venta {
         display: flex;
