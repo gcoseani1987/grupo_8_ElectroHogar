@@ -19,7 +19,9 @@
       </ul>
     <% }else { %>
       <ul class="user">
-        <li><a href="" class="user-nav">Hola <%= locals.usuarioLoggeado.nombre %>  <i class="fas fa-user-alt"></i></a></li>
+        <li><a href="#" class="user-nav"><i class="fas fa-user-alt"></i> 
+        <%= locals.usuarioLoggeado.nombre %>  
+        <img src="/images/chevron-down-solid.svg" class="arrow-usuario" alt="arrow"> </a></li>
         <li><a href="/users/logout" class="user-nav">Cerrar Sesion  <i class="fas fa-sign-out-alt"></i></a></li>
         <a href="/carritoCompras" class="agrandar-carrito"><i class="fas fa-shopping-cart"></i></a>
       </ul>

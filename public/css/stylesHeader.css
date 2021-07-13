@@ -118,11 +118,19 @@
 }
 .agrandar-carrito:hover{
     color: rgb(9, 58, 131);
-    font-size: 33px;
 }
 .user-nav{
     margin-left:5px;
     margin-right: 5px;
+}
+.arrow-usuario{
+    width: 15px;
+    position: relative;
+    top: 4px;
+    transition: all 0.4s;
+}
+.arrow-usuario:active{
+    transform: rotate(180deg);
 }
 
 @keyframes cambio {
