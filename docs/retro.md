@@ -17,3 +17,9 @@ Consideramos estar bien organizados durante el sprint, y cada uno cumplio con su
 ### Sprint 3
 <br>
 Debemos comenzar a explora los html y css para mejorar el formato y el diseño de la página para que la experiencia del usuario sea más dinámica. Al mismo tiempo comenzar a hacer debugging cuando estamos desarrollando para poder encontrar de manera más rápida los errores en el código. Debemos comenzar a hacer más meetings para poder resolver los problemas que no pudimos solucionar de manera individual ya que los sprint conforme vamos  avanzando se van a haciendo más complejos en su resolución. Continuar organizandonos y trabajar en equipo. Dejar de desarrollar sin hacer debugging ya que luego es muy díficil resolver los conflictos que surgen en el código
+
+
+### Sprint 4
+<br>
+
+Realizamos las tareas de forma común aunque no pudimos cumplimentar mas reuniones semanales por cuestiones de tiempo. Pudimos mejorar cuestiones respecto a la visualización del sitio para mejorar la experiencia del usuario al mismo tiempo que cumplimentamos con los desafíos del sprint. 
