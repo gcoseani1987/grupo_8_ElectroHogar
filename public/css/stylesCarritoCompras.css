@@ -5,12 +5,6 @@
     margin: 0
 }
 
-.logo-mini {
-    height: 70px;
-    border-left-width: 30px;
-    padding: 0 0;
-    margin-left: 0;
-} 
 .container{
     max-width: 1250px;
     margin: auto;
@@ -38,6 +32,10 @@
     position: fixed;
     z-index: 10;
 }
+.logo{
+    display: flex;
+    width: 90%;
+}
 .container-header-logo{
     width: 50%;
 }
@@ -60,6 +58,9 @@
     margin-top: 15px;
     color: rgb(39, 56, 112);
     font-weight: bolder;
+}
+.carrito-main {
+    margin: 20px;
 }
 .carrito-main-left-products{
     text-align: center;
@@ -207,16 +208,15 @@
 }
 
 .recomendacion{
-    border: 2px black solid;
-    margin: 15px;
+    margin: 20px;
     padding: 20px;
     text-align: center;
-    box-shadow: 5px 5px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 20px rgb(100, 100, 100);
     transition: all 0.8s;
 }
 
 .recomendacion:hover{
-    box-shadow: 10px 10px 10px black;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .recomendación-producto-descripcion{
@@ -243,12 +243,9 @@
 }
 
 @media(min-width:480px){
-    .logo-mini{
-        display: none;
-    }
     .logo{
-        display: flex;
-        width: 100%;
+        max-height: 50px;
+        width: auto;
     }
     .container-header{
         align-items: center;
@@ -284,6 +281,7 @@
         max-height: 400px;
         position: relative;
         top: 150px;
+        padding-top: 40px;
     }
 
     .recomendaciones-banner{
