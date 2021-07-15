@@ -70,6 +70,7 @@
     box-shadow: 0 0 3px grey;
 }
 .lupita{
+    cursor: pointer;
     font-size: 14px;
     position: relative;
     left: -30px;
