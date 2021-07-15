@@ -67,6 +67,11 @@ const controller = {
     let usuarioEliminado = usuario.delete(id)
     res.redirect('/users/listado')
   },
+  perfil: (req, res) => {
+    let id = req.params.id
+    let usuarioEncontrado = usuario.findByPk(id) 
+    res.render('users/perfil', { usuarioEncontrado } )
+  }, 
 }
 
 module.exports = controller

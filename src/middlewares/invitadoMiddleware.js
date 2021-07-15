@@ -5,4 +5,4 @@ function invitadoMiddleware(req,res,next){
     } 
     next(); 
 }
-module.exports = invitadoMiddleware
+module.exports = invitadoMiddleware 

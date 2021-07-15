@@ -23,7 +23,8 @@
         <div class="buttons">
         <form action="/users/<%=usuarios[i].id%>?_method=DELETE"  method="POST">
           <button class="button" id="button" type="submit">Eliminar</button>
-        </form>      
+          <button class="button" id="button" type="submit"><a href="/users/perfil/<%=usuarios[i].id%>">Ver perfil</a></button>     
+        </form> 
         <br> 
         <br>
         </div>

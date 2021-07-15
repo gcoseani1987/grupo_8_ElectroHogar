@@ -5,4 +5,4 @@ function loggeadoMiddleware(req,res,next){
     next();  
 }
 
-module.exports = loggeadoMiddleware
+module.exports = loggeadoMiddleware 

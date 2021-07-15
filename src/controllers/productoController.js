@@ -15,7 +15,7 @@ const controller = {
       res.render('productos/detalleProducto', { productoEncontrado } )
     },
     
-    formNew: (req, res) => {
+    formNew: (req, res) => { 
       res.render('productos/agregarProducto')
     },
  

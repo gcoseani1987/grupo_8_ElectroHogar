@@ -27,12 +27,15 @@ router.post('/login', validacionesLogin, userController.loginUsuario)
 
 router.get('/listado', invitadoMiddleware, loggeadoMiddleware, userController.listado)
 
+router.get('/perfil/:id', invitadoMiddleware, userController.perfil)
+
 router.get('/registro', loggeadoMiddleware , userController.nuevoUsuario)
 router.post('/registro', uploadFile.single('imagen'), validacionUsuario, userController.crearUsuario)
 
 router.delete('/:id', userController.borrar) 
 
 router.post('/registro', uploadFile.single('imagen'), userController.crearUsuario)
+
 
 router.get('/logout', invitadoMiddleware ,userController.desloggear) 
  
