@@ -5,31 +5,13 @@
     margin: 0;
 }
 
-.promo i{
-    color: black;
-}
-
-.promo{
-    display: flex;
-    font-weight: 600;
-    display: none;
-    margin-top: -5px;
-    background: linear-gradient(to bottom, rgb(0 125 119), white);
-
-}
-
-.promo p{
-    width: 100%;
-    color: black;
-    border: rgb(182, 182, 182) 1px solid;
-    text-align: center;
-    font-size: 14px;
-    font-size: 18px;
-}
 
 main{
     max-width: 1250px;
     margin : auto
+}
+.perfil img{
+    border-radius: 100%;
 }
 
 .perfil {
@@ -37,6 +19,7 @@ main{
     flex-wrap: wrap;
     padding-top: 20px;
     margin: auto;
+    justify-content: center;
 }
 
 
@@ -45,14 +28,18 @@ main{
 }
 
 article {
-        box-shadow: 5px 5px 30px rgb(100,100,100);
+        box-shadow: 5px 5px 30px rgb(44 104 197 / 40%);
         margin: 10px;
         margin-top: 20px;
         transition: all 0.8s;
+        background-color: white;
+        width: 65%;
+        padding-top: 20px;
+        max-width: 480px;
     }
 article:hover{
-    box-shadow: 5px 5px 10px rgb(100,100,100);
-    background-color: rgb(224, 219, 219);
+    box-shadow: 5px 5px 30px rgb(44 104 197 / 60%);
+    background-color: rgb(226 242 255);
 }
 
 .text{
@@ -107,6 +94,7 @@ article:hover{
 .buttons{
     display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 .button{
@@ -128,6 +116,9 @@ article:hover{
     .perfil {
         display: flex;
         flex-wrap: wrap;
+    }
+    img{
+        width: 250px;
     }
 }
 

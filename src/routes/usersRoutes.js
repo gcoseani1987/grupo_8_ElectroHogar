@@ -4,6 +4,7 @@ const multer = require('multer')
 const path = require('path')
 const invitadoMiddleware = require('../middlewares/invitadoMiddleware')
 const loggeadoMiddleware = require('../middlewares/loggeadoMiddleware')
+const administradorMiddleware = require('../middlewares/administradorMiddleware')
 
 const { isFileImage }=require('../helpers/file')
 const validacionUsuario = require('../middlewares/usuarioMiddlewares')
@@ -22,12 +23,13 @@ const uploadFile = multer({ storage })
 
 const userController = require('../controllers/usersController') 
 
+
 router.get('/login', loggeadoMiddleware, userController.login)
 router.post('/login', validacionesLogin, userController.loginUsuario)
 
 router.get('/listado', invitadoMiddleware, loggeadoMiddleware, userController.listado)
 
-router.get('/perfil/:id', invitadoMiddleware, userController.perfil)
+router.get('/perfil/:id', invitadoMiddleware, administradorMiddleware, userController.perfil)
 
 router.get('/registro', loggeadoMiddleware , userController.nuevoUsuario)
 router.post('/registro', uploadFile.single('imagen'), validacionUsuario, userController.crearUsuario)

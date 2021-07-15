@@ -93,6 +93,16 @@ article:hover{
     background-color: rgb(10,74,173);
     color: white;
 }
+form a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+form a:hover {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
 
 .buttons{
     display: flex;

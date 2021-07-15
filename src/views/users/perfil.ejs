@@ -6,10 +6,11 @@
 <body>
   <%- include('../partials/header.ejs')%> 
  <main class="perfilUsuario">
-    <h2 class="text">Perfil de usuario</h2>
+    <h2 class="text">Perfil de <%=usuarioEncontrado.nombre%></h2>
     <section class="perfil">
       <article class="usuario">
-        <img src="<%=usuarioEncontrado.imagen%>" alt="<%=usuarioEncontrado.nombre%>" width="250px">
+        <img src="<%=usuarioEncontrado.imagen%>" alt="<%=usuarioEncontrado.nombre%>" width="200px">
+        <br>
         <br>
         <p class="modelo">ID:<%=usuarioEncontrado.id%></p>
         <br>
