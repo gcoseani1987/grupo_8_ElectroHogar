@@ -98,5 +98,25 @@
     "password2": "$2a$10$zKXOfDOAPDhCxgOAjNnBzu6f96FUglOsiOk1kMUy/J/hGXReFrBHu",
     "imagen": "/images/usuarios/1626386841231.jpg",
     "id": 10
+  },
+  {
+    "nombre": "Gonza",
+    "apellido": "DH",
+    "email": "gonza@gmail.com",
+    "password": "$2a$10$ZBAb.T.nCZGivMP8Solm5.xq9wPvgx8H1VfzLKpCOh7WDs9eb1u3i",
+    "administrador": true,
+    "password2": "$2a$10$TVGFIAV3ZcDUmKopW2Z...72xnVFknK/Kdt83xFyYXsMjQ0s7uT3u",
+    "imagen": "/images/usuarios/1626392212380.jpg",
+    "id": 11
+  },
+  {
+    "nombre": "Pol",
+    "apellido": "DH",
+    "email": "pol@gmail.com",
+    "password": "$2a$10$Go7.8G8gLFzAwJfsEDPcmuWgB.nVNPfupykZLRxuIPR7t7b9jh05C",
+    "administrador": true,
+    "password2": "$2a$10$WUvzv.ByXD9nTU5gDUEP8OcRxHsM46uIk1Qs2w6ciRs/qsra/9UI2",
+    "imagen": "/images/usuarios/1626392240338.jpg",
+    "id": 12
   }
 ]
