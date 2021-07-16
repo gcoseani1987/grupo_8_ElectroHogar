@@ -40,3 +40,20 @@ Resolvimos la funcionalidad carga de productos y hablamos sobre aspectos del dis
 ## Reunión 20-06-2021 
 
 Trabajamos sobre el login y register. Terminamos el Sprint 4.
+
+## Reunión 25-06-2021 
+
+Distribuimos tareas del Sprint 5
+
+## Reunión 01-07-2021 
+
+Pusimos en común. Resolvimos parte de los problemas que no pudieron ser resueltos de manera individual
+
+## Reunión 06-07-2021
+
+Realizamos observaciones sobre la parte visual de la página e hicimos propuestas de mejoras
+
+## Reunión 09-07-2021
+
+Finalizamos las tareas del sprint 5. Repasamos todos los puntos
+
