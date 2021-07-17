@@ -21,9 +21,10 @@
         <p class="modelo">Email: <%=usuarioEncontrado.email%></p>
         <br> 
         <div class="buttons">
-        <form action="/users/<%=usuarioEncontrado.id%>?_method=DELETE"  method="POST">
-          <button class="button" id="button" type="submit">Eliminar</button>
-        </form>     
+          <a href='/users/<%=usuarioEncontrado.id%>/editar'><button class="button" id="button">Editar</button></a>         
+          <form action="/users/<%=usuarioEncontrado.id%>?_method=DELETE"  method="POST">
+            <button class="button" id="button" type="submit">Eliminar</button>
+          </form>
         <br>
         <br>
         </div>

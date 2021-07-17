@@ -25,11 +25,18 @@
     margin-top: 90px;
     justify-content: center;
 }
+.text-login{
+    color: #353535;
+}
+.form-container {
+    color: #284b63;
+    font-weight: 700;
+}
 
 .login-form {
     width: max-content;
     margin: auto;
-    border: 1px black solid;
+    border: 1px #353535 solid;
     border-radius: 10px;
     background-color: white;
     opacity: 0.9;
@@ -40,7 +47,7 @@
 .login-button{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -49,12 +56,12 @@
 }
 
 .login-button:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 
 .forgot a{
-    color: rgb(10,74,173);
+    color: #284b63;
 
 }
 .crear-cuenta-nueva{
@@ -62,7 +69,7 @@
 }
 .crear-cuenta-nueva a{
     margin-top:10px;
-    color: rgb(10,74,173)
+    color: #284b63
 }
 .advertencia{
     color: rgb(187, 58, 58);

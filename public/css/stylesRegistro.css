@@ -29,18 +29,24 @@
 .registro-form {
     width: max-content;
     margin: auto;
-    border: 1px black solid;
+    border: 1px #353535 solid;
+    color: black;
+    font-weight: 700;
     border-radius: 10px;
     background-color: white;
     opacity: 0.9;
     text-align: center;
     padding: 10px;
 }
+.text-registro{
+    font-weight: 500;
+    color: #284b63;
+}
 
 .button-registro{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -49,12 +55,12 @@
 }
 
 .button-registro:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63	;
     color: white;
 }
 
 .forgot a{
-    color: rgb(10,74,173);
+    color: #284b63	;
 }
 
 .iniciar-sesion{
@@ -63,7 +69,7 @@
 }
 
 .iniciar-sesion a{
-    color: rgb(10,74,173);
+    color: #284b63	;
 }
 
 .advertencia{

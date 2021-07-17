@@ -1,8 +1,25 @@
 *{
+    color: #284b63
+}
+body{
     background-image: url(../images/login.jpg);
-    color: blue
+    background-size: cover;
 }
 
-.text{ 
-    background-color: transparent;
+a {
+    margin-left: 25px;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+span{
+    padding: 5px;
+}
+.display-flex{
+    display: flex;
+    flex-direction: column;
+}
+a:hover{
+    background-color: #3c6e71;
+    color: white;
+    font-weight: 700;
 }

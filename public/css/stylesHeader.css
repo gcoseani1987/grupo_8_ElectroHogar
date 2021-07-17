@@ -42,7 +42,7 @@
     font-size: 30px;
     padding: 15px;
     border-radius: 5px;
-    color: rgb(10,74,173);
+    color: #284b63	;
     position: relative;
     right: -5px;
     top: -5px;
@@ -67,7 +67,7 @@
     position: relative;
     top: -5px;
     padding-left: 5px;
-    box-shadow: 0 0 3px grey;
+    box-shadow: 0 0 3px #353535	;
 }
 .lupita{
     cursor: pointer;
@@ -77,7 +77,7 @@
     top: -3px;
     border: none;
     background-color: transparent;
-    color: rgb(10,74,173);
+    color: #284b63	;
 }
 
 .main-header-right{
@@ -90,7 +90,7 @@
 
 .main-header-right a{
     text-decoration: none;
-    color: rgb(10,74,173);
+    color: #284b63	;
 }
 
 .main-header-right a:hover{
@@ -121,7 +121,7 @@
     font-size: 30px;
 }
 .agrandar-carrito:hover{
-    color: rgb(9, 58, 131);
+    color: #284b63	;
 }
 .user-nav{
     margin-left:5px;
@@ -176,7 +176,7 @@
     }
     .lupita{
         left: -35px;
-        border-left: 1px solid grey ;
+        border-left: 1px solid #353535	 ;
         padding-left: 5px;
     }
 }

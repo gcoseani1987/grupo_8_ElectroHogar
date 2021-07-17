@@ -27,7 +27,7 @@
 
 .categoria h2{
     font-size: 30px;
-    color: rgb(10,74,173);
+    color: #3c6e71;
     margin-left: 15px;
     text-transform: uppercase;
 }
@@ -41,7 +41,7 @@
 }
 
 .productos article {
-    box-shadow: 5px 5px 20px grey;
+    box-shadow: 5px 5px 20px #353535;
     margin: 10px;
     align-items: center;
     transition: all 0.8s;
@@ -51,7 +51,7 @@
 }
  
 .productos article:hover {
-    box-shadow: 5px 5px 10px grey;
+    box-shadow: 5px 5px 10px #353535;
     background-color: rgb(230, 230, 230);
 }
 
@@ -61,13 +61,13 @@
 
 .precio{
     font-size: 18px;
-    color: rgb(10,74,173);
+    color: #284b63;
     font-weight: bold;
     text-align: center;
 }
 .modelo{
         font-size: 18px;
-        color: black;
+        color: #3c6e71	;
         font-weight: bold;
         text-align: center;
     }
@@ -93,7 +93,7 @@
 
 .footer-left2 a{
     text-decoration: none;
-    color: rgb(10,74,173);
+    color: #284b63;
 }
 
 .footer-left2 i{

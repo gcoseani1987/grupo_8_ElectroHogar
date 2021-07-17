@@ -5,7 +5,6 @@
     margin: 0;
 }
 
-
 main{
     max-width: 1250px;
     margin : auto
@@ -22,13 +21,12 @@ main{
     justify-content: center;
 }
 
-
 .padding-top{
     padding-top: 100px;
 }
 
 article {
-        box-shadow: 5px 5px 30px rgb(44 104 197 / 40%);
+        box-shadow: 5px 5px 30px #353535;
         margin: 10px;
         margin-top: 20px;
         transition: all 0.8s;
@@ -37,21 +35,20 @@ article {
         padding-top: 20px;
         max-width: 480px;
     }
-article:hover{
-    box-shadow: 5px 5px 30px rgb(44 104 197 / 60%);
-    background-color: rgb(226 242 255);
-}
+    article:hover {
+        box-shadow: 5px 5px 20px #3c6e71;
+        background-color: #3c6e7130;
+    }
 
 .text{
     font-size: 30px;
-    color: rgb(0 125 119);
+    color: #3c6e71;
     margin-left: 12px;
-    margin-bottom: 15px;
 }
 
 .modelo{
     font-size: 18px;
-    color: black;
+    color: #353535;
     font-weight: bold;
     text-align: center;
 }
@@ -64,7 +61,7 @@ article:hover{
 .button-agregar{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -74,7 +71,7 @@ article:hover{
 .button{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -83,11 +80,11 @@ article:hover{
 }
 
 .button-agregar:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 .button:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 
@@ -95,20 +92,26 @@ article:hover{
     display: flex;
     text-align: center;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .button{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 15px;
     padding: 2px 3px;
     border-radius: 3px;
     transition: all 0.7s;
 }
+button#button {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
 
 .button:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 

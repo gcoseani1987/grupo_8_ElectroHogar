@@ -6,7 +6,7 @@
 }
 
 .promo i{
-    color: black;
+    color: #353535;
 }
 
 .promo{
@@ -14,14 +14,14 @@
     font-weight: 600;
     display: none;
     margin-top: -5px;
-    background: linear-gradient(to bottom, rgb(0 125 119), white);
+    background: linear-gradient(to bottom, #3c6e71	, white);
 
 }
 
 .promo p{
     width: 100%;
-    color: black;
-    border: rgb(182, 182, 182) 1px solid;
+    color: #353535;
+    border: #3c6e71 1px solid;
     text-align: center;
     font-size: 14px;
     font-size: 18px;
@@ -38,8 +38,8 @@
 }
 
 .categorias img:hover{
-    background-color: rgb(10,74,173);
-    box-shadow: 5px 5px 25px grey;
+    background-color: #284b63;
+    box-shadow: 5px 5px 25px #353535;
 }
 
 .categorias img{
@@ -86,26 +86,26 @@ article {
 .text1{
     display: none;
     font-size: 30px;
-    color: rgb(0 125 119);
+    color: #3c6e71	;
     margin-left: 15px;
 }
 
 .text{
     font-size: 30px;
-    color: rgb(0 125 119);
+    color: #3c6e71	;
     margin-left: 15px;
 }
 
 .precio{
     font-size: 18px;
-    color: rgb(10,74,173);
+    color: #284b63;
     font-weight: bold;
     text-align: center;
 }
 
 .modelo{
     font-size: 18px;
-    color: black;
+    color: #353535	;
     text-align: center;
 }
 

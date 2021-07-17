@@ -5,27 +5,6 @@
     margin: 0;
 }
 
-.promo i{
-    color: black;
-}
-
-.promo{
-    display: flex;
-    font-weight: 600;
-    display: none;
-    margin-top: -5px;
-    background: linear-gradient(to bottom, rgb(0 125 119), white);
-
-}
-
-.promo p{
-    width: 100%;
-    color: black;
-    border: rgb(182, 182, 182) 1px solid;
-    text-align: center;
-    font-size: 14px;
-    font-size: 18px;
-}
 
 main{
     max-width: 1250px;
@@ -51,33 +30,33 @@ main{
 }
 
 article {
-        box-shadow: 5px 5px 30px rgb(100,100,100);
+        box-shadow: 5px 5px 30px #353535;
         margin: 10px;
         margin-top: 20px;
         transition: all 0.8s;
     }
 article:hover{
-    box-shadow: 5px 5px 10px rgb(100,100,100);
-    background-color: rgb(224, 219, 219);
+    box-shadow: 5px 5px 10px #353535;
+    background-color: #d9d9d9 ;
 }
 
 .text{
     font-size: 30px;
-    color: rgb(0 125 119);
+    color: #3c6e71	;
     margin-left: 12px;
     margin-bottom: 15px;
 }
 
 .precio{
     font-size: 18px;
-    color: rgb(10,74,173);
+    color: #284b63	;
     font-weight: bold;
     text-align: center;
 }
 
 .modelo{
     font-size: 18px;
-    color: black;
+    color: #353535;
     font-weight: bold;
     text-align: center;
 }
@@ -89,7 +68,7 @@ article:hover{
 .button-agregar{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -99,7 +78,7 @@ article:hover{
 .button{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -108,11 +87,11 @@ article:hover{
 }
 
 .button-agregar:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 .button:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 
@@ -124,15 +103,15 @@ article:hover{
 .button{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 15px;
-    padding: 2px 3px;
+    padding: 2px 4px;
     border-radius: 3px;
     transition: all 0.7s;
 }
 
 .button:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 

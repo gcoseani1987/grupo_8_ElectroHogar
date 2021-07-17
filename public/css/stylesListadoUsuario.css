@@ -30,32 +30,32 @@ main{
 }
 
 article {
-        box-shadow: 5px 5px 30px rgb(100,100,100);
+        box-shadow: 5px 5px 30px #353535;
         margin: 10px;
         margin-top: 20px;
         transition: all 0.8s;
     }
 article:hover{
-    box-shadow: 5px 5px 10px rgb(100,100,100);
+    box-shadow: 5px 5px 10px #353535;
 }
 
 .text{
     font-size: 30px;
-    color: rgb(0 125 119);
+    color: #3c6e71;
     margin-left: 12px;
     margin-bottom: 15px;
 }
 
 .nombre{
     font-size: 18px;
-    color: rgb(10,74,173);
+    color: #284b63;
     font-weight: bold;
     text-align: center;
 }
 
 .modelo{
     font-size: 18px;
-    color: black;
+    color: #353535;
     font-weight: bold;
     text-align: center;
 }
@@ -67,7 +67,7 @@ article:hover{
 .button-agregar{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -77,7 +77,7 @@ article:hover{
 .button{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -96,7 +96,7 @@ article:hover{
 form a{
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: #353535;
 }
 form a:hover {
     text-decoration: none;
@@ -112,7 +112,7 @@ form a:hover {
 .button{
     background-color: rgb(217,217,217);
     border: none;
-    color: black;
+    color: #353535;
     font-size: 15px;
     padding: 2px 3px;
     border-radius: 3px;
@@ -120,7 +120,7 @@ form a:hover {
 }
 
 .button:hover{
-    background-color: rgb(10,74,173);
+    background-color: #284b63;
     color: white;
 }
 
