@@ -41,6 +41,14 @@ Ofrecemos productos electrodomésticos del hogar para el uso cotidiano de todas 
 
 -**Grupo Marquez:** https://www.grupomarquez.com.ar/
 
+## Palate de colores utilizada:
+
+#353535	(gris oscuro)
+#3c6e71	(verde)
+#ffffff (blanco)
+#d9d9d9 (gris)
+#284b63	(azul)
+
 ## Integrantes
 -Coseani, Guillermo Adolfo. QA Data analyst. 34 años
 
