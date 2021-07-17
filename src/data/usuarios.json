@@ -10,46 +10,6 @@
     "id": 1
   },
   {
-    "nombre": "Gabriel Omar",
-    "apellido": "Batistuta",
-    "email": "gbatistuta@gmail.com",
-    "password": "$2a$10$unUgbIlOPlU9/R4DWIYmcubvhkvTMJuYQvIzAL6EHlq/gxKg6WJca",
-    "password2": "$2a$10$zuiU.j3.6XGiknclxuNhVuA.3IgBfypihUvEUgKRVximnWwMIzsAS",
-    "imagen": "/images/usuarios/1624663058141.jpg",
-    "administrador": false,
-    "id": 2
-  },
-  {
-    "nombre": "Tony",
-    "apellido": "Stark",
-    "email": "ironman@gmail.com",
-    "password": "$2a$10$J3GovEXfRj1Y.V8mSidWDOdfC/0Ncarb5GouXV8j3YV0no/Nlac66",
-    "password2": "$2a$10$roxiRddcml.1s3/WpRZWzeUJHNzEkEvPwpQFC5jRaYe3arxbTeTLu",
-    "imagen": "/images/usuarios/1624663091320.jpg",
-    "administrador": false,
-    "id": 3
-  },
-  {
-    "nombre": "Steve ",
-    "apellido": "Rogers",
-    "email": "capamerica@gmail.com",
-    "password": "$2a$10$domYaHlZTm7idsd80zM.ZeYUtcYnOM2jOTt6YwaYfhiHJfOWMI8oW",
-    "password2": "$2a$10$zubTUikm9Z6H6Oxd.lp3C.KtwRVviezGPqti9gEeeO7WKZPO9ceFu",
-    "imagen": "/images/usuarios/1624663124088.jpg",
-    "administrador": false,
-    "id": 4
-  },
-  {
-    "nombre": "Thor",
-    "apellido": "Odinson",
-    "email": "thor@gmail.com",
-    "password": "$2a$10$rD4JYEtu7KaPERMLJPQWfuOEaVyp2B3/ExfL4ga.EH/HuM.uuHQcC",
-    "password2": "$2a$10$JGONxgorczyPfxOrz8CWp.1mIWLXf7PMCT.ZuSckzRTec3FXMAZTG",
-    "imagen": "/images/usuarios/1624663150401.jpg",
-    "administrador": false,
-    "id": 5
-  },
-  {
     "nombre": "Bruce",
     "apellido": "Banner",
     "email": "hulk@gmail.com",
@@ -57,7 +17,7 @@
     "password2": "$2a$10$pUbQq8Mwbv9BS49YtV9txOk8AHF6oHdhs6H3JXc0Wz9jPkw7Y09A2",
     "imagen": "/images/usuarios/1624663182332.jpg",
     "administrador": false,
-    "id": 6
+    "id": 2
   },
   {
     "nombre": "Bruce",
@@ -67,17 +27,7 @@
     "password2": "$2a$10$8/RDtIvsz.jb4iubwUd5deE77TC7ZseCgtto6oDPKuGF5pQ3ZstKC",
     "imagen": "/images/usuarios/1624663226410.jpg",
     "administrador": false,
-    "id": 7
-  },
-  {
-    "nombre": "Juan Sebastian",
-    "apellido": "Veron",
-    "email": "veron@gmail.com",
-    "password": "$2a$10$DNczhp54L96ojnq/KKTqr.C87EutDw7mXiw3nzWzxfBxCgamM.m62",
-    "password2": "$2a$10$5CLfWVI7N8flaQzGnrZNOe/YD7.qUMEjk3QfBZFRpT1n/guGx9xcm",
-    "imagen": "/images/usuarios/1624663274253.jpg",
-    "administrador": false,
-    "id": 8
+    "id": 3
   },
   {
     "nombre": "Emiliano",
@@ -87,17 +37,16 @@
     "password2": "$2a$10$TlgidhagnOlW29UA5.cavuqZgxkdU88JdwE8F1CbfdEBjgyLy2bHi",
     "imagen": "/images/usuarios/1624740739540.jpg",
     "administrador": true,
-    "id": 9
+    "id": 4
   },
   {
-    "nombre": "Juan Ignacio",
+    "id": 5,
+    "nombre": "Ignacio",
     "apellido": "Galvagno",
     "email": "ignacio.101@hotmail.com",
-    "password": "$2a$10$DTJwKNYQvMDoWZZypma5UeGa3DdDU6847J/Nk0UqJFf0t0bLRrz2.",
-    "administrador": true,
-    "password2": "$2a$10$zKXOfDOAPDhCxgOAjNnBzu6f96FUglOsiOk1kMUy/J/hGXReFrBHu",
-    "imagen": "/images/usuarios/1626386841231.jpg",
-    "id": 10
+    "password": "$2a$10$HUUoWdCdgNo2bbiDpj4wW.hltEzpOKb17Cxp3gotMDtIIPx4qdJ/m",
+    "password2": "$2a$10$HUUoWdCdgNo2bbiDpj4wW.hltEzpOKb17Cxp3gotMDtIIPx4qdJ/m",
+    "imagen": "/images/usuarios/1626386841231.jpg"
   },
   {
     "nombre": "Gonza",
@@ -107,7 +56,7 @@
     "administrador": true,
     "password2": "$2a$10$TVGFIAV3ZcDUmKopW2Z...72xnVFknK/Kdt83xFyYXsMjQ0s7uT3u",
     "imagen": "/images/usuarios/1626392212380.jpg",
-    "id": 11
+    "id": 6
   },
   {
     "nombre": "Pol",
@@ -117,6 +66,36 @@
     "administrador": true,
     "password2": "$2a$10$WUvzv.ByXD9nTU5gDUEP8OcRxHsM46uIk1Qs2w6ciRs/qsra/9UI2",
     "imagen": "/images/usuarios/1626392240338.jpg",
-    "id": 12
+    "id": 7
+  },
+  {
+    "nombre": "Tony",
+    "apellido": "Stark",
+    "email": "ironman@gmail.com",
+    "password": "$2a$10$Gprf5fSZHckpE3MMQxcHf.eGJIOWlu1eZJiBJpU7XukcI0H2le5/6",
+    "administrador": false,
+    "password2": "$2a$10$a0CHYznNwwb/XLoKCIWG5.GK/ia0XWNjnDGIaA/cRs5GDlOZ6/hGi",
+    "imagen": "/images/usuarios/1626553076014.jpg",
+    "id": 8
+  },
+  {
+    "nombre": "Juan Sebastian",
+    "apellido": "Veron",
+    "email": "veron@gmail.com",
+    "password": "$2a$10$fKEqDK.YHowkRTpg8VENb.UIq2x16R0dF9XGmapJxNQulzqysx4hu",
+    "administrador": false,
+    "password2": "$2a$10$A.IsiTvE47kTZtYasjignewXRcvvI8wXhnUoyqbgm5x9N3A/D4lhi",
+    "imagen": "/images/usuarios/1626553251893.jpg",
+    "id": 9
+  },
+  {
+    "nombre": "Steve",
+    "apellido": "Rogers",
+    "email": "capamerica@gmail.com",
+    "password": "$2a$10$snSymGLl30ceFeYplmae1.zK.lit4110ACrRIfKrGe52UtA5ynAKW",
+    "administrador": false,
+    "password2": "$2a$10$PT8Mbmq7zhf3JRyaDQ.zLukJH3xDf1CN1NiO0bYA/1gZ21CxGDGEm",
+    "imagen": "/images/usuarios/1626553296802.jpg",
+    "id": 10
   }
 ]

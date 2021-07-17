@@ -53,7 +53,7 @@ modificar (data ,id){
    if(producto.id == id){
        producto ={
           id: producto.id,
-          ...data
+          ...data 
        }
    } return producto 
   });  

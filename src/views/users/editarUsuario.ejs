@@ -1,0 +1,62 @@
+<%- include('../partials/head.ejs')%>
+<link rel="stylesheet" href="/css/stylesEditarUsuario.css">
+<title>Editar usuario</title>
+<link rel="shortcut icon" href="/images/logo-mini-title.svg" style="color: rgb(10,74,173);">
+</head>
+<body>
+
+    <%- include('../partials/header.ejs')%>
+ 
+    <main class="create-registro">
+        <h2 class="titulo">EDITAR USUARIO</h2>
+        <section class="create-form">
+            <form action='/users/<%=usuarioEncontrado.id%>/editar?_method=PUT' method="POST" class="create" enctype="multipart/form-data"> 
+                <div class="create-container">
+                    <label>Usuario</label>
+                    <br>
+                    <img src="<%=usuarioEncontrado.imagen%>" alt="<%=usuarioEncontrado.descripcion%>" width="300px">
+                    <br>
+                    <br>
+                    <br>
+                    <label for="nombre" class="label">Editar nombre</label>
+                    <br>
+                    <input type="name" class="input-create" name="nombre" value="<%= usuarioEncontrado.nombre %>">
+                    <br> 
+                    <br>   
+                    <br>
+                    <label for="apellido" class="label">Editar apellido</label>
+                    <br>
+                    <input type="name" class="input-create" name="apellido" value="<%= usuarioEncontrado.apellido %>">
+                    <br>
+                    <br>
+                    <br>
+                    <label for="imagen" class="label">Editar imagenes</label>
+                    <br>
+                    <input name="imagen" class="input-create" type="file" accept="jpg,jpeg" >
+                    <br>
+                    <br>
+                    <label for="email" class="label">Editar email</label>
+                    <br>
+                    <input for="email" class="input-create" type="email" name="email" value="<%= usuarioEncontrado.email %>">
+                    <br>
+                    <br>
+                    <label for="password" class="label">Editar contraseña</label>
+                    <br>
+                    <input type="password" for="password" class="input-create" type="password" name="password" placeholder="Escriba acá la contraseña nueva">
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="button-container">
+                    <button class="create-button" type="submit">Guardar cambios</button>
+                    <button class="create-button" type="reset">Resetear</button>
+                </div>
+            </form>
+        </section>
+        <br>
+        <br>
+    </main>
+
+    <%- include('../partials/footer.ejs')%>
+
+</body>

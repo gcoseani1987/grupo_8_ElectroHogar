@@ -61,9 +61,35 @@ const controller = {
     res.clearCookie('Email')
     res.redirect('/')
   },
- 
-  borrar: (req, res) => {
+
+  editar: (req, res) => {
     let id = req.params.id
+    let usuarioEncontrado = usuario.findByPk(id)
+    res.render('users/editarUsuario', { usuarioEncontrado })
+  },
+
+  actualizar: (req, res) => {
+    const { id } = req.params;
+    const usuarioOriginal = usuario.findByPk(id)
+    const data = req.body; 
+    const { file } = req
+    let imagen
+    if (file) {
+      imagen = '/images/usuarios/' + req.file.filename
+    } else {
+      imagen = usuarioOriginal.imagen
+    }
+    data.imagen = imagen
+    let { nombre, apellido, email, password } = req.body
+    password = bcryptjs.hashSync(req.body.password, 10)
+    const password2 = password
+    const dataNueva = {nombre, apellido, email, password, password2, imagen }
+    usuario.modificar(dataNueva, id);
+    res.redirect('/users/listado');
+},
+
+  borrar: (req, res) => {
+    let id = req.params.id 
     let usuarioEliminado = usuario.delete(id)
     res.redirect('/users/listado')
   },

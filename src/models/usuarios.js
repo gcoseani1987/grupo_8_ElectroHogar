@@ -14,7 +14,7 @@ module.exports = {
     fs.writeFileSync(this.usuariosPath, JSON.stringify(newData, null, 2))
     return newData
   },
-
+ 
   generarId() {
     return this.readFile().pop().id + 1
   },
@@ -52,5 +52,18 @@ module.exports = {
     const usuarios = this.readFile();
     const usuarioEncontrado = usuarios.find(usuario => usuario[field] == value) 
     return usuarioEncontrado
+  },
+
+  modificar (data ,id){
+    const usuarios = this.readFile();
+    const usuarioAEditar = usuarios.map(usuario =>{
+     if(usuario.id == id){
+         usuario ={
+            id: usuario.id,
+            ...data 
+         }
+     } return usuario 
+    });  
+    this.writeFile(usuarioAEditar)
   }
 }

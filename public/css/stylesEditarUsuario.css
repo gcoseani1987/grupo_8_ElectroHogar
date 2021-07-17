@@ -1,0 +1,97 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* NO BORRAR*/
+.main-header{
+    background-color: rgb(217,217,217);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    justify-content: space-between;
+    top: 0;
+    margin-top: 10px;
+}
+
+
+.create-registro{
+    background-image: url(../images/login.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+    opacity: 0.9;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.create-form{
+    width: max-content;
+    margin: auto;
+    border: 1px #353535 solid;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+    padding: 10px;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #3c6e71	;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-create-precio{
+    width: 30%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.create-button{
+    background-color: rgb(217,217,217);
+    text-align: center;
+    border: none;
+    color: #353535;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px grey;
+    transition: all 0.7s; 
+    margin-bottom: 10px;
+}
+
+.create-button:hover{
+    background-color: #284b63;
+    color: white;
+    box-shadow: 5px 5px 10px #353535;
+}
+
+
+.input-create{
+    width: 95%;
+    text-align: center;
+}
+
+.label{
+    color: #284b63;
+    font-size: 20px;
+}
+
+.description-create{
+    height: 70px;
+    width: 95%;
+    padding: 5px;
+}
+
+@media(min-width:1200px){
+    .create-registro{
+        background-size: cover;
+    }
+}

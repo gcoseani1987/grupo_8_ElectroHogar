@@ -31,6 +31,9 @@ router.get('/listado', invitadoMiddleware, loggeadoMiddleware, userController.li
 
 router.get('/perfil/:id', invitadoMiddleware, administradorMiddleware, userController.perfil)
 
+router.get('/:id/editar', invitadoMiddleware, loggeadoMiddleware, userController.editar) 
+router.put('/:id/editar', uploadFile.single('imagen'), loggeadoMiddleware, invitadoMiddleware, userController.actualizar)
+
 router.get('/registro', loggeadoMiddleware , userController.nuevoUsuario)
 router.post('/registro', uploadFile.single('imagen'), validacionUsuario, userController.crearUsuario)
 
