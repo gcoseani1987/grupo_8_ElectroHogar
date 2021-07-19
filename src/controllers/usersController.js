@@ -30,6 +30,10 @@ const controller = {
     const administrador = false
     const usuarioNuevo = {nombre, apellido, email, password, administrador, password2, imagen: '/images/usuarios/' + req.file.filename }
       usuario.crearUsuario(usuarioNuevo)
+      delete usuarioNuevo.password
+      delete usuarioNuevo.password2
+      req.session.usuarioLoggeado = usuarioNuevo
+      res.cookie('Email',bcryptjs.hashSync(req.body.email,10),{ maxAge : (1000*60)*5 })
       res.redirect('/') 
   },  
 
