@@ -60,15 +60,20 @@ const controller = {
     res.render('users/modificarpassword' , { usuarioEncontrado })
   },
   editarPassword: (req,res) => {
+    const resultadoValidaciones = validationResult(req)
     const { id } = req.params;
     const usuarioEncontrado = usuario.findByPk(id)
     let { nombre, apellido, email, imagen, administrador } = usuarioEncontrado
+    if(resultadoValidaciones.isEmpty()){ 
     let passwordEditado = req.body.passwordEditado
     password =  bcryptjs.hashSync(req.body.passwordEditado, 10) 
     const password2 = password
     const dataNueva = {nombre, apellido, email, administrador ,password, password2, imagen }
     usuario.modificar(dataNueva, id);
-    res.redirect('/users/perfil/' + id);
+    res.redirect('/users/perfil/' + id)
+    } else{
+      res.render('users/modificarpassword', { usuarioEncontrado,  errors: resultadoValidaciones.mapped() })
+    };
   },
 
   listado: (req, res) => {
