@@ -5,6 +5,7 @@ const path = require('path')
 const invitadoMiddleware = require('../middlewares/invitadoMiddleware')
 const loggeadoMiddleware = require('../middlewares/loggeadoMiddleware')
 const administradorMiddleware = require('../middlewares/administradorMiddleware')
+const passwordMiddleware = require('../middlewares/passwordMiddleware')
 
 const { isFileImage }=require('../helpers/file')
 const validacionUsuario = require('../middlewares/usuarioMiddlewares')
@@ -31,8 +32,11 @@ router.get('/listado', invitadoMiddleware, loggeadoMiddleware, userController.li
 
 router.get('/perfil/:id', invitadoMiddleware, administradorMiddleware, userController.perfil)
 
-router.get('/:id/editar', invitadoMiddleware, loggeadoMiddleware, userController.editar) 
-router.put('/:id/editar', uploadFile.single('imagen'), loggeadoMiddleware, invitadoMiddleware, userController.actualizar)
+router.get('/:id/editar', invitadoMiddleware, administradorMiddleware, userController.editar) 
+router.put('/:id/editar', uploadFile.single('imagen'), administradorMiddleware, invitadoMiddleware, userController.actualizar)
+
+router.get('/modificarpassword/:id', passwordMiddleware ,userController.password)
+router.post('/modificarpassword/:id', passwordMiddleware ,userController.editarPassword)
 
 router.get('/registro', loggeadoMiddleware , userController.nuevoUsuario)
 router.post('/registro', uploadFile.single('imagen'), validacionUsuario, userController.crearUsuario)

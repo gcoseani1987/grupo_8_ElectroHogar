@@ -40,10 +40,7 @@
                     <input for="email" class="input-create" type="email" name="email" value="<%= usuarioEncontrado.email %>">
                     <br>
                     <br>
-                    <label for="password" class="label">Contraseña nueva</label>
-                    <br>
-                    <input type="password" for="password" class="input-create" type="password" name="password" placeholder="Escriba su contraseña actual">
-                    <br>
+                    <a href="/users/modificarpassword/<%= usuarioEncontrado.id %>" class="label">Modificar Contraseña</a>
                 </div>
                 <div class="button-container">
                     <button class="create-button" type="submit">Guardar cambios</button>

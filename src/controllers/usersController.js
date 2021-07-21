@@ -54,6 +54,22 @@ const controller = {
     res.render('users/login', { oldData, errors: resultadoValidaciones.mapped() })
     }
   }, 
+  password:(req,res)=>{
+    let id = req.params.id
+    let usuarioEncontrado = usuario.findByPk(id)
+    res.render('users/modificarpassword' , { usuarioEncontrado })
+  },
+  editarPassword: (req,res) => {
+    const { id } = req.params;
+    const usuarioEncontrado = usuario.findByPk(id)
+    let { nombre, apellido, email, imagen, administrador } = usuarioEncontrado
+    let passwordEditado = req.body.passwordEditado
+    password =  bcryptjs.hashSync(req.body.passwordEditado, 10) 
+    const password2 = password
+    const dataNueva = {nombre, apellido, email, administrador ,password, password2, imagen }
+    usuario.modificar(dataNueva, id);
+    res.redirect('/users/perfil/' + id);
+  },
 
   listado: (req, res) => {
     let usuarios = usuario.findAll() 
@@ -84,12 +100,13 @@ const controller = {
       imagen = usuarioOriginal.imagen
     }
     data.imagen = imagen
-    let { nombre, apellido, email, password } = req.body
-    password = bcryptjs.hashSync(req.body.password, 10)
+    let { nombre, apellido, email } = req.body
+    password = usuarioOriginal.password
     const password2 = password
-    const dataNueva = {nombre, apellido, email, password, password2, imagen }
+    const administrador = false
+    const dataNueva = {nombre, apellido, email,administrador, password, password2, imagen }
     usuario.modificar(dataNueva, id);
-    res.redirect('/users/listado');
+    res.redirect('/users/perfil/' + id);
 },
 
   borrar: (req, res) => {

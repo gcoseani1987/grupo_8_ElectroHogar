@@ -93,8 +93,18 @@
     "nombre": "Steve",
     "apellido": "Rogers",
     "email": "capamerica@gmail.com",
-    "password": "$2a$10$/.eE6oi32Ua720kM9k8mt.fgOC7woAJh8HkEh3vaSzqaf8.LQj2OC",
-    "password2": "$2a$10$/.eE6oi32Ua720kM9k8mt.fgOC7woAJh8HkEh3vaSzqaf8.LQj2OC",
-    "imagen": "/images/usuarios/1626812067297.jpg"
+    "password": "$2a$10$DGxUcHNjebmCpKJZlLrBVuy7SO3N//BfMKuRMbonkO5TsmDm3sTx2",
+    "password2": "$2a$10$DGxUcHNjebmCpKJZlLrBVuy7SO3N//BfMKuRMbonkO5TsmDm3sTx2",
+    "imagen": "/images/usuarios/1626877046369.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "María",
+    "apellido": "Colman",
+    "email": "marvelcomics@gmail.com",
+    "administrador": false,
+    "password": "$2a$10$JG3fXd.sxrxChjXqzlqc9ujxHqkzUfiUoxeekcA/6ryqvkewdOH2K",
+    "password2": "$2a$10$JG3fXd.sxrxChjXqzlqc9ujxHqkzUfiUoxeekcA/6ryqvkewdOH2K",
+    "imagen": "/images/usuarios/1626880155400.jpeg"
   }
 ]
