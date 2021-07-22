@@ -79,14 +79,14 @@
     "id": 8
   },
   {
+    "id": 9,
     "nombre": "Juan Sebastian",
     "apellido": "Veron",
     "email": "veron@gmail.com",
-    "password": "$2a$10$fKEqDK.YHowkRTpg8VENb.UIq2x16R0dF9XGmapJxNQulzqysx4hu",
     "administrador": false,
-    "password2": "$2a$10$A.IsiTvE47kTZtYasjignewXRcvvI8wXhnUoyqbgm5x9N3A/D4lhi",
-    "imagen": "/images/usuarios/1626553251893.jpg",
-    "id": 9
+    "password": "$2a$10$FXPXWRewGbEppKl.w6NU2eHyNR/ZIvciOAr3vnTateW7pd94engZC",
+    "password2": "$2a$10$FXPXWRewGbEppKl.w6NU2eHyNR/ZIvciOAr3vnTateW7pd94engZC",
+    "imagen": "/images/usuarios/1626553251893.jpg"
   },
   {
     "id": 10,

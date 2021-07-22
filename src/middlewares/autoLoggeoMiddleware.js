@@ -1,6 +1,6 @@
 const controllerUsuarios = require('../controllers/usersController')
 
-function vistasUsuariosMiddleware(req,res,next){
+function autoLoggeoMiddleware(req,res,next){
     res.locals.estaLoggeado = false 
    
     const usuarioCookie = controllerUsuarios.crearUsuario.usuarioNuevo.email
@@ -10,4 +10,4 @@ function vistasUsuariosMiddleware(req,res,next){
     next()
 }
 
-module.exports = vistasUsuariosMiddleware
+module.exports = autoLoggeoMiddleware
