@@ -8,11 +8,11 @@ const validacionPassword = [
     body('passwordAEditar').notEmpty().withMessage('Por favor ingrese su contraseña actual').bail()
     .custom((value, {req}) => {
         const { passwordAEditar } = req.body
-        const { id } = req.params.id
+        const { id } = req.params
         const usuarioEncontrado = usuarios.findByPk(id)
         if( bcryptjs.compareSync( passwordAEditar , usuarioEncontrado.password ) ) { 
             return true
-        } else {
+        } else { 
         return false
     }
     }).withMessage('La contraseña ingresada no es válida'),

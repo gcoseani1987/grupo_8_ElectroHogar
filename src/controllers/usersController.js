@@ -61,7 +61,7 @@ const controller = {
   },
   editarPassword: (req,res) => {
     const resultadoValidaciones = validationResult(req)
-    const { id } = req.params;
+    const { id } = req.params
     const usuarioEncontrado = usuario.findByPk(id)
     let { nombre, apellido, email, imagen, administrador } = usuarioEncontrado
     if(resultadoValidaciones.isEmpty()){ 
@@ -116,8 +116,15 @@ const controller = {
 
   borrar: (req, res) => {
     let id = req.params.id 
-    let usuarioEliminado = usuario.delete(id)
+    let usuarioAEliminar = usuario.findByPk(id)
+    if(req.session.usuarioLoggeado.administrador == true && req.session.usuarioLoggeado.id != usuarioAEliminar.id){
     res.redirect('/users/listado')
+    } else {
+      req.session.destroy()
+      res.clearCookie('Email')
+      res.redirect('/')
+    }
+    let usuarioEliminado = usuario.delete(id)
   },
   perfil: (req, res) => {
     let id = req.params.id
