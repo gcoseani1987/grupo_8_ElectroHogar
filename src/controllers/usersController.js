@@ -18,7 +18,7 @@ const controller = {
     const resultadoValidaciones = validationResult(req)
     if(!resultadoValidaciones.isEmpty()){
       if(req.file){
-        fs.unlinkSync(req.file.path)
+        fs.unlinkSync(req.file.path) 
       }  
       const oldData = req.body
       res.render('users/registro', { oldData, errors: resultadoValidaciones.mapped()})
