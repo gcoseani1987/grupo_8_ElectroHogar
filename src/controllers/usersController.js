@@ -30,6 +30,10 @@ const controller = {
     const administrador = false
     const usuarioNuevo = {nombre, apellido, email, password, administrador, password2, imagen: '/images/usuarios/' + req.file.filename }
       usuario.crearUsuario(usuarioNuevo)
+      delete usuarioNuevo.password
+      delete usuarioNuevo.password2
+      req.session.usuarioLoggeado = usuarioNuevo
+      res.cookie('Email',bcryptjs.hashSync(req.body.email,10),{ maxAge : (1000*60)*5 })
       res.redirect('/') 
   },  
 
@@ -50,6 +54,27 @@ const controller = {
     res.render('users/login', { oldData, errors: resultadoValidaciones.mapped() })
     }
   }, 
+  password:(req,res)=>{
+    let id = req.params.id
+    let usuarioEncontrado = usuario.findByPk(id)
+    res.render('users/modificarpassword' , { usuarioEncontrado })
+  },
+  editarPassword: (req,res) => {
+    const resultadoValidaciones = validationResult(req)
+    const { id } = req.params
+    const usuarioEncontrado = usuario.findByPk(id)
+    let { nombre, apellido, email, imagen, administrador } = usuarioEncontrado
+    if(resultadoValidaciones.isEmpty()){ 
+    let passwordEditado = req.body.passwordEditado
+    password =  bcryptjs.hashSync(req.body.passwordEditado, 10) 
+    const password2 = password
+    const dataNueva = {nombre, apellido, email, administrador ,password, password2, imagen }
+    usuario.modificar(dataNueva, id);
+    res.redirect('/users/perfil/' + id)
+    } else{
+      res.render('users/modificarpassword', { usuarioEncontrado,  errors: resultadoValidaciones.mapped() })
+    };
+  },
 
   listado: (req, res) => {
     let usuarios = usuario.findAll() 
@@ -80,18 +105,26 @@ const controller = {
       imagen = usuarioOriginal.imagen
     }
     data.imagen = imagen
-    let { nombre, apellido, email, password } = req.body
-    password = bcryptjs.hashSync(req.body.password, 10)
+    let { nombre, apellido, email } = req.body
+    password = usuarioOriginal.password
     const password2 = password
-    const dataNueva = {nombre, apellido, email, password, password2, imagen }
+    const administrador = false
+    const dataNueva = {nombre, apellido, email,administrador, password, password2, imagen }
     usuario.modificar(dataNueva, id);
-    res.redirect('/users/listado');
+    res.redirect('/users/perfil/' + id);
 },
 
   borrar: (req, res) => {
     let id = req.params.id 
-    let usuarioEliminado = usuario.delete(id)
+    let usuarioAEliminar = usuario.findByPk(id)
+    if(req.session.usuarioLoggeado.administrador == true && req.session.usuarioLoggeado.id != usuarioAEliminar.id){
     res.redirect('/users/listado')
+    } else {
+      req.session.destroy()
+      res.clearCookie('Email')
+      res.redirect('/')
+    }
+    let usuarioEliminado = usuario.delete(id)
   },
   perfil: (req, res) => {
     let id = req.params.id

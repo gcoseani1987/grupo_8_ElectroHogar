@@ -11,6 +11,7 @@ main{
 }
 .perfil img{
     border-radius: 100%;
+    height: 200px;
 }
 
 .perfil {
@@ -123,6 +124,10 @@ button#button {
     img{
         width: 250px;
     }
+    .perfil img{
+        width: 250px;
+        height: 250px;
+    }
 }
 
 @media(min-width:769px){
@@ -133,6 +138,7 @@ button#button {
         display: flex;
         flex-wrap: wrap;
     }
+    
 }
 
 @media(min-width:1200px){
