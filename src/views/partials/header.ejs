@@ -13,16 +13,24 @@
    <div class="main-header-right">
     <% if (!locals.estaLoggeado) { %>        
       <ul class="user">
-        <li><a href="/users/login" class="user-nav">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
-        <li><a href="/users/registro" class="user-nav">Registrate<i class="fas fa-user-plus"></i></a></li>
-        <a href="/carritoCompras" class="agrandar-carrito"><i class="fas fa-shopping-cart"></i></a>
+        <li><a href="/users/login" class="user-nav" id="nombre-user">Ingresá<i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="/users/registro" class="user-nav" id="nombre-user">Registrate<i class="fas fa-user-plus"></i></a></li>
+        <a href="/carritoCompras" class="agrandar-carrito" ><i class="fas fa-shopping-cart"></i></a>
       </ul>
     <% }else { %>
       <ul class="user">
-        <li><a href="#" class="user-nav"><i class="fas fa-user-alt"></i> 
+        <li><a href="#" class="user-nav" id="nombre-user"><i class="fas fa-user-alt"></i> 
         <%= locals.usuarioLoggeado.nombre %>  
-        <img src="/images/chevron-down-solid.svg" class="arrow-usuario" alt="arrow"> </a></li>
-        <li><a href="/users/logout" class="user-nav">Cerrar Sesion  <i class="fas fa-sign-out-alt"></i></a></li>
+        <img src="/images/chevron-down-solid.svg" class="arrow-usuario" alt="arrow"> </a>
+          <ul class="nav-des">
+            <li><a href="/users/perfil/<%= locals.usuarioLoggeado.id %>" class="user-nav">Perfil <i class="fas fa-user-circle"></i></a></li>
+            <% if (locals.usuarioLoggeado.administrador == true) { %>  
+            <li><a href="/users/listado" class="user-nav">Listado de usuarios  <i class="fas fa-users"></i></a></li>
+            <li><a href="/productos/listado" class="user-nav">Listado de productos  <i class="fas fa-shopping-basket"></i></a></li>
+            <% } %> 
+            <li><a href="/users/logout" class="user-nav">Cerrar Sesion  <i class="fas fa-sign-out-alt"></i></a></li>
+          </ul>
+        </li>
         <a href="/carritoCompras" class="agrandar-carrito"><i class="fas fa-shopping-cart"></i></a>
       </ul>
     <% } %> 
@@ -31,5 +39,6 @@
       <p><i class="fas fa-bars"></i></p>
    </div>
   </div>
+  <script src="/js/desplegable.js"></script>
 </header>
 
