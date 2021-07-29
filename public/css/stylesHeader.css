@@ -40,12 +40,12 @@
 }
 .burger-menu{
     font-size: 30px;
-    padding: 15px;
+    padding: 18px 13px;
     border-radius: 5px;
     color: #284b63	;
     position: relative;
     right: -5px;
-    top: -5px;
+    top: -9px;
 }
 
 .user{

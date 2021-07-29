@@ -5,17 +5,7 @@
     margin: 0;
 }
 
-/* NO BORRAR*/
-.main-header{
-    background-color: rgb(217,217,217);
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    position: fixed;
-    z-index: 10;
-    justify-content: space-between;
-    top: 0;
-}
+
 .container-article{
     max-width: 1250px;
     margin: auto;
