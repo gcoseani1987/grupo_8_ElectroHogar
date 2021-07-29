@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const alias = 'Colors'
+    const alias = 'Images'
     const columns = {
         id: {
             type: DataType.INTEGER,
@@ -16,6 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps:false
     }
     
-    const Color = sequelize.define(alias, columns, config);
-    return Color;
+    const Imagen = sequelize.define(alias, columns, config);
+    return Imagen;
    }
