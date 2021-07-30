@@ -5,24 +5,16 @@
     margin: 0;
 }
 
-/* NO BORRAR*/
-.main-header{
-    background-color: rgb(217,217,217);
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    position: fixed;
-    z-index: 10;
-    justify-content: space-between;
-    top: 0;
-}
-
-.main-registro {
+html{
     background-image: url(../images/login.jpg);
     background-attachment: fixed;
     background-size: contain;
+}
+
+
+.main-registro {
     opacity: 0.9;
-    margin-top: 90px;
+    margin-top: 110px;
     justify-content: center;
 }
 

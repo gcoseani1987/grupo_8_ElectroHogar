@@ -4,7 +4,9 @@
     padding: 0;
     margin: 0;
 }
-
+.imagen-banner-categoria {
+    padding-top: 20px;
+}
 
 .categoria {
     margin-top: 70px;
