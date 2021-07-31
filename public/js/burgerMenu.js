@@ -8,11 +8,11 @@ let arrow = document.querySelector('.burger-arrow')
 categoriasBtn.addEventListener('click',()=>{
     mostrarCategorias.classList.toggle('mostrar-categorias');
     arrow.classList.toggle('arrow-turn')
-    menuStyle.classList.toggle('box-shadow')
+    menuStyle.classList.add('box-shadow')
 })
 
 burgerBtn.addEventListener('click',()=>{
     menuStyle.style.right = '0'
-    menuStyle.classList.toggle('box-shadow')
+    menuStyle.classList.add('box-shadow')
 })
 
