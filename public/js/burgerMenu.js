@@ -3,7 +3,6 @@ let menuStyle = document.querySelector('div#menu-style')
 let categoriasBtn = document.querySelector("#categorias-btn")
 let mostrarCategorias = document.querySelector('.mostrar-categorias')
 let arrow = document.querySelector('.burger-arrow')
-let main = document.querySelector('main')
 
 
 categoriasBtn.addEventListener('click',()=>{

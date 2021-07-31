@@ -185,6 +185,7 @@ a#nombre-user:hover{
     position: relative;
     top: 25px;
     visibility: hidden;
+    height: 0;
 }
 
 ul.nav-des {

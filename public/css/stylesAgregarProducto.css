@@ -5,20 +5,6 @@
     margin: 0;
 }
 
-/* NO BORRAR*/
-.main-header{
-    background-color: rgb(217,217,217);
-    width: 100%;
-    display: flex;
-    position: fixed;
-    z-index: 10;
-    justify-content: space-between;
-    top: 0;
-}
-.main-header{
-    margin-top: 10px;
-}
-
 
 .create-registro{
     background-image: url(../images/login.jpg);

@@ -669,6 +669,7 @@
     "id": 38,
     "nombre": "SMART TV BGH 43 PULGADAS FULL HD B4318FH5",
     "descripcion": "Smart Tv 43\". Resolucion FHD 1920x1080. Entradas HDMI y puertos USB disponibles. Sintonizador digital incorporado con funcion PVR y Timeshift para grabar tus programas favoritos. Wi-fi. Netflix, Youtube y Vewd (ex Opera store).",
+    "oferta": "no",
     "stock": "2",
     "categoriaProd": "televisores",
     "alto": "56",
@@ -680,7 +681,6 @@
     "profundidad": "0.7",
     "peso": "9.9",
     "precio": "40500",
-    "imagen": "/images/televisor.png",
-    "oferta": "no"
+    "imagen": "/images/televisor.png"
   }
 ]
