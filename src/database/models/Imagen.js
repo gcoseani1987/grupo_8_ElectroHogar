@@ -2,12 +2,12 @@ module.exports = (sequelize, DataTypes) => {
     const alias = 'Images'
     const columns = {
         id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },  
         nombre: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
     }
     
@@ -17,5 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const Imagen = sequelize.define(alias, columns, config);
+
+    Imagen.associate = models => {
+        Imagen.belongsTo(models.Producto, {
+            as: 'product',
+            foreignKey: 'imagenes_id'
+        })
+    }
+
     return Imagen;
    }

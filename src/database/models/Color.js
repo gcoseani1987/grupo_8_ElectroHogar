@@ -2,12 +2,12 @@ module.exports = (sequelize, DataTypes) => {
     const alias = 'Colors'
     const columns = {
         id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },  
         nombre: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
     }
     
@@ -17,5 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const Color = sequelize.define(alias, columns, config);
+
+    Color.associate = models => {
+        Color.belongsTo(models.Producto, {
+            as: 'product',
+            foreignKey: 'color_id'
+        })
+    }
+    
     return Color;
    }

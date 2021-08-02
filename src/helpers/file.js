@@ -13,4 +13,4 @@ function isFileImage(fileName) {
 
 module.exports = { 
     isFileImage,
-}
+} 

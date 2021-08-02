@@ -13,13 +13,13 @@
     <section class="venta">
      <%for (let i=0; i<productos.length ; i++){%>
       <article class="producto">
-        <a href="/productos/detalle/<%=productos[i].id%>"><img src="<%=productos[i].imagen%>" alt="<%=productos[i].descripcion%>"></a>
+        <a href="/productos/detalle/<%=productos[i].id%>"><img src="<%=productos[i].imagen%>" height="200px" alt="<%=productos[i].descripcion%>"></a>
         <br>
         <p class="precio">$<%=productos[i].precio%></p> 
         <br>
         <p class="modelo"><%=productos[i].nombre%></p>
         <br>
-        <p class="modelo"><%=productos[i].descripcion%></p> 
+
         <p class="modelo">Categoria: <%=productos[i].categoriaProd%></p>
         <br>
         <p class="modelo">En stock: <%=productos[i].stock%></p>

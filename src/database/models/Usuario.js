@@ -2,27 +2,27 @@ module.exports = (sequelize, DataTypes) => {
     const alias = 'Users'
     const columns = {
         id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },  
         nombre: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         apellido: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         administrador: {
-            type: DataType.BOOLEAN
+            type: DataTypes.BOOLEAN
         },
         password: {
-            type: DataType.STRING,
+            type: DataTypes.STRING,
         },
         email: {
-            type: DataType.STRING,
+            type: DataTypes.STRING,
         },
         imagen: {
-            type: DataType.STRING,
+            type: DataTypes.STRING,
         },
     }
     
@@ -31,6 +31,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps:false
     }
     
-    const User = sequelize.define(alias, columns, config);
-    return User;
+    const Usuario = sequelize.define(alias, columns, config);
+
+    Usuario.associate = models => {
+        Usuario.belongsTo(models.Producto, {
+            as:'product',
+            foreignKey: 'usuario_id'
+    })
+    }
+    
+    return Usuario;
    }

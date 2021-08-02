@@ -2,45 +2,45 @@ module.exports = (sequelize, DataTypes) => {
     const alias = 'Products'
     const columns = {
         id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },  
         nombre: {
-            type: DataType.STRING
-        },
+            type: DataTypes.STRING
+        }, 
         stock: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         oferta: {
-            type: DataType.BOOLEAN
+            type: DataTypes.BOOLEAN
         },
         alto: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         ancho: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         precio: {
-            type: DataType.DECIMAL,
+            type: DataTypes.DECIMAL,
         },
         descripcion: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         garantia: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         modelo: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         origen: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         peso: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         profundidad: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
 
     }
@@ -50,6 +50,25 @@ module.exports = (sequelize, DataTypes) => {
         timestamps:false
     }
     
-    const Product = sequelize.define(alias, columns, config);
-    return Product;
+    const Producto = sequelize.define(alias, columns, config);
+
+    Producto.associate = models => {
+        Producto.hasMany(models.Usuario, {
+            as: 'user',
+            foreignKey: 'usuario_id'
+        }),
+        Producto.belongsTo(models.Categoria, {
+            as: 'category',
+            foreignKey: 'categoria_id'
+        }),
+        Producto.belongsTo(models.Color, {
+            as: 'color',
+            foreignKey: 'color_id'
+        }),
+        Producto.hasMany(models.Imagen, {
+            as: 'imagen',
+            foreignKey: 'imagen_id'
+        })
+    }
+    return Producto;
    }
