@@ -41,8 +41,19 @@
         <div id="menu-style">
             <ul class="burger-items">
               <% if (!locals.estaLoggeado) { %>    
+                <li><a href="#" id="categorias-btn" class="burger-links">Categorias <img src="/images/chevron-down-solid2.svg" class="burger-arrow"></a>
+                  <ul class="burger-items mostrar-categorias">
+                    <li><a href="/categorias/1" class="links-lista">Aires</a></li>
+                    <li><a href="/categorias/2" class="links-lista">Televisores</a></li>
+                    <li><a href="/categorias/3" class="links-lista">Cocinas</a></li>
+                    <li><a href="/categorias/4" class="links-lista">Heladeras</a></li>
+                    <li><a href="/categorias/5" class="links-lista">Lavarropas</a></li>
+                  </ul>
+                </li>
               <li><a href="/users/login" class="burger-links">Ingresá      <i class="fas fa-sign-in-alt"></i></a></li>
               <li><a href="/users/registro" class="burger-links">Registrate     <i class="fas fa-user-plus"></i></a></li>
+              <% }else { %>       
+              <li><a href="/users/perfil/<%= locals.usuarioLoggeado.id %>" class="burger-links">Perfil <i class="fas fa-user-circle"></i></a></li>
               <li><a href="#" id="categorias-btn" class="burger-links">Categorias <img src="/images/chevron-down-solid2.svg" class="burger-arrow"></a>
                 <ul class="burger-items mostrar-categorias">
                   <li><a href="/categorias/1" class="links-lista">Aires</a></li>
@@ -52,22 +63,11 @@
                   <li><a href="/categorias/5" class="links-lista">Lavarropas</a></li>
                 </ul>
               </li>
-              <% }else { %>       
-              <li><a href="/users/perfil/<%= locals.usuarioLoggeado.id %>" class="burger-links">Perfil <i class="fas fa-user-circle"></i></a></li>
               <% if (locals.usuarioLoggeado.administrador == true) { %>  
                 <li><a href="/users/listado" class="burger-links">Listado de usuarios  <i class="fas fa-users"></i></a></li>
                 <li><a href="/productos/listado" class="burger-links">Listado de productos  <i class="fas fa-shopping-basket"></i></a></li>
               <% } %> 
-              <li><a href="#" id="categorias-btn" class="burger-links">Categorias <img src="/images/chevron-down-solid2.svg" class="burger-arrow"></a>
-                <ul class="burger-items mostrar-categorias">
-                  <li><a href="/categorias/1" class="links-lista">Aires</a></li>
-                  <li><a href="/categorias/2" class="links-lista">Televisores</a></li>
-                  <li><a href="/categorias/3" class="links-lista">Cocinas</a></li>
-                  <li><a href="/categorias/4" class="links-lista">Heladeras</a></li>
-                  <li><a href="/categorias/5" class="links-lista">Lavarropas</a></li>
-                </ul>
-              </li>
-
+              <li><a href="/carritoCompras" class="burger-links">Carrito de compras  <i class="fas fa-shopping-cart"></i></a></li>
               <li><a href="/users/logout" class="burger-links">Cerrar Sesion  <i class="fas fa-sign-out-alt"></i></a></li>
             </ul>
           </li>

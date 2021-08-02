@@ -80,6 +80,9 @@
     padding-left: 25px;
     transition: all .6s;
 }
+.borroso{
+    filter: blur(2px);
+}
 .box-shadow{
     box-shadow: 0 0 50px 5px #284b63
 }

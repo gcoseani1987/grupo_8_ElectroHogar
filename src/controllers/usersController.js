@@ -108,7 +108,7 @@ const controller = {
     let { nombre, apellido, email } = req.body
     password = usuarioOriginal.password
     const password2 = password
-    const administrador = false
+    const administrador = usuarioOriginal.administrador
     const dataNueva = {nombre, apellido, email,administrador, password, password2, imagen }
     usuario.modificar(dataNueva, id);
     res.redirect('/users/perfil/' + id);

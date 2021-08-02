@@ -30,20 +30,21 @@
     "id": 3
   },
   {
+    "id": 4,
     "nombre": "Emiliano",
     "apellido": "Cucit",
     "email": "emicu144@gmail.com",
-    "password": "$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6",
-    "password2": "$2a$10$TlgidhagnOlW29UA5.cavuqZgxkdU88JdwE8F1CbfdEBjgyLy2bHi",
-    "imagen": "/images/usuarios/1624740739540.jpg",
     "administrador": true,
-    "id": 4
+    "password": "$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6",
+    "password2": "$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6",
+    "imagen": "/images/usuarios/1624740739540.jpg"
   },
   {
     "id": 5,
     "nombre": "Ignacio",
     "apellido": "Galvagno",
     "email": "ignacio.101@hotmail.com",
+    "administrador": true,
     "password": "$2a$10$HUUoWdCdgNo2bbiDpj4wW.hltEzpOKb17Cxp3gotMDtIIPx4qdJ/m",
     "password2": "$2a$10$HUUoWdCdgNo2bbiDpj4wW.hltEzpOKb17Cxp3gotMDtIIPx4qdJ/m",
     "imagen": "/images/usuarios/1626386841231.jpg"
