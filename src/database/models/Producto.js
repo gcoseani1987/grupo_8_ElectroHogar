@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const alias = 'Products'
+    const alias = 'Producto'
     const columns = {
         id: {
             type: DataTypes.INTEGER,
@@ -46,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const config = {
+        tableName : "productos",
         underscored:true,
         timestamps:false
     }
@@ -54,11 +55,11 @@ module.exports = (sequelize, DataTypes) => {
 
     Producto.associate = models => {
         Producto.hasMany(models.Usuario, {
-            as: 'user',
+            as: 'usuarios',
             foreignKey: 'usuario_id'
         }),
         Producto.belongsTo(models.Categoria, {
-            as: 'category',
+            as: 'categoria',
             foreignKey: 'categoria_id'
         }),
         Producto.belongsTo(models.Color, {
@@ -66,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'color_id'
         }),
         Producto.hasMany(models.Imagen, {
-            as: 'imagen',
+            as: 'imagenes',
             foreignKey: 'imagen_id'
         })
     }

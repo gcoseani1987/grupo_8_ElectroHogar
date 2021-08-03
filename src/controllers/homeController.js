@@ -1,10 +1,10 @@
-const categorias=require('../models/categorias')
-const productos = require('../models/productos')
+const { Categoria }=require('../database/models')
+const { Producto } = require('../database/models')
 
 const controller = {
-    home: (req, res) => {
-      let todosLosProductos = productos.findAll()
-      let productosOferta = todosLosProductos.filter(producto=>producto.oferta==='si') 
+    home: async (req, res) => {
+      let todosLosProductos = await Producto.findAll()
+      let productosOferta = todosLosProductos.filter(producto => producto.oferta == true) 
       res.render('home' , { productosOferta })
     },
     carrito: (req, res) => {
