@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
         nombre: {
             type: DataTypes.STRING
         },
+        imagen: {
+            type: DataTypes.STRING
+        },
     }
     
     const config = {

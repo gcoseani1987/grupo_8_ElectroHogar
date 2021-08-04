@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
         nombre: {
             type: DataTypes.STRING
         },
+
     }
     
     const config = {

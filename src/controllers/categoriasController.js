@@ -1,11 +1,11 @@
-const categorias=require('../models/categorias')
-const productos = require('../models/productos')
+const { Categoria }=require('../database/models')
+const { Producto } = require('../database/models')
 
 const controller = {
-  categoria: (req, res) => {
+  categoria: async (req, res) => {
     const id = req.params.id
-    let categoria = categorias.findByPk(id)
-    let allProducts = productos.findAll()
+    let categoria = await Categoria.findByPk(id)
+    let allProducts = await Producto.findAll()
     let filterProducts = allProducts.filter(producto=>producto.categoriaProd==categoria.nombre) 
     res.render('categoria', { categoria , filterProducts })
   }, 
