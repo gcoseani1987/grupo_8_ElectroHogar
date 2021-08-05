@@ -5,8 +5,13 @@ const controller = {
   categoria: async (req, res) => {
     const id = req.params.id
     let categoria = await Categoria.findByPk(id)
-    let allProducts = await Producto.findAll()
-    let filterProducts = allProducts.filter(producto=>producto.categoriaProd==categoria.nombre) 
+    let filterProducts = await Producto.findAll({
+      include : [{ association: "imagenes"},{ association: "categoria"}],
+      where : {
+        categoria_id : categoria.id
+      }
+    }
+    )
     res.render('categoria', { categoria , filterProducts })
   }, 
   

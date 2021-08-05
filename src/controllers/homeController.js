@@ -10,7 +10,6 @@ const controller = {
           }
         }
         )
-        console.log(productosOferta[0].categoria.nombre)
       res.render('home' , { productosOferta })
     },
     carrito: (req, res) => {
