@@ -45,7 +45,7 @@
     <section class="venta">
       <%for (let i=0; i<productosOferta.length ; i++){%>
         <article class="producto">
-         <a href="/productos/detalle/<%=productosOferta[i].id%>"><img src="<%=productosOferta[i].imagen%>" alt="<%=productosOferta[i].categoriaProd%>"></a>
+         <a href="/productos/detalle/<%=productosOferta[i].id%>"><img src="<%=productosOferta[i].imagenes[0].nombre%>" alt="<%=productosOferta[i].categoria.nombre%>"></a>
          <p class="precio">$<%=productosOferta[i].precio%></p>
          <p class="modelo"><%=productosOferta[i].nombre%></p>
         </article>

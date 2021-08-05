@@ -9,9 +9,6 @@ module.exports = (sequelize, DataTypes) => {
         nombre: {
             type: DataTypes.STRING
         }, 
-        imagenes_id: {
-            type: DataTypes.STRING
-        }, 
         stock: {
             type: DataTypes.INTEGER,
         },
@@ -57,8 +54,8 @@ module.exports = (sequelize, DataTypes) => {
     const Producto = sequelize.define(alias, columns, config);
 
     Producto.associate = models => {
-        Producto.hasMany(models.Usuario, {
-            as: 'usuarios',
+        Producto.belongsTo(models.Usuario, {
+            as: 'usuario',
             foreignKey: 'usuario_id'
         }),
         Producto.belongsTo(models.Categoria, {
@@ -71,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
         }),
         Producto.hasMany(models.Imagen, {
             as: 'imagenes',
-            foreignKey: 'imagenes_id'
+            foreignKey: 'producto_id'
         })
     }
     return Producto;
