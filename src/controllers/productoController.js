@@ -1,24 +1,32 @@
 const { validationResult } = require('express-validator')
-const producto = require('../models/productos')
+const { Producto } = require('../database/models')
+const { Categoria } = require('../database/models')
+const { Imagenes } = require('../database/models')
+const { Color } = require('../database/models')
+const { Usuario } = require('../database/models')
 const { productosPath } = require('../models/usuarios')
 const fs = require('fs')
 
 const controller = {
-    listado: (req, res) => {
-      let productos = producto.findAll() 
+    listado: async (req, res) => {
+      let productos = await Producto.findAll({
+        include : [{ association: "imagenes"},{ association: "categoria"}]
+      }) 
       res.render('./productos/listadoDeProductos', { productos })
     }, 
  
-    detalle: (req, res) => {  
+    detalle: async (req, res) => {  
       let id = req.params.id 
-      let productoEncontrado = producto.findByPk(id) 
+      let productoEncontrado = await Producto.findByPk(id,{
+        include : [{ association: "imagenes"},{ association: "categoria"},{ association: "color"}]
+      })
       res.render('productos/detalleProducto', { productoEncontrado } )
     },
     
     formNew: (req, res) => { 
       res.render('productos/agregarProducto')
     },
- 
+  
     crear: (req, res) => {
       const resultadoValidaciones = validationResult(req)
       if(!resultadoValidaciones.isEmpty()){

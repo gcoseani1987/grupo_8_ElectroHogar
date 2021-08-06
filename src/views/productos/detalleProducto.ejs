@@ -11,17 +11,17 @@
 <article class='article'>
   <div class='article-main'>
   <div class='article-title'>
-    <h1><%=productoEncontrado.nombre%></h1> 
+    <h1><%=productoEncontrado[i].nombre%></h1> 
   </div>
   <div class='article-top'>
     <div class='article-top-right'> 
-        <img src="<%=productoEncontrado.imagen%>" alt="<%=productoEncontrado.nombre%>">
+        <img src="<%=productoEncontrado[i].imagen[0].nombre%>" alt="<%=productoEncontrado[i].nombre%>">
     </div>
     <div class='article-top-left'> 
       <div class='box-condiciones-pago'>
         <div class='box-precio'>
           <span class='precio-contado'><strong>Precio:</strong></span>
-          <span class='precio-contado'>$<%=productoEncontrado.precio%></span>
+          <span class='precio-contado'>$<%=productoEncontrado[i].precio%></span>
         </div>
         <div class='box-tarjetas'> 
           <div class='tarjetas'>
@@ -29,7 +29,7 @@
               <img src="https://images.fravega.com/f64/5ca9b33896079f3d56ac0a01038d568a.png" alt="mastercard" widht=20>
             </div>
             <div class='tarjeta-cuotas'>
-              <i>12 cuotas sin interés de $<%=Math.round((productoEncontrado.precio)/12)%></i>
+              <i>12 cuotas sin interés de $<%=Math.round((productoEncontrado[i].precio)/12)%></i>
             </div>
           </div>
           <div class='tarjetas'>
@@ -37,7 +37,7 @@
               <img src="https://images.fravega.com/f64/d91d7904a85783a86377e30feb87e7ff.png" alt="mastercard" widht=20>
             </div>
             <div class='tarjeta-cuotas'>
-              <i>12 cuotas sin interés de $<%=Math.round(((productoEncontrado.precio)/12))%></i>
+              <i>12 cuotas sin interés de $<%=Math.round(((productoEncontrado[i].precio)/12))%></i>
             </div>
           </div>
            <div class='tarjetas'>
@@ -45,7 +45,7 @@
               <img src="https://images.fravega.com/f64/4ccbd7df1af0344289b45659aab25bbd.png" alt="mastercard" widht=20>
             </div>
             <div class='tarjeta-cuotas'>
-              <i>12 cuotas sin interés de $<%=Math.round((productoEncontrado.precio)/12)%></i>
+              <i>12 cuotas sin interés de $<%=Math.round((productoEncontrado[i].precio)/12)%></i>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
         <h3>Descripción del producto</h3>
       </div>
       <div class='descripcion-text'>
-        <p><%=productoEncontrado.descripcion%></p>
+        <p><%=productoEncontrado[i].descripcion%></p>
       </div>
     </div>
     <div class='article-table'>
@@ -76,31 +76,31 @@
           <tbody>
           <tr>
             <td class='product-specification'>Alto:</td>
-            <td class="specification-value"><%=productoEncontrado.alto%></td>
+            <td class="specification-value"><%=productoEncontrado[i].alto%></td>
           </tr>
           <tr>
             <td class='product-specification'>Color:</td>
-            <td class="specification-value"><%=productoEncontrado.color%></td>
+            <td class="specification-value"><%=productoEncontrado[i].color.nombre%></td>
           </tr>
           <tr>
             <td class='product-specification'>Garantía:</td>
-            <td class="specification-value"><%=productoEncontrado.garantia%></td>
+            <td class="specification-value"><%=productoEncontrado[i].garantia%></td>
           </tr>
           <tr>
             <td class='product-specification'>Modelo:</td>
-            <td class="specification-value"><%=productoEncontrado.modelo%></td>
+            <td class="specification-value"><%=productoEncontrado[i].modelo%></td>
           </tr>
           <tr>
             <td class='product-specification'>Origen:</td>
-            <td class="specification-value"><%=productoEncontrado.origen%></td>
+            <td class="specification-value"><%=productoEncontrado[i].origen%></td>
           </tr>  
           <tr>
             <td class='product-specification'>Peso:</td>
-            <td class="specification-value"><%=productoEncontrado.peso%></td>
+            <td class="specification-value"><%=productoEncontrado[i].peso%></td>
           </tr>      
           <tr>
             <td class='product-specification'>Profundidad:</td>
-            <td class="specification-value"><%=productoEncontrado.profundidad%></td>
+            <td class="specification-value"><%=productoEncontrado[i].profundidad%></td>
           </tr>                
           </tbody>
         </table>
