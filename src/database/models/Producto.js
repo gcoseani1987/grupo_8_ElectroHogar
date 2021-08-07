@@ -64,7 +64,6 @@ module.exports = (sequelize, DataTypes) => {
         }),
         Producto.belongsTo(models.Color, {
             as: 'color',
-            foreignKey: 'color_id'
         }),
         Producto.hasMany(models.Imagen, {
             as: 'imagenes',
