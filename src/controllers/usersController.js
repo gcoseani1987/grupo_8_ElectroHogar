@@ -1,6 +1,5 @@
 const { validationResult } = require('express-validator')
-const usuario = require('../models/usuarios')
-const { usuariosPath, findByField } = require('../models/usuarios')
+const { Usuario } = require('../database/models')
 const fs = require('fs')
 const bcryptjs = require('bcryptjs') 
 
@@ -33,32 +32,36 @@ const controller = {
       delete usuarioNuevo.password
       delete usuarioNuevo.password2
       req.session.usuarioLoggeado = usuarioNuevo
-      res.cookie('Email',bcryptjs.hashSync(req.body.email,10),{ maxAge : (1000*60)*5 })
+      res.cookie('Email',req.body.email,{ maxAge : (1000*60)*5 })
       res.redirect('/') 
   },  
 
-  loginUsuario: (req, res) =>{
+  loginUsuario: async (req, res) =>{
     const resultadoValidaciones = validationResult(req)
-    const usuarioALoggear = usuario.findByField('email',req.body.email)
+    const usuarioALoggear = await Usuario.findAll({
+        where : { email : req.body.email}
+    }) 
+    console.log("body first: ",req.body)
     const oldData = req.body
     if(resultadoValidaciones.isEmpty()){ 
       delete usuarioALoggear.password
       delete usuarioALoggear.password2
       req.session.usuarioLoggeado = usuarioALoggear
-
       if(req.body.recordar){
-        res.cookie('Email',bcryptjs.hashSync(req.body.email,10),{ maxAge : (1000*60)*60*24 })
+        res.cookie('Email',req.body.email,{ maxAge:(1000*60)*60*24 })
       }
       res.redirect('/')
      }else{
-    res.render('users/login', { oldData, errors: resultadoValidaciones.mapped() })
+    res.render('users/login', { oldData , errors: resultadoValidaciones.mapped()})
     }
-  }, 
+  },
+
   password:(req,res)=>{
     let id = req.params.id
     let usuarioEncontrado = usuario.findByPk(id)
     res.render('users/modificarpassword' , { usuarioEncontrado })
   },
+
   editarPassword: (req,res) => {
     const resultadoValidaciones = validationResult(req)
     const { id } = req.params

@@ -1,23 +1,33 @@
-const usuarios = require('../models/usuarios')
+const { Usuario } = require('../database/models')
+const bcryptjs = require('bcryptjs') 
 
-function vistasUsuariosMiddleware(req,res,next){
+
+const vistasUsuariosMiddleware= async function(req,res,next){
     res.locals.estaLoggeado = false 
    
-    const emailCookie = req.cookies.email
-    const usuarioCookie = usuarios.findByField('email',emailCookie)
+    const emailCookie = req.cookies.Email
 
-    if(usuarioCookie){
+    
+    if (emailCookie) {
+        usuarioCookie = await Usuario.findAll({
+            where : { email: emailCookie}
+        })
+        console.log('hola' , usuarioCookie)
+        
         req.session.usuarioLoggeado = usuarioCookie
     }
-   
-    if(req.session && req.session.usuarioLoggeado){
+    
+    if (req.session && req.session.usuarioLoggeado){
         res.locals.estaLoggeado = true
-        res.locals.usuarioLoggeado = req.session.usuarioLoggeado
+        res.locals.usuarioLoggeado = req.session.usuarioLoggeado[0]
+        console.log('usuarioLoggeado:' , res.locals.usuarioLoggeado)
     }
 
 
 
     next()
 }
+
+
 
 module.exports = vistasUsuariosMiddleware
