@@ -80,18 +80,16 @@ const controller = {
          id : req.params.id
       }
     });
-      let { nombre, apellido, email, imagen, administrador } = usuarioEncontrado;
       if(resultadoValidaciones.isEmpty()){ 
         let passwordEditado = req.body.passwordEditado;
         password =  bcryptjs.hashSync(req.body.passwordEditado , 10); 
-        await Usuario.update({
-          password,  
-        }, 
-         {
-            where : {
-               id : req.params.id
-          }
-      });
+        Usuario.update({                 
+            password 
+        },            
+        { 
+          where: { 
+            id: req.params.id 
+          }}).then(result =>console.log(result));
     res.redirect('/users/perfil/' + id);
     } else{
       res.render('users/modificarpassword', { usuarioEncontrado,  errors: resultadoValidaciones.mapped()});
@@ -140,17 +138,19 @@ const controller = {
     res.redirect('/users/perfil/' + id);
 },
 
-  borrar: (req, res) => {
-    let id = req.params.id;
-    let usuarioAEliminar = usuario.findByPk(id);
-    if(req.session.usuarioLoggeado.administrador == true && req.session.usuarioLoggeado.id != usuarioAEliminar.id){
-    res.redirect('/users/listado');
+  borrar: async (req, res) => {
+    let usuarioAEliminar = await Usuario.destroy({
+      where : {
+        id : req.params.id
+      }
+    });
+    if(req.session.usuarioLoggeado[0].administrador == true && req.session.usuarioLoggeado[0].id != req.params.id){
+      res.redirect('/users/listado');
     } else {
       req.session.destroy();
       res.clearCookie('Email');
       res.redirect('/');
     }
-    let usuarioEliminado = usuario.delete(id);
   },
   perfil: async (req, res) => {
     let id = req.params.id;
