@@ -27,7 +27,7 @@ const userController = require('../controllers/usersController')
 
 
 router.get('/login', loggeadoMiddleware, userController.login)
-router.post('/login', validacionesLogin, userController.loginUsuario)
+router.post('/login', loggeadoMiddleware, validacionesLogin, userController.loginUsuario)
 
 router.get('/listado',loggeadoMiddleware, invitadoMiddleware,administradorMiddleware, userController.listado)
 

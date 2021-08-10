@@ -7,7 +7,8 @@ const loggeadoMiddleware = require('../middlewares/loggeadoMiddleware')
  
 const { isFileImage }=require('../helpers/file')
 const validaciones = require ('../middlewares/productosMiddlewares')
-const productoController =require('../controllers/productoController')
+const productoController =require('../controllers/productoController');
+const administradorMiddleware = require('../middlewares/administradorMiddleware');
  
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -19,7 +20,7 @@ const storage = multer.diskStorage({
 })
 const uploadFile = multer({ storage }) 
 
-router.get('/listado', invitadoMiddleware, loggeadoMiddleware, productoController.listado)
+router.get('/listado', invitadoMiddleware, loggeadoMiddleware, administradorMiddleware,  productoController.listado)
 router.get('/detalle/:id', productoController.detalle)
 
 router.get('/agregar',invitadoMiddleware, loggeadoMiddleware, productoController.formNew) 
