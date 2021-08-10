@@ -12,7 +12,6 @@ const vistasUsuariosMiddleware= async function(req,res,next){
         usuarioCookie = await Usuario.findAll({
             where : { email: emailCookie}
         })
-        console.log('hola' , usuarioCookie)
         
         req.session.usuarioLoggeado = usuarioCookie
     }
@@ -20,7 +19,6 @@ const vistasUsuariosMiddleware= async function(req,res,next){
     if (req.session && req.session.usuarioLoggeado){
         res.locals.estaLoggeado = true
         res.locals.usuarioLoggeado = req.session.usuarioLoggeado[0]
-        console.log('usuarioLoggeado:' , res.locals.usuarioLoggeado)
     }
 
 

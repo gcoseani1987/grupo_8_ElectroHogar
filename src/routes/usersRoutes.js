@@ -29,7 +29,7 @@ const userController = require('../controllers/usersController')
 router.get('/login', loggeadoMiddleware, userController.login)
 router.post('/login', validacionesLogin, userController.loginUsuario)
 
-router.get('/listado',loggeadoMiddleware, invitadoMiddleware, loggeadoMiddleware, userController.listado)
+router.get('/listado',loggeadoMiddleware, invitadoMiddleware,administradorMiddleware, userController.listado)
 
 router.get('/perfil/:id', invitadoMiddleware, administradorMiddleware, userController.perfil)
 
