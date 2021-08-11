@@ -19,13 +19,13 @@ const validaciones = [
     body('profundidad').notEmpty().withMessage('Tienes que especificar la profundidad'),
     body('precio').notEmpty().withMessage('Tienes que detallar el precio'),
     body('imagen').custom((value, { req }) => {
-            const { file } = req
-            if (!file) {
+            const { files } = req
+            if (!files.length) {
                 throw new Error('Por favor ingrese una imagen')
             } 
-            if (!isFileImage(file.originalname)) {
+             if (!isFileImage(file.originalname)) {
                 throw new Error('Por favor ingrese un archivo que sea una imagen') 
-            }
+            } 
             return true
         })
 

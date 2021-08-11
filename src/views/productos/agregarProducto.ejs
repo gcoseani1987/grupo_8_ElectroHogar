@@ -67,12 +67,17 @@
                     class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>" style="
                     text-transform: uppercase;">
                     <option value="" >Categoría</option>
-                    <% categorias.forEach(categoria => {  %>
-                            <option value="<%= categoria.id %>"
-                            <%= locals.oldData && (categoria.id === oldData.categoriaProd) ? 'selected' : null %> 
-                        > <%= categoria.nombre%> </option>
+                    <% categorias.forEach(categoria => { %>
+                        <option value="<%= categoria.id %>"
+                        <%= locals.oldData && (categoria.id == oldData.categoriaProd) ? 'selected' : null %>> 
+                        <%= categoria.nombre%> </option>
                     <% }); %>
                     </select>
+                    <%if (locals.errors && errors.categoriaProd){%>
+                        <div class="advertencia">
+                            <%=errors.categoriaProd.msg%>
+                        </div>
+                    <%}%>
                     <br>
                     <br>
                     <label for="alto">Alto</label>
@@ -99,16 +104,21 @@
                     <%}%>
                     <br>
                     <br>
-                    <select name="colores" 
-                    class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>" style="
+                    <select name="color" 
+                    class="input-create <%= locals.errors && errors.color ? 'is-invalid' : null %>" style="
                     text-transform: uppercase;">
-                    <option value="" >Color</option>
+                    <option value="">Color</option>
                     <% colores.forEach(color => {  %>
-                            <option value="<%= color.id %>"
-                            <%= locals.oldData && (color.id === oldData.colores) ? 'selected' : null %> 
-                        > <%= color.nombre%> </option>
+                        <option value="<%= color.id %>"
+                        <%= locals.oldData && (color.id == oldData.color) ? 'selected' : null %>>
+                        <%= color.nombre%> </option>
                    <% }); %>
                     </select>
+                    <%if(locals.errors && errors.color){%>
+                        <div class="advertencia">
+                            <%=errors.color.msg%>
+                        </div>
+                    <%}%>
                     <br>
                     <br>
                     <label for="garantia">Garantía</label>

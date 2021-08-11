@@ -88,7 +88,7 @@ const controller = {
         { 
           where: { 
             id: req.params.id 
-          }}).then(result =>console.log(result));
+        }}).then(result =>console.log(result));
     res.redirect('/users/perfil/' + id);
     } else{
       res.render('users/modificarpassword', { usuarioEncontrado,  errors: resultadoValidaciones.mapped()});

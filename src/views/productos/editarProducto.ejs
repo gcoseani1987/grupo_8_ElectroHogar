@@ -14,7 +14,7 @@
                 <div class="create-container">
                     <label>Producto</label>
                     <br>
-                    <img src="<%=productoEncontrado.imagen%>" alt="<%=productoEncontrado.descripcion%>" width="300px">
+                    <img src="<%=productoEncontrado.imagenes[0].nombre%>" alt="<%=productoEncontrado.descripcion%>" width="300px">
                     <br>
                     <br> 
                     <br> 
@@ -49,16 +49,11 @@
                     class="input-create" style="
                     text-transform: uppercase;"
                     >
-                    <option value="">Categoría</option>
-                   <%  
-                        let seleccionarCategoria = ['televisores','aires','hornos','heladeras','lavarropas'];
-                    %>
-                    <% for (const unaCategoria of seleccionarCategoria) { %>
-                        <option 
-                            value="<%= unaCategoria %>"
-                            <%= productoEncontrado.categoriaProd && (unaCategoria === productoEncontrado.categoriaProd) ? 'selected' : null %> 
-                        > <%= unaCategoria%> </option>
-                    <% } %>
+                    <% categorias.forEach(categoria => { %>
+                        <option value="<%= categoria.id %>"
+                            <%= productoEncontrado.categoriaProd && (categoria.id === productoEncontrado.categoriaProd) ? 'selected' : null %> >
+                        <%= categoria.nombre%> </option>
+                    <% }); %>
                     </select>
                     <label for="alto">Alto</label>
                     <br>
@@ -72,10 +67,17 @@
                     <input class="input-create-precio" type="text" name="ancho" value="<%= productoEncontrado.ancho %>">
                     <br>
                     <br>
-                    <label for="color">Color</label>
-                    <br>
-                    <br>
-                    <input class="input-create" type="text" name="color" value="<%= productoEncontrado.color %>">
+                    <select 
+                    name="color" 
+                    class="input-create" style="
+                    text-transform: uppercase;"
+                    >
+                    <% colores.forEach(color => { %>
+                        <option value="<%= color.id %>"
+                            <%= productoEncontrado.color && (color.id === productoEncontrado.color) ? 'selected' : null %> >
+                        <%= color.nombre%> </option>
+                    <% }); %>
+                    </select>
                     <br>
                     <br>
                     <label for="garantia">Garantía</label>

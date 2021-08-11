@@ -38,50 +38,22 @@ const controller = {
           fs.unlinkSync(req.file.path)
         }
         const oldData = req.body
+        console.log(req.body)
+        console.log(resultadoValidaciones.mapped())
         res.render('productos/agregarProducto',{ oldData, categorias, colores, errors: resultadoValidaciones.mapped()})
         return
       } else {
         const usuario_id = req.session.usuarioLoggeado[0].id
         let { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,oferta,modelo,origen,profundidad,peso,precio } = req.body
-
-        console.log(categoriaProd)
-        switch(color){
-          case 'blanco':
-            color = 1;
-            break;
-          case 'negro':
-            color = 2;
-            break;
-          case 'gris':
-            color = 3;
-            break;
-          case 'azul':
-            color = 4;
-            break;
-          case 'rojo':
-            color = 5;
-            break;
-          case 'rosado':
-            color = 6;
-            break;
-          case 'verde':
-            color = 7;
-            break;
-          default:
-            color = 8;
-            break;
-        }
         console.log(color)
-        console.log(usuario_id)
         Producto.create({
         usuario_id,
-        nombre,
+        nombre,  
         descripcion,
         stock,
         categoria_id : categoriaProd,
         alto,
         ancho,
-        color_id : color,
         garantia,
         modelo,
         origen,
@@ -90,8 +62,9 @@ const controller = {
         oferta,
         precio,
       })
-      .then(producto => {
+      .then(async producto => {
         console.log(producto);
+        await  producto.setColor(color) 
         Imagenes.create({ 
           nombre : '/images/' + req.file.filename,
           producto_id : producto.id
@@ -104,12 +77,16 @@ const controller = {
 
     editar: async (req, res) => {
       let id = req.params.id
+      const categorias = await Categoria.findAll();
+      const colores = await Color.findAll();
       let productoEncontrado = await Producto.findByPk(id,{
+        include : [{ association: "imagenes"},{ association: "color"},{ association: "categoria"}],
         where : {
-          id : id
+          id : id 
         }
       })
-      res.render('productos/editarProducto', { productoEncontrado })
+      console.log(productoEncontrado)
+      res.render('productos/editarProducto', { productoEncontrado, categorias, colores })
     },
 
     actualizar: (req, res) => {
