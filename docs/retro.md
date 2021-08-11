@@ -24,3 +24,6 @@ Debemos comenzar a explora los html y css para mejorar el formato y el diseño d
 
 Realizamos las tareas de forma común aunque no pudimos cumplimentar mas reuniones semanales por cuestiones de tiempo. Pudimos mejorar cuestiones respecto a la visualización del sitio para mejorar la experiencia del usuario al mismo tiempo que cumplimentamos con los desafíos del sprint. Comenzamos a hacer debuggin para resolver los problemas. Tenemos que continuar mejorando la visualización para la experiencia del usuario sea agradable. Hacer más reuniones semanales para poder resolver los sprints.
 
+### Sprint 5 
+
+Pudimos hacer todas las implementaciones del sprint aunque con algunas dificultades. Continuamos desarrollando la página en sus funcionalidades y estética esto incluyo cambiar los colores de la paleta para que sean más armónicos. No pudimos cumplir con la cantidad de reuniones semanales y es un desafió continuar manteniendo las reuniones periodicas. Tenemos que empezar a implementar de manera constante y metódica el debugging 
