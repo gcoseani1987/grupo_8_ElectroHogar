@@ -1,6 +1,6 @@
 const { body } = require('express-validator')
 const path = require('path')
-const usuarios = require('../models/usuarios')
+const { Usuario } = require('../database/models')
 
 const { isFileImage } = require('../helpers/file')
 
@@ -9,8 +9,10 @@ const validacionUsuario = [
     body('apellido').notEmpty().withMessage('Por favor complete un apellido'),
     body('email').notEmpty().withMessage('Por favor complete con un email').bail()
     .isEmail().withMessage('Por favor ingrese un formato de email válido').bail()
-    .custom((email) => {
-        const usuarioEncontrado = usuarios.findByField('email', email)
+    .custom(async (email) => {
+        const usuarioEncontrado = await Usuario.findOne({ 
+            where : { email: email }
+        })
         if (usuarioEncontrado) {
             return false
         }

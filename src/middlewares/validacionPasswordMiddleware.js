@@ -1,15 +1,19 @@
 const { body } = require('express-validator');
 const path = require('path');
-const usuarios = require('../models/usuarios');
+const { Usuario } = require('../database/models');
 const bcryptjs = require('bcryptjs');
 
 
 const validacionPassword = [
     body('passwordAEditar').notEmpty().withMessage('Por favor ingrese su contraseña actual').bail()
-    .custom((value, {req}) => {
+    .custom( async (value, {req}) => {
         const { passwordAEditar } = req.body
         const { id } = req.params
-        const usuarioEncontrado = usuarios.findByPk(id)
+        const usuarioEncontrado = await Usuario.findByPk(id,{
+            where : {
+                id : req.params.id
+            }
+        })
         if( bcryptjs.compareSync( passwordAEditar , usuarioEncontrado.password ) ) { 
             return true
         } else { 

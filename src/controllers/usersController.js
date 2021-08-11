@@ -81,8 +81,7 @@ const controller = {
       }
     });
       if(resultadoValidaciones.isEmpty()){ 
-        let passwordEditado = req.body.passwordEditado;
-        password =  bcryptjs.hashSync(req.body.passwordEditado , 10); 
+        const password =  bcryptjs.hashSync(req.body.passwordEditado , 10); 
         Usuario.update({                 
             password 
         },            

@@ -1,0 +1,380 @@
+1= elguillote
+2= batistuta
+3= ironman
+4= capitan
+5=asgard
+6=hulk123
+7=batman
+8=veron123
+
+
+
+CREATE SCHEMA `electrohogar` ;
+CREATE TABLE `electrohogar`.`usuarios` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(255) NOT NULL,
+  `nombre` VARCHAR(60) NOT NULL,
+  `apellido` VARCHAR(60) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `imagen` VARCHAR(255) NOT NULL,
+  `administrador` TINYINT NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC));
+CREATE TABLE `electrohogar`.`productos` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `categoria_id` INT(10) UNSIGNED NOT NULL,
+  `nombre` VARCHAR(300) NOT NULL,
+  `usuario_id` INT(10) UNSIGNED NOT NULL,
+  `descripcion` VARCHAR(400) NOT NULL,
+  `stock` INT(10) UNSIGNED NOT NULL,
+  `precio` DECIMAL UNSIGNED NOT NULL,
+  `alto` DECIMAL UNSIGNED NOT NULL,
+  `ancho` DECIMAL UNSIGNED NOT NULL,
+  `color_id` INT(10) UNSIGNED NOT NULL,
+  `garantia` INT(10) UNSIGNED NOT NULL,
+  `modelo` VARCHAR(200) NOT NULL,
+  `origen` VARCHAR(100) NOT NULL,
+  `peso` DECIMAL UNSIGNED NOT NULL,
+  `profundidad` DECIMAL UNSIGNED NOT NULL,
+  `oferta` TINYINT NOT NULL,
+  PRIMARY KEY (`id`));
+CREATE TABLE `electrohogar`.`colores` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(60) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) );
+CREATE TABLE `electrohogar`.`categorias` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `nombre` VARCHAR(60) NOT NULL,
+  `imagen` VARCHAR(60) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) );
+CREATE TABLE `electrohogar`.`imagenes` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `nombre` VARCHAR(450) NOT NULL,
+  `producto_id` INT(10) UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`));
+
+ALTER TABLE productos
+ADD FOREIGN KEY (categoria_id) REFERENCES categorias(id);
+ALTER TABLE productos
+ADD FOREIGN KEY (color_id) REFERENCES colores(id);
+ALTER TABLE imagenes
+ADD FOREIGN KEY (producto_id) REFERENCES productos(id);
+ALTER TABLE productos
+ADD FOREIGN KEY (usuario_id) REFERENCES usuarios(id);
+
+INSERT INTO categorias (nombre,imagen) VALUES ("aires","/images/bannerAireAcondicionado.jpg");
+INSERT INTO categorias (nombre,imagen) VALUES ("televisores","/images/bannerTelevisores.jpg");
+INSERT INTO categorias (nombre,imagen) VALUES ("hornos","/images/bannerHornos.png");
+INSERT INTO categorias (nombre,imagen) VALUES ("heladeras","/images/bannerHeladeras.jpg");
+INSERT INTO categorias (nombre,imagen) VALUES ("lavarropas","/images/bannerLavarropas.jpg");
+
+INSERT INTO colores (nombre) VALUES ("BLANCO");
+INSERT INTO colores (nombre) VALUES ("NEGRO");
+INSERT INTO colores (nombre) VALUES ("GRIS");
+INSERT INTO colores (nombre) VALUES ("AZUL");
+INSERT INTO colores (nombre) VALUES ("ROJO");
+INSERT INTO colores (nombre) VALUES ("ROSADO");
+INSERT INTO colores (nombre) VALUES ("VERDE");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Guillermo Adolfo","Coseani","gcoseani@gmail.com",1,"$2a$10$3911ecqGb1AXZ.tosdb.yeUYvQev9XqMdJl80K4J29R0DfP1bje2K","/images/usuarios/1624413248766.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Bruce","Banner","hulk@gmail.com",0,"$2a$10$uAIVYYmRYyGoLEFneCuBQOYeiHyKxEOXNxDsV36fW7LkGXpjeIWXO","/images/usuarios/1624663182332.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Bruce","Wayne","batman@gmail.com",0,"$2a$10$RWU.gZL9ldzC8PDgzlQ.u.fjenYN9VN8mYZiJGv0SjBFHWXVRvak.","/images/usuarios/1624663226410.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Emiliano","Cucit","emicu144@gmail.com",1,"$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6","/images/usuarios/1624740739540.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Ignacio","Galvagno","ignacio.101@hotmail.com",1,"$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6","/images/usuarios/1624740739540.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Gonza","DH","gon@gmail.com",1,"$2a$10$ZBAb.T.nCZGivMP8Solm5.xq9wPvgx8H1VfzLKpCOh7WDs9eb1u3i","/images/usuarios/1626392212380.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Pol","DH","pol@gmail.com",1,"$2a$10$Go7.8G8gLFzAwJfsEDPcmuWgB.nVNPfupykZLRxuIPR7t7b9jh05C","/images/usuarios/1626392240338.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Tony","Stark","ironman@gmail.com",0,"$2a$10$a0CHYznNwwb/XLoKCIWG5.GK/ia0XWNjnDGIaA/cRs5GDlOZ6/hGi","/images/usuarios/1626553076014.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Juan Sebastian","Veron","veron@gmail.com",0,"$2a$10$FXPXWRewGbEppKl.w6NU2eHyNR/ZIvciOAr3vnTateW7pd94engZC","/images/usuarios/1626553251893.jpg");
+
+INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
+VALUES ("Steve","Rogers","capamerica@gmail.com",0,"$2a$10$DGxUcHNjebmCpKJZlLrBVuy7SO3N//BfMKuRMbonkO5TsmDm3sTx2","/images/usuarios/1626877046369.jpg");
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,1);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,1);
+
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 0);
+																																																																																					
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 1) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 1) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (2, "SMART HISENSE 50 PULGADAS 4K UHD 50A64GSV",1,"Led Smart. 50' 4K UHD. Resolucion 3840 x 2160. HDMI: 3 (v2.0. HDMI 1 compatible con ARC). Wi Fi interno (normas 802.11 b/g/n hasta 150 MBps, 1T1R. Antena integrada). USB: 2 conectores hembra tipo A (2.0). Entrada de video compuesto: 1 RCA. Incluye: soporte tipo pie x2, guia rapida x1, manual legal x1, bolsa con tornillos para la base x1, control remoto x1, pilas AAA x2, cable de alimentacion x1.", 4, 50000, 61.7, 95.5, 2, 12, "12SW12D", "ARGENTINA", 9.9, 22.6, 1) ;
+
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,1) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (3, "COCINA MARSHALL",1,"Cocina 55cm. 4 hornallas. Encendido a una mano en hornallas y horno. Quemadores hermeticos. Timer. Plancha enlozada. Rejillas de hierro Fundido. Gril a Gas. Puerta visor doble vidrio Templado.Valvula de seguridad. Rejilla autodeslizable. Multigas.",5,30000,85.5,57,3,12,"2SD3F1Y","ARGENTINA",31.4,54.5,1) ;
+
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta)
+VALUES (4, "HELADERA NO FROST ARISTON",1,"Heladera arriba y freezer abajo. 2 motores independientes. Control digital de temperatura. Luz interior LED. Eficiencia energetica A. Alarma de puerta abierta. Estantes antiderrame muy resistentes. Puertas reversibles. Freezer de 3 cajones.",5,35000,194,75,3,12,"W8ER7DF45Y","ARGENTINA",76,74,0) ;
+
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,0);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,1);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,1);
+
+INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
+VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Puerta de 48cm c/apertura instantanea. Display LED indicador de funciones. 35 Combinaciones de lavado. Aviso sonoro de fin de ciclo. Balance dinamico. Domo cobertor de puerta.",10,55000,59.5,85.5,1,12,"NEXT 8.12 ECO","ARGENTINA",71,55,1);
+
+
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",1);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",1);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",1);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",2);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",2);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",2);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",3);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",3);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",3);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",4);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",4);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",4);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",5);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",5);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",5);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",6);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",6);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",6);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",7);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",7);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",7);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",8);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",8);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",8);
+
+
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",9);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",9);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",9);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",10);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",10);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",10);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",11);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",11);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",11);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",12);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",12);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",12);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",13);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",13);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",13);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",14);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",14);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",14);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",15);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",15);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",15);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",16);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",16);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",16);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",17);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",17);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",17);
+
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",18);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",18);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",18);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",18);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",19);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",19);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",19);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",19);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",20);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",20);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",20);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",20);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",21);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",21);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",21);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",21);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",22);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",22);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",22);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",22);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",23);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",23);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",23);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",23);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",24);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",24);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",24);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",24);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",25);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",25);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",25);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",25);
+
+
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",26);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",26);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",26);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",26);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",27);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",27);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",27);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",27);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",28);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",28);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",28);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",28);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",29);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",29);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",29);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",29);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",30);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",30);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",30);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",30);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",31);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",31);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",31);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",31);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",32);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",32);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",32);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",32);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",33);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",33);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",33);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",33);
+
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",34);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",34);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",35);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",35);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",36);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",36);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",37);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",37);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",38);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",38);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",39);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",39);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",40);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",40);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",41);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",41);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",42);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",42);

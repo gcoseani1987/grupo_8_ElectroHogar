@@ -24,10 +24,10 @@ router.get('/listado', invitadoMiddleware, loggeadoMiddleware, administradorMidd
 router.get('/detalle/:id', productoController.detalle)
 
 router.get('/agregar',invitadoMiddleware, loggeadoMiddleware, productoController.formNew) 
-router.post('/agregar', invitadoMiddleware, loggeadoMiddleware, uploadFile.single('imagen'), validaciones, productoController.crear)
+router.post('/agregar', invitadoMiddleware, loggeadoMiddleware, uploadFile.any('imagen'), validaciones, productoController.crear)
 
 router.get('/:id/editar',invitadoMiddleware, loggeadoMiddleware, productoController.editar) 
-router.put('/:id/editar', uploadFile.single('imagen'), loggeadoMiddleware, invitadoMiddleware, productoController.actualizar)
+router.put('/:id/editar', uploadFile.any('imagen'), loggeadoMiddleware, invitadoMiddleware, productoController.actualizar)
 
 router.delete('/:id', invitadoMiddleware,productoController.borrar)
 

@@ -52,7 +52,7 @@
                     <label for="imagen">Imagen</label>
                     <br>
                     <br>
-                    <input name="imagen" class="input-create " type="file"  >
+                    <input name="imagen" class="input-create" type="file" multiple>
                     <%if (locals.errors && errors.imagen){%>
                         <div class="advertencia">
                             <%=errors.imagen.msg%>
@@ -63,22 +63,15 @@
                     <label for="categoria">Categoría</label>
                     <br>
                     <br>
-                    <select 
-                    name="categoriaProd" 
+                    <select name="categoriaProd" 
                     class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>" style="
-                    text-transform: uppercase;
-                "
-                    >
+                    text-transform: uppercase;">
                     <option value="" >Categoría</option>
-                    <%  
-                        let seleccionarCategoria = ['televisores','aires','hornos','heladeras','lavarropas'];
-                    %>
-                    <% for (const unaCategoria of seleccionarCategoria) { %>
-                        <option 
-                            value="<%= unaCategoria %>"
-                            <%= locals.oldData && (unaCategoria === oldData.categoriaProd) ? 'selected' : null %> 
-                        > <%= unaCategoria%> </option>
-                    <% } %>
+                    <% categorias.forEach(categoria => {  %>
+                            <option value="<%= categoria.id %>"
+                            <%= locals.oldData && (categoria.id === oldData.categoriaProd) ? 'selected' : null %> 
+                        > <%= categoria.nombre%> </option>
+                    <% }); %>
                     </select>
                     <br>
                     <br>
@@ -106,16 +99,16 @@
                     <%}%>
                     <br>
                     <br>
-                    <label for="color">Color</label>
-                    <br>
-                    <br>
-                    <input class="input-create <%= locals.errors && errors.color ? 'is-invalid' : null %>" type="text" 
-                    name="color" value="<%= locals.oldData && oldData.color %>">
-                    <%if (locals.errors && errors.color){%>
-                        <div class="advertencia">
-                            <%=errors.color.msg%>
-                        </div>
-                    <%}%>
+                    <select name="colores" 
+                    class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>" style="
+                    text-transform: uppercase;">
+                    <option value="" >Color</option>
+                    <% colores.forEach(color => {  %>
+                            <option value="<%= color.id %>"
+                            <%= locals.oldData && (color.id === oldData.colores) ? 'selected' : null %> 
+                        > <%= color.nombre%> </option>
+                   <% }); %>
+                    </select>
                     <br>
                     <br>
                     <label for="garantia">Garantía</label>
