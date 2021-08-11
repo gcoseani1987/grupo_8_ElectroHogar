@@ -55,3 +55,7 @@ Ofrecemos productos electrodomésticos del hogar para el uso cotidiano de todas 
 -Galvagno, Juan Ignacio. Despachante de aeronaves. 23 años
 
 -Cucit, Emiliano. Estudiante Ing. Química. 27 años
+
+
+### Base de datos
+Los archivos para crear la base de datos se encuentran en la carpeta BaseDeDatos dentro de la carpeta docs.
