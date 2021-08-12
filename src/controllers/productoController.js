@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator')
 const { Producto } = require('../database/models')
 const { Categoria } = require('../database/models')
-const { Imagenes } = require('../database/models')
+const { Imagen } = require('../database/models')
 const { Color } = require('../database/models')
 const { Usuario } = require('../database/models')
 const { productosPath, findAll } = require('../models/usuarios')
@@ -34,45 +34,36 @@ const controller = {
       const categorias = await Categoria.findAll() 
       const colores = await Color.findAll()
       if(!resultadoValidaciones.isEmpty()){
-        if(req.file){
-          fs.unlinkSync(req.file.path)
-        }
         const oldData = req.body
-        console.log(req.body)
-        console.log(resultadoValidaciones.mapped())
         res.render('productos/agregarProducto',{ oldData, categorias, colores, errors: resultadoValidaciones.mapped()})
         return
-      } else {
+      } 
         const usuario_id = req.session.usuarioLoggeado[0].id
         let { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,oferta,modelo,origen,profundidad,peso,precio } = req.body
-        console.log(color)
-        Producto.create({
-        usuario_id,
-        nombre,  
-        descripcion,
-        stock,
-        categoria_id : categoriaProd,
-        alto,
-        ancho,
-        garantia,
-        modelo,
-        origen,
-        profundidad,
-        peso,
-        oferta,
-        precio,
+/*         return res.send(req.body) */
+        let producto = await Producto.create({
+          usuario_id,
+          nombre,  
+          color_id : color,
+          descripcion,
+          stock,
+          categoria_id : categoriaProd,
+          alto,
+          ancho,
+          garantia,
+          modelo,
+          origen,
+          profundidad,
+          peso,
+          oferta,
+          precio,
       })
-      .then(async producto => {
-        console.log(producto);
-        await  producto.setColor(color) 
-        Imagenes.create({ 
-          nombre : '/images/' + req.file.filename,
-          producto_id : producto.id
-        })
-        .then(imagenes => console.log(imagenes));
-        res.redirect('/productos/listado');
-      });
-      }
+      
+      await Imagen.create({ 
+        nombre : '/images/' + req.file.filename,
+        producto_id : producto.id
+      })
+      res.redirect('/productos/listado');
     }, 
 
     editar: async (req, res) => {
@@ -89,29 +80,41 @@ const controller = {
       res.render('productos/editarProducto', { productoEncontrado, categorias, colores })
     },
 
-    actualizar: (req, res) => {
+    actualizar: async (req, res) => {
       const { id } = req.params;
-      const productoOriginal = producto.findByPk(id)
+      const productoOriginal = await Producto.findByPk(id)
       const data = req.body; 
       const { file } = req
-      let imagen
+  
       if (file) {
-        imagen = '/images/' + req.file.filename
-      } else {
-        imagen = productoOriginal.imagen
+        await Imagen.update({
+          nombre : '/images/' + req.file.filename
+        },{
+          where: { producto_id : id }
+        })
       }
-      data.imagen = imagen
-      const { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,oferta,modelo,origen,profundidad,peso,precio } = req.body
-      const dataNueva = {nombre,descripcion,oferta,stock,categoriaProd,alto,ancho,color,garantia,modelo,
-        origen,profundidad,peso, precio , imagen }
-      producto.modificar(dataNueva, id);
+  
+      data.color_id = data.color
+      data.categoria_id = data.categoriaProd
+      delete data.color
+      delete data.categoriaProd 
+  
+      await Producto.update(data,{
+        where: { id : id } 
+      });
+     
       res.redirect('/productos/listado');
   },
   
     borrar: async (req, res) => {
-      let productoEliminado = await Producto.destroy({
+        await Imagen.destroy({
+          where : {
+            producto_id: req.params.id
+          }
+        })
+        await Producto.destroy({
         where : { 
-          id : id
+          id : req.params.id
         }
       })
       res.redirect('/productos/listado')

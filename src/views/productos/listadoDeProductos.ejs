@@ -13,7 +13,11 @@
     <section class="venta">
      <%for (let i=0; i<productos.length ; i++){%>
       <article class="producto">
-        <a href="/productos/detalle/<%=productos[i].id%>"><img src="<%=productos[i].imagenes[0].nombre%>" height="200px" alt="<%=productos[i].descripcion%>"></a>
+        <% productos[i].imagenes.forEach((imagen,j) => {%>
+          <% if (j<1) { %>
+            <a href="/productos/detalle/<%=productos[i].id%>"><img src="<%=imagen.nombre%>" height="200px" alt="<%=productos[i].descripcion%>"></a> 
+          <% } %>
+          <% }) %>
         <br>
         <p class="precio">$<%=productos[i].precio%></p> 
         <br>

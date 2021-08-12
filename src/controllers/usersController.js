@@ -75,23 +75,18 @@ const controller = {
   editarPassword: async (req,res) => {
     const resultadoValidaciones = validationResult(req);
     const { id } = req.params;
-    const usuarioEncontrado = await Usuario.findByPk(id,{
-      where : {
-         id : req.params.id
-      }
-    });
       if(resultadoValidaciones.isEmpty()){ 
         const password =  bcryptjs.hashSync(req.body.passwordEditado , 10); 
-        Usuario.update({                 
+        await Usuario.update({                 
             password 
         },            
         { 
           where: { 
             id: req.params.id 
-        }}).then(result =>console.log(result));
+          }});
     res.redirect('/users/perfil/' + id);
     } else{
-      res.render('users/modificarpassword', { usuarioEncontrado,  errors: resultadoValidaciones.mapped()});
+      res.render('users/modificarpassword', {  errors: resultadoValidaciones.mapped()});
     };
   },
 
@@ -116,9 +111,11 @@ const controller = {
     res.render('users/editarUsuario', { usuarioEncontrado });
   },
 
-  actualizar: (req, res) => {
-    const { id } = req.params;
-    const usuarioOriginal = usuario.findByPk(id);
+  actualizar: async (req, res) => {
+    const { id } = req.params
+    const usuarioOriginal = await Usuario.findByPk(id,{
+      where : { id : id }
+    });
     const data = req.body; 
     const { file } = req;
     let imagen;
@@ -129,11 +126,12 @@ const controller = {
     }
     data.imagen = imagen;
     let { nombre, apellido, email } = req.body;
-    password = usuarioOriginal.password;
-    const password2 = password;
-    const administrador = usuarioOriginal.administrador;
-    const dataNueva = {nombre, apellido, email,administrador, password, password2, imagen };
-    usuario.modificar(dataNueva, id);
+    const dataNueva = {nombre, apellido, email, imagen };
+    await Usuario.update(dataNueva,
+      {
+      where : { id : id}
+    });
+
     res.redirect('/users/perfil/' + id);
 },
 
