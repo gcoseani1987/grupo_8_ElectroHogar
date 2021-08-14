@@ -14,7 +14,8 @@ main{
 .barra-busqueda{
     margin-bottom: 15px;
     padding: 5px;
-    border: 1px solid grey;
+    border: 1px solid #284b63;
+    background-color: rgba(53, 53, 53,0.1);
 }
 .lupa-busqueda {
     background-color: transparent;
