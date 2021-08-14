@@ -9,8 +9,15 @@
   </div>
  <main class="listadoProductos">
     <h2 class="text">Productos</h2>
+    <form action="/productos/listado" method="GET" class="formulario-busqueda">
+      <input type="text" class="barra-busqueda" name="busqueda" placeholder="Buscar producto">
+      <button type="submit" class="lupa-busqueda"><i class="fas fa-search"></i></button>
+    </form>
     <a href="/productos/agregar"><button class="button-agregar">Agregar productos</button></a>
     <section class="venta">
+      <% if (productos.length == 0) { %>
+        <h1 class="not-found">No se encontro ningun producto con ese nombre!</h1>
+      <% } else { %>
      <%for (let i=0; i<productos.length ; i++){%>
       <article class="producto">
         <% productos[i].imagenes.forEach((imagen,j) => {%>
@@ -37,6 +44,7 @@
         </div>
       </article>
       <%}%>
+      <% } %>
     </section>  
 </main>
   <br>

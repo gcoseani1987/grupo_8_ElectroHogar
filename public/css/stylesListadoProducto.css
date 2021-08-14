@@ -11,6 +11,26 @@ main{
     margin : auto
 }
 
+.barra-busqueda{
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+.lupa-busqueda {
+    background-color: transparent;
+    border: none;
+    color: #284b63;
+    font-size: 20px;
+    position: relative;
+    left: -29px;
+    top: 2px;
+}
+.not-found{
+    color: #284b63;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
 .venta {
     display: flex;
     flex-wrap: wrap;

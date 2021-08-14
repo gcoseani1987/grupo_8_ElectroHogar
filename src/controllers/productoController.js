@@ -1,4 +1,5 @@
 const { validationResult } = require('express-validator')
+const { Op } = require('sequelize')
 const { Producto } = require('../database/models')
 const { Categoria } = require('../database/models')
 const { Imagen } = require('../database/models')
@@ -10,7 +11,12 @@ const fs = require('fs')
 const controller = {
     listado: async (req, res) => {
       let productos = await Producto.findAll({
-        include : [{ association: "imagenes"},{ association: "categoria"}]
+        include : [{ association: "imagenes"},{ association: "categoria"}],
+        where : {
+          nombre : {
+            [Op.substring] : req.query.busqueda ? req.query.busqueda : '' 
+          }
+        }
       }) 
       res.render('./productos/listadoDeProductos', { productos })
     }, 
