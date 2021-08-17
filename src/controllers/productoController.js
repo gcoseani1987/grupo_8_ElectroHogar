@@ -46,7 +46,6 @@ const controller = {
       } 
         const usuario_id = req.session.usuarioLoggeado[0].id
         let { nombre,descripcion,stock,categoriaProd,alto,ancho,color,garantia,oferta,modelo,origen,profundidad,peso,precio } = req.body
-/*         return res.send(req.body) */
         let producto = await Producto.create({
           usuario_id,
           nombre,  

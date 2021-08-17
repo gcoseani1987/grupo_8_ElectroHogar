@@ -15,55 +15,59 @@
                     <label for="nombre">Nombre de producto:</label>
                     <br>
                     <br>
-                    <input class="input-create <%= locals.errors && errors.nombre ? 'is-invalid' : null %> " type="text" name="nombre" 
+                    <input id="inputNombre" class="input-create <%= locals.errors && errors.nombre ? 'is-invalid' : null %> " type="text" name="nombre" 
                     value="<%= locals.oldData && oldData.nombre %>">
                     <%if (locals.errors && errors.nombre){%>    
                         <div class="advertencia">
                             <%=errors.nombre.msg%>
                         </div>
+                    <span class="errorNombre"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="descripcion">Descripción de producto</label>
                     <br>
                     <br>
-                    <textarea name="descripcion" class="description-create <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
+                    <textarea id="inputDescripcion" name="descripcion" class="description-create <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
                         value="<%= locals.oldData && oldData.descripcion %>"></textarea></textarea>
                     <%if (locals.errors && errors.descripcion){%>
                         <div class="advertencia">
                             <%=errors.descripcion.msg%>
                         </div>
+                    <span class="errorDescripcion"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="stock">Stock</label>
                     <br>
                     <br>
-                    <input class="input-create-precio <%= locals.errors && errors.stock ? 'is-invalid' : null %>" type="number" 
+                    <input id="inputStock" class="input-create-precio <%= locals.errors && errors.stock ? 'is-invalid' : null %>" type="number" 
                     name="stock"  value="<%= locals.oldData && oldData.stock %>"
                     >
                     <%if (locals.errors && errors.stock){%>
                         <div class="advertencia">
                             <%=errors.stock.msg%>
                         </div>
+                    <span class="errorStock"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="imagen">Imagen</label>
                     <br>
                     <br>
-                    <input name="imagen" class="input-create" type="file" multiple>
+                    <input id="inputImagen" name="imagen" class="input-create" type="file" multiple>
                     <%if (locals.errors && errors.imagen){%>
                         <div class="advertencia">
                             <%=errors.imagen.msg%>
                         </div>
+                    <span class="errorImagen"></span>
                     <%}%> 
                     <br>
                     <br>
                     <label for="categoria">Categoría</label>
                     <br>
                     <br>
-                    <select name="categoriaProd" 
+                    <select id="inputCategoria" name="categoriaProd" 
                     class="input-create <%= locals.errors && errors.categoriaProd ? 'is-invalid' : null %>" style="
                     text-transform: uppercase;">
                     <option value="" >Categoría</option>
@@ -77,34 +81,37 @@
                         <div class="advertencia">
                             <%=errors.categoriaProd.msg%>
                         </div>
+                    <span class="errorCateogoria"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="alto">Alto</label>
                     <br>
                     <br>
-                    <input class="input-create-precio <%= locals.errors && errors.alto ? 'is-invalid' : null %>" type="number" 
+                    <input id="inputAlto" class="input-create-precio <%= locals.errors && errors.alto ? 'is-invalid' : null %>" type="number" 
                     name="alto" step="0.01" placeholder="1" value="<%= locals.oldData && oldData.alto %>" >
                     <%if (locals.errors && errors.alto){%>
                         <div class="advertencia">
                             <%=errors.alto.msg%>
                         </div>
+                    <span class="errorAlto"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="ancho">Ancho</label>
                     <br>
                     <br>
-                    <input class="input-create-precio <%= locals.errors && errors.ancho ? 'is-invalid' : null %>" type="number" 
+                    <input  id="inputAncho" class="input-create-precio <%= locals.errors && errors.ancho ? 'is-invalid' : null %>" type="number" 
                     name="ancho" step="0.01" placeholder="1" value="<%= locals.oldData && oldData.ancho %>">
                     <%if (locals.errors && errors.ancho){%>
                         <div class="advertencia">
                             <%=errors.ancho.msg%>
                         </div>
+                    <span class="errorAncho"></span>
                     <%}%>
                     <br>
                     <br>
-                    <select name="color" 
+                    <select id="inputColor" name="color" 
                     class="input-create <%= locals.errors && errors.color ? 'is-invalid' : null %>" style="
                     text-transform: uppercase;">
                     <option value="">Color</option>
@@ -118,78 +125,85 @@
                         <div class="advertencia">
                             <%=errors.color.msg%>
                         </div>
+                    <span class="errorColor"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="garantia">Garantía</label>
                     <br>
                     <br>
-                    <input class="input-create-precio <%= locals.errors && errors.garantia ? 'is-invalid' : null %>" type="number" 
+                    <input id="inputGarantia" class="input-create-precio <%= locals.errors && errors.garantia ? 'is-invalid' : null %>" type="number" 
                     name="garantia" placeholder="12" value="<%= locals.oldData && oldData.garantia %>">
                     <%if (locals.errors && errors.garantia){%>
                         <div class="advertencia">
                             <%=errors.garantia.msg%>
                         </div>
+                    <span class="errorGarantia"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="modelo">Modelo</label>
                     <br>
                     <br>
-                    <input class="input-create <%= locals.errors && errors.modelo ? 'is-invalid' : null %>" type="text" 
+                    <input id="inputModelo" class="input-create <%= locals.errors && errors.modelo ? 'is-invalid' : null %>" type="text" 
                     name="modelo" value="<%= locals.oldData && oldData.modelo %>">
                     <%if (locals.errors && errors.modelo){%>
                         <div class="advertencia">
                             <%=errors.modelo.msg%>
                         </div>
+                    <span class="errorModelo"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="origen">Origen</label>
                     <br>
                     <br>
-                    <input class="input-create <%= locals.errors && errors.origen ? 'is-invalid' : null %>" type="text" 
+                    <input id="inputOrigen" class="input-create <%= locals.errors && errors.origen ? 'is-invalid' : null %>" type="text" 
                     name="origen" value="<%= locals.oldData && oldData.origen %>">
                     <%if (locals.errors && errors.origen){%>
                         <div class="advertencia">
                             <%=errors.origen.msg%>
                         </div>
+                    <span class="errorOrigen"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="peso">Peso</label>
                     <br>
                     <br>
-                    <input class="input-create-precio <%= locals.errors && errors.peso ? 'is-invalid' : null %>" type="number" 
+                    <input id="inputPeso" class="input-create-precio <%= locals.errors && errors.peso ? 'is-invalid' : null %>" type="number" 
                     name="peso" step="0.01" placeholder="1" value="<%= locals.oldData && oldData.peso %>">
                     <%if (locals.errors && errors.peso){%>
                         <div class="advertencia">
                             <%=errors.peso.msg%>
                         </div>
+                    <span class="errorPeso"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="profundidad">Profundidad</label>
                     <br>
                     <br>
-                    <input class="input-create-precio <%= locals.errors && errors.profundidad ? 'is-invalid' : null %>" type="number" 
+                    <input id="inputProfundidad" class="input-create-precio <%= locals.errors && errors.profundidad ? 'is-invalid' : null %>" type="number" 
                     name="profundidad" step="0.01" placeholder="1" value="<%= locals.oldData && oldData.profundidad %>">
                     <%if (locals.errors && errors.profundidad){%>
                         <div class="advertencia">
                             <%=errors.profundidad.msg%>
                         </div>
+                    <span class="errorProfundidad"></span>
                     <%}%>
                     <br>
                     <br>
                     <label for="precio">Precio</label>
                     <br>
                     <br>
-                    <input class= "input-create-precio <%= locals.errors && errors.precio ? 'is-invalid' : null %>" type="number" 
+                    <input id="inputPrecio" class= "input-create-precio <%= locals.errors && errors.precio ? 'is-invalid' : null %>" type="number" 
                     name="precio" placeholder="$50.000" value="<%= locals.oldData && oldData.precio %>">
                     <%if (locals.errors && errors.precio){%>
                         <div class="advertencia">
                             <%=errors.precio.msg%>
                         </div>
+                    <span class="errorPrecio"></span>
                     <%}%>
                     <br>
                     <br>
@@ -217,5 +231,6 @@
     </main>
 
     <%- include('../partials/footer.ejs')%>
-
+    
+    <script src="/js/validacionAgregarProducto.js"></script>
 </body> 
