@@ -21,8 +21,9 @@
                         <div class="advertencia">
                             <%=errors.nombre.msg%>
                         </div>
-                    <span class="errorNombre"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorNombre"></span>
                     <br>
                     <br>
                     <label for="descripcion">Descripción de producto</label>
@@ -34,8 +35,9 @@
                         <div class="advertencia">
                             <%=errors.descripcion.msg%>
                         </div>
-                    <span class="errorDescripcion"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorDescripcion"></span>
                     <br>
                     <br>
                     <label for="stock">Stock</label>
@@ -48,8 +50,9 @@
                         <div class="advertencia">
                             <%=errors.stock.msg%>
                         </div>
-                    <span class="errorStock"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorStock"></span>
                     <br>
                     <br>
                     <label for="imagen">Imagen</label>
@@ -60,11 +63,9 @@
                         <div class="advertencia">
                             <%=errors.imagen.msg%>
                         </div>
-                    <span class="errorImagen"></span>
-                    <%}%> 
+                        <%}%> 
                     <br>
-                    <br>
-                    <label for="categoria">Categoría</label>
+                    <span class="error-mensaje errorImagen"></span>
                     <br>
                     <br>
                     <select id="inputCategoria" name="categoriaProd" 
@@ -73,16 +74,17 @@
                     <option value="" >Categoría</option>
                     <% categorias.forEach(categoria => { %>
                         <option value="<%= categoria.id %>"
-                        <%= locals.oldData && (categoria.id == oldData.categoriaProd) ? 'selected' : null %>> 
+                        <%= locals.oldData && (categoria.id == oldData.categoriaProd) ? 'selected' : null %>>
                         <%= categoria.nombre%> </option>
-                    <% }); %>
+                   <% }); %>
                     </select>
-                    <%if (locals.errors && errors.categoriaProd){%>
+                    <%if(locals.errors && errors.categoriaProd){%>
                         <div class="advertencia">
                             <%=errors.categoriaProd.msg%>
                         </div>
-                    <span class="errorCateogoria"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorCategoria"></span>   
                     <br>
                     <br>
                     <label for="alto">Alto</label>
@@ -94,8 +96,9 @@
                         <div class="advertencia">
                             <%=errors.alto.msg%>
                         </div>
-                    <span class="errorAlto"></span>
                     <%}%>
+                    <br>
+                    <span class="error-mensaje errorAlto"></span>
                     <br>
                     <br>
                     <label for="ancho">Ancho</label>
@@ -107,8 +110,9 @@
                         <div class="advertencia">
                             <%=errors.ancho.msg%>
                         </div>
-                    <span class="errorAncho"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorAncho"></span>
                     <br>
                     <br>
                     <select id="inputColor" name="color" 
@@ -125,8 +129,9 @@
                         <div class="advertencia">
                             <%=errors.color.msg%>
                         </div>
-                    <span class="errorColor"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorColor"></span>
                     <br>
                     <br>
                     <label for="garantia">Garantía</label>
@@ -138,8 +143,9 @@
                         <div class="advertencia">
                             <%=errors.garantia.msg%>
                         </div>
-                    <span class="errorGarantia"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorGarantia"></span>
                     <br>
                     <br>
                     <label for="modelo">Modelo</label>
@@ -151,8 +157,9 @@
                         <div class="advertencia">
                             <%=errors.modelo.msg%>
                         </div>
-                    <span class="errorModelo"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorModelo"></span>
                     <br>
                     <br>
                     <label for="origen">Origen</label>
@@ -164,8 +171,9 @@
                         <div class="advertencia">
                             <%=errors.origen.msg%>
                         </div>
-                    <span class="errorOrigen"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorOrigen"></span>
                     <br>
                     <br>
                     <label for="peso">Peso</label>
@@ -177,8 +185,9 @@
                         <div class="advertencia">
                             <%=errors.peso.msg%>
                         </div>
-                    <span class="errorPeso"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorPeso"></span>
                     <br>
                     <br>
                     <label for="profundidad">Profundidad</label>
@@ -190,8 +199,9 @@
                         <div class="advertencia">
                             <%=errors.profundidad.msg%>
                         </div>
-                    <span class="errorProfundidad"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorProfundidad"></span>
                     <br>
                     <br>
                     <label for="precio">Precio</label>
@@ -203,8 +213,9 @@
                         <div class="advertencia">
                             <%=errors.precio.msg%>
                         </div>
-                    <span class="errorPrecio"></span>
-                    <%}%>
+                        <%}%>
+                    <br>
+                    <span class="error-mensaje errorPrecio"></span>
                     <br>
                     <br>
                     <div class="input-container">
@@ -217,6 +228,8 @@
                                     <%=errors.oferta.msg%>
                                 </div>
                             <%}%>
+                        <br>
+                            <span class="error-mensaje errorOferta"></span>
                          </div>
                      </div>
                 <br>
@@ -228,9 +241,10 @@
         </section>
         <br>
         <br>
+        <script src="/js/file.js"></script>
+        <script src="/js/validacionAgregarProducto.js"></script>
     </main>
 
     <%- include('../partials/footer.ejs')%>
     
-    <script src="/js/validacionAgregarProducto.js"></script>
 </body> 

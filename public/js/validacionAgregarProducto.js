@@ -1,7 +1,5 @@
 const form = document.querySelector("#formulario-creacion")
 
-const { isFileImage } = require('../helpers/file')
-
 const inputNombre = document.querySelector('#inputNombre')
 const inputDescripcion = document.querySelector('#inputDescripcion')
 const inputStock = document.querySelector('#inputStock')
@@ -16,6 +14,8 @@ const inputOrigen = document.querySelector('#inputOrigen')
 const inputPeso = document.querySelector('#inputPeso') 
 const inputProfundidad = document.querySelector('#inputProfundidad')
 const inputPrecio = document.querySelector('#inputPrecio')
+const inputOferta = document.querySelectorAll('#oferta')
+
 
 const errorNombre = document.querySelector('.errorNombre')
 const errorDescripcion = document.querySelector('.errorDescripcion')
@@ -31,13 +31,16 @@ const errorOrigen = document.querySelector('.errorOrigen')
 const errorPeso = document.querySelector('.errorPeso') 
 const errorProfundidad = document.querySelector('.errorProfundidad')
 const errorPrecio = document.querySelector('.errorPrecio')
+const errorOferta = document.querySelectorAll('.errorOferta')
 
 const inputArray = [
-    inputNombre, inputDescripcion, inputStock, inputImagen, inputCategoria, inputAlto, inputAncho, inputColor, inputGarantia, inputModelo, inputOrigen, inputPeso, inputProfundidad, inputPrecio
+    inputNombre, inputDescripcion, inputStock, inputImagen, inputCategoria, inputAlto, inputAncho, 
+    inputColor, inputGarantia, inputModelo, inputOrigen, inputPeso, inputProfundidad, inputPrecio, inputOferta
 ] 
 
 const errorArray = [
-    errorNombre, errorDescripcion, errorStock, errorImagen, errorCategoria, errorAlto, errorAncho, errorColor, errorGarantia, errorModelo, errorOrigen, errorPeso, errorProfundidad, errorPrecio
+    errorNombre, errorDescripcion, errorStock, errorImagen, errorCategoria, errorAlto, errorAncho, 
+    errorColor, errorGarantia, errorModelo, errorOrigen, errorPeso, errorProfundidad, errorPrecio, errorOferta
 ] 
 
 
@@ -46,27 +49,44 @@ function esNumerico(n) {
 }
 
 function resetErrors() {
-    errorArray.forEach(msg => {
-        msg.innerHTML = ""
-    })
+    errorNombre.innerHTML = '', 
+    errorDescripcion.innerHTML = '', 
+    errorStock.innerHTML = '', 
+    errorImagen.innerHTML = '', 
+    errorCategoria.innerHTML = '',  
+    errorAlto.innerHTML = '', 
+    errorAncho.innerHTML = '', 
+    errorColor.innerHTML = '', 
+    errorGarantia.innerHTML = '', 
+    errorModelo.innerHTML = '', 
+    errorOrigen.innerHTML = '', 
+    errorPeso.innerHTML = '', 
+    errorProfundidad.innerHTML = '', 
+    errorPrecio.innerHTML = '', 
+    errorOferta.innerHTML = ''
 }
 
 function validateForm(e) {
+    
     let hasErrors = false
     
     resetErrors()
 
-    if (inputNombre.value.length < 5) {
-        hasErrors = true
-        inputNombre.innerHTML = "El nombre debe tener al menos 5 caracteres"
+    if (inputNombre.value.length < 4) {
         inputNombre.focus()
+        hasErrors = true
+        errorNombre.innerHTML = "El nombre debe tener al menos 5 caracteres"
     }
 
     
-    if (inputDescripcion.value.length < 20) {
-        hasErrors = true
+    if (inputDescripcion.value.length < 19) {
         errorDescripcion.innerHTML = "La descripcion debe tener al menos 20 caracteres"
-        inputDescripcion.focus()
+       
+        if (!hasErrors) {
+            inputDescripcion.focus()
+        }
+
+            hasErrors = true
     }
 
     if (!esNumerico(inputStock.value) || inputStock.value < 0) {
@@ -90,23 +110,24 @@ function validateForm(e) {
         hasErrors = true
     }       
     
-    const { file } = req
-    if (!isFileImage(file.originalname)) {
-        
-        errorImagen.innerHTML = "Por favor ingrese una imágen válida"
-        
-        if (!hasErrors) {
-            inputImagen.focus()
+    if(inputImagen.value){
+        if (!isFileImage(inputImagen.value)) {  
+            console.log(!isFileImage(inputImagen.value))
+            errorImagen.innerHTML = "Por favor ingrese una imágen válida"
+            
+            if (!hasErrors) {
+                inputImagen.focus()
+            }
+                                                                  
+            hasErrors = true
         }
-                                                                                                
-        hasErrors = true
     }
-
+         
     if (!inputCategoria.value) {
-        errorCategoria.innerHTML = "Por favor ingrese una categoria"
+        errorCategoria.innerHTML = "Por favor ingrese un categoria"
         
         if (!hasErrors) {
-            inputCateogoria.focus()
+            inputCategoria.focus()
         }
 
         hasErrors = true
@@ -148,17 +169,26 @@ function validateForm(e) {
         if (!hasErrors) {
             inputGarantia.focus()
         }
-    }
-    if (inputModelo.value.length < 4) {
+
         hasErrors = true
+    }
+
+    if (inputModelo.value.length < 4) {
         errorModelo.innerHTML = "El modelo debe tener al menos 4 caracteres"
+        if (!hasErrors) {
         inputModelo.focus()
+        }
+
+        hasErrors = true
     }
 
     if (inputOrigen.value.length < 4) {
-        hasErrors = true
         errorOrigen.innerHTML = "El origen debe tener al menos 4 caracteres"
+        if (!hasErrors) {
         inputOrigen.focus()
+        }
+
+        hasErrors = true
     }
 
     if (!esNumerico(inputPeso.value) || inputPeso.value < 0) {
@@ -191,15 +221,23 @@ function validateForm(e) {
         hasErrors = true
     }
 
+    console.log(inputOferta.value)
+    if (!inputOferta.value) {
+        errorOferta.innerHTML = "Indica si el producto se encuentra en oferta"
+        
+        if (!hasErrors) {
+            inputCateogoria.focus()
+        }
+
+        hasErrors = true
+    }
+
     if (hasErrors) {
         e.preventDefault()
     }
     
 }
 
-inputArray.forEach(input => {
-    input.addEventListener('blur', validateForm)
-})
 
 
 

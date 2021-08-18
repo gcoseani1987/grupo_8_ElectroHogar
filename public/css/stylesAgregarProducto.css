@@ -82,6 +82,11 @@
     background-position: right calc(.1em + .1875rem) center;
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
+.error-mensaje{
+    color: rgb(187, 58, 58);
+    font-size: 15px;
+}
+
 @media(min-width:1200px){
     .create-registro{
         background-size: cover;
