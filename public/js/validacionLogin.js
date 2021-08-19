@@ -20,27 +20,36 @@ function resetErrors() {
     errorPassword.innerHTML = ''
 }
 
+function validateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    return (false)
+}
+
 function validateForm(e) {
     
     let hasErrors = false
     
     resetErrors()
 
-    if (inputEmail.value.length < 4) {
+    if (!validateEmail(inputEmail.value)) {
+        console.log(!validateEmail(inputEmail.value))
+        errorEmail.innerHTML = "Ingrese un email valido"
+        if(!hasErrors){
         inputEmail.focus()
+        }
         hasErrors = true
-        errorEmail.innerHTML = "El email no se encuentra registrado"
     }
 
-    
-    if (inputPassword.value.length < 19) {
-        errorDescripcion.innerHTML = "La descripcion debe tener al menos 20 caracteres"
-       
-        if (!hasErrors) {
-            inputDescripcion.focus()
+    if (inputPassword.value.length < 8) {
+        errorPassword.innerHTML = "La contraseña debe tener al menos 8 caracteres"
+        if(!hasErrors){
+        inputPassword.focus()
         }
-
-            hasErrors = true
+        hasErrors = true
     }
 
     if (hasErrors) {

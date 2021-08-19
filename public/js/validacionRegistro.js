@@ -22,6 +22,16 @@ const errorArray = [
     errorNombre, errorApellido, errorEmail, errorImagen, errorPassword, errorPassword2
 ] 
 
+function validateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    return (false)
+}
+
+
 function resetErrors() {
     errorNombre.innerHTML = '', 
     errorApellido.innerHTML = '', 
@@ -61,7 +71,8 @@ function ValidateEmail(email)
         hasErrors = true
     }
 
-    if (!ValidateEmail(email.value)) {
+
+    if (!validateEmail(inputEmail.value)) {
         errorEmail.innerHTML = "Ingrese un email valido"
         if(!hasErrors){
             inputEmail.focus()
