@@ -82,6 +82,7 @@ html{
 }
 
 
+
 .advertencia{
     color: rgb(187, 58, 58);
     padding: 2px;
@@ -102,6 +103,14 @@ html{
 .error-mensaje{
     color: rgb(187, 58, 58);
     font-size: 15px;
+    font-weight: 100;
+}
+.acomodarMensaje{
+    position: relative;
+    top: -30px;
+}
+#inputEmail{
+    text-align: center;
 }
 
 @media(min-width:480px){
