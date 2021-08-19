@@ -38,22 +38,27 @@ function validateForm(e) {
     resetErrors()
 
     if (inputNombre.value.length < 2) {
+        errorNombre.innerHTML = "El nombre debe tener al menos 2 caracteres"
         inputNombre.focus()
         hasErrors = true
-        errorNombre.innerHTML = "El nombre debe tener al menos 2 caracteres"
     }
 
     if (inputApellido.value.length < 2) {
-        inputApellido.focus()
-        hasErrors = true
         errorApellido.innerHTML = "El apellido debe tener al menos 2 caracteres"
+        if(!hasErrors){
+        inputApellido.focus()
+        }
+
+        hasErrors = true
     }
 
     //email-> ver como se hace
-    if (inputApellido.value.length < 2) {
-        inputApellido.focus()
+    if (inputEmail.value.length < 2) {
+        errorEmail.innerHTML = "El email debe tener al menos 2 caracteres"
+        if(!hasErrors){
+        inputEmail.focus()
+        }
         hasErrors = true
-        errorApellido.innerHTML = "El apellido debe tener al menos 2 caracteres"
     }
 
     if (!inputImagen.value) {
@@ -80,17 +85,19 @@ function validateForm(e) {
     }
 
     if (inputPassword.value.length < 8) {
-        inputPassword.focus()
-        hasErrors = true
         errorPassword.innerHTML = "La contraseña debe tener al menos 8 caracteres"
+        if(!hasErrors){
+        inputPassword.focus()
+        }
+        hasErrors = true
     }
 
-    // Password2 -> ver como se hace
+/*     // Password2 -> ver como se hace
     if (inputApellido.value.length < 2) {
         inputApellido.focus()
         hasErrors = true
         errorApellido.innerHTML = "El apellido debe tener al menos 2 caracteres"
-    }    
+    }     */
 
     if (hasErrors) {
         e.preventDefault()
