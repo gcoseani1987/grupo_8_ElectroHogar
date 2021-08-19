@@ -8,16 +8,16 @@
   <%- include('../partials/header.ejs')%> 
 
   <main class="main-login">   
-    <br>  
+    <br>   
     <section class="login-form">
-      <form action="/users/login" method="POST" class="login">
+      <form action="/users/login" method="POST" class="login" id="formulario-login">
         <p class="text-login"><strong>INGRESAR CON MAIL Y CONTRASEÑA</strong><p>
           <br>
-        <div class="form-container">
+        <div class="form-container"> 
           <label for="email">Email:</label>
           <br>
           <br>
-          <input class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ejemplo@hotmail.com"
+          <input id="inputEmail" class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ejemplo@hotmail.com"
           value="<%= locals.oldData && oldData.email %>">
           <%if (locals.errors && errors.email){%>    
             <div class="advertencia">
@@ -25,17 +25,19 @@
             </div>
         <%}%>    
           <br>
+          <span class="error-mensaje errorEmail"></span>
           <br>
         <label for="password">Contraseña:</label>
           <br>
           <br>
-          <input class="input-login <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
+          <input id="inputPassword" class="input-login <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
           <%if (locals.errors && errors.password){%>    
             <div class="advertencia">
                 <%=errors.password.msg%>
             </div>
         <%}%> 
           <br>
+          <span class="error-mensaje errorPassword"></span>
           <br>
         </div>
         <div class="forgot">
@@ -63,6 +65,7 @@
   <br>
   <br>
   <br>
+  <script src="/js/validacionLogin.js"></script>
 </main>
 
 <%- include('../partials/footer.ejs')%>

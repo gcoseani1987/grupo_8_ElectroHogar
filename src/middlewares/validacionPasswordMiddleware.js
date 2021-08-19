@@ -21,7 +21,7 @@ const validacionPassword = [
     }
     }).withMessage('La contraseña ingresada no es válida'),
     body('passwordEditado').notEmpty().withMessage('Ingrese su nueva contraseña').bail()
-    .isLength({min: 6}).withMessage('La contraseña debe tener al menos 6 caracteres'),
+    .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
     body('passwordEditado2').notEmpty().withMessage('Repita su nueva contraseña').bail()
     .custom((value, {req}) => {
         const { passwordEditado, passwordEditado2} = req.body

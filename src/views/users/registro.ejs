@@ -12,23 +12,25 @@
       <p class="text-registro"><strong>REGISTRATE Y EMPEZÁ A COMPRAR</strong><p>
         <br>
         <div class="form-container">
-          <form action="/users/registro" method="POST" class="registro" enctype="multipart/form-data">
-            <label for="nombre">Nombre:</label>
+          <form action="/users/registro" method="POST" class="registro" id="formulario-registro" enctype="multipart/form-data">
+            <label for="nombre" class="label">Nombre:</label>
             <br>
             <br>
-            <input class="input-registro <%= locals.errors && errors.nombre ? 'is-invalid' : null%>" type="text" name="nombre"
+            <input id="inputNombre" class="input-registro <%= locals.errors && errors.nombre ? 'is-invalid' : null%>" type="text" name="nombre"
             value="<%= locals.oldData && oldData.nombre %>">
             <%if (locals.errors && errors.nombre){%>    
               <div class="advertencia">
                   <%=errors.nombre.msg%>
               </div>
-          <%}%>
+          <%}%> 
+            <br>
+            <span class="error-mensaje errorNombre"></span>
             <br>
             <br>
-            <label for="apellido">Apellido:</label>
+            <label for="apellido" class="label">Apellido:</label>
             <br> 
             <br>
-            <input class="input-registro <%= locals.errors && errors.apellido ? 'is-invalid' : null%>" type="text" name="apellido"
+            <input id="inputApellido" class="input-registro <%= locals.errors && errors.apellido ? 'is-invalid' : null%>" type="text" name="apellido"
             value="<%= locals.oldData && oldData.apellido %>">
             <%if (locals.errors && errors.apellido){%>    
               <div class="advertencia">
@@ -36,11 +38,13 @@
               </div>
           <%}%>            
             <br>
+            <span class="error-mensaje errorApellido"></span>
+            <br>
             <br> 
-            <label for="email">Email:</label>
+            <label for="email" class="label">Email:</label>
             <br>
             <br>
-            <input class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ejemplo@hotmail.com"
+            <input id="inputEmail" class="input-registro <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" placeholder="ejemplo@hotmail.com"
             value="<%= locals.oldData && oldData.email %>">
             <%if (locals.errors && errors.email){%>    
               <div class="advertencia">
@@ -48,39 +52,46 @@
               </div>
           <%}%>    
             <br>
+            <span class="error-mensaje errorEmail"></span>
             <br>
-            <label for="imagen">Imagen de perfil:</label>
+            <br>
+            <label for="imagen" class="label">Imagen de perfil:</label>
             <br>
             <br>
-            <input name="imagen" class="input-registro" type="file">
+            <input id="inputImagen" name="imagen" class="input-registro" type="file">
             <%if (locals.errors && errors.imagen){%>    
               <div class="advertencia">
                   <%=errors.imagen.msg%>
               </div>
             <%}%>
             <br>
+            <span class="error-mensaje errorImagen"></span>
             <br>
-            <label for="password">Contraseña:</label>
+            <label for="password" class="label">Contraseña:</label>
             <br>
             <br>
-            <input class="input-registro <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
+            <input id="inputPassword" class="input-registro <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
             <%if (locals.errors && errors.password){%>    
               <div class="advertencia">
                   <%=errors.password.msg%>
               </div>
             <%}%>
             <br>
+            <span class="error-mensaje errorPassword"></span>
             <br>
-            <label for="password2">Repita su contraseña:</label>
+            <br>
+            <label for="password2" class="label">Repita su contraseña:</label>
             <br>
             <br>
-            <input class="input-registro <%= locals.errors && errors.password2 ? 'is-invalid' : null%>" type="password" name="password2">
+            <input id="inputPassword2" class="input-registro <%= locals.errors && errors.password2 ? 'is-invalid' : null%>" type="password" name="password2">
             <%if (locals.errors && errors.password2){%>    
               <div class="advertencia">
                   <%=errors.password2.msg%>
               </div>
             <%}%>
         </div>
+          <br>
+          <span class="error-mensaje errorPassword2"></span>
           <br>
         <div class="button">
           <button class="button-registro" type="submit">Crear cuenta</button>
@@ -94,6 +105,8 @@
     </section> 
     <br>
     <br>
+    <script src="/js/file.js"></script>
+    <script src="/js/validacionRegistro.js"></script>
   </main>
  
   <%- include('../partials/footer.ejs')%>

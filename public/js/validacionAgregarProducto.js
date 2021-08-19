@@ -238,9 +238,6 @@ function validateForm(e) {
     
 }
 
-
-
-
 form.addEventListener('submit', validateForm)
 
 
