@@ -36,7 +36,15 @@ function validateForm(e) {
     let hasErrors = false
     
     resetErrors()
-    
+
+function ValidateEmail(email) 
+{
+    if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+    {
+    return (true)
+    }
+    return (false)
+}
 
     if (inputNombre.value.length < 2) {
         errorNombre.innerHTML = "El nombre debe tener al menos 2 caracteres"
@@ -53,14 +61,14 @@ function validateForm(e) {
         hasErrors = true
     }
 
-    //email-> ver como se hace
-    if (inputEmail.value.length < 2) {
-        errorEmail.innerHTML = "El email debe tener al menos 2 caracteres"
+    if (!ValidateEmail(email.value)) {
+        errorEmail.innerHTML = "Ingrese un email valido"
         if(!hasErrors){
-        inputEmail.focus()
+            inputEmail.focus()
         }
+
         hasErrors = true
-    }
+      }
 
     if (!inputImagen.value) {
         errorImagen.innerHTML = "Por favor ingrese una imágen"

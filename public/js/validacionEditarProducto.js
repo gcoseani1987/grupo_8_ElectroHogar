@@ -1,46 +1,37 @@
-const form = document.querySelector("#formulario-creacion")
-
+const form = document.querySelector("#formulario-edicion")
+ 
 const inputNombre = document.querySelector('#inputNombre')
 const inputDescripcion = document.querySelector('#inputDescripcion')
 const inputStock = document.querySelector('#inputStock')
 const inputImagen = document.querySelector('#inputImagen')
-const inputCategoria = document.querySelector('#inputCategoria')
-const inputAlto = document.querySelector('#inputAlto') 
+const inputAlto = document.querySelector('#inputAlto')
 const inputAncho = document.querySelector('#inputAncho')
-const inputColor = document.querySelector('#inputColor')
 const inputGarantia = document.querySelector('#inputGarantia')
 const inputModelo = document.querySelector('#inputModelo')
 const inputOrigen = document.querySelector('#inputOrigen')
 const inputPeso = document.querySelector('#inputPeso') 
 const inputProfundidad = document.querySelector('#inputProfundidad')
 const inputPrecio = document.querySelector('#inputPrecio')
-const inputOferta = document.querySelectorAll('#oferta')
-
 
 const errorNombre = document.querySelector('.errorNombre')
 const errorDescripcion = document.querySelector('.errorDescripcion')
 const errorStock = document.querySelector('.errorStock')
 const errorImagen = document.querySelector('.errorImagen')
-const errorCategoria = document.querySelector('.errorCategoria')
 const errorAlto = document.querySelector('.errorAlto')
 const errorAncho = document.querySelector('.errorAncho')
-const errorColor = document.querySelector('.errorColor')
 const errorGarantia = document.querySelector('.errorGarantia')
 const errorModelo = document.querySelector('.errorModelo')
 const errorOrigen = document.querySelector('.errorOrigen')
 const errorPeso = document.querySelector('.errorPeso') 
 const errorProfundidad = document.querySelector('.errorProfundidad')
 const errorPrecio = document.querySelector('.errorPrecio')
-const errorOferta = document.querySelectorAll('.errorOferta')
 
 const inputArray = [
-    inputNombre, inputDescripcion, inputStock, inputImagen, inputCategoria, inputAlto, inputAncho, 
-    inputColor, inputGarantia, inputModelo, inputOrigen, inputPeso, inputProfundidad, inputPrecio, inputOferta
+    inputNombre, inputDescripcion, inputStock, inputImagen, inputAlto, inputAncho, inputGarantia, inputModelo, inputOrigen, inputPeso, inputProfundidad, inputPrecio 
 ] 
 
 const errorArray = [
-    errorNombre, errorDescripcion, errorStock, errorImagen, errorCategoria, errorAlto, errorAncho, 
-    errorColor, errorGarantia, errorModelo, errorOrigen, errorPeso, errorProfundidad, errorPrecio, errorOferta
+    errorNombre, errorDescripcion, errorStock, errorImagen, errorAlto, errorAncho, errorGarantia, errorModelo, errorOrigen, errorPeso, errorProfundidad, errorPrecio
 ] 
 
 
@@ -52,23 +43,22 @@ function resetErrors() {
     errorNombre.innerHTML = '', 
     errorDescripcion.innerHTML = '', 
     errorStock.innerHTML = '', 
-    errorImagen.innerHTML = '', 
-    errorCategoria.innerHTML = '',  
+    errorImagen.innerHTML = '' 
     errorAlto.innerHTML = '', 
-    errorAncho.innerHTML = '', 
-    errorColor.innerHTML = '', 
+    errorAncho.innerHTML = '',
     errorGarantia.innerHTML = '', 
     errorModelo.innerHTML = '', 
     errorOrigen.innerHTML = '', 
     errorPeso.innerHTML = '', 
     errorProfundidad.innerHTML = '', 
-    errorPrecio.innerHTML = '', 
-    errorOferta.innerHTML = ''
+    errorPrecio.innerHTML = ''
 }
 
 function validateForm(e) {
     
     let hasErrors = false
+
+
     
     resetErrors()
 
@@ -97,18 +87,7 @@ function validateForm(e) {
         }
 
         hasErrors = true
-    }
-
-    if (!inputImagen.value) {
-        
-        errorImagen.innerHTML = "Por favor ingrese una imágen"
-        
-        if (!hasErrors) {
-            inputImagen.focus()
-        }
-                                                                                                
-        hasErrors = true
-    }       
+    }      
     
     if(inputImagen.value){
         if (!isFileImage(inputImagen.value)) {  
@@ -121,16 +100,6 @@ function validateForm(e) {
                                                                   
             hasErrors = true
         }
-    }
-         
-    if (!inputCategoria.value) {
-        errorCategoria.innerHTML = "Por favor ingrese un categoria"
-        
-        if (!hasErrors) {
-            inputCategoria.focus()
-        }
-
-        hasErrors = true
     }
 
     if (!esNumerico(inputAlto.value) || inputAlto.value < 0) {
@@ -148,16 +117,6 @@ function validateForm(e) {
         
         if (!hasErrors) {
             inputAncho.focus()
-        }
-
-        hasErrors = true
-    }
-
-    if (!inputColor.value) {
-        errorColor.innerHTML = "Por favor ingrese un color"
-        
-        if (!hasErrors) {
-            inputColor.focus()
         }
 
         hasErrors = true
@@ -216,28 +175,16 @@ function validateForm(e) {
         
         if (!hasErrors) {
             inputPrecio.focus()
-        }
+        } 
 
         hasErrors = true
     }
 
-    console.log(inputOferta.value)
-    if (!inputOferta.value) {
-        errorOferta.innerHTML = "Indica si el producto se encuentra en oferta"
-        
-        if (!hasErrors) {
-            inputCateogoria.focus()
-        }
-
-        hasErrors = true
-    }
+    console.log(hasErrors)
 
     if (hasErrors) {
         e.preventDefault()
-    }
-    
+    }   
 }
 
 form.addEventListener('submit', validateForm)
-
-

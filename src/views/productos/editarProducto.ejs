@@ -10,8 +10,8 @@
     <main class="create-registro">
         <h2 class="titulo">EDITAR PRODUCTO</h2>
         <section class="create-form">
-            <form action='/productos/<%= productoEncontrado.id %>/editar?_method=PUT' method="POST" class="create" enctype="multipart/form-data"> 
-                <div class="create-container">
+            <form action='/productos/<%= productoEncontrado.id %>/editar?_method=PUT' method="POST" class="create" enctype="multipart/form-data" id="formulario-edicion"> 
+                <div class="create-container"> 
                     <label>Producto</label>
                     <br>
                     <img src="<%=productoEncontrado.imagenes[0].nombre%>" alt="<%=productoEncontrado.descripcion%>" width="300px">
@@ -20,31 +20,35 @@
                     <br> 
                     <label for="nombre" class="label">Editar nombre</label>
                     <br>
-                    <input type="name" class="input-create" name="nombre" value="<%= productoEncontrado.nombre %>">
+                    <input id="inputNombre" type="name" class="input-create" name="nombre" value="<%= productoEncontrado.nombre %>">
                     <br> 
+                    <span class="error-mensaje errorNombre"></span>
                     <br>   
                     <br>
                     <label for="descripcion" class="label">Editar descripcion de producto</label>
                     <br>
-                    <textarea name="descripcion" class="description-create"><%= productoEncontrado.descripcion %></textarea>
+                    <textarea id="inputDescripcion" name="descripcion" class="description-create"><%= productoEncontrado.descripcion %></textarea>
                     <br>
+                    <span class="error-mensaje errorDescripcion"></span>
                     <br>
                     <br>
                     <label for="stock" class="label">Stock</label>
                     <br>
-                    <input for="stock" class="input-create-precio" type="number" name="stock" value="<%= productoEncontrado.stock %>">
+                    <input id="inputStock" for="stock" class="input-create-precio" type="number" name="stock" value="<%= productoEncontrado.stock %>">
                     <br>
+                    <span class="error-mensaje errorStock"></span>
                     <br>
                     <br>
                     <label for="imagen" class="label">Editar imagen</label>
                     <br>
-                    <input name="imagen" class="input-create" type="file" accept="jpg,jpeg" >
+                    <input id="inputImagen" name="imagen" class="input-create" type="file" accept="jpg,jpeg" >
                     <br>
+                    <span class="error-mensaje errorImagen"></span>
                     <br>
                     <br>
                     <label for="categoriaProd" class="label">Categoría</label>
                     <br>
-                    <select 
+                    <select id="inputCategoria"
                     name="categoriaProd" 
                     class="input-create" style="
                     text-transform: uppercase;"
@@ -55,20 +59,28 @@
                         <%= categoria.nombre%> </option>
                     <% }); %>
                     </select>
+                    <br>
+                    <span class="error-mensaje errorCategoria"></span>
+                    <br>
+                    <br>
                     <label for="alto">Alto</label>
                     <br>
                     <br>
-                    <input class="input-create-precio" type="text" name="alto" value="<%= productoEncontrado.alto %>">
+                    <input id="inputAlto" class="input-create-precio" type="text" name="alto" value="<%= productoEncontrado.alto %>">
+                    <br>
+                    <span class="error-mensaje errorAlto"></span>
                     <br>
                     <br>
                     <label for="ancho">Ancho</label>
                     <br>
                     <br>
-                    <input class="input-create-precio" type="text" name="ancho" value="<%= productoEncontrado.ancho %>">
+                    <input id="inputAncho" class="input-create-precio" type="text" name="ancho" value="<%= productoEncontrado.ancho %>">
+                    <br>
+                    <span class="error-mensaje errorAncho"></span>
                     <br>
                     <br>
                     <select 
-                    name="color" 
+                    name="color" id="inputColor"
                     class="input-create" style="
                     text-transform: uppercase;"
                     >
@@ -79,41 +91,54 @@
                     <% }); %>
                     </select>
                     <br>
+                    <span class="error-mensaje errorColor"></span>
+                    <br>
                     <br>
                     <label for="garantia">Garantía</label>
                     <br>
                     <br>
-                    <input class="input-create-precio" type="text" name="garantia" value="<%= productoEncontrado.garantia %>">
+                    <input id="inputGarantia" class="input-create-precio" type="text" name="garantia" value="<%= productoEncontrado.garantia %>">
+                    <br>
+                    <span class="error-mensaje errorGarantia"></span>
                     <br>
                     <br>
                     <label for="modelo">Modelo</label>
                     <br>
                     <br>
-                    <input class="input-create" type="text" name="modelo" value="<%= productoEncontrado.modelo %>">
+                    <input id="inputModelo" class="input-create" type="text" name="modelo" value="<%= productoEncontrado.modelo %>">
+                    <br>
+                    <span class="error-mensaje errorModelo"></span>
                     <br>
                     <br>
                     <label for="origen">Origen</label>
                     <br>
                     <br>
-                    <input class="input-create" type="text" name="origen" value="<%= productoEncontrado.origen %>">
+                    <input id="inputOrigen" class="input-create" type="text" name="origen" value="<%= productoEncontrado.origen %>">
+                    <br>
+                    <span class="error-mensaje errorOrigen"></span>
                     <br>
                     <br>
                     <label for="peso">Peso</label>
                     <br>
                     <br>
-                    <input class="input-create-precio" type="text" name="peso" value="<%= productoEncontrado.peso%>">
+                    <input id="inputPeso" class="input-create-precio" type="text" name="peso" value="<%= productoEncontrado.peso%>">
+                    <br>
+                    <span class="error-mensaje errorPeso"></span>
                     <br>
                     <br>
                     <label for="profundidad">Profundidad</label>
                     <br>
                     <br>
-                    <input class="input-create-precio" type="text" name="profundidad" value="<%= productoEncontrado.profundidad %>">
+                    <input id="inputProfundidad" class="input-create-precio" type="text" name="profundidad" value="<%= productoEncontrado.profundidad %>">
                     <br>
+                    <span class="error-mensaje errorProfundidad"></span>
                     <br>
                     <br>
                     <label for="precio" class="label">Precio</label>
                     <br>
-                    <input for="precio" class= "input-create-precio" type="text" name="precio" placeholder="$50.000" value="<%= productoEncontrado.precio %>">
+                    <input id="inputPrecio" for="precio" class= "input-create-precio" type="text" name="precio" placeholder="$50.000" value="<%= productoEncontrado.precio %>">
+                    <br>
+                    <span class="error-mensaje errorPrecio"></span>
                     <br>
                     <br>
                     <label for="oferta" class="input-create">¿En oferta?</label>
@@ -131,6 +156,8 @@
         </section>
         <br>
         <br>
+        <script src="/js/file.js"></script>
+        <script src="/js/validacionEditarProducto.js"></script>        
     </main>
 
     <%- include('../partials/footer.ejs')%>
