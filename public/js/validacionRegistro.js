@@ -36,6 +36,7 @@ function validateForm(e) {
     let hasErrors = false
     
     resetErrors()
+    
 
     if (inputNombre.value.length < 2) {
         errorNombre.innerHTML = "El nombre debe tener al menos 2 caracteres"
@@ -92,12 +93,13 @@ function validateForm(e) {
         hasErrors = true
     }
 
-/*     // Password2 -> ver como se hace
-    if (inputApellido.value.length < 2) {
-        inputApellido.focus()
+    if (inputPassword2.value.length < 8) {
+        errorPassword2.innerHTML = "Debe repetir su contraseña"
+        if(!hasErrors){
+        inputPassword2.focus()
+        }
         hasErrors = true
-        errorApellido.innerHTML = "El apellido debe tener al menos 2 caracteres"
-    }     */
+    }
 
     if (hasErrors) {
         e.preventDefault()
