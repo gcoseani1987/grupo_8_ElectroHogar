@@ -30,7 +30,9 @@
         <label for="password">Contraseña:</label>
           <br>
           <br>
-          <input id="inputPassword" class="input-login <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
+          <input id="inputPassword" class="input-login mostrarEsconderPassword <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
+          <p class="mostrarPassword"><i class="far fa-eye"></i></p>
+          <p class="esconderPassword"><i class="far fa-eye-slash"></i></p>
           <%if (locals.errors && errors.password){%>    
             <div class="advertencia">
                 <%=errors.password.msg%>
@@ -66,6 +68,7 @@
   <br>
   <br>
   <script src="/js/validacionLogin.js"></script>
+  <script src="/js/mostrarContraseña.js"></script>
 </main>
 
 <%- include('../partials/footer.ejs')%>

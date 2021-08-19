@@ -59,10 +59,28 @@ html{
     padding: 10px;
     margin-bottom: 15px;
 }
+#inputPassword,#inputPassword2{
+    text-align: center;
+}
 
 .iniciar-sesion a{
     color: #284b63	;
 }
+.esconderPassword{
+    display: block;
+    position: relative;
+    top: -20px;
+    left: 85px;
+    margin: 0px 170px;
+}
+.mostrarPassword{
+    display: none;
+    position: relative;
+    top: -20px;
+    left: 85px;
+    margin: 0px 170px;
+}
+
 
 .advertencia{
     color: rgb(187, 58, 58);

@@ -71,7 +71,9 @@
             <label for="password" class="label">Contraseña:</label>
             <br>
             <br>
-            <input id="inputPassword" class="input-registro <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
+            <input id="inputPassword" class="input-registro mostrarEsconderPassword <%= locals.errors && errors.password ? 'is-invalid' : null%>" type="password" name="password">
+            <p class="mostrarPassword"><i class="far fa-eye"></i></p>
+            <p class="esconderPassword"><i class="far fa-eye-slash"></i></p>
             <%if (locals.errors && errors.password){%>    
               <div class="advertencia">
                   <%=errors.password.msg%>
@@ -84,7 +86,9 @@
             <label for="password2" class="label">Repita su contraseña:</label>
             <br>
             <br>
-            <input id="inputPassword2" class="input-registro <%= locals.errors && errors.password2 ? 'is-invalid' : null%>" type="password" name="password2">
+            <input id="inputPassword2" class="input-registro mostrarEsconderPassword <%= locals.errors && errors.password2 ? 'is-invalid' : null%>" type="password" name="password2">
+            <p class="mostrarPassword"><i class="far fa-eye"></i></p>
+            <p class="esconderPassword"><i class="far fa-eye-slash"></i></p>
             <%if (locals.errors && errors.password2){%>    
               <div class="advertencia">
                   <%=errors.password2.msg%>
@@ -106,6 +110,7 @@
     </section> 
     <br>
     <br>
+    <script src="/js/mostrarContraseña.js"></script>
     <script src="/js/file.js"></script>
     <script src="/js/validacionRegistro.js"></script>
   </main>
