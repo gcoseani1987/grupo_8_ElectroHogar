@@ -31,6 +31,7 @@ function validateEmail(mail)
     return (false)
 }
 
+
 function resetErrors() {
     errorNombre.innerHTML = '', 
     errorApellido.innerHTML = '', 
