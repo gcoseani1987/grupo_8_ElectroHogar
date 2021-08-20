@@ -1,4 +1,4 @@
-window.onload = function(){
+window.addEventListener ('load', function(){
     let burgerBtn = document.querySelector('.burger-menu')
     let menuStyle = document.querySelector('div#menu-style')
     let categoriasBtn = document.querySelector("#categorias-btn")
@@ -24,3 +24,4 @@ window.onload = function(){
         main.classList.remove('borroso')
     })
 }
+)
