@@ -81,7 +81,6 @@ const controller = {
           id : id 
         }
       })
-      console.log(productoEncontrado)
       res.render('productos/editarProducto', { productoEncontrado, categorias, colores })
     },
 

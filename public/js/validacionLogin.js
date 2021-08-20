@@ -29,32 +29,52 @@ function validateEmail(mail)
     return (false)
 }
 
+
 function validateForm(e) {
+
+        e.preventDefault()
     
     let hasErrors = false
     
     resetErrors()
-
-    if (!validateEmail(inputEmail.value)) {
-        console.log(!validateEmail(inputEmail.value))
-        errorEmail.innerHTML = "Ingrese un email valido"
-        if(!hasErrors){
-        inputEmail.focus()
+    
+    fetch('http://localhost:3030/api/users/emailExist',{
+        method : "POST",
+        body : JSON.stringify({
+            email : inputEmail.value
+        }),
+        headers : {
+            "content-type" : "application/json"
         }
-        hasErrors = true
-    }
-
-    if (inputPassword.value.length < 8) {
-        errorPassword.innerHTML = "La contraseña debe tener al menos 8 caracteres"
-        if(!hasErrors){
-        inputPassword.focus()
+    }).then(res => res.json())
+    .then(respuesta =>{
+        if (!validateEmail(inputEmail.value)) {
+            errorEmail.innerHTML = "Ingrese un email valido"
+            if(!hasErrors){
+            inputEmail.focus()
+            }
+            hasErrors = true
         }
-        hasErrors = true
-    }
 
-    if (hasErrors) {
-        e.preventDefault()
-    }
+        if (inputPassword.value.length < 8) {
+            errorEmail.innerHTML = "Usuario no valido"
+            if(!hasErrors){
+            inputEmail.focus()
+            }
+            hasErrors = true
+        }
+
+        if(!respuesta.found){
+            errorEmail.innerHTML = "Usuario no valido"
+            hasErrors = true
+        }
+        
+        if (!hasErrors) {
+            form.submit()
+        }
+
+    })
+    
     
 }
 

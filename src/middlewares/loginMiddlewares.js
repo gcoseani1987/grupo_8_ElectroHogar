@@ -12,11 +12,11 @@ const validacionLogin = [
             where : { email: req.body.email }
         })
         if(usuarioEncontrado){
-        if(bcryptjs.compareSync( password , usuarioEncontrado[0].password)) {
-            return true
-        } 
-        return false
+            if(bcryptjs.compareSync( password , usuarioEncontrado[0].password)) {
+                return true
+            } 
     }
+    return Promise.reject("Error de loggeo")
     }).withMessage('El usuario o la contraseña no son validos'),
 ]
 

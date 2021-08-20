@@ -93,7 +93,6 @@ function ValidateEmail(email)
     
     if(inputImagen.value){
         if (!isFileImage(inputImagen.value)) {  
-            console.log(!isFileImage(inputImagen.value))
             errorImagen.innerHTML = "Por favor ingrese una imágen válida"
             
             if (!hasErrors) {

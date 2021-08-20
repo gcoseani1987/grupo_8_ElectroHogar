@@ -91,7 +91,6 @@ function validateForm(e) {
     
     if(inputImagen.value){
         if (!isFileImage(inputImagen.value)) {  
-            console.log(!isFileImage(inputImagen.value))
             errorImagen.innerHTML = "Por favor ingrese una imágen válida"
             
             if (!hasErrors) {
@@ -180,7 +179,6 @@ function validateForm(e) {
         hasErrors = true
     }
 
-    console.log(hasErrors)
 
     if (hasErrors) {
         e.preventDefault()

@@ -5,6 +5,7 @@ const app = express();
 const path = require('path');
 const port = process.env.PORT || 3030 
 const vistasUsuariosMiddleware = require('./middlewares/vistasUsuariosMiddleware')
+const apiRouter = require('../src/routes/api/indexRouter')
 
 
 //requerimos express-session 
@@ -17,7 +18,7 @@ app.use(session({
 //requerimos cookie-parser
 app.use(cookies())
 
-app.use(vistasUsuariosMiddleware)
+app.use(vistasUsuariosMiddleware) 
 
 //requerimos la constante que nos arma la ruta
 const publicPath = path.resolve(__dirname, '../public');
@@ -55,6 +56,9 @@ app.use('/productos', productoRoutes)
 /* Usuarios */
 const usersRoutes = require('./routes/usersRoutes')
 app.use('/users', usersRoutes)
+
+/* Usuarios api*/
+app.use('/api', apiRouter)
 
 /*Categorías*/ 
 const categoriasRoutes = require('./routes/categoriasRoutes')
