@@ -3,7 +3,7 @@ const { Usuario } = require('../../database/models')
 const controller = {
 
     async buscarUsuario (req,res){
-        /* /api/users/emailExist */
+        /* URL de la api : /api/users/emailExist */
         const { email } = req.body;
         const usuarioBuscado = await Usuario.findOne({
             where : {

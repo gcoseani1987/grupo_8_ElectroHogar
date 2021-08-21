@@ -56,6 +56,11 @@ function validateForm(e) {
             hasErrors = true
         }
 
+        if(!respuesta.found){
+            errorEmail.innerHTML = "Usuario no valido"
+            hasErrors = true
+        }
+        
         if (inputPassword.value.length < 8) {
             errorEmail.innerHTML = "Usuario no valido"
             if(!hasErrors){
@@ -64,10 +69,6 @@ function validateForm(e) {
             hasErrors = true
         }
 
-        if(!respuesta.found){
-            errorEmail.innerHTML = "Usuario no valido"
-            hasErrors = true
-        }
         
         if (!hasErrors) {
             form.submit()

@@ -5,8 +5,10 @@ const { Usuario } = require('../database/models')
 const { isFileImage } = require('../helpers/file')
 
 const validacionUsuario = [
-    body('nombre').notEmpty().withMessage('Por favor complete un nombre'),
-    body('apellido').notEmpty().withMessage('Por favor complete un apellido'),
+    body('nombre').notEmpty().withMessage('Por favor complete un nombre').bail()
+    .isLength({min : 2}).withMessage('El nombre debe tener mas de 2 letras'),
+    body('apellido').notEmpty().withMessage('Por favor complete un apellido').bail()
+    .isLength({min : 2}).withMessage('El apellido debe tener mas de 2 letras'),
     body('email').notEmpty().withMessage('Por favor complete con un email').bail()
     .isEmail().withMessage('Por favor ingrese un formato de email válido').bail()
     .custom(async (email) => {

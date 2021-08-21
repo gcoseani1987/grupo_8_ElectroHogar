@@ -27,7 +27,7 @@ router.get('/agregar',invitadoMiddleware, loggeadoMiddleware, productoController
 router.post('/agregar', invitadoMiddleware, loggeadoMiddleware, uploadFile.single('imagen'), validaciones, productoController.crear)
 
 router.get('/:id/editar',invitadoMiddleware, loggeadoMiddleware, productoController.editar) 
-router.put('/:id/editar', uploadFile.single('imagen'), loggeadoMiddleware, invitadoMiddleware, productoController.actualizar)
+router.put('/:id/editar', uploadFile.single('imagen'), loggeadoMiddleware, invitadoMiddleware, validaciones, productoController.actualizar)
 
 router.delete('/:id', invitadoMiddleware,productoController.borrar)
 

@@ -7,10 +7,10 @@
 
 Pol, Gonza, tenemos las retros y las daily en la carpeta Docs
 
-USUARIO ADMIN: pol@gmail.com password: pol123
+USUARIO ADMIN: pol@gmail.com password: pol12345 
 USUARIO ADMIN: gonza@gmail.com password: gonza123
 
-USUARIO: ironman@gmail.com password: ironman
+USUARIO: ironman@gmail.com password: ironman1
 
 
 

@@ -4,8 +4,10 @@ const path = require('path')
 const { isFileImage } = require('../helpers/file')
 
 const validaciones = [
-    body('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('descripcion').notEmpty().withMessage('Tienes que escribir una descripcion'),
+    body('nombre').notEmpty().withMessage('Tienes que escribir un nombre').bail()
+    .isLength({min : 5}).withMessage('El nombre debe tener mas de 5 caracteres'),
+    body('descripcion').notEmpty().withMessage('Tienes que escribir una descripcion').bail()
+    .isLength({min : 20}).withMessage('La descripción debe tener mas de 20 caracteres'),
     body('stock').notEmpty().withMessage('Tienes que aclarar el stock disponible'),
     body('categoriaProd').notEmpty().withMessage('Tienes que seleccionar una categoría'),
     body('alto').notEmpty().withMessage('Tienes que especificar el alto'),
