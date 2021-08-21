@@ -1,11 +1,11 @@
 1= elguillote
-2= batistuta
-3= ironman
-4= capitan
-5=asgard
-6=hulk123
-7=batman
-8=veron123
+2= ironman1
+3= capitan1
+4= hulk1234
+5= batman123
+6= veron123
+7= pol12345
+8=gonza123
 
 
 
@@ -82,31 +82,31 @@ INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen)
 VALUES ("Guillermo Adolfo","Coseani","gcoseani@gmail.com",1,"$2a$10$3911ecqGb1AXZ.tosdb.yeUYvQev9XqMdJl80K4J29R0DfP1bje2K","/images/usuarios/1624413248766.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Bruce","Banner","hulk@gmail.com",0,"$2a$10$uAIVYYmRYyGoLEFneCuBQOYeiHyKxEOXNxDsV36fW7LkGXpjeIWXO","/images/usuarios/1624663182332.jpg");
+VALUES ("Bruce","Banner","hulk@gmail.com",0,"$2a$10$z0G61AhIZe0yFWQjQDGKN.VYa0I/Z04iC.0Uu4dBgi.xTDuMnuImO","/images/usuarios/1624662971910.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Bruce","Wayne","batman@gmail.com",0,"$2a$10$RWU.gZL9ldzC8PDgzlQ.u.fjenYN9VN8mYZiJGv0SjBFHWXVRvak.","/images/usuarios/1624663226410.jpg");
+VALUES ("Bruce","Wayne","batman@gmail.com",0,"$2a$10$wIj.CfIqTlpwtrhVqr6TxuR2r5JExer71iqixO3rVfonO90IhM8yq","/images/usuarios/1624663226410.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Emiliano","Cucit","emicu144@gmail.com",1,"$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6","/images/usuarios/1624740739540.jpg");
+VALUES ("Emiliano","Cucit","emicu144@gmail.com",1,"$2a$10$Y4jX69wpCxWF/UInUHcPg.M/Io0MYy1NEuh88cYa2BWgi0l4pC63K","/images/usuarios/1624740739540.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Ignacio","Galvagno","ignacio.101@hotmail.com",1,"$2a$10$dCZnp7E2IsSy8EijXGg97.pW18oxmecjYll0FmwkFex6tB7hYRxU6","/images/usuarios/1624740739540.jpg");
+VALUES ("Ignacio","Galvagno","ignacio.101@hotmail.com",1,"$2a$10$Y4jX69wpCxWF/UInUHcPg.M/Io0MYy1NEuh88cYa2BWgi0l4pC63K","/images/usuarios/1626386841231.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
 VALUES ("Gonza","DH","gon@gmail.com",1,"$2a$10$ZBAb.T.nCZGivMP8Solm5.xq9wPvgx8H1VfzLKpCOh7WDs9eb1u3i","/images/usuarios/1626392212380.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Pol","DH","pol@gmail.com",1,"$2a$10$Go7.8G8gLFzAwJfsEDPcmuWgB.nVNPfupykZLRxuIPR7t7b9jh05C","/images/usuarios/1626392240338.jpg");
+VALUES ("Pol","DH","pol@gmail.com",1,"$2a$10$Fq0z0O2YIdqMo9n0E8Ak4.tLdVNspq2ghyYmYMjBLBhrLN5JK8Tuq","/images/usuarios/1626392240338.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Tony","Stark","ironman@gmail.com",0,"$2a$10$a0CHYznNwwb/XLoKCIWG5.GK/ia0XWNjnDGIaA/cRs5GDlOZ6/hGi","/images/usuarios/1626553076014.jpg");
+VALUES ("Tony","Stark","ironman@gmail.com",0,"$2a$10$XOztxeYWfXgH0rUUbq45/u1bg7ldALMOk0grdeMZSTkeK.kHcC/Xy","/images/usuarios/1624662827955.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Juan Sebastian","Veron","veron@gmail.com",0,"$2a$10$FXPXWRewGbEppKl.w6NU2eHyNR/ZIvciOAr3vnTateW7pd94engZC","/images/usuarios/1626553251893.jpg");
+VALUES ("Juan Sebastian","Veron","veron@gmail.com",0,"$2a$10$FXPXWRewGbEppKl.w6NU2eHyNR/ZIvciOAr3vnTateW7pd94engZC","/images/usuarios/1626551512416.jpg");
 
 INSERT INTO usuarios (nombre,apellido,email,administrador, password ,imagen) 
-VALUES ("Steve","Rogers","capamerica@gmail.com",0,"$2a$10$DGxUcHNjebmCpKJZlLrBVuy7SO3N//BfMKuRMbonkO5TsmDm3sTx2","/images/usuarios/1626877046369.jpg");
+VALUES ("Steve","Rogers","capamerica@gmail.com",0,"$2a$10$LJ4rKyy5X0amPm4/3kIw9utFZ3GhgKXrDrLW0vEredP7AQBMcWUwS","/images/usuarios/1626877046369.jpg");
 
 INSERT INTO productos (categoria_id,nombre,usuario_id,descripcion,stock,precio,alto,ancho,color_id,garantia,modelo,origen,peso,profundidad,oferta) 
 VALUES (1,"AIRE ACONDICIONADO SPLIT BGH",1,"Split Frio/calor de 3430W . Compresor Digital Inverter. Timer. Funcion Sleep. Filtro antibacterias. Deflector de aire movil. Funcion automatico. Funcion Deshumidificacion. Autolimpiante. Funcion Ventilacion. Hot Start. EE: A.",8,25000,29,72.2,1,12,"BS26WCCR","ARGENTINA",8.3,18.7,0);
@@ -240,141 +240,129 @@ VALUES (5,"LAVARROPAS AUTOMATICO DREAN",1,"Clase A++. Capacidad 7Kg. 1000RPM. Pu
 
 
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",1);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",1);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",1);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",2);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",2);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1A.webp",1);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1B.webp",1);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",2);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",3);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aireA.webp",2);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2B.webp",2);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",3);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",3);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2A.webp",3);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2b.webp",3);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",4);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",4);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",4);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",5);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",5);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1A.webp",4);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1B.webp",4);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",5);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",6);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aireA.webp",5);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2B.webp",5);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",6);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",6);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2A.webp",6);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2b.webp",6);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",7);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",7);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",7);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1.png",8);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2.png",8);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1A.webp",7);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire1B.webp",7);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire.png",8);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aireA.webp",8);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/aire2B.webp",8);
+
 
 
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",9);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",9);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",9);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",10);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisorA.jpg",9);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisorB.jpg",9);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",10);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",10);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",11);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",11);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",11);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",12);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",12);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1A.jpg",10);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1B.jpg",10);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele2.png",11);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele2A.jpg",11);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele2B.jpg",11);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",12);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3A.jpg",12);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3B.jpg",12);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",13);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",13);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",13);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",14);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisorA.jpg",13);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisorB.jpg",13);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",14);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",14);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",15);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",15);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",15);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",16);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",16);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1A.jpg",14);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1B.jpg",14);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele2.png",15);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele2A.jpg",15);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele2B.jpg",15);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",16);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/televisor.png",17);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3A.jpg",16);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3B.jpg",16);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1.png",17);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele3.png",17);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1A.jpg",17);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/tele1B.jpg",17);
+
+
+
 
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",18);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",18);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",18);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",18);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",19);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornosA.jpg",18);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornosB.jpg",18);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",19);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",19);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",19);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",20);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",20);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2B.jpg",19);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",20);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",20);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",21);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",21);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",21);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2A.jpg",20);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2B.jpg",20);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",21);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3A.webp",21);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3B.png",21);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",22);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",22);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",22);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",22);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",23);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornosA.jpg",22);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornosB.jpg",22);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",23);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",23);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",23);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",24);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",24);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2B.jpg",23);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",24);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",24);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos.png",25);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos1.png",25);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2.png",25);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2A.jpg",24);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos2B.jpg",24);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3.png",25);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3A.webp",25);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/hornos3B.png",25);
+
 
 
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",26);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",26);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",26);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",26);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",27);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeraA.jpg",26);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeraB.jpg",26);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",27);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",27);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",27);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",28);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",28);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1A.jpg",27);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1B.jpg",27);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",28);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",28);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",29);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",29);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",29);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2A.jpg",28);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2B.jpg",28);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",29);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3A.jpg",29);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3B.jpg",29);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",30);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",30);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",30);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",30);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",31);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeraA.jpg",30);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeraB.jpg",30);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",31);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",31);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",31);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",32);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",32);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1A.jpg",31);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1B.jpg",31);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",32);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",32);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladeras.png",33);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera1.png",33);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2.png",33);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2A.jpg",32);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera2B.jpg",32);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3.png",33);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3A.jpg",33);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/heladera3B.jpg",33);
 
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",34);
+
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",34);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropasA.jpg",34);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",35);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",35);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",36);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1A.jpg",35);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",36);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropasA.jpg",36);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",37);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",37);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",38);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1A.jpg",37);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",38);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropasA.jpg",38);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",39);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",39);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",40);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1A.jpg",39);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",40);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropasA.jpg",40);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",41);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",41);
-INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1.png",42);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas1A.jpg",41);
 INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropas.png",42);
+INSERT INTO imagenes (nombre,producto_id) VALUES ("/images/lavarropasA.jpg",42);
