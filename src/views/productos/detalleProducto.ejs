@@ -14,8 +14,17 @@
     <h1><%=productoEncontrado.nombre%></h1> 
   </div>
   <div class='article-top'>
-    <div class='article-top-right'> 
-        <img src="<%=productoEncontrado.imagenes[0].nombre%>" alt="<%=productoEncontrado.nombre%>">
+    <div class="dots-flex">
+      <div class='article-top-right'> 
+          <p class="arrow arrow-left"><i class="fas fa-chevron-left"></i></p>
+            <li class="imagenes-producto"><img src="<%=productoEncontrado.imagenes[0].nombre%>" alt="<%=productoEncontrado.nombre%>"></li>
+          <p class="arrow arrow-right"><i class="fas fa-chevron-right"></i></p>
+      </div>
+      <ul class="dots-list">
+        <% for( let i = 0; i < productoEncontrado.imagenes.length; i++ ) { %>
+          <li class="dots"></li>
+        <% } %>
+      </ul>
     </div>
     <div class='article-top-left'> 
       <div class='box-condiciones-pago'>
@@ -111,5 +120,5 @@
 </div>
   
 <%- include('../partials/footer.ejs')%>
-
+<script src="/js/slider.js"></script>
 </body>
