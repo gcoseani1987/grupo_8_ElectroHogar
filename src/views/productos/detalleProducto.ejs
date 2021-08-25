@@ -17,8 +17,13 @@
     <div class="dots-flex">
       <div class='article-top-right'> 
           <p class="arrow arrow-left"><i class="fas fa-chevron-left"></i></p>
-            <li class="imagenes-producto"><img src="<%=productoEncontrado.imagenes[0].nombre%>" alt="<%=productoEncontrado.nombre%>"></li>
+          <ul>
+            <% for( let i = 0; i < productoEncontrado.imagenes.length; i++ ) { %>
+              <li class="imagenes-producto"><img src="<%=productoEncontrado.imagenes[i].nombre%>" alt="<%=productoEncontrado.nombre%>"></li>
+            <% } %>
+          </ul>
           <p class="arrow arrow-right"><i class="fas fa-chevron-right"></i></p>
+          
       </div>
       <ul class="dots-list">
         <% for( let i = 0; i < productoEncontrado.imagenes.length; i++ ) { %>

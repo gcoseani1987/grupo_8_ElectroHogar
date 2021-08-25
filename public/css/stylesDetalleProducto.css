@@ -48,9 +48,20 @@
 
 .article-top-right img{
     width: 250px;
+    height: 350px;
+    object-fit: contain;
 }
 .imagenes-producto{
     list-style: none;
+    display: none;
+    transition: all .4s;
+    height: 350px;
+}
+
+.mostrar{
+    display: flex;
+    align-content: center;
+    align-items: center;
 }
 
 .dots-list{
