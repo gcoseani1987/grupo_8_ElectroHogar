@@ -8,11 +8,16 @@ window.addEventListener('load',()=>{
     let i = 0
     imagenes[i].classList.add('mostrar')
     marcadores[i].classList.add('active')  
+
+    
+    function reset(){
+        marcadores.forEach(el => el.classList.remove("active"))
+        imagenes.forEach(el => el.classList.remove("mostrar"))
+    }
     
 
     flechaDer.addEventListener('click',()=>{
-        imagenes[i].classList.remove('mostrar')
-        marcadores[i].classList.remove('active')
+        reset()
         if(i<(imagenes.length-1)){
             i = i + 1
             imagenes[i].classList.add('mostrar')
@@ -27,8 +32,7 @@ window.addEventListener('load',()=>{
     )
 
     flechaIzq.addEventListener('click',()=>{
-        imagenes[i].classList.remove('mostrar')
-        marcadores[i].classList.remove('active')
+        reset()
         if(i != 0){
             i = i - 1 
             imagenes[i].classList.add('mostrar')
@@ -41,10 +45,10 @@ window.addEventListener('load',()=>{
         }    
     })
 
+
     for (let i = 0; i < marcadores.length; i++) {
         marcadores[i].addEventListener("click", function() {
-            marcadores.forEach(el => el.classList.remove("active"))
-            imagenes.forEach(el => el.classList.remove("mostrar"))
+            reset()
             marcadores[i].classList.add('active')
             imagenes[i].classList.add('mostrar')
         });
