@@ -39,5 +39,15 @@ window.addEventListener('load',()=>{
             imagenes[i].classList.add('mostrar')
             marcadores[i].classList.add('active')
         }    
-    })  
+    })
+
+    for (let i = 0; i < marcadores.length; i++) {
+        marcadores[i].addEventListener("click", function() {
+            marcadores.forEach(el => el.classList.remove("active"))
+            imagenes.forEach(el => el.classList.remove("mostrar"))
+            marcadores[i].classList.add('active')
+            imagenes[i].classList.add('mostrar')
+        });
+    }
+
 })
