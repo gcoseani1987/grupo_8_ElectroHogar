@@ -4,8 +4,9 @@ window.addEventListener('load',()=>{
     const flechaDer = document.querySelector('.arrow-right');
     const marcadores = document.querySelectorAll('.dots')
 
-    
-    let i = 0
+
+
+    let  i = 0
     imagenes[i].classList.add('mostrar')
     marcadores[i].classList.add('active')  
 
@@ -46,11 +47,12 @@ window.addEventListener('load',()=>{
     })
 
 
-    for (let i = 0; i < marcadores.length; i++) {
-        marcadores[i].addEventListener("click", function() {
+    for (let j = 0; j < marcadores.length; j++) {
+        marcadores[j].addEventListener("click", function() {
             reset()
-            marcadores[i].classList.add('active')
-            imagenes[i].classList.add('mostrar')
+            marcadores[j].classList.add('active')
+            imagenes[j].classList.add('mostrar')
+            i = j
         });
     }
 
