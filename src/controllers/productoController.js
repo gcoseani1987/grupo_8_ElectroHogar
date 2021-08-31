@@ -1,11 +1,6 @@
 const { validationResult } = require('express-validator')
 const { Op } = require('sequelize')
-const { Producto } = require('../database/models')
-const { Categoria } = require('../database/models')
-const { Imagen } = require('../database/models')
-const { Color } = require('../database/models')
-const { Usuario } = require('../database/models')
-const { productosPath, findAll } = require('../models/usuarios')
+const { Producto, Categoria, Imagen, Color, Usuario } = require('../database/models')
 const fs = require('fs')
 
 const controller = {

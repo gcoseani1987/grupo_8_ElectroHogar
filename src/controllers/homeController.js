@@ -1,5 +1,4 @@
-const { Categoria }=require('../database/models')
-const { Producto } = require('../database/models')
+const { Categoria, Producto }=require('../database/models')
 
 const controller = {
     home: async (req, res) => {
