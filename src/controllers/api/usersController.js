@@ -18,9 +18,28 @@ const controller = {
             return res.status(404).json({
                 found : false
         })   
+    
+    },
 
+    async listado(req,res){
+    /*     URL de al api : /api/users */
+        const listadoUsuarios = await Usuario.findAll({
+            attributes : [
+                "id",
+                "nombre",
+                "email"
+            ]
+        });
+        const cantidadUsuarios = listadoUsuarios.length;
+        const users = listadoUsuarios.map(usuario=>{
+            usuario.setAttribute("detail","http://localhost:3030/api/users/" + usuario.id)
+        })
+        return res.json({
+            count : cantidadUsuarios,
+            users
+        })
+        
     }
-
 }
   
 module.exports = controller  

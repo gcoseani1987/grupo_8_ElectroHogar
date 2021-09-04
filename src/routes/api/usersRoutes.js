@@ -5,4 +5,6 @@ const controller = require('../../controllers/api/usersController');
 
 router.post('/emailExist', controller.buscarUsuario);
 
+router.get('/', controller.listado)
+
 module.exports = router;
