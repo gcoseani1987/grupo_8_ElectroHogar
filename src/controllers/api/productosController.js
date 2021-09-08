@@ -1,12 +1,12 @@
 const e = require('express');
-const { Producto, Categoria} = require('../../database/models');
+const { Producto, Categoria, Imagen, Color} = require('../../database/models');
 
 const controller = {
     async listado(req, res){
         /* URL de api : /api/products */
         const products = await Producto.findAll(
             {
-                attributes : ['id', 'nombre', 'descripcion']
+                attributes : ['id', 'nombre', 'descripcion'], include : ['imagenes']
             }
         )
         const count = products.length;
@@ -28,8 +28,38 @@ const controller = {
             countByCategory,
             products
         })
-    }
+    },
 
+    async detalle(req, res){
+        try {
+            const id = req.params.id
+            const productoBuscado = await Producto.findByPk(id, {
+                attributes : [
+                    'id', 'nombre', 'descripcion', 'stock', 'precio', 'alto', 'ancho', 'garantia', 'modelo', 'origen', 'peso', 'profundidad', 'oferta'
+                ], include : [ 'imagenes', 'color']
+            })
+            productoBuscado.setDataValue('imagen', 'http://localhost:3030' + productoBuscado.imagenes[0].nombre)
+
+            res.status(200).json({
+                meta : {
+                    status : 'success',
+                },
+                data : {
+                    productoBuscado
+                }
+            }) 
+        }
+        catch(error) {
+            res.status(404).json({
+                meta : {
+                    status : 'error', 
+                },
+                error : {
+                    msg : 'no se encontro el producto'
+                }
+            }) 
+        }
+    }
 }
 
 module.exports = controller  

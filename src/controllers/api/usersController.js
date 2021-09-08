@@ -53,14 +53,14 @@ const controller = {
             })
             usuarioBuscado.setDataValue('imagen', 'http://localhost:3030' + usuarioBuscado.imagen)
             
-                res.status(200).json({
-                    meta : {
-                        status : 'success',
-                    },
-                    data : {
-                        usuarioBuscado
-                    }
-                }) 
+            res.status(200).json({
+                meta : {
+                    status : 'success',
+                },
+                data : {
+                    usuarioBuscado
+                }
+            }) 
         }
         catch(error) {
             res.status(404).json({
