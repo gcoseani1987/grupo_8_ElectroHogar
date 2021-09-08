@@ -33,25 +33,32 @@ const controller = {
         });
         const cantidadUsuarios = listadoUsuarios.length;
         const users = listadoUsuarios.map(usuario=>{
-            usuario.setAttribute("detail","http://localhost:3030/api/users/" + usuario.id)
+            usuario.setDataValue("detail", "http://localhost:3030/api/users/" + usuario.id)
+            return usuario
         })
         return res.json({
             count : cantidadUsuarios,
-            users
+            users 
         })  
     },
 
     async perfil(req, res){
         /* URL de al api : /api/users/:id */
         try {
-            const usuario = req.params.id
-            const { id, nombre, apellido, email, imagen } = await Usuario.findByPk(usuario)
+            const id = req.params.id
+            const usuarioBuscado = await Usuario.findByPk(id, {
+                attributes : [ 
+                    'id', 'nombre', 'apellido', 'email', 'imagen'
+                ]
+            })
+            usuarioBuscado.setDataValue('imagen', 'http://localhost:3030' + usuarioBuscado.imagen)
+            
                 res.status(200).json({
                     meta : {
-                        status : 'success', 
+                        status : 'success',
                     },
                     data : {
-                        usuario
+                        usuarioBuscado
                     }
                 }) 
         }
@@ -67,5 +74,5 @@ const controller = {
         }
     }
 }
-  
+
 module.exports = controller  
