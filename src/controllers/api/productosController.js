@@ -36,16 +36,19 @@ const controller = {
             const productoBuscado = await Producto.findByPk(id, {
                 attributes : [
                     'id', 'nombre', 'descripcion', 'stock', 'precio', 'alto', 'ancho', 'garantia', 'modelo', 'origen', 'peso', 'profundidad', 'oferta'
-                ], include : [ 'imagenes', 'color']
+                ], include : [  'color','imagenes']
             })
-            productoBuscado.setDataValue('imagen', 'http://localhost:3030' + productoBuscado.imagenes[0].nombre)
+            const imagenesProducto = productoBuscado.imagenes.map(imagen=>{
+                imagen.setDataValue("URL", "http://localhost:3030" + imagen.nombre)
+                return imagen
+            })
 
             res.status(200).json({
                 meta : {
                     status : 'success',
                 },
                 data : {
-                    productoBuscado
+                    productoBuscado,
                 }
             }) 
         }

@@ -15,10 +15,11 @@ const controller = {
             return res.status(200).json({
                 found : true
             })            
-        }
+        } else {
             return res.status(404).json({
                 found : false
-        })   
+            })   
+        }
     
     },
 
