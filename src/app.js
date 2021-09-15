@@ -6,6 +6,7 @@ const path = require('path');
 const port = process.env.PORT || 3030 
 const vistasUsuariosMiddleware = require('./middlewares/vistasUsuariosMiddleware')
 const apiRouter = require('../src/routes/api/indexRouter')
+const cors = require('cors')
 
 
 //requerimos express-session 
@@ -14,6 +15,8 @@ app.use(session({
     resave: false,
     saveUninitialized:false,
 }))
+
+app.use(cors())
 
 //requerimos cookie-parser
 app.use(cookies())
