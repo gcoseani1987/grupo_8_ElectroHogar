@@ -8,8 +8,7 @@ const vistasUsuariosMiddleware = require('./middlewares/vistasUsuariosMiddleware
 const apiRouter = require('../src/routes/api/indexRouter')
 const cors = require('cors')
 
-
-//requerimos express-session 
+//requerimos express-session
 app.use(session({
     secret : 'ELECRTOHOGAR',
     resave: false,
@@ -17,7 +16,7 @@ app.use(session({
 }))
 
 app.use(cors())
-
+ 
 //requerimos cookie-parser
 app.use(cookies())
 

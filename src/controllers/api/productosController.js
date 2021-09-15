@@ -6,7 +6,7 @@ const controller = {
         /* URL de api : /api/products */
         const products = await Producto.findAll(
             {
-                attributes : ['id', 'nombre', 'descripcion'], include : ['imagenes']
+                attributes : ['id', 'nombre', 'descripcion', 'oferta', 'precio', 'stock'], include : ['imagenes', 'categoria'] 
             }
         )
         const count = products.length;
