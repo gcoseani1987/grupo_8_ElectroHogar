@@ -6,7 +6,7 @@ const controller = {
         /* URL de api : /api/products */
         const products = await Producto.findAll(
             {
-                attributes : ['id', 'nombre', 'descripcion', 'oferta', 'precio', 'stock'], include : ['imagenes', 'categoria'] 
+                attributes : ['id', 'nombre', 'descripcion'], include : ['imagenes'] 
             }
         )
         const count = products.length;
@@ -26,6 +26,22 @@ const controller = {
         res.json({
             count,
             countByCategory,
+            products
+        })
+    },
+    async resumen(req, res){
+        /* URL de api : /api/products/resumen */
+        const products = await Producto.findAll(
+            {
+                attributes : ['nombre', 'precio', 'stock', 'oferta'] , include : ['categoria'] 
+            }
+        )
+        const productos = products.map(producto=>{
+            producto.setDataValue( "categoria", producto.categoria.nombre)
+            return producto
+        })
+
+        res.json({
             products
         })
     },
