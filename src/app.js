@@ -59,7 +59,7 @@ app.use('/productos', productoRoutes)
 const usersRoutes = require('./routes/usersRoutes')
 app.use('/users', usersRoutes)
 
-/* Usuarios api*/
+/* api*/
 app.use('/api', apiRouter)
 
 /*Categorías*/ 
