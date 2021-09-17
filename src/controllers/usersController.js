@@ -74,6 +74,11 @@ const controller = {
   editarPassword: async (req,res) => {
     const resultadoValidaciones = validationResult(req);
     const { id } = req.params;
+    const usuarioEncontrado = await Usuario.findByPk(id,{
+      where : {
+         id : req.params.id
+      }
+    });
       if(resultadoValidaciones.isEmpty()){ 
         const password =  bcryptjs.hashSync(req.body.passwordEditado , 10); 
         await Usuario.update({                 
@@ -85,7 +90,7 @@ const controller = {
           }});
     res.redirect('/users/perfil/' + id);
     } else{
-      res.render('users/modificarpassword', {  errors: resultadoValidaciones.mapped()});
+      res.render('users/modificarpassword', { usuarioEncontrado, errors: resultadoValidaciones.mapped()});
     };
   },
 
